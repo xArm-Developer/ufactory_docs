@@ -1562,11 +1562,24 @@ else:
                   </el-upload>
 ~~~
 
-Status report message
+
+Status report message (http://{ip}:{port}/project)
 ---
-1. xarm_tcp_pose
-2. xarm_joint_pose
-3. xarm_error, xarm_warn
-4. xarm_mode
+
+1.xarm_tcp_pose<br> 
+2.xarm_joint_pose<br> 
+3.xarm_error, xarm_warn<br> 
+4.xarm_mode<br> 
+
+### Front end
+~~~
+// Connect websocket to get push
+self.init_onmessage = (onmessage) => {
+  if(onmessage.cmd === 'devices_status_report'){
+// so something
+}
+};
+~~~
+
 
 

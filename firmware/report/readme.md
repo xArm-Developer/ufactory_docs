@@ -1,4 +1,11 @@
-# ReadMe
+---
+description: >-
+  For simplified Chinese version: 简体中文版 For UFACTORY Lite 6 users, make sure you
+  have followed the instructions before chapter 4.7 on this page, then switch to
+  ReadMe for Lite6. For kinetic users, pleas
+---
+
+# ReadMe\_en
 
 ### 1. Introduction <a href="#1.-introduction" id="1.-introduction"></a>
 

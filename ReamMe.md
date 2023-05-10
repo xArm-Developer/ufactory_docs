@@ -1,8 +1,11 @@
 # Table of contents
 
-* [ReadMe](README.md)
-* [WebsocketAPI](websocketapi/README.md)
-  * [WebsocketAPI](WebsocketAPI/UFactoryStudio\_websocket.md)
-* [firmware](firmware/README.md)
-  * [ReadMe\_en](firmware/report/README.md)
-    * [ReadMe\_cn](firmware/report/readme\_cn.md)
+
+* [firmware](firmware)
+  * [report](firmware/report)
+    * [get_report_data_with_port30000.py](firmware/report/_get_report_data_with_port30000.py)
+    * [ReadMe_en.md](firmware/report/ReadMe_en.md)
+    * [ReadMe_cn.md](firmware/report/ReadMe_cn.md)
+  
+* [websocketapi](websocketapi)
+  * [websocketapi.md](websocketapi/websocketapi_md)

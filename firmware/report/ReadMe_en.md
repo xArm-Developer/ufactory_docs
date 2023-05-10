@@ -6,7 +6,7 @@
 
 ### 2. Data definition of port 30000 <a href="#1.-introduction" id="1.-introduction"></a>
 
-&#x20;    Firmware version: V2.0.3 or later
+&#x20;    Firmware version: V2.1.0 or later
 
 | Items                                 | Type | First byte | Last byte | Length | Unit         | Description       |
 | ------------------------------------- | ---- | ---------- | --------- | ------ | ------------ | ----------------- |

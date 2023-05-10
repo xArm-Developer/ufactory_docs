@@ -1,33 +1,35 @@
-WebsocketAPI
-==
+# WebsocketAPI
 
-Set motion(ws://{ip}:{port}/ws) <br> 
----
+Set motion(ws://{ip}:{port}/ws)\
 
 
-## 1.xarm_move_step
-Description:  
-Long press: keep moving in a certain direction until the button is released. <br> 
-Short press: move a step in a certain direction.<br> 
-Button: [Live Control] -- X+ / X- / Y+ / Y- / Z+ / Z- <br> 
 
-~~~
+## 1.xarm\_move\_step
+
+Description:\
+Long press: keep moving in a certain direction until the button is released.\
+Short press: move a step in a certain direction.\
+Button: \[Live Control] -- X+ / X- / Y+ / Y- / Z+ / Z-\
+
+
+```
 URL:  /ws 
 Request Type： Application/json 
 Return Type： */*  
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| isloop                | bool  	|  Yes          	 | whether a long press or not                                 | 
-| direction             | String 	|  Yes          	 | Direction of movement：<br>'position-x-increase’;'position-x-decrease’; <br>’position-y-increase’;’position-y-decrease’;<br>’position-z-increase’;’position-z-decrease’; <br>’attitude-roll-increase’;'attitude-roll-decrease';<br>’attitude-pitch-increase’;'attitude-pitch-decrease';<br>'attitude-yaw-increase';'attitude-yaw-decrease';<br>Change of Joint angle：<br>'joint-angle-increase';'joint-angle-decrease'; <br>Aligning the Hand(for xArm5 only)：<br>'set-end-level' ;
-| isMoveTool                | bool  	|  Yes          	 | whether use Tool Coordinate or not(Base Coordinate by default)                                | 
-| isSetInitialPoint                | bool  	|  No          	 | (Not Used)                               | 
-| Return Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| Return Parameter     | Type	  |  Must be filled	 | 0: success <br>Other: Failed. Refer to [xArm_Python_SDK/xarm_API_Code.md](https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code)                                                | 
+| Request Parameter | Type   | Must be filled | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ----------------- | ------ | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| isloop            | bool   | Yes            | whether a long press or not                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| direction         | String | Yes            | <p>Direction of movement：<br>'position-x-increase’;'position-x-decrease’;<br>’position-y-increase’;’position-y-decrease’;<br>’position-z-increase’;’position-z-decrease’;<br>’attitude-roll-increase’;'attitude-roll-decrease';<br>’attitude-pitch-increase’;'attitude-pitch-decrease';<br>'attitude-yaw-increase';'attitude-yaw-decrease';<br>Change of Joint angle：<br>'joint-angle-increase';'joint-angle-decrease';<br>Aligning the Hand(for xArm5 only)：<br>'set-end-level' ;</p> |
+| isMoveTool        | bool   | Yes            | whether use Tool Coordinate or not(Base Coordinate by default)                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| isSetInitialPoint | bool   | No             | (Not Used)                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Return Parameter  | Type   | Must be filled | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Return Parameter  | Type   | Must be filled | <p>0: success<br>Other: Failed. Refer to <a href="https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code">xArm_Python_SDK/xarm_API_Code.md</a></p>                                                                                                                                                                                                                                                                                            |
 
 ### Background
-~~~
+
+```
 if direction == 'position-x-increase' or direction == 'position-x-decrease':
     self._xarm_sync_tcp(0)
     x = GLOBAL.XArm.xarm_position_step if direction == 'position-x-increase' else -GLOBAL.XArm.xarm_position_step
@@ -35,10 +37,11 @@ if direction == 'position-x-increase' or direction == 'position-x-decrease':
         code = GLOBAL.XArm.xarm.set_tool_position(x=x, speed=tcp_speed)
     else:
         code = GLOBAL.XArm.xarm.set_position(x=x, relative=True, speed=tcp_speed)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 moveStep(direction, isLoop) {
       window.CommandsRobotSocket.moveStep({ 'direction': direction, 'isLoop': isLoop, 'isMoveTool': this.isToolCoord });
 },
@@ -55,64 +58,67 @@ moveStep = (data, callback) => {
     }
   });
 }
-~~~
+```
 
-## 2.xarm_move_step_over
-Description:  <br> 
+## 2.xarm\_move\_step\_over
+
+Description:\
 The xArm will be stopped immediately once the button is released.
 
-~~~
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| */*                    |        	|               	 |                                                             | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| status code           | int    	|  Yes           	 | 0 by default | 
+| Request Parameter | Type | Must be filled | Description  |
+| ----------------- | ---- | -------------- | ------------ |
+| _/_               |      |                |              |
+| Return Parameter  | Type | Must be filled | Description  |
+| status code       | int  | Yes            | 0 by default |
 
+## 3.xarm\_move\_joint
 
-## 3.xarm_move_joint
-Description:  <br> 
-Move with Joint Motion<br> 
-1）Back to initial position  2）Joint motion in 'Live Control' interface
+Description:\
+Move with Joint Motion\
+1）Back to initial position 2）Joint motion in 'Live Control' interface
 
-~~~
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| I                    |     String   	|       Yes        	 |                 Joint angle of Joint1      | 
-| J                    |     String   	|       Yes        	 |                 Joint angle of Joint2      | 
-| K                    |     String   	|       Yes        	 |                 Joint angle of Joint3      | 
-| M                    |     String   	|       Yes        	 |                 Joint angle of Joint4     | 
-| N                    |     String   	|       Yes        	 |                 Joint angle of Joint5      | 
-| O                    |     String   	|       Yes        	 |                 Joint angle of Joint6      | 
-| R                    |     String   	|       Yes        	 |                 Joint angle of Joint7     | 
-| wait                    |     String   	|       No        	 |                 wait or not    | 
-| isControl                   |     bool   	|       Yes        	 |                 whether start the program by Blockly or not     | 
-| isClickMove                    |     bool   	|       Yes        	 |                 whether click 'Move' in the Blockly or not    | 
-| Module                    |     String   	|       No        	 |                 whether the wait=True in the Blockly or not     | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| */*          |     	|             	 |  | 
+| Request Parameter | Type   | Must be filled | Description                                 |
+| ----------------- | ------ | -------------- | ------------------------------------------- |
+| I                 | String | Yes            | Joint angle of Joint1                       |
+| J                 | String | Yes            | Joint angle of Joint2                       |
+| K                 | String | Yes            | Joint angle of Joint3                       |
+| M                 | String | Yes            | Joint angle of Joint4                       |
+| N                 | String | Yes            | Joint angle of Joint5                       |
+| O                 | String | Yes            | Joint angle of Joint6                       |
+| R                 | String | Yes            | Joint angle of Joint7                       |
+| wait              | String | No             | wait or not                                 |
+| isControl         | bool   | Yes            | whether start the program by Blockly or not |
+| isClickMove       | bool   | Yes            | whether click 'Move' in the Blockly or not  |
+| Module            | String | No             | whether the wait=True in the Blockly or not |
+| Return Parameter  | Type   | Must be filled | Description                                 |
+| _/_               |        |                |                                             |
 
 ### Background
-~~~
+
+```
 GLOBAL.XArm.xarm_printed = True
 ret = yield self._wait_until_cmdnum_lt_max()
 if ret is not None:
     return response(client, id, ret)
 self.last_move_client = client
 code = GLOBAL.XArm.xarm.set_servo_angle(angle=angles, speed=mvvelo, mvacc=mvacc, mvtime=mvtime,is_radian=False, wait=False, radius=radius)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.moveJoint = (positions, index, isWait, callback, isControl, modName, isClickMove) => {
   if (modName === 'blockly' && isControl === false && !window.Blockly.Running) {
     return;
@@ -146,32 +152,32 @@ self.moveJoint = (positions, index, isWait, callback, isControl, modName, isClic
     }
   });
 };
-~~~
+```
 
+## 4.switch\_mode\_Lite6
 
-## 4.switch_mode_Lite6
-Description:  <br> 
-Change the mode of Lite6.
-Button: [Live Control] - Manual mode
+Description:\
+Change the mode of Lite6. Button: \[Live Control] - Manual mode
 
-~~~
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| mode                    |     int   	|       Yes        	 |               0:position mode; <br>2:joint teaching mode     | 
-| version                    |     String   	|       Yes        	 |                 Joint angle of Joint2      | 
-| status                    |     int   	|       Yes        	 |              0:close joint teaching mode; <br>1:open joint teaching mode;    | 
-| Reported                    |       	|             	 |                      | 
-| Lite6_record_mode                    |     int   	|       Yes        	 |             return 1 if the teaching mode is enabled;<br>return 0 if the teaching mode is closed.     | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| */*          |     	|             	 |  | 
+| Request Parameter   | Type   | Must be filled | Description                                                                                  |
+| ------------------- | ------ | -------------- | -------------------------------------------------------------------------------------------- |
+| mode                | int    | Yes            | <p>0:position mode;<br>2:joint teaching mode</p>                                             |
+| version             | String | Yes            | Joint angle of Joint2                                                                        |
+| status              | int    | Yes            | <p>0:close joint teaching mode;<br>1:open joint teaching mode;</p>                           |
+| Reported            |        |                |                                                                                              |
+| Lite6\_record\_mode | int    | Yes            | <p>return 1 if the teaching mode is enabled;<br>return 0 if the teaching mode is closed.</p> |
+| Return Parameter    | Type   | Must be filled | Description                                                                                  |
+| _/_                 |        |                |                                                                                              |
 
 ### Background
-~~~
+
+```
 if current_tgpio == '' and value == 1:
     xarm.set_mode(mode, 1)
     if xarm.error_code == 0:
@@ -183,10 +189,11 @@ elif current_tgpio != value:
     xarm.set_mode(*mode_param)
     if xarm.error_code == 0:
         xarm.set_state(0)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.switch_mode_lite6 = (mode, callback) => {
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
   Object.assign(params.data, {
@@ -199,26 +206,28 @@ self.switch_mode_lite6 = (mode, callback) => {
     }
   });
 };
-~~~
+```
 
-## 5.xarm_set_blockly_init
-Description:  <br> 
+## 5.xarm\_set\_blockly\_init
+
+Description:\
 Initialize the parameter of Lite6 before runing Blockly project.
 
-~~~
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| version                    |     String   	|       Yes        	 |         Lite by default | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| status code         |    int 	|       Yes      	 |   0 by default|
+| Request Parameter | Type   | Must be filled | Description     |
+| ----------------- | ------ | -------------- | --------------- |
+| version           | String | Yes            | Lite by default |
+| Return Parameter  | Type   | Must be filled | Description     |
+| status code       | int    | Yes            | 0 by default    |
 
 ### Background
-~~~
+
+```
 mode = GLOBAL.XArm.xarm.mode
 if mode == 2:
     return response(client, cmd_id, 105)
@@ -228,10 +237,11 @@ self._xarm_set_params(**{
     'Q': GLOBAL.XArm.xarm_tcp_acc,
     'Q2': GLOBAL.XArm.xarm_joint_acc,
 })
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.setBlocklyInit = (callback) => {
   window.GlobalUtil.model.robot.event.GPIOEvent.reset(true);
   window.GlobalUtil.model.robot.state.local.acceleration = window.GlobalUtil.model.robot.state.remote.defaultTcpAcc;
@@ -247,29 +257,31 @@ self.setBlocklyInit = (callback) => {
     }
   });
 }
-~~~
+```
 
-## 6.run_blockly
-Description:  <br> 
+## 6.run\_blockly
+
+Description:\
 Run the Blockly project.
 
-~~~
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| userId                    |     String   	|       No        	 |         test by default | 
-| version                    |     String   	|       No        	 |         Lite6 by default | 
-| category                    |     String   	|       No        	 |         myapp by default | 
-| appName                    |     String   	|       Yes       	 |         The name of the Blockly project | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| status code         |    int 	|             	 | 0:success;<br> 1:Initialization exception;<br>  -12: failed;<br>  -11: covert failed;<br>  -3: parameter error; |
+| Request Parameter | Type   | Must be filled | Description                                                                                                     |
+| ----------------- | ------ | -------------- | --------------------------------------------------------------------------------------------------------------- |
+| userId            | String | No             | test by default                                                                                                 |
+| version           | String | No             | Lite6 by default                                                                                                |
+| category          | String | No             | myapp by default                                                                                                |
+| appName           | String | Yes            | The name of the Blockly project                                                                                 |
+| Return Parameter  | Type   | Must be filled | Description                                                                                                     |
+| status code       | int    |                | <p>0:success;<br>1:Initialization exception;<br>-12: failed;<br>-11: covert failed;<br>-3: parameter error;</p> |
 
 ### Background
-~~~
+
+```
 user_id = data.get('userId', 'test')
 xarm_version = data.get('version', GLOBAL.XArm.xarm_type)
 category = data.get('category', 'myapp')
@@ -295,10 +307,11 @@ if client:
     response(client, cmd_id, code)
 else:
     return code
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.runBlockly = (name, callback) => {
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
   Object.assign(params.data, {
@@ -311,26 +324,28 @@ self.runBlockly = (name, callback) => {
     }
   })
 };
-~~~
+```
 
-## 7.xarm_urgent_stop
-Description:  <br> 
+## 7.xarm\_urgent\_stop
+
+Description:\
 Emergency Stop
 
-~~~
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| /                   |      	|               	 |        | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| status code         |    int 	|         Yes    	 | 0 by default |
+| Request Parameter | Type | Must be filled | Description  |
+| ----------------- | ---- | -------------- | ------------ |
+| /                 |      |                |              |
+| Return Parameter  | Type | Must be filled | Description  |
+| status code       | int  | Yes            | 0 by default |
 
 ### Background
-~~~
+
+```
 GLOBAL.XArm.xarm_paused = False
 GLOBAL.XArm.xarm_printed = False
 GLOBAL.XArm.xarm_print_client = None
@@ -359,10 +374,11 @@ if GLOBAL.Core.jedi_ws and GLOBAL.Core.jedi_ws.connected:
         'cmd': 'stop_python_script',
         'data': {}
     })
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.urgentStop = (data, callback) => {
   self.model.robot.state.status.error = data;
   self.model.commonStatusMgr.blocklyCanUpdate = false;
@@ -397,37 +413,39 @@ self.urgentStop = (data, callback) => {
     }
   });
 };
-~~~
+```
 
+## 8.xarm\_set\_simulation\_robot
 
-## 8.xarm_set_simulation_robot
-Description:  <br> 
+Description:\
 Enable/Disable simulated robot
 
-~~~
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| on_off                  |  bool    	|     yes          	 |   True: enable; <br> False: disable     | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| status code         |    int 	|         Yes    	 | 0: success <br>Other: Failed. Refer to [xArm_Python_SDK/xarm_API_Code.md](https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code)     |
+| Request Parameter | Type | Must be filled | Description                                                                                                                                                                                 |
+| ----------------- | ---- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| on\_off           | bool | yes            | <p>True: enable;<br>False: disable</p>                                                                                                                                                      |
+| Return Parameter  | Type | Must be filled | Description                                                                                                                                                                                 |
+| status code       | int  | Yes            | <p>0: success<br>Other: Failed. Refer to <a href="https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code">xArm_Python_SDK/xarm_API_Code.md</a></p> |
 
 ### Background
-~~~
+
+```
 on_off = data.get('on_off')
 code = GLOBAL.XArm.xarm.set_simulation_robot(on_off)
 GLOBAL.XArm.xarm.get_position()
 GLOBAL.XArm.xarm.get_servo_angle()
 yield self._xarm_sync()
 response(client, cmd_id, code)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.set_simulation_robot = (on_off, callback) => {
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
   Object.assign(params.data, {
@@ -439,27 +457,29 @@ self.set_simulation_robot = (on_off, callback) => {
     }
   });
 }
-~~~
+```
 
-## 9.xarm_set_speed
-Description:  <br> 
-Set the speed percent of Arm<br> 
-Button:[Live Control]- Speed
+## 9.xarm\_set\_speed
 
-~~~
+Description:\
+Set the speed percent of Arm\
+Button:\[Live Control]- Speed
+
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| percent                  |  int    	|     yes          	 |   set the speed percent of the Arm 0.01-1(1-100%)    | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| status code         |    int 	|         Yes    	 | 0 by default   |
+| Request Parameter | Type | Must be filled | Description                                     |
+| ----------------- | ---- | -------------- | ----------------------------------------------- |
+| percent           | int  | yes            | set the speed percent of the Arm 0.01-1(1-100%) |
+| Return Parameter  | Type | Must be filled | Description                                     |
+| status code       | int  | Yes            | 0 by default                                    |
 
 ### Background
-~~~
+
+```
 percent = float(data.get('percent'))  # percent
 if percent > 1:
     percent = 1
@@ -476,10 +496,11 @@ self._xarm_set_params(**{
 }, is_radian=False)
 GLOBAL.XArm.xarm_params = self._xarm_get_params(is_radian=False)
 return response(client, cmd_id, 0, 'ok')
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.setSpeedPercent = (percent, callback) => {
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
   Object.assign(params.data, {
@@ -491,27 +512,29 @@ self.setSpeedPercent = (percent, callback) => {
     }
   });
 }
-~~~
+```
 
-## 10.xarm_set_lite6_gripper
-Description:  <br> 
-Open/close/stop the lite6 gripper<br> 
-Button:[Live Control] - [open/close/stop]
+## 10.xarm\_set\_lite6\_gripper
 
-~~~
+Description:\
+Open/close/stop the lite6 gripper\
+Button:\[Live Control] - \[open/close/stop]
+
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| op                  |  String    	|     yes          	 |  open: Open the gripper Lite;<br> close: Close the gripper Lite;<br>stop: Stop the gripper Lite    | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| status code         |    int 	|         Yes    	 | 0: success <br>Other: Failed. Refer to [xArm_Python_SDK/xarm_API_Code.md](https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code)     |
+| Request Parameter | Type   | Must be filled | Description                                                                                                                                                                                 |
+| ----------------- | ------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| op                | String | yes            | <p>open: Open the gripper Lite;<br>close: Close the gripper Lite;<br>stop: Stop the gripper Lite</p>                                                                                        |
+| Return Parameter  | Type   | Must be filled | Description                                                                                                                                                                                 |
+| status code       | int    | Yes            | <p>0: success<br>Other: Failed. Refer to <a href="https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code">xArm_Python_SDK/xarm_API_Code.md</a></p> |
 
 ### Background
-~~~
+
+```
 op = data.get('op')
 if op == 'open':
     code = GLOBAL.XArm.xarm.open_lite6_gripper()
@@ -522,10 +545,11 @@ elif op == 'close':
 elif op == 'stop':
     code = GLOBAL.XArm.xarm.stop_lite6_gripper()
     response(client, cmd_id, code)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.setLite6Gripper = (op, callback) => {
   // control lite6 gripper
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
@@ -538,38 +562,40 @@ self.setLite6Gripper = (op, callback) => {
     }
   });
 }
-~~~
+```
 
-## 11.xarm_move_arc_line
-Description:  <br> 
-Linear Motion <br> 
-Button:[Blockly]- [linear motion]- [move]
+## 11.xarm\_move\_arc\_line
 
-~~~
+Description:\
+Linear Motion\
+Button:\[Blockly]- \[linear motion]- \[move]
+
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| X                  |  String    	|     Yes          	 | X  | 
-| Y                 |  String    	|     Yes          	 | Y  | 
-| Z                  |  String    	|     Yes          	 | Z  | 
-| A                  |  String    	|     Yes          	 | Roll  | 
-| M                  |  String    	|     Yes          	 | Pitch  | 
-| B                  |  String    	|     Yes          	 | Yaw  | 
-| R                 |  String    	|     No          	 | Radius  | 
-| relative                 |  String    	|     Yes          	 | whether relative motion or not. <br>True: Yes <br>Flase: No  | 
-| wait                 |  String    	|     No          	 | wait or not  | 
-| isControl                 |  bool    	|     Yes          	 | whether start the program by Blockly or not  | 
-| isClickMove                 |  bool    	|     Yes          	 | whether click 'Move' in the Blockly or not  | 
-| module                 |  String    	|     No          	 | whether the blockly project is running or not. | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| status code         |    int 	|         Yes    	 | 0: success <br>Other: Failed. Refer to [xArm_Python_SDK/xarm_API_Code.md](https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code)     |
+| Request Parameter | Type   | Must be filled | Description                                                                                                                                                                                 |
+| ----------------- | ------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| X                 | String | Yes            | X                                                                                                                                                                                           |
+| Y                 | String | Yes            | Y                                                                                                                                                                                           |
+| Z                 | String | Yes            | Z                                                                                                                                                                                           |
+| A                 | String | Yes            | Roll                                                                                                                                                                                        |
+| M                 | String | Yes            | Pitch                                                                                                                                                                                       |
+| B                 | String | Yes            | Yaw                                                                                                                                                                                         |
+| R                 | String | No             | Radius                                                                                                                                                                                      |
+| relative          | String | Yes            | <p>whether relative motion or not.<br>True: Yes<br>Flase: No</p>                                                                                                                            |
+| wait              | String | No             | wait or not                                                                                                                                                                                 |
+| isControl         | bool   | Yes            | whether start the program by Blockly or not                                                                                                                                                 |
+| isClickMove       | bool   | Yes            | whether click 'Move' in the Blockly or not                                                                                                                                                  |
+| module            | String | No             | whether the blockly project is running or not.                                                                                                                                              |
+| Return Parameter  | Type   | Must be filled | Description                                                                                                                                                                                 |
+| status code       | int    | Yes            | <p>0: success<br>Other: Failed. Refer to <a href="https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code">xArm_Python_SDK/xarm_API_Code.md</a></p> |
 
 ### Background
-~~~
+
+```
 code, limit = 0, False
 if code == 0 and limit is False:
     if is_control:
@@ -589,10 +615,11 @@ if code == 0 and limit is False:
             return response(client, id, ret)
 self.last_move_client = client
 code = GLOBAL.XArm.xarm.set_position(*pose, radius=radius, speed=mvvelo, mvacc=mvacc, mvtime=mvtime,is_radian=False, relative=relative)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.moveArcLine = (data, isWait, callback, isControl, modName, isClickMove) => {
   if (modName === 'blockly' && isControl === false && !window.Blockly.Running) {
     return;
@@ -624,30 +651,32 @@ self.moveArcLine = (data, isWait, callback, isControl, modName, isClickMove) => 
     }
   });
 };
-~~~
+```
 
-## 12.xarm_move_circle
-Description:  <br> 
-Move circle <br> 
-Button:[Blockly] - [move circle] - [move]
+## 12.xarm\_move\_circle
 
-~~~
+Description:\
+Move circle\
+Button:\[Blockly] - \[move circle] - \[move]
+
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| module                  |  String    	|     No          	 | whether the blockly project is running or not.   | 
-| pose1                 |  String    	|     Yes          	 | The first position: [x(mm), y(mm), z(mm), roll(rad or °), pitch(rad or °), yaw(rad or °)]  | 
-| pose2                 |  String    	|     Yes          	 | The second position: [x(mm), y(mm), z(mm), roll(rad or °), pitch(rad or °), yaw(rad or °)]  | 
-| percent                 |  Float    	|     Yes          	 | 1-100%;  <br>percent = center angle/360 | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| status code         |    int 	|         Yes    	 | 0: success <br>Other: Failed. Refer to [xArm_Python_SDK/xarm_API_Code.md](https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code)     |
+| Request Parameter | Type   | Must be filled | Description                                                                                                                                                                                 |
+| ----------------- | ------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| module            | String | No             | whether the blockly project is running or not.                                                                                                                                              |
+| pose1             | String | Yes            | The first position: \[x(mm), y(mm), z(mm), roll(rad or °), pitch(rad or °), yaw(rad or °)]                                                                                                  |
+| pose2             | String | Yes            | The second position: \[x(mm), y(mm), z(mm), roll(rad or °), pitch(rad or °), yaw(rad or °)]                                                                                                 |
+| percent           | Float  | Yes            | <p>1-100%;<br>percent = center angle/360</p>                                                                                                                                                |
+| Return Parameter  | Type   | Must be filled | Description                                                                                                                                                                                 |
+| status code       | int    | Yes            | <p>0: success<br>Other: Failed. Refer to <a href="https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code">xArm_Python_SDK/xarm_API_Code.md</a></p> |
 
 ### Background
-~~~
+
+```
 module = data.get('module', '')
 mode = GLOBAL.XArm.xarm.mode
 if mode == 2 and module == 'blockly':
@@ -689,10 +718,11 @@ else:
         self._xarm_sync()
     GLOBAL.XArm.xarm_printed = False
 response(client, cmd_id, code)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.moveCircle = (pose1, pose2, percent, wait, callback, isControl, module) => {
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
   Object.assign(params.data, {
@@ -709,29 +739,31 @@ self.moveCircle = (pose1, pose2, percent, wait, callback, isControl, module) => 
     }
   });
 };
-~~~
+```
 
-## 13.xarm_set_cgpio_digital
-Description:  <br> 
-Set Controller Digital Output to low/high <br> 
-Button: [Blockly]- [Controller IO]-[Set CO]
+## 13.xarm\_set\_cgpio\_digital
 
-~~~
+Description:\
+Set Controller Digital Output to low/high\
+Button: \[Blockly]- \[Controller IO]-\[Set CO]
+
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| ionum                  |  int    	|     Yes          	 | CO0-CO7  | 
-| value                 |  int    	|     Yes          	 | 0: low level; <br> 1: high level | 
-| delay                 |  int    	|     No         	 | delay time; <br>0: set it at once  | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| status code         |    int 	|         Yes    	 | 0: success <br>Other: Failed. Refer to [xArm_Python_SDK/xarm_API_Code.md](https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code)     |
+| Request Parameter | Type | Must be filled | Description                                                                                                                                                                                 |
+| ----------------- | ---- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ionum             | int  | Yes            | CO0-CO7                                                                                                                                                                                     |
+| value             | int  | Yes            | <p>0: low level;<br>1: high level</p>                                                                                                                                                       |
+| delay             | int  | No             | <p>delay time;<br>0: set it at once</p>                                                                                                                                                     |
+| Return Parameter  | Type | Must be filled | Description                                                                                                                                                                                 |
+| status code       | int  | Yes            | <p>0: success<br>Other: Failed. Refer to <a href="https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code">xArm_Python_SDK/xarm_API_Code.md</a></p> |
 
 ### Background
-~~~
+
+```
 GLOBAL.XArm.xarm_printed = True
 ret = yield self._wait_until_cmdnum_lt_max()
 if ret is not None:
@@ -742,10 +774,11 @@ xyz = data.get('xyz')
 tol_r = data.get('tol_r')
 code = GLOBAL.XArm.xarm.set_cgpio_digital_with_xyz(ionum, value, xyz, tol_r)
 response(client, cmd_id, code)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.set_cgpio_digital = async (ionum, value, callback, delay) => {
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
   Object.assign(params.data, {
@@ -762,28 +795,30 @@ self.set_cgpio_digital = async (ionum, value, callback, delay) => {
   });
   await self.socketCom.wait(cmd_id);
 };
-~~~
+```
 
-## 14.xarm_set_cgpio_analog
-Description:  <br> 
-Set Controller Analog Value <br> 
-Button: [Blockly] - [Controller IO] - [AO set]
+## 14.xarm\_set\_cgpio\_analog
 
-~~~
+Description:\
+Set Controller Analog Value\
+Button: \[Blockly] - \[Controller IO] - \[AO set]
+
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| ionum                  |  int    	|     Yes          	 | AO0-AO1  | 
-| value                 |  Float    	|     Yes          	 | value | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| status code         |    int 	|         Yes    	 | 0: success <br>Other: Failed. Refer to [xArm_Python_SDK/xarm_API_Code.md](https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code)     |
+| Request Parameter | Type  | Must be filled | Description                                                                                                                                                                                 |
+| ----------------- | ----- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ionum             | int   | Yes            | AO0-AO1                                                                                                                                                                                     |
+| value             | Float | Yes            | value                                                                                                                                                                                       |
+| Return Parameter  | Type  | Must be filled | Description                                                                                                                                                                                 |
+| status code       | int   | Yes            | <p>0: success<br>Other: Failed. Refer to <a href="https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code">xArm_Python_SDK/xarm_API_Code.md</a></p> |
 
 ### Background
-~~~
+
+```
 GLOBAL.XArm.xarm_printed = True
 ret = yield self._wait_until_cmdnum_lt_max()
 if ret is not None:
@@ -794,10 +829,11 @@ xyz = data.get('xyz')
 tol_r = data.get('tol_r')
 code = GLOBAL.XArm.xarm.set_cgpio_analog_with_xyz(ionum, value, xyz, tol_r)
 response(client, cmd_id, code)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.set_cgpio_analog = async (ionum, value, callback) => {
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
   Object.assign(params.data, {
@@ -813,29 +849,31 @@ self.set_cgpio_analog = async (ionum, value, callback) => {
   });
   await self.socketCom.wait(cmd_id);
 };
-~~~
+```
 
-## 15.xarm_set_gpio_digital
-Description:  <br> 
-Set tool digital output.<br>
-Button: [Blockly] - [Tool IO] - [set]
+## 15.xarm\_set\_gpio\_digital
 
-~~~
+Description:\
+Set tool digital output.\
+Button: \[Blockly] - \[Tool IO] - \[set]
+
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| ionum                  |  int    	|     Yes          	 | TO0-TO1  | 
-| value                 |  int    	|     Yes          	 | 0: low level; <br>1: high level | 
-| delay                 |  int    	|     No          	 | delay time;<br>0: set it at once | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| status code         |    int 	|         Yes    	 | 0: success <br>Other: Failed. Refer to [xArm_Python_SDK/xarm_API_Code.md](https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code)     |
+| Request Parameter | Type | Must be filled | Description                                                                                                                                                                                 |
+| ----------------- | ---- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ionum             | int  | Yes            | TO0-TO1                                                                                                                                                                                     |
+| value             | int  | Yes            | <p>0: low level;<br>1: high level</p>                                                                                                                                                       |
+| delay             | int  | No             | <p>delay time;<br>0: set it at once</p>                                                                                                                                                     |
+| Return Parameter  | Type | Must be filled | Description                                                                                                                                                                                 |
+| status code       | int  | Yes            | <p>0: success<br>Other: Failed. Refer to <a href="https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code">xArm_Python_SDK/xarm_API_Code.md</a></p> |
 
 ### Background
-~~~
+
+```
 yield self._wait_until_not_pause()
 GLOBAL.XArm.xarm_printed = True
 ret = yield self._wait_until_cmdnum_lt_max()
@@ -846,10 +884,11 @@ value = data.get('value')
 delay = data.get('delay', 0)
 code = GLOBAL.XArm.xarm.set_tgpio_digital(ionum, value, delay_sec=delay)
 response(client, cmd_id, code)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.set_gpio_digital = async (ionum, value, callback, delay) => {
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
   Object.assign(params.data, {
@@ -865,29 +904,31 @@ self.set_gpio_digital = async (ionum, value, callback, delay) => {
   });
   await self.socketCom.wait(cmd_id);
 };
-~~~
+```
 
-## 16.xarm_set_suction_cup
-Description:  <br> 
-Open/close the vacuum gripper <br> 
-Button: [Blockly] - [End effector] - [set]
+## 16.xarm\_set\_suction\_cup
 
-~~~
+Description:\
+Open/close the vacuum gripper\
+Button: \[Blockly] - \[End effector] - \[set]
+
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------           | 
-| on                  |  bool    	|     Yes          	 | Open: True;  <br> Close: Flase | 
-| wait                 |  bool    	|     Yes          	 | wait or not | 
-| delay                 |  int    	|     No          	 | delay time;<br>0: set it at once | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                                 | 
-| status code         |    int 	|         Yes    	 | 0: success <br>Other: Failed. Refer to [xArm_Python_SDK/xarm_API_Code.md](https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code)     |
+| Request Parameter | Type | Must be filled | Description                                                                                                                                                                                 |
+| ----------------- | ---- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| on                | bool | Yes            | <p>Open: True;<br>Close: Flase</p>                                                                                                                                                          |
+| wait              | bool | Yes            | wait or not                                                                                                                                                                                 |
+| delay             | int  | No             | <p>delay time;<br>0: set it at once</p>                                                                                                                                                     |
+| Return Parameter  | Type | Must be filled | Description                                                                                                                                                                                 |
+| status code       | int  | Yes            | <p>0: success<br>Other: Failed. Refer to <a href="https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api_code.md#api-code">xArm_Python_SDK/xarm_API_Code.md</a></p> |
 
 ### Background
-~~~
+
+```
 yield self._wait_until_not_pause()
 if self.is_simulation_robot:
     return response(client, cmd_id, 0)
@@ -921,10 +962,11 @@ if code == 0 and wait:
             break
         yield gen.sleep(0.2)
 response(client, cmd_id, code)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.setSuctionCup = (on, wait, callback, delay) => {
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
   Object.assign(params.data, {
@@ -939,29 +981,31 @@ self.setSuctionCup = (on, wait, callback, delay) => {
     }
   });
 };
-~~~
+```
 
-## 17.app_create_file
-Description:  <br> 
+## 17.app\_create\_file
+
+Description:\
 Creat Blockly file
 
-~~~
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------          | 
-| userId                  |  String    	|     No          	 | test by default | 
-| version                 |  String    	|     No          	 | Lite6 by default | 
-| folderName                 |  String    	|     No          	 | Name of Blockly | 
-| xmlData                 |  String    	|     Yes          	 | xml data |
-| Return Parameter      | Type	  |  Must be filled	 | Description                                        | 
-| status code         |    int 	|         Yes    	 | 0: success <br> -32:Written failed.   |
+| Request Parameter | Type   | Must be filled | Description                              |
+| ----------------- | ------ | -------------- | ---------------------------------------- |
+| userId            | String | No             | test by default                          |
+| version           | String | No             | Lite6 by default                         |
+| folderName        | String | No             | Name of Blockly                          |
+| xmlData           | String | Yes            | xml data                                 |
+| Return Parameter  | Type   | Must be filled | Description                              |
+| status code       | int    | Yes            | <p>0: success<br>-32:Written failed.</p> |
 
 ### Background
-~~~
+
+```
 user_id = data.get('userId', 'test')
 xarm_version = data.get('version', GLOBAL.XArm.xarm_type)
 root_path = os.path.join(projects_path, user_id, xarm_version, 'app', 'myapp')
@@ -971,10 +1015,11 @@ folder_path = os.path.join(root_path, file_name)
 code, _ = create_folder(root_path, folder_path)
 code, _ = create_file(root_path, file_name, xml_data, xarm_version)
 response(client, cmd_id, code, _)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.appCreateFile = (obj, callback) => {
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
   Object.assign(params.data, obj);
@@ -984,38 +1029,42 @@ self.appCreateFile = (obj, callback) => {
     }
   });
 };
-~~~
+```
 
-## 18.app_save_file
-Description:  <br> 
-Save/delete the Blockly project<br> 
+## 18.app\_save\_file
 
-~~~
+Description:\
+Save/delete the Blockly project\
+
+
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------          | 
-| userId                  |  String    	|     No          	 | test by default | 
-| version                 |  String    	|     No          	 | Lite6 by default | 
-| config                 |  Json    	|     No          	 |Directory information. for example：{'selectFilePath':'/4545','expendKeys'['/[D]5125'],'lastAccessTime':1677486596.026057,<br>'deviceType':'xarm6','name':'myapp'}  | 
-| children                 |      	|               	 | All files: <br> [{'type':'dir','name':'12312',<br>'children': [{'type':'file','name':'342445','children': [],'uuid': '/342445'}],'uuid': '/[D]12312'}] <br>(name: file name，children: project，type: file type) |
-| Return Parameter      | Type	  |  Must be filled	 | Description                                        | 
-| status code         |    int 	|         Yes    	 | 0: success <br> -32:Written failed.   |
+| Request Parameter | Type   | Must be filled | Description                                                                                                                                                                                                        |
+| ----------------- | ------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| userId            | String | No             | test by default                                                                                                                                                                                                    |
+| version           | String | No             | Lite6 by default                                                                                                                                                                                                   |
+| config            | Json   | No             | <p>Directory information. for example：{'selectFilePath':'/4545','expendKeys'['/[D]5125'],'lastAccessTime':1677486596.026057,<br>'deviceType':'xarm6','name':'myapp'}</p>                                           |
+| children          |        |                | <p>All files:<br>[{'type':'dir','name':'12312',<br>'children': [{'type':'file','name':'342445','children': [],'uuid': '/342445'}],'uuid': '/[D]12312'}]<br>(name: file name，children: project，type: file type)</p> |
+| Return Parameter  | Type   | Must be filled | Description                                                                                                                                                                                                        |
+| status code       | int    | Yes            | <p>0: success<br>-32:Written failed.</p>                                                                                                                                                                           |
 
 ### Background
-~~~
+
+```
 user_id = data.get('userId', 'test')
 xarm_version = data.get('version', GLOBAL.XArm.xarm_type)
 root_path = os.path.join(projects_path, user_id, xarm_version, 'app', 'myapp')
 code, _ = save_app_config(root_path, data, xarm_version)
 response(client, cmd_id, code, _)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.saveInfo = (selectCurPath, callback) => {
   if (selectCurPath !== undefined) {
     self.curProjTree.config.selectFilePath = selectCurPath;
@@ -1040,28 +1089,31 @@ self.saveInfo = (selectCurPath, callback) => {
     };
   });
 };
-~~~
+```
 
-## 19.get_app_info
-Description:  <br> 
-Get Blockly project directory information<br> 
+## 19.get\_app\_info
 
-~~~
+Description:\
+Get Blockly project directory information\
+
+
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------          | 
-| userId                  |  String    	|     No          	 | test by default | 
-| version                 |  String    	|     No          	 | Lite6 by default | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                        | 
-| status code         |    int 	|         Yes    	 | 0: success; <br>-31: read failed; <br>-12: not found; <br>-32: written failed; <br>-22: read file directory error  |
-| data         |    Json 	|         Yes    	 | directory infomation |
+| Request Parameter | Type   | Must be filled | Description                                                                                                          |
+| ----------------- | ------ | -------------- | -------------------------------------------------------------------------------------------------------------------- |
+| userId            | String | No             | test by default                                                                                                      |
+| version           | String | No             | Lite6 by default                                                                                                     |
+| Return Parameter  | Type   | Must be filled | Description                                                                                                          |
+| status code       | int    | Yes            | <p>0: success;<br>-31: read failed;<br>-12: not found;<br>-32: written failed;<br>-22: read file directory error</p> |
+| data              | Json   | Yes            | directory infomation                                                                                                 |
 
 ### Background
-~~~
+
+```
 user_id = data.get('userId', 'test')
 xarm_version = data.get('version', GLOBAL.XArm.xarm_type)
 root_path = os.path.join(projects_path, user_id, xarm_version, 'app', 'myapp')
@@ -1077,10 +1129,11 @@ if not os.path.exists(os.path.join(root_path, select_file_path.lstrip('/'))):
             result_dir['config']['selectFilePath'] = item['uuid']
             break
 response(client, cmd_id, code, data=result_dir)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.getAppInfo = (callback) => {
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
   // Object.assign(params.data, {
@@ -1092,29 +1145,32 @@ self.getAppInfo = (callback) => {
     }
   });
 };
-~~~
+```
 
-## 20.get_app_xml_data
-Description:  <br> 
-Get the xml Data of Blockly project<br> 
+## 20.get\_app\_xml\_data
 
-~~~
+Description:\
+Get the xml Data of Blockly project\
+
+
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------          | 
-| userId                  |  String    	|     No          	 | test by default | 
-| version                 |  String    	|     No          	 | Lite6 by default | 
-| appName                 |  String    	|     Yes          	 | Name of Blockly project | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                        | 
-| status code         |    int 	|         Yes    	 | 0: success;<br> -31: read failed;<br>-12: not found;<br>-22: read file directory error |
-| xmlData         |    Json 	|         Yes    	 | xml data |
+| Request Parameter | Type   | Must be filled | Description                                                                                  |
+| ----------------- | ------ | -------------- | -------------------------------------------------------------------------------------------- |
+| userId            | String | No             | test by default                                                                              |
+| version           | String | No             | Lite6 by default                                                                             |
+| appName           | String | Yes            | Name of Blockly project                                                                      |
+| Return Parameter  | Type   | Must be filled | Description                                                                                  |
+| status code       | int    | Yes            | <p>0: success;<br>-31: read failed;<br>-12: not found;<br>-22: read file directory error</p> |
+| xmlData           | Json   | Yes            | xml data                                                                                     |
 
 ### Background
-~~~
+
+```
 user_id = data.get('userId', 'test')
 xarm_version = data.get('version', GLOBAL.XArm.xarm_type)
 root_path = os.path.join(projects_path, user_id, xarm_version, 'app', 'myapp')
@@ -1154,10 +1210,11 @@ if os.path.exists(prj_path):
     except:
         pass
 return response(client, id, _, {'xmlData': xml_data})
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.getAppXmlData = data => new Promise((resolve, reject) => {
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
   Object.assign(params.data, {
@@ -1173,34 +1230,36 @@ self.getAppXmlData = data => new Promise((resolve, reject) => {
     }
   })
 })
-~~~
+```
 
-## 21.xarm_set_motion_config
-Description:  <br> 
-Save motion related parameters<br> 
-Button: [Settings] - [Motion]
+## 21.xarm\_set\_motion\_config
 
-~~~
+Description:\
+Save motion related parameters\
+Button: \[Settings] - \[Motion]
+
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------          | 
-| tcpAcc                  |  int    	|     No          	 | Line Motion Acceleration(1-50000) | 
-| jointAcc                  |  int    	|     No          	 | Joint Motion Acceleration(1-1146) | 
-| posStep                  |  Float    	|     No          	 | Line Motion Position Step(0.1-100) | 
-| attitudeStep                  |  Float    	|     No          	 | Line Motion Attitude Step(0.1-100) | 
-| jointStep                  |  Float    	|     No          	 | Joint Motioin Step(0.1-20) | 
-| collSens                  |  int    	|     No          	 | Collision Sensitivity(0-5) | 
-| teachSens                  |  int    	|     No          	 | Teach Sensitivity(1-5) | 
-| initPos                  |  Array    	|     No          	 | Initial（[0,0,0,0,0,0]） | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                        | 
-| status code         |    int 	|         Yes    	 | 0 by default|
+| Request Parameter | Type  | Must be filled | Description                        |
+| ----------------- | ----- | -------------- | ---------------------------------- |
+| tcpAcc            | int   | No             | Line Motion Acceleration(1-50000)  |
+| jointAcc          | int   | No             | Joint Motion Acceleration(1-1146)  |
+| posStep           | Float | No             | Line Motion Position Step(0.1-100) |
+| attitudeStep      | Float | No             | Line Motion Attitude Step(0.1-100) |
+| jointStep         | Float | No             | Joint Motioin Step(0.1-20)         |
+| collSens          | int   | No             | Collision Sensitivity(0-5)         |
+| teachSens         | int   | No             | Teach Sensitivity(1-5)             |
+| initPos           | Array | No             | Initial（\[0,0,0,0,0,0]）            |
+| Return Parameter  | Type  | Must be filled | Description                        |
+| status code       | int   | Yes            | 0 by default                       |
 
 ### Background
-~~~
+
+```
 tcp_acc = int(data.get('tcpAcc', 0))
 joint_acc = int(data.get('jointAcc', 0))
 if tcp_acc:
@@ -1244,10 +1303,11 @@ if init_pos:
     GLOBAL.XArm.xarm_initial_point = list(map(float, init_pos))
 GLOBAL.XArm.save()
 response(client, cmd_id, 0)
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.setMotionConfig = (config, callback) => {
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
   Object.assign(params.data, config);
@@ -1257,33 +1317,35 @@ self.setMotionConfig = (config, callback) => {
     }
   });
 };
-~~~
+```
+
+## 22.xarm\_set\_effector\_modbus\_rtu\_cmd
+
+Description:\
+Send modbus RTU command\
 
 
-## 22.xarm_set_effector_modbus_rtu_cmd
-Description:  <br> 
-Send modbus RTU command<br> 
-
-~~~
+```
 URL: /ws 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------          | 
-| isloop                  |  bool    	|     No          	 | whether to send modbus commands cyclically.<br> Yes: True<br> No: False, by default | 
-| mdb_info                  |  Array    	|     Yes          	 | command information. For example:<br>[{'checked': True, 'note': {'cn':'','en': ''},'delay':'','cmd':'00 01 00 02'}] <br>('checked'- whether check the format is correct or not；'note'-{'cn':'','en': ''}'delay'-delay time'cmd'-modbus command)| 
-| end_fmv                  |  String    	|     Yes          	 | The firmware version of end IO board, e.g.‘2.5.9’ | 
-| buadrate                  |  int    	|     Yes          	 | modbus baud rate(4800-2500000) | 
-| is_stop                  |  int    	|     No          	 | wheter to stop sending the command | 
-| host_id                  |  int    	|     Yes     	 | Host ID.<br>control box modbus: 11<br>robot arm modbus:9 | 
-| Return Parameter      | Type	  |  Must be filled	 | Description                                        | 
-| status code         |    int 	|         Yes    	 | 0 by default;<br>1:Failed|
-|data         |    Json 	|         No    	 | {'recv': recv,'send':cmd,'send_time':send_time,'recv_time':recv_time}|
+| Request Parameter | Type   | Must be filled | Description                                                                                                                                                                                                                                           |
+| ----------------- | ------ | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| isloop            | bool   | No             | <p>whether to send modbus commands cyclically.<br>Yes: True<br>No: False, by default</p>                                                                                                                                                              |
+| mdb\_info         | Array  | Yes            | <p>command information. For example:<br>[{'checked': True, 'note': {'cn':'','en': ''},'delay':'','cmd':'00 01 00 02'}]<br>('checked'- whether check the format is correct or not；'note'-{'cn':'','en': ''}'delay'-delay time'cmd'-modbus command)</p> |
+| end\_fmv          | String | Yes            | The firmware version of end IO board, e.g.‘2.5.9’                                                                                                                                                                                                     |
+| buadrate          | int    | Yes            | modbus baud rate(4800-2500000)                                                                                                                                                                                                                        |
+| is\_stop          | int    | No             | wheter to stop sending the command                                                                                                                                                                                                                    |
+| host\_id          | int    | Yes            | <p>Host ID.<br>control box modbus: 11<br>robot arm modbus:9</p>                                                                                                                                                                                       |
+| Return Parameter  | Type   | Must be filled | Description                                                                                                                                                                                                                                           |
+| status code       | int    | Yes            | <p>0 by default;<br>1:Failed</p>                                                                                                                                                                                                                      |
+| data              | Json   | No             | {'recv': recv,'send':cmd,'send\_time':send\_time,'recv\_time':recv\_time}                                                                                                                                                                             |
 
 ### Background
-~~~
+
+```
 if info_dic.get('checked', False):
     try:
         response(client, cmd_id, code=100)
@@ -1311,10 +1373,11 @@ if info_dic.get('checked', False):
     except Exception as e:
         logger.error(e)
         return response(client, cmd_id, 1, {'send': cmd, })
-~~~
+```
 
 ### Front end
-~~~
+
+```
 self.setEffectorModbusCmd = (data, callback, host_id) => {
   const params = window.GlobalConstant.INIT_CMD_PARAMS_COMMON_DATA();
   Object.assign(params.data, data, {
@@ -1326,32 +1389,31 @@ self.setEffectorModbusCmd = (data, callback, host_id) => {
     }
   });
 } 
-~~~
+```
 
-
-
-Upload or Download file (http://{ip}:{port}/project)
----
+## Upload or Download file (http://{ip}:{port}/project)
 
 ## 1.Download Blockly project
-Description:  <br> 
+
+Description:\
 Download Blockly project
 
-~~~
+```
 URL: /project/download 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------          | 
-| path                  |  String    	|     Yes     	 | Relative path|
-| data                  |  Json    	|     Yes     	 | Path information: <br>{"type":"file","name":"Lite6_Logic_test_1","children":[],"uuid":"/Lite6_Logic_test_1"}|
-| Return Parameter      | Type	  |  Must be filled	 | Description                                        | 
-|/       |     	|             	 | |
+| Request Parameter | Type   | Must be filled | Description                                                                                                        |
+| ----------------- | ------ | -------------- | ------------------------------------------------------------------------------------------------------------------ |
+| path              | String | Yes            | Relative path                                                                                                      |
+| data              | Json   | Yes            | <p>Path information:<br>{"type":"file","name":"Lite6_Logic_test_1","children":[],"uuid":"/Lite6_Logic_test_1"}</p> |
+| Return Parameter  | Type   | Must be filled | Description                                                                                                        |
+| /                 |        |                |                                                                                                                    |
 
 ### Background
-~~~
+
+```
 path = config_path
 if not os.path.isfile(path):
     return
@@ -1404,10 +1466,11 @@ for chunk in content:
         yield self.flush()
     except iostream.StreamClosedError:
         return
-~~~
+```
 
 ### Front end
-~~~
+
+```
  download(name) {
       const data = {};
       if (name === undefined) {
@@ -1444,29 +1507,31 @@ for chunk in content:
           this.$message.error(`${this.$t('downloadFailed')}: ${e}`);
         })
     }
-~~~
+```
 
 ## 2.Import Blockly project
-Description:  <br> 
+
+Description:\
 Import Blockly project
 
-~~~
+```
 URL: /project/download 
 Request Type：	Application/json 
 Return Type：	*/* 
-~~~
+```
 
-| Request Parameter     | Type	  |  Must be filled	 | Description                                                 | 
-| -------------------   | ------	|  --------------	 | -------------------------------------------------          | 
-| path                  |  String    	|     Yes     	 | Path to upload to the Blockly folder|
-| data                  |  Json    	|     Yes     	 | Blockly information：<br> {"type":"dir","name":"test_1","uuid":"/[D]test_1"}|
-| File                  |  Binary    	|     Yes     	 | Binary data of file |
-| Return Parameter      | Type	  |  Must be filled	 | Description                                        | 
-|result       |  String   	|      Yes       	 |OK: success; <br> Invalid Args：Invalid parameter |
-|success       |  int   	|      Yes       	 |status code.<br> >1: success<br>0: import error<br>-3: the file is empty<br>-1: the type is error|
+| Request Parameter | Type   | Must be filled | Description                                                                                             |
+| ----------------- | ------ | -------------- | ------------------------------------------------------------------------------------------------------- |
+| path              | String | Yes            | Path to upload to the Blockly folder                                                                    |
+| data              | Json   | Yes            | <p>Blockly information：<br>{"type":"dir","name":"test_1","uuid":"/[D]test_1"}</p>                       |
+| File              | Binary | Yes            | Binary data of file                                                                                     |
+| Return Parameter  | Type   | Must be filled | Description                                                                                             |
+| result            | String | Yes            | <p>OK: success;<br>Invalid Args：Invalid parameter</p>                                                   |
+| success           | int    | Yes            | <p>status code.<br>>1: success<br>0: import error<br>-3: the file is empty<br>-1: the type is error</p> |
 
 ### Background
-~~~
+
+```
 self.set_header("Access-Control-Allow-Origin", "*")
 self.set_header("Access-Control-Allow-Headers", "x-requested-with")
 self.set_header('Access-Control-Allow-Methods', 'POST')
@@ -1552,34 +1617,32 @@ if file_metas:
     self.write(json.dumps({'result': 'ok', 'success': success}))
 else:
     self.write(json.dumps({'result': 'Invalid Args', 'success': -2}))
-~~~
+```
 
 ### Front end
-~~~
+
+```
   <el-upload :disabled="isRunning" multiple class="app-uploader com-edit-btn" :data="uploadData" :action="`http://${window.GlobalUtil.socketInfo.host}/project/upload`"
                     :show-file-list="false" :on-success="handleUploadProjectSuccess" :before-upload="beforeUploadProject">
                     <img :disabled="isRunning" @click="onUpload" src="../assets/img/blockly/upload-icon2.svg" />
                   </el-upload>
-~~~
+```
 
+## Status report message (http://{ip}:{port}/project)
 
-Status report message (http://{ip}:{port}/project)
----
+1.xarm\_tcp\_pose\
+2.xarm\_joint\_pose\
+3.xarm\_error, xarm\_warn\
+4.xarm\_mode\
 
-1.xarm_tcp_pose<br> 
-2.xarm_joint_pose<br> 
-3.xarm_error, xarm_warn<br> 
-4.xarm_mode<br> 
 
 ### Front end
-~~~
+
+```
 // Connect websocket to get push
 self.init_onmessage = (onmessage) => {
   if(onmessage.cmd === 'devices_status_report'){
 // so something
 }
 };
-~~~
-
-
-
+```

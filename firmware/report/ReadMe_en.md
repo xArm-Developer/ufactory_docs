@@ -30,8 +30,8 @@
 | Actual TCP Speed                      | FP32 | 497        | 520       | 24     | mm/s & rad/s |                   |
 | Estimated TCP Torques                 | FP32 | 521        | 544       | 24     | N & N·m      |                   |
 | Reserved for Cartesian                | FP32 | 545        | 688       | 144    |              |                   |
-| Raw Data of 6-Aixs Torque Sensor      | FP32 | 689        | 712       | 24     | N & N·m      | \[x,y,z,rx,ry,rz] |
-| Filtered Data of 6-Aixs Torque Sensor | FP32 | 713        | 736       | 24     | N & N·m      | \[x,y,z,rx,ry,rz] |
+| Raw Data of 6-Axis Torque Sensor      | FP32 | 689        | 712       | 24     | N & N·m      | \[Fx,Fy,Fz,Tx,Ty,Tz] |
+| Filtered Data of 6-Axis Torque Sensor | FP32 | 713        | 736       | 24     | N & N·m      | \[Fx,Fy,Fz,Tx,Ty,Tz] |
 | Reserved for External Devices         | FP32 | 737        | 784       | 48     |              |                   |
 
 &#x20;   &#x20;

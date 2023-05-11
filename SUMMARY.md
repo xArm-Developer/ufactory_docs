@@ -1,3 +1,13 @@
 # Table of contents
 
-* [Page 1](README.md)
+* [Table of contents](README.md)
+* [websocketapi](websocketapi/README.md)
+  * [WebsocketAPI](websocketapi/websocketapi.md)
+* [firmware](firmware/README.md)
+  * [communication\_protocol](firmware/communication\_protocol/README.md)
+    * [ReadMe\_en](firmware/communication\_protocol/ReadMe\_en.md)
+    * [communication\_protocol](firmware/communication\_protocol/communication\_protocol/README.md)
+      * [xArm Motion Parameters](firmware/communication\_protocol/communication\_protocol/xarm-motion-parameters.md)
+  * [report](firmware/report/README.md)
+    * [ReadMe\_cn](firmware/report/ReadMe\_cn.md)
+    * [ReadMe\_en](firmware/report/ReadMe\_en.md)

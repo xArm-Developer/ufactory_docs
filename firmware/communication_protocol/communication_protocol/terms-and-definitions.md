@@ -46,7 +46,7 @@
 
 **`Roll/Pitch/Yaw`**
 
-![](../../../.gitbook/assets/图片.png)
+<figure><img src="../../../.gitbook/assets/图片.png" alt=""><figcaption></figcaption></figure>
 
 `Roll / Pitch / Yaw sequentially rotates around the X / Y / Z of the selected coordinate system (base coordinate system).The following describes the roll/pitch/yaw orientation representation of {B} relative to {A}:For example, the coordinate system {B} and a known reference coordinate system {A} are first superposed. First rotate {B} around` ![](file:///C:/Users/mikec/AppData/Local/Temp/ksohtml20308/wps1.png)`by γ, then around` ![](file:///C:/Users/mikec/AppData/Local/Temp/ksohtml20308/wps2.png)`by β, and finally around`![](file:///C:/Users/mikec/AppData/Local/Temp/ksohtml20308/wps3.png) `by α.Each rotation is around a fixed axis of the reference coordinate system {A}. This method is called the XYZ fixed angle coordinate system, and sometimes they are defined as the roll angle, pitch angle, and yaw angle.The above description is shown in the following figure:The equivalent rotation matrix is:`
 

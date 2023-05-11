@@ -7,3 +7,21 @@
 Before meeting the above conditions, we strongly recommend operators should refer to 'xArm User Manual' and program xArm robot by xArm Studio. Until then, operators could start xArm Modbus-TCP application development based on the communication protocol xArm provided.
 
 It will reduce the potential risks as well as increase the efficiency of your application development based on xArm Modbus-TCP.
+
+## Further Developer Resources <a href="#_toc21764" id="_toc21764"></a>
+
+ROS Library & Github: [https://github.com/xArm-Developer/xarm\_ros](https://github.com/xArm-Developer/xarm\_ros)
+
+xArm Python SDK Library: [https://github.com/xArm-Developer/xArm-Python-SDK](https://github.com/xArm-Developer/xArm-Python-SDK)
+
+xArm CPLUS SDK Library: [https://github.com/xArm-Developer/xArm-CPLUS-SDK](https://github.com/xArm-Developer/xArm-CPLUS-SDK)
+
+Note: For the above three developer resources, we have detailed installation steps and commands on github. Please download the installation package for further development.
+
+## &#x20;More Information      <a href="#_toc17347" id="_toc17347"></a>
+
+&#x20;More product information: https://www.ufactory.cc
+
+&#x20;For technical support, please email to: support@ufactory.cc
+
+&#x20;For sales support, please email to: sales@ufactory.cc

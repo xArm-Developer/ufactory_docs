@@ -1,6 +1,6 @@
 # Terms and Definitions
 
-### <mark style="color:blue;">**Unit Definition**</mark>
+<mark style="color:blue;">**Unit Definition**</mark>
 
 | Parameter              | Python-SDK     | Blockly        | Communication Protocol |
 | ---------------------- | -------------- | -------------- | ---------------------- |
@@ -48,9 +48,9 @@ Set the relative offset between the default tool coordinate system at flange cen
 
 <figure><img src="../../../.gitbook/assets/图片.png" alt=""><figcaption></figcaption></figure>
 
-Roll / Pitch / Yaw sequentially rotates around the X / Y / Z of the selected coordinate system (base coordinate system).The following describes the roll/pitch/yaw orientation representation of {B} relative to {A}:For example, the coordinate system {B} and a known reference coordinate system {A} are first superposed. First rotate {B} around ![](file:///C:/Users/mikec/AppData/Local/Temp/ksohtml20308/wps1.png)by γ, then around ![](file:///C:/Users/mikec/AppData/Local/Temp/ksohtml20308/wps2.png)by β, and finally around![](file:///C:/Users/mikec/AppData/Local/Temp/ksohtml20308/wps3.png) by α.Each rotation is around a fixed axis of the reference coordinate system {A}. This method is called the XYZ fixed angle coordinate system, and sometimes they are defined as the roll angle, pitch angle, and yaw angle.The above description is shown in the following figure:The equivalent rotation matrix is:
+Roll / Pitch / Yaw sequentially rotates around the X / Y / Z of the selected coordinate system (base coordinate system).The following describes the roll/pitch/yaw orientation representation of {B} relative to {A}:For example, the coordinate system {B} and a known reference coordinate system {A} are first superposed. First rotate {B} around by γ, then around by β, and finally around by α.Each rotation is around a fixed axis of the reference coordinate system {A}. This method is called the XYZ fixed angle coordinate system, and sometimes they are defined as the roll angle, pitch angle, and yaw angle.The above description is shown in the following figure:The equivalent rotation matrix is:
 
-![](file:///C:/Users/mikec/AppData/Local/Temp/ksohtml20308/wps7.png)
+<figure><img src="file:///C:/Users/mikec/AppData/Local/Temp/ksohtml20308/wps7.png" alt=""><figcaption></figcaption></figure>
 
 Note: γ corresponds to roll; β corresponds to pitch; α corresponds to yaw.
 
@@ -90,7 +90,7 @@ Consists of tool center point and coordinate orientation. If the TCP offset is n
 
 **User Coordinate System**(please refer to the figure 1)
 
-`The user coordinate system can be defined as any other referencecoordinate system rather than the robot base.`
+The user coordinate system can be defined as any other referencecoordinate system rather than the robot base.
 
 <figure><img src="../../../.gitbook/assets/图片 (1).png" alt=""><figcaption></figcaption></figure>
 

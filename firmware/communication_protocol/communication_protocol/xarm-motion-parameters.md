@@ -17,8 +17,6 @@ Working Range:
 {% tab title="xArm6" %}
 Maximum Speed:  180°/s
 
-
-
 Working Range:
 
 | Joint 1 | ±360°      |
@@ -32,8 +30,6 @@ Working Range:
 
 {% tab title="xArm7" %}
 Maximum Speed:  180°/s
-
-
 
 Working Range:
 

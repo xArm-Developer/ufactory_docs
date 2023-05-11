@@ -6,7 +6,7 @@
 * [firmware](firmware/README.md)
   * [communication\_protocol](firmware/communication\_protocol/README.md)
     * [ReadMe\_en](firmware/communication\_protocol/ReadMe\_en.md)
-    * [communication\_protocol](firmware/communication\_protocol/communication\_protocol/README.md)
+    * [communication\_protocol](firmware/communication\_protocol/communication\_protocol.md)
       * [xArm Motion Parameters](firmware/communication\_protocol/communication\_protocol/xarm-motion-parameters.md)
   * [report](firmware/report/README.md)
     * [ReadMe\_cn](firmware/report/ReadMe\_cn.md)

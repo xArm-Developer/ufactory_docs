@@ -64,11 +64,11 @@ Working Range:
 
 {% tabs %}
 {% tab title="xArm6/6/7" %}
-|              | TCP Motion   | Joint Motion |
-| ------------ | ------------ | ------------ |
-| Speed        | 0～1000mm/s   | 0～180°/s     |
-| Acceleration | 0～50000mm/s2 | 0～1145°/s2   |
-| Jerk         | 0～10000mm/s3 | 0～28647°/s3  |
+|              | TCP Motion    | Joint Motion |
+| ------------ | ------------- | ------------ |
+| Speed        | 0～1000mm/s    | 0～180°/s     |
+| Acceleration | 0～50000mm/s2  | 0～1145°/s2   |
+| Jerk         | 0～100000mm/s3 | 0～28647°/s3  |
 {% endtab %}
 
 {% tab title="Lite6" %}

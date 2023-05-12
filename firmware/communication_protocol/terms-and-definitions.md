@@ -110,9 +110,9 @@ q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
 
 ## **Coordinates**
 
-<figure><img src="../../.gitbook/assets/coordinates.svg" alt="" width="563"><figcaption><p><mark style="color:blue;"><strong>Figure 1</strong></mark></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/coordinates.svg" alt="" width="563"><figcaption></figcaption></figure>
 
-* [x] **The Base Coordinate System(please refer to the figure 1)**
+* [x] **The Base Coordinate System**
 
 <!---->
 
@@ -120,7 +120,7 @@ q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
 
 <!---->
 
-* [x] **Tool Coordinate System(please refer to the figure 1)**
+* [x] **Tool Coordinate System**
 
 <!---->
 
@@ -128,7 +128,7 @@ q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
 
 <!---->
 
-* [x] **User Coordinate System(please refer to the figure 1)**
+* [x] **User Coordinate System**
 
 <!---->
 

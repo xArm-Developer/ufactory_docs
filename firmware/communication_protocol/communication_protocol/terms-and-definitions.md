@@ -69,7 +69,7 @@
 > Note: γ corresponds to roll; β corresponds to pitch; α corresponds to yaw.
 
 $$
-f(x) = x * e^{2 pi i \xi x}
+ABR
 $$
 
 

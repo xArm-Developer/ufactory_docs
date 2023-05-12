@@ -126,7 +126,7 @@ q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
 
 > The user coordinate system can be defined as any other referencecoordinate system rather than the robot base.
 
-<figure><img src="../../.gitbook/assets/coordinates.svg" alt="" width="563"><figcaption><p><strong>Figure1</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/coordinates.svg" alt="" width="563"><figcaption><p><mark style="color:blue;"><strong>Figure1</strong></mark></p></figcaption></figure>
 
 **Manual Mode**
 

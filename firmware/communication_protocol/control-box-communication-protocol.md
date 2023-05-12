@@ -1,0 +1,2 @@
+# Control Box Communication Protocol
+

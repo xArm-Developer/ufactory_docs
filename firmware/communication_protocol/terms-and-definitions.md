@@ -97,13 +97,13 @@ $$
 > 4\. Using phi and \[x, y, z] can also derive the attitude representation as unit quaternion
 
 ```
-q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z].
+q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
 ```
 
 > For example:The vector of the rotation axis represented by the base coordinate system is \[1, 0, 0], and the rotation angle is 180 degrees (π), then the axis angle representation of this pose is \[π, 0, 0].The rotation axis is \[0.707, 0.707, 0] and the rotation angle is 90 degrees (π / 2), then the axis angle posture is
 
 ```
-[0.707 * (π / 2), 0.707 * (π / 2), 0].
+[0.707 * (π / 2), 0.707 * (π / 2), 0]
 ```
 
 
@@ -122,11 +122,11 @@ q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z].
 
 
 
-**User Coordinate System**
+**User Coordinate System(please refer to the figure 1)**
 
 > The user coordinate system can be defined as any other referencecoordinate system rather than the robot base.
 
-<figure><img src="../../.gitbook/assets/coordinates.svg" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/coordinates.svg" alt="" width="563"><figcaption><p><strong>Figure1</strong></p></figcaption></figure>
 
 **Manual Mode**
 

@@ -66,6 +66,12 @@
 
 <figure><img src="../../../.gitbook/assets/Formula.svg" alt="" width="375"><figcaption></figcaption></figure>
 
+$$
+Rxyz(γ,β,α)=Rz(α)Ry(β)Rx(γ)
+$$
+
+
+
 
 
 > Note: γ corresponds to roll; β corresponds to pitch; α corresponds to yaw.

@@ -1,4 +1,4 @@
-# xArm Motion Parameters
+# Robot specifications
 
 {% tabs %}
 {% tab title="xArm5" %}
@@ -42,17 +42,43 @@ Working Range:
 | Joint 6 | -97°～180°  |
 | Joint 7 | ±360°      |
 {% endtab %}
+
+{% tab title="Lite 6" %}
+Maximum Speed:  180°/s
+
+Working Range:
+
+| Joint 1 | ±360°      |
+| ------- | ---------- |
+| Joint 2 | ±150°      |
+| Joint 3 | -3.5°～300° |
+| Joint 4 | ±360°      |
+| Joint 5 | ±12°       |
+| Joint 6 | ±360°      |
+{% endtab %}
 {% endtabs %}
 
 
 
 **Range of various motion parameters of the robotic arm**
 
+{% tabs %}
+{% tab title="xArm6/6/7" %}
 |              | TCP Motion   | Joint Motion |
 | ------------ | ------------ | ------------ |
 | Speed        | 0～1000mm/s   | 0～180°/s     |
 | Acceleration | 0～50000mm/s2 | 0～1145°/s2   |
 | Jerk         | 0～10000mm/s3 | 0～28647°/s3  |
+{% endtab %}
+
+{% tab title="Lite6" %}
+|              | TCP Motion   | Joint Motion |
+| ------------ | ------------ | ------------ |
+| Speed        | 0～500mm/s    | 0～180°/s     |
+| Acceleration | 0～50000mm/s2 | 0～1145°/s2   |
+| Jerk         | 0～10000mm/s3 | 0～28647°/s3  |
+{% endtab %}
+{% endtabs %}
 
 Note:
 

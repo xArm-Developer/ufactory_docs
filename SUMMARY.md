@@ -8,7 +8,7 @@
     * [ReadMe\_en](firmware/communication\_protocol/ReadMe\_en.md)
     * [communication\_protocol](firmware/communication\_protocol/communication\_protocol/README.md)
       * [Terms and Definitions](firmware/communication\_protocol/communication\_protocol/terms-and-definitions.md)
-      * [xArm Motion Parameters](firmware/communication\_protocol/communication\_protocol/xarm-motion-parameters.md)
+      * [Robot specifications](firmware/communication\_protocol/communication\_protocol/xarm-motion-parameters.md)
   * [report](firmware/report/README.md)
     * [ReadMe\_cn](firmware/report/ReadMe\_cn.md)
     * [ReadMe\_en](firmware/report/ReadMe\_en.md)

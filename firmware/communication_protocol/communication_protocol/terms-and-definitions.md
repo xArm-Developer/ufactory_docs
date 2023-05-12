@@ -90,7 +90,17 @@ Consists of tool center point and coordinate orientation. If the TCP offset is n
 
 The user coordinate system can be defined as any other referencecoordinate system rather than the robot base.
 
-<figure><img src="../../../.gitbook/assets/21.svg" alt=""><figcaption><p>111</p></figcaption></figure>
+<div>
+
+<figure><img src="../../../.gitbook/assets/21.svg" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src="../../../.gitbook/assets/图片 (1).png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+<figure><img src="../../../.gitbook/assets/21.svg" alt=""><figcaption></figcaption></figure>
 
 **Manual Mode**
 

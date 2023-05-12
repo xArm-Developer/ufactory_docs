@@ -112,39 +112,39 @@ q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
 
 <figure><img src="../../.gitbook/assets/coordinates.svg" alt="" width="563"><figcaption></figcaption></figure>
 
-**The Base Coordinate System**
+#### **The Base Coordinate System**
 
 * The base coordinate system is a Cartesian coordinate system based on the mounting base of the robotic arm and used to describe the motion of the robotic arm.(front and back: X axis, left and right: Y axis, up and down: Z axis)
 
-**Tool Coordinate System**
+#### **Tool Coordinate System**
 
 * Consists of tool center point and coordinate orientation. If the TCP offset is not set, the default tool coordinate system is located at flange center.For tool coordinate system based motion: The tool center point is taken as the zero point, and the trajectory of the robotic arm refers to the tool coordinate system.
 
-**User Coordinate System**
+#### **User Coordinate System**
 
 * The user coordinate system can be defined as any other referencecoordinate system rather than the robot base.
 
 
 
-**Manual Mode**
+### **Manual Mode**
 
 > In this mode, the robotic arm will enter the ‘zero gravity’ mode, since the gravity is compensated, the user can guide the robotic arm position directly by hand.
 
 
 
-**Teach Sensitivity**
+### **Teach Sensitivity**
 
 > Teach sensitivity range is from 1 to 5 level. The larger the set value, the higher the teach sensitivity level, and the less the force required to drag the joint in the manual mode.
 
 
 
-**Collision Sensitivity**
+### **Collision Sensitivity**
 
 > The collision sensitivity range is from 0 to 5 level. When it is set to 0, it means that collision detection is not enabled. The larger the set value, the higher the collision sensitivity level, and the smaller the force required to trigger the collision protection response of the robotic arm.
 
 
 
-**GPIO**
+### **GPIO**
 
 > General-purpose input and output.
 >
@@ -154,13 +154,13 @@ q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
 
 
 
-**Safety Boundary**
+### **Safety Boundary**
 
 > When this mode is activated, the boundary range of the cartesian space of the robotic arm can be limited. If the tool center point (TCP) exceeds the set safety boundary, the robotic arm will stop moving.
 
 
 
-**Reduced Mode**
+### **Reduced Mode**
 
 > When this mode is activated, the maximum linear velocity of the Cartesian motion of the robotic arm, the maximum joint speed, and the range of the joint motion will be limited.
 

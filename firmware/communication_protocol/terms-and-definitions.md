@@ -108,25 +108,33 @@ q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
 
 
 
+## **Coordinates**
+
+<figure><img src="../../.gitbook/assets/coordinates.svg" alt="" width="563"><figcaption><p><mark style="color:blue;"><strong>Figure 1</strong></mark></p></figcaption></figure>
+
+* [x] **The Base Coordinate System(please refer to the figure 1)**
+
+<!---->
+
+* The base coordinate system is a Cartesian coordinate system based on the mounting base of the robotic arm and used to describe the motion of the robotic arm.(front and back: X axis, left and right: Y axis, up and down: Z axis)
+
+<!---->
+
+* [x] **Tool Coordinate System(please refer to the figure 1)**
+
+<!---->
+
+* Consists of tool center point and coordinate orientation. If the TCP offset is not set, the default tool coordinate system is located at flange center.For tool coordinate system based motion: The tool center point is taken as the zero point, and the trajectory of the robotic arm refers to the tool coordinate system.
+
+<!---->
+
+* [x] **User Coordinate System(please refer to the figure 1)**
+
+<!---->
+
+* The user coordinate system can be defined as any other referencecoordinate system rather than the robot base.
 
 
-**The Base Coordinate System(please refer to the figure 1)**
-
-> The base coordinate system is a Cartesian coordinate system based on the mounting base of the robotic arm and used to describe the motion of the robotic arm.(front and back: X axis, left and right: Y axis, up and down: Z axis)
-
-
-
-**Tool Coordinate System(please refer to the figure 1)**
-
-> Consists of tool center point and coordinate orientation. If the TCP offset is not set, the default tool coordinate system is located at flange center.For tool coordinate system based motion: The tool center point is taken as the zero point, and the trajectory of the robotic arm refers to the tool coordinate system.
-
-
-
-**User Coordinate System(please refer to the figure 1)**
-
-> The user coordinate system can be defined as any other referencecoordinate system rather than the robot base.
-
-<figure><img src="../../.gitbook/assets/coordinates.svg" alt="" width="563"><figcaption><p><mark style="color:blue;"><strong>Figure1</strong></mark></p></figcaption></figure>
 
 **Manual Mode**
 

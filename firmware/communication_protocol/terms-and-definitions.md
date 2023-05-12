@@ -70,7 +70,7 @@ $$
 
 > Note: γ corresponds to roll; β corresponds to pitch; α corresponds to yaw.
 
-<figure><img src="../../.gitbook/assets/RPY.svg" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/RPY(1).svg" alt="" width="563"><figcaption></figcaption></figure>
 
 **Axis-Angle**
 

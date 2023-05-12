@@ -112,25 +112,15 @@ q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
 
 <figure><img src="../../.gitbook/assets/coordinates.svg" alt="" width="563"><figcaption></figcaption></figure>
 
-* [x] **The Base Coordinate System**
-
-<!---->
+**The Base Coordinate System**
 
 * The base coordinate system is a Cartesian coordinate system based on the mounting base of the robotic arm and used to describe the motion of the robotic arm.(front and back: X axis, left and right: Y axis, up and down: Z axis)
 
-<!---->
-
-* [x] **Tool Coordinate System**
-
-<!---->
+**Tool Coordinate System**
 
 * Consists of tool center point and coordinate orientation. If the TCP offset is not set, the default tool coordinate system is located at flange center.For tool coordinate system based motion: The tool center point is taken as the zero point, and the trajectory of the robotic arm refers to the tool coordinate system.
 
-<!---->
-
-* [x] **User Coordinate System**
-
-<!---->
+**User Coordinate System**
 
 * The user coordinate system can be defined as any other referencecoordinate system rather than the robot base.
 

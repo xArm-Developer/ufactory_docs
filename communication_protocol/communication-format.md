@@ -58,7 +58,7 @@ Parameter:
 {% endtab %}
 {% endtabs %}
 
-t
+
 
 Status Bit of the Response Format
 

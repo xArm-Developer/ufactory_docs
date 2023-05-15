@@ -1,4 +1,4 @@
-# Page 1
+# Register (General)
 
 ## Joint motion (P2P motion)
 

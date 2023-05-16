@@ -124,17 +124,51 @@ Example：&#x20;
 > * 1 represents the given pose is a relative pose
 > * (the given parameters 1-6 coordinates are based on the current an offset of position)
 
-{% code lineNumbers="true" %}
+{% code overflow="wrap" lineNumbers="true" %}
 ```
 // Request
-00 01 00 02 00 27 5C
+00 01 00 02 00 27 5C 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 DB 0F C9 40 00 00 C8 42 00 00 FA 44 00 00 00 00 00 01
 ```
 {% endcode %}
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```
 //Response
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 DB 0F C9 40 00 00 C8 42 00 00 FA 44 00 00 00 00 00 01
+00 01 00 02 00 04 5C 00 00 01
+```
+{% endcode %}
+
+
+
+## The operation triggered by the position of the general digital IO of the control box
+
+**Register145（0x91）**
+
+Example：
+
+> iomum=0
+>
+> on-off：on (1)  &#x20;
+>
+> x=300
+>
+> y=0
+>
+> z=300
+>
+> Tolerance radius (tol\_r) =3
+
+{% code overflow="wrap" lineNumbers="true" %}
+```
+// Request
+00 01 00 02 00 13 91 00 01 00 00 96 43 00 00 00 00 00 00 96 43 00 00 40 40
+```
+{% endcode %}
+
+{% code lineNumbers="true" %}
+```
+//Response
+00 01 00 02 00 02 91 00
 ```
 {% endcode %}
 

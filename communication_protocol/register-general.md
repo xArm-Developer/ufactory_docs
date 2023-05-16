@@ -4,7 +4,7 @@
 
 **egister23（0x17）**
 
-{% code title="" fullWidth="true" %}
+{% code title="" fullWidth="false" %}
 ```
 Example：  J1-J7: π/3,0,0,0,0,0,0  speed=20*π/180rad/s,acceleration=500*π/180rad/s2,motion time=0
 // Request

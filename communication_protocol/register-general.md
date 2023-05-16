@@ -14,11 +14,10 @@ Example：&#x20;
 >
 > motion time=0
 
-{% code overflow="wrap" fullWidth="false" %}
+{% code overflow="wrap" lineNumbers="true" fullWidth="false" %}
 ```
 // Request
-00 01 00 02 00 29 17 92 0A 86 3F 00 00 00 00 00 00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,C2,B8,B2,3E,58,A0,0B,41,00,00,00,00
-
+00 01 00 02 00 29 17 92 0A 86 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 C2 B8 B2 3E 58 A0 0B 41 00 00 00 00
 ```
 {% endcode %}
 

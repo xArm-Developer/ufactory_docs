@@ -91,6 +91,26 @@ Example：
 
 
 
+## Get the radius of rotation of the target joint relative to the TCP
+
+**Register：6(0x06)**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

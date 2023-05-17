@@ -18,7 +18,9 @@
 
 <pre data-overflow="wrap"><code>// Response
 00 01 00 02 00 2A 01 00 <a data-footnote-ref href="#user-content-fn-1">36 2C 36 2C 58 49 31 32 30 32 2C 41 43 31 33 30 32 2C 76 31 2E 31 32 2E 31 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00</a>
+</code></pre>
 
+```
 00 01    Transaction ID
 00 02    Protocol
 00 2A    Length (parameter length+1)
@@ -28,7 +30,7 @@
 58 49 31 32 30 32 2C    XI1202,
 41 43 31 33 30 32 2C    AC1302,
 76 31 2E 31 32 2E 31 30    v1.12.10
-</code></pre>
+```
 
 
 

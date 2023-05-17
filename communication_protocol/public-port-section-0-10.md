@@ -9,29 +9,27 @@
 00 01 00 02 00 01 01 
 ```
 
-```
-00 01    Transaction ID
-00 02    Protocol Identifier
-00 01    Length (parameter length+1)
-01       Register
-```
+<pre><code>//00 01    Transaction ID
+//00 02    Protocol Identifier
+//00 01    Length (parameter length+1)
+<strong>//01       Register
+</strong></code></pre>
 
 <pre data-overflow="wrap"><code>// Response
 00 01 00 02 00 2A 01 00 <a data-footnote-ref href="#user-content-fn-1">36 2C 36 2C 58 49 31 32 30 32 2C 41 43 31 33 30 32 2C 76 31 2E 31 32 2E 31 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00</a>
 </code></pre>
 
-```
-00 01    U16, Transaction ID
-00 02    U16, Protocol Identifier
-00 2A    U16, Length (parameter length+1)
-01       U8, Register
-00       U8, State
-36 2C 36 2C   U8.Type,Axes, 6,6,
-58 49 31 32 30 32 2C    U8,xArm Version XI1202,
-41 43 31 33 30 32 2C    U8,Control Box Version AC1302,
-76 31 2E 31 32 2E 31 30    U8.Firmware Version v1.12.10
-00 00 00 00 00 00 00 00 00 00 00 00 00 00   U8, null  
-```
+<pre><code>//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 2A    U16, Length (parameter length+1)
+//01       U8, Register
+//00       U8, State
+//36 2C 36 2C   U8.Type,Axes, 6,6,
+//58 49 31 32 30 32 2C    U8,xArm Version XI1202,
+//41 43 31 33 30 32 2C    U8,Control Box Version AC1302,
+<strong>//76 31 2E 31 32 2E 31 30    U8.Firmware Version v1.12.10
+</strong>//00 00 00 00 00 00 00 00 00 00 00 00 00 00   U8, null  
+</code></pre>
 
 
 

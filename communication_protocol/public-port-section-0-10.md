@@ -4,25 +4,39 @@
 
 **Register：1(0x01)**
 
-{% code lineNumbers="true" %}
 ```
 // Request
 00 01 00 02 00 01 01 
 ```
-{% endcode %}
 
-{% code lineNumbers="true" %}
 ```
-// Response
-00 01 00 02 00 02 01 00 
+00 01    Transaction ID
+00 02    Protocol
+00 01    Length (parameter length+1)
+01       Register
 ```
-{% endcode %}
+
+<pre data-overflow="wrap"><code>// Response
+00 01 00 02 00 2A 01 00 <a data-footnote-ref href="#user-content-fn-1">36 2C 36 2C 58 49 31 32 30 32 2C 41 43 31 33 30 32 2C 76 31 2E 31 32 2E 31 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00</a>
+
+00 01    Transaction ID
+00 02    Protocol
+00 2A    Length (parameter length+1)
+01       Register
+00       State: 
+36 2C 36 2C    6,6,
+58 49 31 32 30 32 2C    XI1202,
+41 43 31 33 30 32 2C    AC1302,
+76 31 2E 31 32 2E 31 30    v1.12.10
+</code></pre>
+
+
 
 
 
 ## Get SN information
 
-Register：2(0x02)
+**Register：2(0x02)**
 
 Example：
 
@@ -30,19 +44,14 @@ Example：
 >
 > XI120204201B02 AC130202B02L02
 
-{% code lineNumbers="true" %}
 ```
 // Request
  00 01 00 02 00 01 02
 ```
-{% endcode %}
 
-{% code lineNumbers="true" %}
-```
-// Response
-00 01 00 02 00 02 02 00 
-```
-{% endcode %}
+<pre data-overflow="wrap"><code>// Response
+00 01 00 02 00 2A 02 00 <a data-footnote-ref href="#user-content-fn-2">58 49 31 32 30 32 30 34 32 30 31 42 30 32 00 41 43 31 33 30 32 30 32 42 30 32 4C 30 32 0A 00 00 00 00 00 00 00 00 00 00</a>
+</code></pre>
 
 
 
@@ -50,19 +59,14 @@ Example：
 
 **Register：4(0x04)**
 
-{% code lineNumbers="true" %}
 ```
 // Request
 00 01 00 02 00 01 04 
 ```
-{% endcode %}
 
-{% code lineNumbers="true" %}
-```
-// Response
-00 01 00 02 00 02 04 10 
-```
-{% endcode %}
+<pre><code>// Response
+00 01 00 02 00 02 04 <a data-footnote-ref href="#user-content-fn-3">10 </a>
+</code></pre>
 
 
 
@@ -78,15 +82,13 @@ Example：
 >
 > 1: Value of actual current of servo
 
-{% code lineNumbers="true" %}
 ```
 // Request
 00 01 00 02 00 01 05
 ```
-{% endcode %}
 
-<pre data-line-numbers><code>// Response
-<strong>00 01 00 02 00 03 05 00 00
+<pre><code>// Response
+<strong>00 01 00 02 00 03 05 <a data-footnote-ref href="#user-content-fn-4">00 00</a>
 </strong></code></pre>
 
 
@@ -95,6 +97,39 @@ Example：
 
 **Register：6(0x06)**
 
+Example：
+
+> Radius of rotation(mm)
+
+```
+// Request
+00 01 00 02 00 02 06 06 
+```
+
+<pre><code>// Response
+00 01 00 02 00 06 06 10 <a data-footnote-ref href="#user-content-fn-5">00 00 00 00</a>
+</code></pre>
+
+
+
+## Remote shut down the operating system
+
+**Register10（0x0A）**
+
+Example:
+
+> 1: remote shut down the operating system temporarily
+>
+> 2：reboot
+
+<pre><code>// Request
+00 01 00 02 00 02 0A <a data-footnote-ref href="#user-content-fn-6">01 </a>
+</code></pre>
+
+```
+// Response
+00 01 00 02 00 02 0A 10
+```
 
 
 
@@ -117,3 +152,19 @@ Example：
 
 
 
+
+
+
+
+
+[^1]: 
+
+[^2]: 
+
+[^3]: 
+
+[^4]: 
+
+[^5]: 
+
+[^6]: 

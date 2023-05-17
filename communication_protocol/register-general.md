@@ -14,19 +14,14 @@ Example：&#x20;
 >
 > motion time=0
 
-{% code overflow="wrap" lineNumbers="true" fullWidth="false" %}
-```
-// Request
-00 01 00 02 00 29 17 92 0A 86 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 C2 B8 B2 3E 58 A0 0B 41 00 00 00 00
-```
-{% endcode %}
+<pre data-overflow="wrap" data-full-width="false"><code>// Request
+00 01 00 02 00 29 17 <a data-footnote-ref href="#user-content-fn-1">92 0A 86 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 C2 B8 B2 3E 58 A0 0B 41 00 00 00 00</a>
+</code></pre>
 
-{% code lineNumbers="true" %}
 ```
 //Response
-00,01，00,02,00,04,17,00,00,01
+00 01 00 02 00 04 17 00 00 01
 ```
-{% endcode %}
 
 ##
 
@@ -38,19 +33,14 @@ Example：&#x20;
 
 > maxacc=1000mm/s2
 
-{% code lineNumbers="true" %}
-```
-// Request
-00 01 00 02 00 05 20 00 00 7A 44
-```
-{% endcode %}
+<pre><code>// Request
+00 01 00 02 00 05 20 <a data-footnote-ref href="#user-content-fn-2">00 00 7A 44</a>
+</code></pre>
 
-{% code lineNumbers="true" %}
 ```
 //Response
-00,01，00,02,00,04,20,00,00,01
+00 01 00 02 00 04 20 00 00 01
 ```
-{% endcode %}
 
 
 
@@ -72,19 +62,14 @@ Example：&#x20;
 >
 > yaw=0
 
-{% code lineNumbers="true" %}
 ```
 // Request
 00 01 00 02 00 01 29
 ```
-{% endcode %}
 
-{% code overflow="wrap" lineNumbers="true" %}
-```
-//Response
-00 01 00 02 00 1A 29 00 00 00 4F 43 00 00 00 00 00 00 E0 42 DB 0F 49 40 00 00 00 00 00 00 00 00
-```
-{% endcode %}
+<pre data-overflow="wrap"><code>//Response
+00 01 00 02 00 1A 29 00 <a data-footnote-ref href="#user-content-fn-3">00 00 4F 43 5F F1 23 29 00 00 E0 42 DB 0F 49 C0 00 00 00 80 00 00 00 09</a>
+</code></pre>
 
 
 
@@ -124,19 +109,13 @@ Example：&#x20;
 > * 1 represents the given pose is a relative pose
 > * (the given parameters 1-6 coordinates are based on the current an offset of position)
 
-{% code overflow="wrap" lineNumbers="true" %}
-```
-// Request
-00 01 00 02 00 27 5C 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 DB 0F C9 40 00 00 C8 42 00 00 FA 44 00 00 00 00 00 01
-```
-{% endcode %}
+<pre data-overflow="wrap"><code>// Request
+00 01 00 02 00 27 5C<a data-footnote-ref href="#user-content-fn-4"> 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 DB 0F C9 40 00 00 C8 42 00 00 FA 44 00 00 00 00 00 01</a>
+</code></pre>
 
-{% code overflow="wrap" lineNumbers="true" %}
-```
-//Response
-00 01 00 02 00 04 5C 00 00 01
-```
-{% endcode %}
+<pre data-overflow="wrap"><code>//Response
+00 01 00 02 00 04 5C 00 <a data-footnote-ref href="#user-content-fn-5">00 01</a>
+</code></pre>
 
 
 
@@ -158,21 +137,31 @@ Example：
 >
 > Tolerance radius (tol\_r) =3
 
-{% code overflow="wrap" lineNumbers="true" %}
-```
-// Request
-00 01 00 02 00 13 91 00 01 00 00 96 43 00 00 00 00 00 00 96 43 00 00 40 40
-```
-{% endcode %}
+<pre data-overflow="wrap"><code>// Request
+00 01 00 02 00 13 91 <a data-footnote-ref href="#user-content-fn-6">00 01 00 00 96 43 00 00 00 00 00 00 96 43 00 00 40 40</a>
+</code></pre>
 
-{% code lineNumbers="true" %}
 ```
 //Response
 00 01 00 02 00 02 91 00
 ```
-{% endcode %}
 
 
 
 
 
+
+
+
+
+[^1]: 
+
+[^2]: 
+
+[^3]: 
+
+[^4]: 
+
+[^5]: 
+
+[^6]: 

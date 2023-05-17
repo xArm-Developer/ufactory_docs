@@ -11,7 +11,7 @@
 
 ```
 00 01    Transaction ID
-00 02    Protocol
+00 02    Protocol Identifier
 00 01    Length (parameter length+1)
 01       Register
 ```
@@ -21,16 +21,16 @@
 </code></pre>
 
 ```
-00 01    Transaction ID
-00 02    Protocol
-00 2A    Length (parameter length+1)
-01       Register
-00       State: 
-36 2C 36 2C    6,6,
-58 49 31 32 30 32 2C    XI1202,
-41 43 31 33 30 32 2C    AC1302,
-76 31 2E 31 32 2E 31 30    v1.12.10
-00 00 00 00 00 00 00 00 00 00 00 00 00 00    null  
+00 01    U16, Transaction ID
+00 02    U16, Protocol Identifier
+00 2A    U16, Length (parameter length+1)
+01       U8, Register
+00       U8, State
+36 2C 36 2C   U8.Type,Axes, 6,6,
+58 49 31 32 30 32 2C    U8,xArm Version XI1202,
+41 43 31 33 30 32 2C    U8,Control Box Version AC1302,
+76 31 2E 31 32 2E 31 30    U8.Firmware Version v1.12.10
+00 00 00 00 00 00 00 00 00 00 00 00 00 00   U8, null  
 ```
 
 

@@ -7,16 +7,33 @@
 ```
 // Request
 00 01 00 02 00 01 01 
+```
 
+<details>
+
+<summary> Request Description</summary>
+
+```
 //00 01    Transaction ID
 //00 02    Protocol Identifier
 //00 01    Length 
 //01       Register
 ```
 
-<pre data-overflow="wrap"><code>// Response
-00 01 00 02 00 2A 01 00 <a data-footnote-ref href="#user-content-fn-1">36 2C 36 2C 58 49 31 32 30 32 2C 41 43 31 33 30 32 2C 76 31 2E 31 32 2E 31 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00</a>
+</details>
 
+{% code overflow="wrap" %}
+```
+// Response
+00 01 00 02 00 2A 01 00 36 2C 36 2C 58 49 31 32 30 32 2C 41 43 31 33 30 32 2C 76 31 2E 31 32 2E 31 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+```
+{% endcode %}
+
+<details>
+
+<summary> Response Description</summary>
+
+```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 2A    U16, Length 
@@ -27,7 +44,9 @@
 //41 43 31 33 30 32 2C    U8, Control Box Version AC1302,
 //76 31 2E 31 32 2E 31 30    U8, Firmware Version v1.12.10
 //00 00 00 00 00 00 00 00 00 00 00 00 00 00   U8, null  
-</code></pre>
+```
+
+</details>
 
 
 
@@ -49,7 +68,7 @@ Example：
 ```
 
 <pre data-overflow="wrap"><code>// Response
-00 01 00 02 00 2A 02 00 <a data-footnote-ref href="#user-content-fn-2">58 49 31 32 30 32 30 34 32 30 31 42 30 32 00 41 43 31 33 30 32 30 32 42 30 32 4C 30 32 0A 00 00 00 00 00 00 00 00 00 00</a>
+00 01 00 02 00 2A 02 00 <a data-footnote-ref href="#user-content-fn-1">58 49 31 32 30 32 30 34 32 30 31 42 30 32 00 41 43 31 33 30 32 30 32 42 30 32 4C 30 32 0A 00 00 00 00 00 00 00 00 00 00</a>
 </code></pre>
 
 
@@ -64,7 +83,7 @@ Example：
 ```
 
 <pre><code>// Response
-00 01 00 02 00 02 04 <a data-footnote-ref href="#user-content-fn-3">10 </a>
+00 01 00 02 00 02 04 <a data-footnote-ref href="#user-content-fn-2">10 </a>
 </code></pre>
 
 
@@ -87,7 +106,7 @@ Example：
 ```
 
 <pre><code>// Response
-<strong>00 01 00 02 00 03 05 <a data-footnote-ref href="#user-content-fn-4">00 00</a>
+<strong>00 01 00 02 00 03 05 <a data-footnote-ref href="#user-content-fn-3">00 00</a>
 </strong></code></pre>
 
 
@@ -106,7 +125,7 @@ Example：
 ```
 
 <pre><code>// Response
-00 01 00 02 00 06 06 10 <a data-footnote-ref href="#user-content-fn-5">00 00 00 00</a>
+00 01 00 02 00 06 06 10 <a data-footnote-ref href="#user-content-fn-4">00 00 00 00</a>
 </code></pre>
 
 
@@ -122,7 +141,7 @@ Example:
 > 2：reboot
 
 <pre><code>// Request
-00 01 00 02 00 02 0A <a data-footnote-ref href="#user-content-fn-6">01 </a>
+00 01 00 02 00 02 0A <a data-footnote-ref href="#user-content-fn-5">01 </a>
 </code></pre>
 
 ```
@@ -165,5 +184,3 @@ Example:
 [^4]: 
 
 [^5]: 
-
-[^6]: 

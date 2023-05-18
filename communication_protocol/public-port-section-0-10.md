@@ -56,12 +56,6 @@
 
 **Register：2(0x02)**
 
-Example：
-
-> SN of robot and control box：
->
-> XI120204201B02 AC130202B02L02
-
 ```
 // Request
  00 01 00 02 00 01 02
@@ -97,7 +91,9 @@ Example：
 //00 2A    U16, Length 
 //02       U8, Register
 //00       U8, State
-
+//58 49 31 32 30 32 30 34 32 30 31 42 30 32 00      U8, XI120204201B02
+//41 43 31 33 30 32 30 32 42 30 32 4C 30 32 0A      U8, AC130202B02L02
+//00 00 00 00 00 00 00 00 00 00     U8, null
 ```
 
 </details>

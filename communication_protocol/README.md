@@ -10,16 +10,20 @@ It will reduce the potential risks as well as increase the efficiency of your ap
 
 
 
+## Control Box Communication Protocol
+
+<figure><img src=".gitbook/assets/Control Box Communication Protocol.svg" alt="" width="563"><figcaption></figcaption></figure>
+
 ## Further Developer Resources <a href="#_toc21764" id="_toc21764"></a>
 
 * ROS Library & Github: [https://github.com/xArm-Developer/xarm\_ros](https://github.com/xArm-Developer/xarm\_ros)
 * xArm Python SDK Library: [https://github.com/xArm-Developer/xArm-Python-SDK](https://github.com/xArm-Developer/xArm-Python-SDK)
 * xArm CPLUS SDK Library: [https://github.com/xArm-Developer/xArm-CPLUS-SDK](https://github.com/xArm-Developer/xArm-CPLUS-SDK)
-* Note: For the above three developer resources, we have detailed installation steps and&#x20;
+* Note: For the above three developer resources, we have detailed installation steps and
 * commands on github. Please download the installation package for further development.
 
-## &#x20;More Information      <a href="#_toc17347" id="_toc17347"></a>
+## More Information <a href="#_toc17347" id="_toc17347"></a>
 
-* &#x20;More product information: https://www.ufactory.cc
-* &#x20;For technical support, please email to: support@ufactory.cc
+* More product information: https://www.ufactory.cc
+* For technical support, please email to: support@ufactory.cc
 * For sales support, please email to: sales@ufactory.cc

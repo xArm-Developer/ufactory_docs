@@ -79,15 +79,15 @@ Response:
 
 00 01 00 02 00 03 0D 00 02
 
-| Transaction ID                                                                                                                                                                                                                                                                                                                                                                                                | 2 Bytes | u16 | 0x00,0x01 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | --------- |
-| Protocol                                                                                                                                                                                                                                                                                                                                                                                                      | 2 Bytes | u16 | 0x00,0x02 |
-| Length                                                                                                                                                                                                                                                                                                                                                                                                        | 2 Bytes | u16 | 0x00,0x03 |
-| Register                                                                                                                                                                                                                                                                                                                                                                                                      | 1 Byte  | u8  | 0x0D      |
-| State                                                                                                                                                                                                                                                                                                                                                                                                         | 1 Byte  | u8  | 0x00      |
-| <p>Parameter1</p><p>Motion state：</p><p>1：In motion</p><p>2：Sleep</p><p>3：Suspend</p><p>4：Stop </p><p>5： System reset</p><p>The user just enters the state after the mode switch or changes some settings (such as TCP offset, sensitivity, etc.). The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.</p><p> </p> | 1 Byte  | u8  | 0x01      |
+| Transaction ID                                                                                                            | 2 Bytes | u16 | 0x00,0x01 |
+| ------------------------------------------------------------------------------------------------------------------------- | ------- | --- | --------- |
+| Protocol                                                                                                                  | 2 Bytes | u16 | 0x00,0x02 |
+| Length                                                                                                                    | 2 Bytes | u16 | 0x00,0x03 |
+| Register                                                                                                                  | 1 Byte  | u8  | 0x0D      |
+| State                                                                                                                     | 1 Byte  | u8  | 0x00      |
+| <p>Parameter1</p><p>Motion state：</p><p>1：In motion</p><p>2：Sleep</p><p>3：Suspend</p><p>4：Stop </p><p>5： System reset</p> | 1 Byte  | u8  | 0x01      |
 
-
+> The user just enters the state after the mode switch or changes some settings (such as TCP offset, sensitivity, etc.). The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
 
 ## Get the number of commands in the command buffer
 

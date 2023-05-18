@@ -181,14 +181,26 @@ Response:
 
 **Register：17 (0x11)**
 
-```
-// Request
-00 01 00 02 00 01 11
-```
+Request:
 
-<pre><code>// Response
-00 01 00 02 00 02 11 <a data-footnote-ref href="#user-content-fn-1">00</a>
-</code></pre>
+00 01 00 02 00 01 11
+
+| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
+| -------------- | ------- | --- | --------- |
+| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
+| Length         | 2 Bytes | u16 | 0x00,0x01 |
+| Register       | 1 Byte  | u8  | 0x11      |
+
+Response:
+
+00 01 00 02 00 02 11 00
+
+| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
+| -------------- | ------- | --- | --------- |
+| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
+| Length         | 2 Bytes | u16 | 0x00,0x02 |
+| Register       | 1 Byte  | u8  | 0x11      |
+| State          | 1 Byte  | u8  | 0x00      |
 
 
 
@@ -196,28 +208,28 @@ Response:
 
 **Register：18 (0x12)**
 
-Example:
+Request:
 
-> **Control the brakes：**
->
-> 1\~7: Select motor joint separately
->
-> 8: Select all joints
->
-> **Enable the brake:**
->
-> 1: Enable the brake
->
-> 0: Release the brake
+00 01 00 02 00 03 12 08 01
 
-<pre><code>// Request
-00 01 00 02 00 03 12 <a data-footnote-ref href="#user-content-fn-2">08 01</a> 
-</code></pre>
+| Transaction ID                                                                                                                     | 2 Bytes               | u16               | 0x00,0x01           |
+| ---------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ----------------- | ------------------- |
+| Protocol                                                                                                                           | 2 Bytes               | u16               | 0x00,0x02           |
+| Length                                                                                                                             | 2 Bytes               | u16               | 0x00,0x03           |
+| Register                                                                                                                           | 1 Byte                | u8                | 0x12                |
+| <p>Parameter1(Select all joints)</p><p>Control the brakes：</p><p>1~6: Select motor joint separately</p><p>8: Select all joints</p> | <p>1 Byte</p><p> </p> | <p>u8</p><p> </p> | <p> </p><p>0x08</p> |
+| <p>Parameter2 (Enable the brake)</p><p>Operation：</p><p>1: Unlock Joint</p><p>0: Disable Joint</p>                                 | <p>1 Byte</p><p> </p> | <p>u8</p><p> </p> | 0x01                |
 
-```
-// Response
+Response:
+
 00 01 00 02 00 02 12 10
-```
+
+| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
+| -------------- | ------- | --- | --------- |
+| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
+| Length         | 2 Bytes | u16 | 0x00,0x02 |
+| Register       | 1 Byte  | u8  | 0x12      |
+| State          | 1 Byte  | u8  | 0x10      |
 
 
 
@@ -229,36 +241,17 @@ Example:
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
 {% endhint %}
 
-Example:
+Request:
 
-> **Motion mode：**
->
-> 0: Position control mode
->
-> 1: servo motion mode
->
-> 2: Joint teaching mode
->
-> 3: Cartesian teaching mode (not yet available)
->
-> 4: Joint velocity control mode
->
-> 5: Cartesian velocity control mode
->
-> 6: Joint online trajectory planning mode
->
-> 7: Cartesian online trajectory planning mode
->
-> **Teach mode load detection:**
->
-> 0: on
->
-> 1: off
->
->
+| Transaction ID                                                                                                                                                                                                                                                                                                                                                                          | 2 Bytes | u16 | 0x00,0x01 |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | --------- |
+| Protocol                                                                                                                                                                                                                                                                                                                                                                                | 2 Bytes | u16 | 0x00,0x02 |
+| Length (parameter length+1)                                                                                                                                                                                                                                                                                                                                                             | 2 Bytes | u16 | 0x00,0x02 |
+| Register                                                                                                                                                                                                                                                                                                                                                                                | 1 Byte  | u8  | 0x13      |
+| <p>Parameter1(Position control mode)</p><p>Motion mode：</p><p>0: Position control mode</p><p>1: servo motion mode</p><p>2: Joint teaching mode</p><p>3: Cartesian teaching mode (not yet available)</p><p>4: Joint velocity control mode</p><p>5: Cartesian velocity control mode</p><p>6: Joint online trajectory planning mode</p><p>7: Cartesian online trajectory planning mode</p> | 1 Byte  | u8  | 0x00      |
 
 <pre><code>// Request
-00 01 00 02 00 03 13 <a data-footnote-ref href="#user-content-fn-3">00 00</a> 
+00 01 00 02 00 03 13 <a data-footnote-ref href="#user-content-fn-1">00 00</a> 
 </code></pre>
 
 ```
@@ -271,7 +264,3 @@ Example:
 
 
 [^1]: 
-
-[^2]: 
-
-[^3]: 

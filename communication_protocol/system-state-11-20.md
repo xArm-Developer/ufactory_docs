@@ -8,27 +8,28 @@
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
 {% endhint %}
 
-Example:
+Request:
 
-> **Joint Number(Select all joints)**
->
-> 1-7：Motor joint(1-7)
->
-> 8：Select all joints
->
-> **Whether to enable the servo**
->
-> 1：Enable servo
->
-> 0：Disable servo
+00 01 00 02 00 03 0B 08 01
 
-<pre><code>// Request
-00 01 00 02 00 03 0B  <a data-footnote-ref href="#user-content-fn-1">08 01</a>
-</code></pre>
+| Transaction ID                                                                              | 2 Bytes | u16 | 0x00,0x01                                       |
+| ------------------------------------------------------------------------------------------- | ------- | --- | ----------------------------------------------- |
+| Protocol                                                                                    | 2 Bytes | u16 | 0x00,0x02                                       |
+| Length (parameter length+1)                                                                 | 2 Bytes | u16 | 0x00,0x03                                       |
+| Register                                                                                    | 1 Byte  | u8  | 0x0B                                            |
+| <p>Joint Number(Select all joints)</p><p>1-7：Motor joint(1-7)</p><p>8：Select all joints</p> | 1 Byte  | u8  | <p> </p><p>0x08</p>                             |
+| <p>Whether to enable the servo</p><p>1：Enable servo</p><p>0：Disable servo</p>               | 1 Byte  | u8  | <p> </p><p>Enable: 0x01</p><p>Disable: 0x00</p> |
 
-<pre><code>// Response
-00 01 00 02 00 02 0B <a data-footnote-ref href="#user-content-fn-2">10</a>
-</code></pre>
+Response:
+
+00 01 00 02 00 02 0B 10
+
+| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
+| -------------- | ------- | --- | --------- |
+| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
+| Length         | 2 Bytes | u16 | 0x00,0x02 |
+| Register       | 1 Byte  | u8  | 0x0B      |
+| State          | 1 Byte  | u8  | 0x10      |
 
 
 
@@ -36,23 +37,27 @@ Example:
 
 **Register：12(0x0C)**
 
-Example:
+Request:
 
-> Motion Sate
->
-> 3: Suspend the current motion
->
-> 4: Stop all current motion (restart the system)
->
-> 0: Enter the motion mode
+00 01 00 02 00 02 0C 00
 
-<pre><code>// Request
-00 01 00 02 00 02 0C <a data-footnote-ref href="#user-content-fn-3">00</a>  
-</code></pre>
+| Transaction ID                                                                                                                                          | 2 Bytes | u16 | 0x00,0x01 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | --------- |
+| Protocol                                                                                                                                                | 2 Bytes | u16 | 0x00,0x02 |
+| Length (parameter length+1)                                                                                                                             | 2 Bytes | u16 | 0x00,0x02 |
+| Register                                                                                                                                                | 1 Byte  | u8  | 0x00      |
+| <p>Parameter1: Motion Sate</p><p>3: Suspend the current motion</p><p>4: Stop all current motion (restart the system)</p><p>0: Enter the motion mode</p> | 1 Byte  | u8  | 0x00      |
 
-<pre><code>// Response
-00 01 00 02 00 02 0C <a data-footnote-ref href="#user-content-fn-4">00</a>
-</code></pre>
+Response:
+
+00 01 00 02 00 02 0C 00
+
+| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
+| -------------- | ------- | --- | --------- |
+| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
+| Length         | 2 Bytes | u16 | 0x00,0x02 |
+| Register       | 1 Byte  | u8  | 0x0C      |
+| State          | 1 Byte  | u8  | 0x00      |
 
 
 
@@ -60,28 +65,27 @@ Example:
 
 **Register：13 (0x0D)**
 
-Example:
+Request:
 
-> Motion state：
->
-> 1：In motion
->
-> 2：Sleep
->
-> 3：Suspend
->
-> 4：Stop
->
-> 5： System reset: The user just enters the state after the mode switch or changes some settings (such as TCP offset, sensitivity, etc.). The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
+00 01 00 02 00 01 0D
 
-```
-// Request
-00 01 00 02 00 01 0D 
-```
+| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
+| -------------- | ------- | --- | --------- |
+| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
+| Length         | 2 Bytes | u16 | 0x00,0x01 |
+| Register       | 1 Byte  | u8  | 0x0D      |
 
-<pre><code>// Response
-00 01 00 02 00 03 0D <a data-footnote-ref href="#user-content-fn-5">00 02</a>
-</code></pre>
+Response:
+
+00 01 00 02 00 03 0D 00 02
+
+| Transaction ID                                                                                                                                                                                                                                                                                                                                                                                                | 2 Bytes | u16 | 0x00,0x01 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | --------- |
+| Protocol                                                                                                                                                                                                                                                                                                                                                                                                      | 2 Bytes | u16 | 0x00,0x02 |
+| Length                                                                                                                                                                                                                                                                                                                                                                                                        | 2 Bytes | u16 | 0x00,0x03 |
+| Register                                                                                                                                                                                                                                                                                                                                                                                                      | 1 Byte  | u8  | 0x0D      |
+| State                                                                                                                                                                                                                                                                                                                                                                                                         | 1 Byte  | u8  | 0x00      |
+| <p>Parameter1</p><p>Motion state：</p><p>1：In motion</p><p>2：Sleep</p><p>3：Suspend</p><p>4：Stop </p><p>5： System reset</p><p>The user just enters the state after the mode switch or changes some settings (such as TCP offset, sensitivity, etc.). The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.</p><p> </p> | 1 Byte  | u8  | 0x01      |
 
 
 
@@ -89,18 +93,27 @@ Example:
 
 **Register：14 (0x0E)**
 
-Example:
+Request
 
-> The number of commands in the buffer
-
-```
-// Request
 00 01 00 02 00 01 0E
-```
 
-<pre><code>// Response
-00 01 00 02 00 04 0E <a data-footnote-ref href="#user-content-fn-6">00 00 00</a>
-</code></pre>
+| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
+| -------------- | ------- | --- | --------- |
+| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
+| Length         | 2 Bytes | u16 | 0x00,0x01 |
+| Register       | 1 Byte  | u8  | 0x0E      |
+
+Response:
+
+00 01 00 02 00 04 0E 00 00 00
+
+| Transaction ID                                                 | 2 Bytes                | u16                | 0x00,0x01 |
+| -------------------------------------------------------------- | ---------------------- | ------------------ | --------- |
+| Protocol                                                       | 2 Bytes                | u16                | 0x00,0x02 |
+| Length                                                         | 2 Bytes                | u16                | 0x00,0x04 |
+| Register                                                       | 1 Byte                 | u8                 | 0x0E      |
+| State                                                          | 1 Byte                 | u8                 | 0x00      |
+| <p>Parameter1</p><p>(The number of commands in the buffer)</p> | <p>2 Bytes</p><p> </p> | <p>u16</p><p> </p> | 0x00,0x01 |
 
 
 
@@ -108,18 +121,28 @@ Example:
 
 **Register：15 (0x0F)**
 
-Example:
+Request:
 
-> Error code   Warning code
-
-```
-// Request
 00 01 00 02 00 01 0F
-```
 
-<pre><code>// Response
-00 01 00 02 00 04 0F <a data-footnote-ref href="#user-content-fn-7">00 00 00</a>
-</code></pre>
+| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
+| -------------- | ------- | --- | --------- |
+| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
+| Length         | 2 Bytes | u16 | 0x00,0x01 |
+| Register       | 1 Byte  | u8  | 0x0F      |
+
+Response:
+
+00 01 00 02 00 04 0F 00 00 00
+
+| Transaction ID                       | 2 Bytes | u16 | 0x00,0x01 |
+| ------------------------------------ | ------- | --- | --------- |
+| Protocol                             | 2 Bytes | u16 | 0x00,0x02 |
+| Length                               | 2 Bytes | u16 | 0x00,0x04 |
+| Register                             | 1 Byte  | u8  | 0x0F      |
+| State                                | 1 Byte  | u8  | 0x00      |
+| <p>Parameter1</p><p>Error code</p>   | 1 Byte  | u8  | 0x00      |
+| <p>Parameter2</p><p>Warning code</p> | 1 Byte  | u8  | 0x00      |
 
 
 
@@ -131,14 +154,26 @@ Example:
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
 {% endhint %}
 
-```
-// Request
-00 01 00 02 00 01 10
-```
+Request:
 
-<pre><code>// Response
-00 01 00 02 00 02 10 <a data-footnote-ref href="#user-content-fn-8">00</a>
-</code></pre>
+00 01 00 02 00 01 10
+
+| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
+| -------------- | ------- | --- | --------- |
+| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
+| Length         | 2 Bytes | u16 | 0x00,0x01 |
+| Register       | 1 Byte  | u8  | 0x10      |
+
+Response:
+
+00 01 00 02 00 02 10 00
+
+| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
+| -------------- | ------- | --- | --------- |
+| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
+| Length         | 2 Bytes | u16 | 0x00,0x02 |
+| Register       | 1 Byte  | u8  | 0x10      |
+| State          | 1 Byte  | u8  | 0x10      |
 
 
 
@@ -152,7 +187,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 ```
 
 <pre><code>// Response
-00 01 00 02 00 02 11 <a data-footnote-ref href="#user-content-fn-9">00</a>
+00 01 00 02 00 02 11 <a data-footnote-ref href="#user-content-fn-1">00</a>
 </code></pre>
 
 
@@ -176,7 +211,7 @@ Example:
 > 0: Release the brake
 
 <pre><code>// Request
-00 01 00 02 00 03 12 <a data-footnote-ref href="#user-content-fn-10">08 01</a> 
+00 01 00 02 00 03 12 <a data-footnote-ref href="#user-content-fn-2">08 01</a> 
 </code></pre>
 
 ```
@@ -223,7 +258,7 @@ Example:
 >
 
 <pre><code>// Request
-00 01 00 02 00 03 13 <a data-footnote-ref href="#user-content-fn-11">00 00</a> 
+00 01 00 02 00 03 13 <a data-footnote-ref href="#user-content-fn-3">00 00</a> 
 </code></pre>
 
 ```
@@ -240,19 +275,3 @@ Example:
 [^2]: 
 
 [^3]: 
-
-[^4]: 
-
-[^5]: 
-
-[^6]: 
-
-[^7]: 
-
-[^8]: 
-
-[^9]: 
-
-[^10]: 
-
-[^11]: 

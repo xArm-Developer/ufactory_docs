@@ -243,6 +243,8 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 Request:
 
+00 01 00 02 00 03 13 00 00
+
 | Transaction ID                                                                                                                                                                                                                                                                                                                                                                          | 2 Bytes | u16 | 0x00,0x01 |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | --------- |
 | Protocol                                                                                                                                                                                                                                                                                                                                                                                | 2 Bytes | u16 | 0x00,0x02 |
@@ -250,17 +252,18 @@ Request:
 | Register                                                                                                                                                                                                                                                                                                                                                                                | 1 Byte  | u8  | 0x13      |
 | <p>Parameter1(Position control mode)</p><p>Motion mode：</p><p>0: Position control mode</p><p>1: servo motion mode</p><p>2: Joint teaching mode</p><p>3: Cartesian teaching mode (not yet available)</p><p>4: Joint velocity control mode</p><p>5: Cartesian velocity control mode</p><p>6: Joint online trajectory planning mode</p><p>7: Cartesian online trajectory planning mode</p> | 1 Byte  | u8  | 0x00      |
 
-<pre><code>// Request
-00 01 00 02 00 03 13 <a data-footnote-ref href="#user-content-fn-1">00 00</a> 
-</code></pre>
+Response:
 
-```
-// Response
 00 01 00 02 00 02 13 00
-```
+
+| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
+| -------------- | ------- | --- | --------- |
+| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
+| Length         | 2 Bytes | u16 | 0x00,0x02 |
+| Register       | 1 Byte  | u8  | 0x13      |
+| State          | 1 Byte  | u8  | 0x10      |
 
 
 
 
 
-[^1]: 

@@ -1,6 +1,6 @@
 # Public Port Section（0-10）
 
-## Get version information
+## exGet version information
 
 **Register：1(0x01)**
 
@@ -142,6 +142,10 @@
 
 </details>
 
+
+
+
+
 ## Get the value of Joint torque or actual current
 
 **Register: 5(0x05)**
@@ -159,9 +163,39 @@ Example：
 00 01 00 02 00 01 05
 ```
 
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//05       U8, Register
+```
+
+</details>
+
 <pre><code>// Response
 <strong>00 01 00 02 00 03 05 <a data-footnote-ref href="#user-content-fn-2">00 00</a>
 </strong></code></pre>
+
+<details>
+
+<summary>Response Description</summary>
+
+{% code overflow="wrap" %}
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 03    U16, Length 
+//05       U8, Register
+//00       U8, State
+//00       U8, 0: Theoretical joint torque 1: Actual current of servo
+```
+{% endcode %}
+
+</details>
 
 
 

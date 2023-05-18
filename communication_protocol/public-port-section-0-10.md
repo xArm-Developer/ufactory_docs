@@ -14,10 +14,10 @@
 <summary> Request Description</summary>
 
 ```
-//00 01    Transaction ID
-//00 02    Protocol Identifier
-//00 01    Length 
-//01       Register
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//01       U8, Register
 ```
 
 </details>
@@ -66,10 +66,10 @@
 <summary>Request Description</summary>
 
 ```
-//00 01    Transaction ID
-//00 02    Protocol Identifier
-//00 01    Length 
-//02       Register
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//02       U8, Register
 ```
 
 </details>
@@ -111,11 +111,36 @@
 00 01 00 02 00 01 04 
 ```
 
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//04       U8, Register
+```
+
+</details>
+
 <pre><code>// Response
 00 01 00 02 00 02 04 <a data-footnote-ref href="#user-content-fn-1">10 </a>
 </code></pre>
 
+<details>
 
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//04       U8, Register
+//10       U8, State
+```
+
+</details>
 
 ## Get the value of Joint torque or actual current
 

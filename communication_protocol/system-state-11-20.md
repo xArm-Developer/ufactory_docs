@@ -163,27 +163,44 @@ Motion state：
 
 **Register：14 (0x0E)**
 
-Request
-
+```
+// Request
 00 01 00 02 00 01 0E
+```
 
-| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
-| -------------- | ------- | --- | --------- |
-| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
-| Length         | 2 Bytes | u16 | 0x00,0x01 |
-| Register       | 1 Byte  | u8  | 0x0E      |
+<details>
 
-Response:
+<summary>Request Description</summary>
 
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//0E       U8, Register
+```
+
+</details>
+
+```
+// Response:
 00 01 00 02 00 04 0E 00 00 00
+```
 
-| Transaction ID                                                 | 2 Bytes                | u16                | 0x00,0x01 |
-| -------------------------------------------------------------- | ---------------------- | ------------------ | --------- |
-| Protocol                                                       | 2 Bytes                | u16                | 0x00,0x02 |
-| Length                                                         | 2 Bytes                | u16                | 0x00,0x04 |
-| Register                                                       | 1 Byte                 | u8                 | 0x0E      |
-| State                                                          | 1 Byte                 | u8                 | 0x00      |
-| <p>Parameter1</p><p>(The number of commands in the buffer)</p> | <p>2 Bytes</p><p> </p> | <p>u16</p><p> </p> | 0x00,0x01 |
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 04    U16, Length 
+//0E       U8, Register
+//00 00    U16, The number of commands in the buffer
+```
+
+</details>
+
+
 
 
 
@@ -191,28 +208,46 @@ Response:
 
 **Register：15 (0x0F)**
 
-Request:
-
+```
+// Request:
 00 01 00 02 00 01 0F
+```
 
-| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
-| -------------- | ------- | --- | --------- |
-| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
-| Length         | 2 Bytes | u16 | 0x00,0x01 |
-| Register       | 1 Byte  | u8  | 0x0F      |
+<details>
 
-Response:
+<summary>Request Description</summary>
 
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//0F       U8, Register
+```
+
+</details>
+
+```
+// Response:
 00 01 00 02 00 04 0F 00 00 00
+```
 
-| Transaction ID                       | 2 Bytes | u16 | 0x00,0x01 |
-| ------------------------------------ | ------- | --- | --------- |
-| Protocol                             | 2 Bytes | u16 | 0x00,0x02 |
-| Length                               | 2 Bytes | u16 | 0x00,0x04 |
-| Register                             | 1 Byte  | u8  | 0x0F      |
-| State                                | 1 Byte  | u8  | 0x00      |
-| <p>Parameter1</p><p>Error code</p>   | 1 Byte  | u8  | 0x00      |
-| <p>Parameter2</p><p>Warning code</p> | 1 Byte  | u8  | 0x00      |
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 04    U16, Length 
+//0F       U8, Register
+//00       U8, State
+//00       U8, Error code
+//00       U8, Warning code
+```
+
+</details>
+
+
 
 
 

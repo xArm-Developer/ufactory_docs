@@ -311,9 +311,14 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 <details>
 
-<summary></summary>
+<summary>Request Description</summary>
 
-
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//11       U8, Register
+```
 
 </details>
 
@@ -324,17 +329,17 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 <details>
 
-<summary></summary>
+<summary>Response Description</summary>
 
-
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//11       U8, Register
+//00       U8, State
+```
 
 </details>
-
-
-
-
-
-
 
 
 
@@ -344,28 +349,44 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 **Register：18 (0x12)**
 
-Request:
-
+```
+// Request:
 00 01 00 02 00 03 12 08 01
+```
 
-| Transaction ID                                                                                                                     | 2 Bytes               | u16               | 0x00,0x01           |
-| ---------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ----------------- | ------------------- |
-| Protocol                                                                                                                           | 2 Bytes               | u16               | 0x00,0x02           |
-| Length                                                                                                                             | 2 Bytes               | u16               | 0x00,0x03           |
-| Register                                                                                                                           | 1 Byte                | u8                | 0x12                |
-| <p>Parameter1(Select all joints)</p><p>Control the brakes：</p><p>1~6: Select motor joint separately</p><p>8: Select all joints</p> | <p>1 Byte</p><p> </p> | <p>u8</p><p> </p> | <p> </p><p>0x08</p> |
-| <p>Parameter2 (Enable the brake)</p><p>Operation：</p><p>1: Unlock Joint</p><p>0: Disable Joint</p>                                 | <p>1 Byte</p><p> </p> | <p>u8</p><p> </p> | 0x01                |
+<details>
 
-Response:
+<summary>Request Description</summary>
 
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 03    U16, Length 
+//12       U8, Register
+//08       U8,  1~6: Select motor joint separately  8: Select all joints
+//01       U8,  0: Disable Joint   1: Unlock Joint
+```
+
+</details>
+
+```
+// Response:
 00 01 00 02 00 02 12 10
+```
 
-| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
-| -------------- | ------- | --- | --------- |
-| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
-| Length         | 2 Bytes | u16 | 0x00,0x02 |
-| Register       | 1 Byte  | u8  | 0x12      |
-| State          | 1 Byte  | u8  | 0x10      |
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 03    U16, Length 
+//12       U8, Register
+//10       U8, State
+```
+
+</details>
 
 
 

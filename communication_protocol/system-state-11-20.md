@@ -398,27 +398,56 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
 {% endhint %}
 
-Request:
+```
+// Request:
+00 01 00 02 00 02 13 00 00
+```
 
-00 01 00 02 00 03 13 00 00
+<details>
 
-| Transaction ID                                                                                                                                                                                                                                                                                                                                                                          | 2 Bytes | u16 | 0x00,0x01 |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | --------- |
-| Protocol                                                                                                                                                                                                                                                                                                                                                                                | 2 Bytes | u16 | 0x00,0x02 |
-| Length (parameter length+1)                                                                                                                                                                                                                                                                                                                                                             | 2 Bytes | u16 | 0x00,0x02 |
-| Register                                                                                                                                                                                                                                                                                                                                                                                | 1 Byte  | u8  | 0x13      |
-| <p>Parameter1(Position control mode)</p><p>Motion mode：</p><p>0: Position control mode</p><p>1: servo motion mode</p><p>2: Joint teaching mode</p><p>3: Cartesian teaching mode (not yet available)</p><p>4: Joint velocity control mode</p><p>5: Cartesian velocity control mode</p><p>6: Joint online trajectory planning mode</p><p>7: Cartesian online trajectory planning mode</p> | 1 Byte  | u8  | 0x00      |
+<summary>Request Description</summary>
 
-Response:
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//13       U8, Register
 
+//00       U8, Motion mode：
+0: Position control mode
+1: servo motion mode
+2: Joint teaching mode
+3: Cartesian teaching mode (not yet available)
+4: Joint velocity control mode
+5: Cartesian velocity control mode
+6: Joint online trajectory planning mode
+7: Cartesian online trajectory planning mode
+
+//00       U8, Teach mode load detection  0:ON   1:OFF
+```
+
+</details>
+
+```
+// Response:
 00 01 00 02 00 02 13 00
+```
 
-| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
-| -------------- | ------- | --- | --------- |
-| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
-| Length         | 2 Bytes | u16 | 0x00,0x02 |
-| Register       | 1 Byte  | u8  | 0x13      |
-| State          | 1 Byte  | u8  | 0x10      |
+<details>
+
+<summary>esponse Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//13       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
 
 
 

@@ -385,14 +385,181 @@ The motion calculates the trajectory of the space circle according to the three-
 
 
 
+## Linear motion in tool coordinate system
+
+**Register：28 (1C)**
+
+{% hint style="warning" %}
+Move in Cartesian linear relative motion based on the current tool coordinate system.
+{% endhint %}
+
+{% code overflow="wrap" %}
+```
+// Request
+00 01 00 02 00 25 1C 00 00 C8 43 00 00 00 00 00 00 48 43 DB 0F 49 40 00 00 00 00 00 00 00 00 C2 B8 B2 3E 00 00 FA 44 00 00 00 00 
+```
+{% endcode %}
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 25    U16, Length 
+//1C       U8, Register
+//00 00 C8 43	fp32, x=400mm
+//00 00 00 00	fp32, y=0mm
+//00 00 48 43	fp32, z=200mm
+//DB 0F 49 40	fp32, roll=π
+//00 00 00 00	fp32, pitch=0
+//00 00 00 00	fp32, yaw=0
+//C2 B8 B2 3E	fp32, speed=20mm/s
+//00 00 FA 44	fp32, acceleration=2000mm/s2
+//00 00 00 00	fp32, motion time=0
+```
+
+</details>
+
+```
+// Response
+00 01 00 02 00 04 1C 00 00 01
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 04    U16, Length 
+//1C       U8, Register
+//00       U8, State
+//00 01    U16, Parameter
+```
+
+</details>
 
 
 
 
 
+## Servoj motion
+
+**Register：29 (1D)**
+
+{% code overflow="wrap" %}
+```
+// Request
+00 01 00 02 00 29 1D 92 0A 86 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+```
+{% endcode %}
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 29    U16, Length 
+//1D       U8, Register
+//92 0A 86 3F	fp32, Joint1=π/3
+//00 00 00 00	fp32, Joint2=0
+//00 00 00 00	fp32, Joint3=0
+//00 00 00 00	fp32, Joint4=0
+//00 00 00 00	fp32, Joint5=0
+//00 00 00 00	fp32, Joint6=0
+//00 00 00 00	fp32, Joint7=0
+//00 00 00 00	fp32, speed  meaningless  0
+//00 00 00 00	fp32, acceleration  meaningless  0
+//00 00 00 00	fp32, motion time  meaningless  0
+```
+
+</details>
+
+```
+// Response
+00 01 00 02 00 02 1D 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//1D       U8, Register
+//00       U8, State
+```
+
+</details>
 
 
 
 
+
+## Servo\_cartesian motion
+
+**Register：30 (1E)**
+
+{% hint style="warning" %}
+Interface for receiving high-frequency continuous cartesian trajectory motion.
+{% endhint %}
+
+{% code overflow="wrap" %}
+```
+// Request
+00 01 00 02 00 25 1E 00 00 C8 43 00 00 00 00 00 00 48 43 DB 0F 49 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+```
+{% endcode %}
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 25    U16, Length 
+//1E       U8, Register
+//00 00 C8 43	fp32, x=400mm
+//00 00 00 00	fp32, y=0mm
+//00 00 48 43	fp32, z=200mm
+//DB 0F 49 40	fp32, roll=π
+//00 00 00 00	fp32, pitch=0
+//00 00 00 00	fp32, yaw=0
+//00 00 00 00	fp32, speed, meaningless, 0
+//00 00 00 00	fp32, acceleration, meaningless, 0
+//00 00 00 00	fp32, 
+Motion coordinate system：
+0 ：the base coordinate system
+1 ：the tool coordinate system
+```
+
+</details>
+
+```
+// Response
+00 01 00 02 00 02 1E 00 
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//1E       U8, Register
+//00       U8, State
+```
+
+</details>
 
 [^1]: 

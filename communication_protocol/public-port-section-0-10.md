@@ -150,14 +150,6 @@
 
 **Register: 5(0x05)**
 
-Example：
-
-> Value of theoretical joint torque
->
-> 0: Value of theoretical joint torque
->
-> 1: Value of actual current of servo
-
 ```
 // Request
 00 01 00 02 00 01 05
@@ -201,20 +193,46 @@ Example：
 
 ## Get the radius of rotation of the target joint relative to the TCP
 
-**Register：6(0x06)**
-
-Example：
-
-> Radius of rotation(mm)
+**Register：6(0x06)x**
 
 ```
 // Request
 00 01 00 02 00 02 06 06 
 ```
 
-<pre><code>// Response
-00 01 00 02 00 06 06 10 <a data-footnote-ref href="#user-content-fn-3">00 00 00 00</a>
-</code></pre>
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//06       U8, Register
+//06       U8, Parameter 1(target joint:6)
+```
+
+</details>
+
+```
+// Response
+00 01 00 02 00 06 06 10 00 00 00 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 06    U16, Length 
+//05       U8, Register
+//10       U8, State
+//00 00 00 00    U8, Parameter 1(Radius of rotation)
+```
+
+</details>
 
 
 
@@ -222,15 +240,23 @@ Example：
 
 **Register10（0x0A）**
 
-Example:
-
-> 1: remote shut down the operating system temporarily
->
-> 2：reboot
-
 <pre><code>// Request
-00 01 00 02 00 02 0A <a data-footnote-ref href="#user-content-fn-4">01 </a>
+00 01 00 02 00 02 0A <a data-footnote-ref href="#user-content-fn-3">01 </a>
 </code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//0A       U8,  Register
+//01       U8,  1:remote shut down the operating system temporarily 2:reboot
+```
+
+</details>
 
 ```
 // Response
@@ -238,6 +264,20 @@ Example:
 ```
 
 
+
+<details>
+
+<summary></summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 04    U16, Length 
+//0A       U8, Register
+//10       U8, State
+```
+
+</details>
 
 
 
@@ -268,5 +308,3 @@ Example:
 [^2]: 
 
 [^3]: 
-
-[^4]: 

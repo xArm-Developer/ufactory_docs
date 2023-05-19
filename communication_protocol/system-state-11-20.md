@@ -298,30 +298,45 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 
 
+
+
 ## Clear control box warning
 
 **Register：17 (0x11)**
 
-Request:
-
+```
+// Request:
 00 01 00 02 00 01 11
+```
 
-| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
-| -------------- | ------- | --- | --------- |
-| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
-| Length         | 2 Bytes | u16 | 0x00,0x01 |
-| Register       | 1 Byte  | u8  | 0x11      |
+<details>
 
-Response:
+<summary></summary>
 
+
+
+</details>
+
+```
+// Response:
 00 01 00 02 00 02 11 00
+```
 
-| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
-| -------------- | ------- | --- | --------- |
-| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
-| Length         | 2 Bytes | u16 | 0x00,0x02 |
-| Register       | 1 Byte  | u8  | 0x11      |
-| State          | 1 Byte  | u8  | 0x00      |
+<details>
+
+<summary></summary>
+
+
+
+</details>
+
+
+
+
+
+
+
+
 
 
 

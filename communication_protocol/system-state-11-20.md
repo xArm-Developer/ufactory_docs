@@ -259,26 +259,31 @@ Motion state：
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
 {% endhint %}
 
-Request:
-
+```
+// Request:
 00 01 00 02 00 01 10
+```
 
-| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
-| -------------- | ------- | --- | --------- |
-| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
-| Length         | 2 Bytes | u16 | 0x00,0x01 |
-| Register       | 1 Byte  | u8  | 0x10      |
+<details>
 
-Response:
+<summary>Request Description</summary>
 
+
+
+</details>
+
+```
+// Response:
 00 01 00 02 00 02 10 00
+```
 
-| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
-| -------------- | ------- | --- | --------- |
-| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
-| Length         | 2 Bytes | u16 | 0x00,0x02 |
-| Register       | 1 Byte  | u8  | 0x10      |
-| State          | 1 Byte  | u8  | 0x10      |
+<details>
+
+<summary>Response Description</summary>
+
+
+
+</details>
 
 
 

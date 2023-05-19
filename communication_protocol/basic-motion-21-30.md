@@ -225,9 +225,10 @@
 
 **Register：25 (0x19)**
 
-<pre><code>// Request
-00 01 00 02 00 0D 19 <a data-footnote-ref href="#user-content-fn-2">DB 0F 49 40 F3 66 DF 40 00 00 00 00</a> 
-</code></pre>
+```
+// Request
+00 01 00 02 00 0D 19 DB 0F 49 40 F3 66 DF 40 00 00 00 00
+```
 
 <details>
 
@@ -271,18 +272,44 @@
 
 **Register：26(0x1A)**
 
-Example:
+```
+// Request
+00 01 00 02 00 05 1A 00 00 40 40
+```
 
-> Pause time=3s
+<details>
 
-<pre><code>// Request
-00 01 00 02 00 05 1A <a data-footnote-ref href="#user-content-fn-3">00 00 40 40 </a>
-</code></pre>
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 05    U16, Length 
+//1A       U8, Register
+//00 00 40 40 fp32, Pause time=3s
+```
+
+</details>
 
 ```
 // Response
 00 01 00 02 00 04 1A 00 00 01
 ```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 04    U16, Length 
+//1A       U8, Register
+//00       U8, State
+//00 01    U16, Parameter
+```
+
+</details>
 
 
 
@@ -296,54 +323,63 @@ Example:
 The motion calculates the trajectory of the space circle according to the three-point coordinates, and the three-point coordinates are (current starting point, parameter 1, parameter 2)
 {% endhint %}
 
-Example:
+{% code overflow="wrap" %}
+```
+// Request
+00 01 00 02 00 41 1B 00 00 C8 43 00 00 00 00 00 00 48 43 DB 0F 49 40 00 00 00 00 00 00 00 00 00 00 C8 43 00 00 C8 42 00 00 48 43 DB 0F 49 40 00 00 00 00 00 00 00 00 00 00 C8 42 00 00 FA 44 00 00 00 00 00 00 48 42
+```
+{% endcode %}
 
-> **Parameter 1**
->
-> x=400mm
->
-> y=0mm
->
-> z=200mm
->
-> roll=π
->
-> pitch=0
->
-> yaw=0
->
-> **Parameter 2**
->
-> x=400mm
->
-> y=0mm
->
-> z=200mm
->
-> 0roll=π
->
-> pitch=0
->
-> yaw=0
->
-> speed=100mm/s
->
-> 2000mm/s2
->
-> acceleration500\*π/180rad/s2
->
-> motion time=0
->
-> Percentage of the length of arc in motion to circumference=50%
+<details>
 
-<pre data-overflow="wrap"><code>// Request
-00 01 00 02 00 41 1B <a data-footnote-ref href="#user-content-fn-4">00 00 C8 43 00 00 00 00 00 00 48 43 DB 0F 49 40 00 00 00 00 00 00 00 00 00 00 C8 43 00 00 C8 42 00 00 48 43 DB 0F 49 40 00 00 00 00 00 00 00 00 00 00 C8 42 00 00 FA 44 00 00 00 00 00 00 48 42 </a>
-</code></pre>
+<summary>Request Description</summary>
+
+{% code overflow="wrap" %}
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 41    U16, Length 
+//1B       U8, Register
+//00 00 C8 43 fp32, x=400mm
+//00 00 00 00 fp32, y=0mm
+//00 00 48 43 fp32, z=200mm
+//DB 0F 49 40 fp32, roll=π
+//00 00 00 00 fp32, pitch=0
+//00 00 00 00 fp32, yaw=0
+//00 00 C8 43 fp32, x=400mm
+//00 00 C8 42 fp32, y=0mm
+//00 00 48 43 fp32, z=200mm
+//DB 0F 49 40 fp32, 0roll=π
+//00 00 00 00 fp32, pitch=0
+//00 00 00 00 fp32, yaw=0
+//00 00 C8 42 fp32, speed=100mm/s
+//00 00 FA 44 fp32, acceleration500*π/180rad/s2
+//00 00 00 00 fp32, motion time=0
+//00 00 48 42 fp32, Percentage of the length of arc in motion to circumference=50%
+```
+{% endcode %}
+
+</details>
 
 ```
 // Response
 00 01 00 02 00 04 1B 00 00 01
 ```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 04    U16, Length 
+//1B       U8, Register
+//00       U8, State
+//00 01    U16, Parameter
+```
+
+</details>
 
 
 
@@ -360,9 +396,3 @@ Example:
 
 
 [^1]: 
-
-[^2]: 
-
-[^3]: 
-
-[^4]: 

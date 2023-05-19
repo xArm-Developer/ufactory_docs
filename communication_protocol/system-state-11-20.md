@@ -8,28 +8,51 @@
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
 {% endhint %}
 
-Request:
-
+```
+// Request:
 00 01 00 02 00 03 0B 08 01
+```
 
-| Transaction ID                                                                              | 2 Bytes | u16 | 0x00,0x01                                       |
-| ------------------------------------------------------------------------------------------- | ------- | --- | ----------------------------------------------- |
-| Protocol                                                                                    | 2 Bytes | u16 | 0x00,0x02                                       |
-| Length (parameter length+1)                                                                 | 2 Bytes | u16 | 0x00,0x03                                       |
-| Register                                                                                    | 1 Byte  | u8  | 0x0B                                            |
-| <p>Joint Number(Select all joints)</p><p>1-7：Motor joint(1-7)</p><p>8：Select all joints</p> | 1 Byte  | u8  | <p> </p><p>0x08</p>                             |
-| <p>Whether to enable the servo</p><p>1：Enable servo</p><p>0：Disable servo</p>               | 1 Byte  | u8  | <p> </p><p>Enable: 0x01</p><p>Disable: 0x00</p> |
+<details>
 
-Response:
+<summary>Request Description</summary>
 
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 03    U16, Length 
+//0B       U8, Register
+//08       U8, 
+Joint Number(Select all joints)
+1-7：Motor joint(1-7)
+8：Select all joint
+
+//01       U8,
+Whether to enable the servo
+1：Enable servo
+0：Disable servo
+```
+
+</details>
+
+```
+// Response:
 00 01 00 02 00 02 0B 10
+```
 
-| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
-| -------------- | ------- | --- | --------- |
-| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
-| Length         | 2 Bytes | u16 | 0x00,0x02 |
-| Register       | 1 Byte  | u8  | 0x0B      |
-| State          | 1 Byte  | u8  | 0x10      |
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//0B      U8, Register
+//10      U8, State
+```
+
+</details>
 
 
 
@@ -37,27 +60,50 @@ Response:
 
 **Register：12(0x0C)**
 
-Request:
-
+```
+// Request:
 00 01 00 02 00 02 0C 00
+```
 
-| Transaction ID                                                                                                                                          | 2 Bytes | u16 | 0x00,0x01 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --- | --------- |
-| Protocol                                                                                                                                                | 2 Bytes | u16 | 0x00,0x02 |
-| Length (parameter length+1)                                                                                                                             | 2 Bytes | u16 | 0x00,0x02 |
-| Register                                                                                                                                                | 1 Byte  | u8  | 0x00      |
-| <p>Parameter1: Motion Sate</p><p>3: Suspend the current motion</p><p>4: Stop all current motion (restart the system)</p><p>0: Enter the motion mode</p> | 1 Byte  | u8  | 0x00      |
+<details>
 
-Response:
+<summary>Request Description</summary>
 
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//0C      U8, Register
+
+//00      U8, 
+Motion Sate
+3: Suspend the current motion
+4: Stop all current motion (restart the system)
+0: Enter the motion mode
+```
+
+</details>
+
+```
+// Response:
 00 01 00 02 00 02 0C 00
+```
 
-| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
-| -------------- | ------- | --- | --------- |
-| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
-| Length         | 2 Bytes | u16 | 0x00,0x02 |
-| Register       | 1 Byte  | u8  | 0x0C      |
-| State          | 1 Byte  | u8  | 0x00      |
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//0C      U8, Register
+//00      U8, State
+```
+
+</details>
+
+
 
 
 
@@ -65,29 +111,53 @@ Response:
 
 **Register：13 (0x0D)**
 
-Request:
-
+```
+// Request:
 00 01 00 02 00 01 0D
+```
 
-| Transaction ID | 2 Bytes | u16 | 0x00,0x01 |
-| -------------- | ------- | --- | --------- |
-| Protocol       | 2 Bytes | u16 | 0x00,0x02 |
-| Length         | 2 Bytes | u16 | 0x00,0x01 |
-| Register       | 1 Byte  | u8  | 0x0D      |
+<details>
 
-Response:
+<summary>Request Description</summary>
 
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//0D      U8, Register
+```
+
+</details>
+
+```
+// Response:
 00 01 00 02 00 03 0D 00 02
+```
 
-| Transaction ID                                                                                                            | 2 Bytes | u16 | 0x00,0x01 |
-| ------------------------------------------------------------------------------------------------------------------------- | ------- | --- | --------- |
-| Protocol                                                                                                                  | 2 Bytes | u16 | 0x00,0x02 |
-| Length                                                                                                                    | 2 Bytes | u16 | 0x00,0x03 |
-| Register                                                                                                                  | 1 Byte  | u8  | 0x0D      |
-| State                                                                                                                     | 1 Byte  | u8  | 0x00      |
-| <p>Parameter1</p><p>Motion state：</p><p>1：In motion</p><p>2：Sleep</p><p>3：Suspend</p><p>4：Stop </p><p>5： System reset</p> | 1 Byte  | u8  | 0x01      |
+<details>
 
-> The user just enters the state after the mode switch or changes some settings (such as TCP offset, sensitivity, etc.). The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//0D       U8, Register
+
+//02       U8,
+Motion state：
+1：In motion
+2：Sleep
+3：Suspend
+4：Stop
+5： System reset
+```
+
+</details>
+
+
+
+
 
 ## Get the number of commands in the command buffer
 

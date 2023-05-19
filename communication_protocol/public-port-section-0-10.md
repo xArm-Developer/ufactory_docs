@@ -267,7 +267,7 @@
 
 <details>
 
-<summary></summary>
+<summary>Response Description</summary>
 
 ```
 //00 01    U16, Transaction ID

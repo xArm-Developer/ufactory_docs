@@ -268,7 +268,12 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 <summary>Request Description</summary>
 
-
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//10       U8, Register
+```
 
 </details>
 
@@ -281,7 +286,13 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 <summary>Response Description</summary>
 
-
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//10       U8, Register
+//00       U8, State
+```
 
 </details>
 

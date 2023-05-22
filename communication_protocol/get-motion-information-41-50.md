@@ -170,6 +170,28 @@
 
 
 
+## Get the solution of the forward kinematics
+
+**Register：44 (2C)**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

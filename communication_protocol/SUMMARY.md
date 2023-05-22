@@ -8,3 +8,4 @@
 * [Robot specifications](robot-specifications.md)
 * [System State(11-20)](system-state-11-20.md)
 * [Terms and Definitions](terms-and-definitions.md)
+* [Motion Parameter Setting(31-40)](motion-parameter-setting-31-40.md)

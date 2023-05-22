@@ -106,6 +106,68 @@
 
 
 
+## Get the solution of the inverse kinematics
+
+**Register：43 (2B)**
+
+{% code overflow="wrap" %}
+```
+// Request:
+00 01 00 02 00 19 2B 00 00 C8 43 00 00 00 00 00 00 48 43 DB 0F 49 40 00 00 00 00 00 00 00 00 
+```
+{% endcode %}
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 19    U16, Length 
+//2B       U8, Register
+//00 00 C8 43	fp32, x=400mm
+//00 00 00 00	fp32, y=0mm
+//00 00 48 43	fp32, z=200mm
+//DB 0F 49 40	fp32, roll=π
+//00 00 00 00	fp32, pitch=0
+//00 00 00 00	fp32, yaw=0
+```
+
+</details>
+
+{% code overflow="wrap" %}
+```
+// Response:
+00 01 00 02 00 1E 2B 00 D8 C8 B2 A4 0A 86 A7 3D B1 22 24 BF F2 A9 3C 8A EF 31 0F 3F D8 C8 B2 A4 00 00 00 00
+```
+{% endcode %}
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 19    U16, Length 
+//2B       U8, Register
+//00       U8, State
+//D8 C8 B2 A4     fp32, joint1= 0
+//0A 86 A7 3D     fp32, joint2=0.081803
+//B1 22 24 BF     fp32, joint3=-0.641152
+//F2 A9 3C 8A     fp32, joint4=0
+//EF 31 0F 3F     fp32, joint5=0.559349
+//D8 C8 B2 A4     fp32, joint6=0
+//00 00 00 00     fp32, joint7=0
+```
+
+</details>
+
+
+
+
+
 
 
 

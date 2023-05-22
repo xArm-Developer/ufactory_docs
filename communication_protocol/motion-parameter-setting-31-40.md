@@ -286,29 +286,187 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 
 
+## Set collision detection sensitivity (System reset)
+
+**Register：37(25)**
+
+{% hint style="warning" %}
+The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
+{% endhint %}
+
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 02 25 04 
+</code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//25       U8, Register
+//04       U8, Detect sensitivity=4
+```
+
+</details>
+
+```
+// Request:
+00 01 00 02 00 02 25 10
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//25       U8, Register
+//10       U8, State
+```
+
+</details>
 
 
 
 
 
+## Set teaching sensitivity for teaching mode (System reset)
+
+**Register：38(26)**
+
+{% hint style="warning" %}
+The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
+{% endhint %}
+
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 02 26 04 
+</code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//26       U8, Register
+//04       U8, Teach sensitivity=4
+```
+
+</details>
+
+```
+// Request:
+00 01 00 02 00 02 25 10
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//26       U8, Register
+//10       U8, State
+```
+
+</details>
 
 
 
 
 
+## Delete the current system configuration parameters
+
+**Register：39 (27)**
+
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 01 27 
+</code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//27       U8, Register
+```
+
+</details>
+
+```
+// Request:
+00 01 00 02 00 02 27 10
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//27       U8, Register
+//10       U8, State
+```
+
+</details>
 
 
 
 
 
+## Save the current system configuration parameters
 
+**Register：40 (28)**
 
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 01 28 
+</code></pre>
 
+<details>
 
+<summary>Request Description</summary>
 
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//28       U8, Register
+```
 
+</details>
 
+```
+// Request:
+00 01 00 02 00 02 28 10
+```
 
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//28       U8, Register
+//10       U8, State
+```
+
+</details>
 
 
 

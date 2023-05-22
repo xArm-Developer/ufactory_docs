@@ -174,7 +174,46 @@
 
 **Register：44 (2C)**
 
+{% code overflow="wrap" %}
+```
+// Request:
 
+```
+{% endcode %}
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 19    U16, Length 
+//2B       U8, Register
+```
+
+</details>
+
+{% code overflow="wrap" %}
+```
+// Response:
+
+```
+{% endcode %}
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 19    U16, Length 
+//2B       U8, Register
+//00       U8, State
+```
+
+</details>
 
 
 

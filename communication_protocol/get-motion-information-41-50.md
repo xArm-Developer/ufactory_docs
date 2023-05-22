@@ -204,7 +204,7 @@
 {% code overflow="wrap" %}
 ```
 // Response:
-00 01 00 02 00 1A 2C 00 18 00 CF 42 80 44 33 43 08 01 A0 42 DB 0F 49 C0 00 00 00 80 92 0A 86 3F 
+00 01 00 02 00 1A 2C 00 FF FF CE 42 6B 44 33 43 00 00 E0 42 DB 0F 49 C0 00 00 00 80 92 0A 86 3F
 ```
 {% endcode %}
 
@@ -218,9 +218,9 @@
 //00 1A    U16, Length 
 //2C       U8, Register
 //00       U8, State
-//18 00 CF 42	fp32, x=103.5mm
-//80 44 33 43	fp32, y=179.27mm
-//08 01 A0 42	fp32, z=112mm
+//FF FF CE 42	fp32, x=103.5mm
+//6B 44 33 43	fp32, y=179.27mm
+//00 00 E0 42	fp32, z=112mm
 //DB 0F 49 C0	fp32, roll=-π
 //00 00 00 80	fp32, pitch=-0
 //92 0A 86 3F	fp32, yaw=-π/3

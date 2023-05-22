@@ -177,7 +177,7 @@
 {% code overflow="wrap" %}
 ```
 // Request:
-
+00 01 00 02 00 1D 2C 92 0A 86 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ```
 {% endcode %}
 
@@ -190,6 +190,13 @@
 //00 02    U16, Protocol Identifier
 //00 19    U16, Length 
 //2B       U8, Register
+//92 0A 86 3F	fp32, joint1= π/3
+//00 00 00 00	fp32, joint2=0
+//00 00 00 00	fp32, joint3=0
+//00 00 00 00	fp32, joint4=0
+//00 00 00 00	fp32, joint5=0
+//00 00 00 00	fp32, joint6=0
+//00 00 00 00	fp32, joint7=0
 ```
 
 </details>

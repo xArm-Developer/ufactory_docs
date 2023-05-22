@@ -188,8 +188,8 @@
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 19    U16, Length 
-//2B       U8, Register
+//00 1D    U16, Length 
+//2C       U8, Register
 //92 0A 86 3F	fp32, joint1= π/3
 //00 00 00 00	fp32, joint2=0
 //00 00 00 00	fp32, joint3=0
@@ -204,7 +204,7 @@
 {% code overflow="wrap" %}
 ```
 // Response:
-
+00 01 00 02 00 1A 2C 00 18 00 CF 42 80 44 33 43 08 01 A0 42 DB 0F 49 C0 00 00 00 80 92 0A 86 3F 
 ```
 {% endcode %}
 
@@ -215,9 +215,15 @@
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 19    U16, Length 
-//2B       U8, Register
+//00 1A    U16, Length 
+//2C       U8, Register
 //00       U8, State
+//18 00 CF 42	fp32, x=103.5mm
+//80 44 33 43	fp32, y=179.27mm
+//08 01 A0 42	fp32, z=112mm
+//DB 0F 49 C0	fp32, roll=-π
+//00 00 00 80	fp32, pitch=-0
+//92 0A 86 3F	fp32, yaw=-π/3
 ```
 
 </details>

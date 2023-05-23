@@ -149,7 +149,7 @@ Register：53 (35)
 //10       U8, State
 //10 U8, State
 //00	U16,	The state of Reduce mode: 0-OFF; 1-ON
-//01 2C 00 64 01 2C FF F6 01 2C 00 32 	int16, Safety Boundary: [x_max, x_min, y_max, y_min, z_max, z_min]
+//01 2C 00 64 01 2C FF F6 01 2C 00 32 	int16, Safety Boundary: [x_max=300, x_min=100, y_max=300, y_min=-10, z_max=300, z_min=50]
 //00 00 C8 42 fp32, Max TCP speed=100mm/s
 //DB 0F 49 40 fp32, max Joint speed=180 °/s
 

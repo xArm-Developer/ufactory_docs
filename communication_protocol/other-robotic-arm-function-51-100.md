@@ -193,7 +193,7 @@ Estimate the joint torque based on current and theoretical model, which is for r
 {% code overflow="wrap" %}
 ```
 // Response:
-00 01 00 02 00 1E 37 00 17 37 E1 A3 71 5A 3B C1 37 81 B6 C0 C4 3D A9 BC AC 49 7B BF AD B7 A2 34 00 00 00 00
+00 01 00 02 00 1E 37 00 17 37 00 00 00 00 00 2A C5 5B C1 79 A4 C5 C0 00 00 00 00 87 A3 E9 BF 00 00 00 00 00 00 00 00 
 ```
 {% endcode %}
 

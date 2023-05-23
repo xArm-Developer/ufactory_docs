@@ -164,13 +164,59 @@ Register：53 (35)
 
 
 
+## Get current joint torque of the servo
 
+**Register：55 (37)**
 
+{% hint style="warning" %}
+Estimate the joint torque based on current and theoretical model, which is for reference only
+{% endhint %}
 
+```
+// Request:
+00 01 00 02 00 01 37  
+```
 
+<details>
 
+<summary>Request Description</summary>
 
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//37       U8, Register
+```
 
+</details>
+
+{% code overflow="wrap" %}
+```
+// Response:
+00 01 00 02 00 1E 37 00 17 37 E1 A3 71 5A 3B C1 37 81 B6 C0 C4 3D A9 BC AC 49 7B BF AD B7 A2 34 00 00 00 00
+```
+{% endcode %}
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 1E    U16, Length 
+//37       U8, Register
+//00       U8, State
+//00 00 00 00	fp32, Theoretical torque of joint1 = 0
+//2A C5 5B C1   fp32, Theoretical torque of joint2 = -13.7 N.m
+//79 A4 C5 C0	fp32, Theoretical torque of joint3 = -6.17 N.m
+//00 00 00 00   fp32, Theoretical torque of joint4 = 0
+//87 A3 E9 BF	fp32, Theoretical torque of joint5 = -1.83N.m
+//00 00 00 00	fp32, Theoretical torque of joint6 = 0
+//00 00 00 00	fp32, Theoretical torque of joint7 = 0
+```
+
+</details>
 
 
 

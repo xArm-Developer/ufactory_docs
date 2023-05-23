@@ -236,9 +236,12 @@
 
 **Register：45 (2D)**
 
+{% code overflow="wrap" %}
 ```
 // Request:
+00 01 00 02 00 1D 2D 92 0A 86 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ```
+{% endcode %}
 
 <details>
 
@@ -249,12 +252,20 @@
 //00 02    U16, Protocol Identifier
 //00 1D    U16, Length 
 //2D       U8, Register
+//92 0A 86 3F	fp32, joint1=π/3
+//00 00 00 00	fp32, joint2=0
+//00 00 00 00	fp32, joint3=0
+//00 00 00 00	fp32, joint4=0
+//00 00 00 00	fp32, joint5=0
+//00 00 00 00	fp32, joint6=0
+//00 00 00 00	fp32, joint7=0
 ```
 
 </details>
 
 ```
 // Response:
+00 01 00 02 00 03 2D 00 00
 ```
 
 <details>
@@ -266,6 +277,8 @@
 //00 02    U16, Protocol Identifier
 //00 03    U16, Length 
 //2D       U8, Register
+//00       U8, State
+//00       U8,  1 ：Collision occurs , 0 ：No collision occurs
 ```
 
 </details>

@@ -287,9 +287,182 @@
 
 
 
+## Set TCP speed limit in Reduced Mode
+
+**Register：47 (2F)**
+
+```
+// Request:
+00 01 00 02 00 05 2F 00 00 C8 43 
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 05    U16, Length 
+//2F       U8, Register
+//00 00 C8 43    U8,  Max TCP speed=400mm/s
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 2F 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 04    U16, Length 
+//2F       U8, Register
+//00       U8, State
+```
+
+</details>
 
 
 
 
 
+## Set Joint speed limit in Reduced Mode
 
+**Register：48 (30)**
+
+```
+// Request:
+00 01 00 02 00 05 30 00 00 80 3F 
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 05    U16, Length 
+//2F       U8, Register
+//00 00 C8 43    U8,  Max joint speed=1.0 rad/s
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 30 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//30       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+
+
+
+## Get the state of the Reduced Mode
+
+**Register：49 (31)**
+
+```
+// Request:
+00 01 00 02 00 05 31
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//31       U8, Register
+```
+
+</details>
+
+```
+// Response:
+00 01 00 03 00 02 30 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 03    U16, Length 
+//31       U8, Register
+//00       U8, State
+//00       U8, 0– OFF; 1 - ON
+```
+
+</details>
+
+
+
+
+
+## Set the state of the Reduced Mode
+
+**Register：50 (32)**
+
+```
+// Request:
+00 01 00 02 00 02 32 00
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//32       U8, Register
+//00       U8,   0: turn off Reduced Mode  1: turn on Reduced Mode
+```
+
+</details>
+
+```
+// Response:
+00 01 00 03 00 02 30 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//32       U8, Register
+//00       U8, State
+```
+
+</details>

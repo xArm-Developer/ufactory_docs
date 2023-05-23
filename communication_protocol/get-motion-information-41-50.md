@@ -232,17 +232,43 @@
 
 
 
+## Check the limit of joint space
 
+**Register：45 (2D)**
 
+```
+// Request:
+```
 
+<details>
 
+<summary>Request Description</summary>
 
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 1D    U16, Length 
+//2D       U8, Register
+```
 
+</details>
 
+```
+// Response:
+```
 
+<details>
 
+<summary>Response Description</summary>
 
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 03    U16, Length 
+//2D       U8, Register
+```
 
+</details>
 
 
 

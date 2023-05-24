@@ -10,5 +10,6 @@
 * [Terms and Definitions](terms-and-definitions.md)
 * [Motion Parameter Setting(31-40)](motion-parameter-setting-31-40.md)
 * [Get Motion Information(41-50)](get-motion-information-41-50.md)
-* [Other Robotic Arm Function(51-70)](other-robotic-arm-function-51-70.md)
+* [Other Robotic Arm Function(51-70)](other-robotic-arm-function-51-100.md)
+* [Other Robotic Arm Function(71-80)](other-robotic-arm-function-71-80.md)
 * [Page 1](page-1.md)

@@ -222,7 +222,203 @@ Estimate the joint torque based on current and theoretical model, which is for r
 
 
 
+## Set Joint Range Limit of Reduced Mode
 
+**Register：58 (3A)**
+
+```
+// Request:
+00 01 00 02 00 39 3A  
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 39    U16, Length 
+//3A       U8, Register
+//C2 F5 48 C0 C2 F5 48 40	fp32, J1_min = -3.14rad,J1_max = 3.14rad
+//33 33 03 C0 8F C2 05 40	fp32, J2_min = -2.05rad,J2_max = 20.9rad
+//C2 F5 48 C0 C2 F5 48 40	fp32, J3_min = -3.14rad,J3_max = 3.14rad
+//5C 8F 42 BE 47 E1 7A 40	fp32, J4_min = -0.19rad,J4_max = 3.92rad
+//C2 F5 48 C0 C2 F5 48 40	fp32, J5_min = -3.14rad,J5_max = 3.14rad
+//EB 51 D8 BF C8 00 00 00	fp32, J6_min = -1.69rad,J6_max = 3.14rad
+//C2 F5 48 C0 C2 F5 48 40	fp32, J7_min = -3.14rad,J7_max = 3.14rad
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 3A 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//3A       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+
+
+
+
+
+## Safety boundary start switch
+
+**Register: 59 (3B)**
+
+{% hint style="warning" %}
+Set the safety fence boundary validation switch in three-dimensional space. If the TCP of the robotic arm exceeds this boundary after validation, error C35 of the Control Box will be triggered.
+{% endhint %}
+
+```
+// Request:
+00 01 00 02 00 0D 33  
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+{% code overflow="wrap" %}
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//3B       U8, Register
+
+//00       U8, 
+Validation switch
+0: Turn off safety boundary detection
+1: Turn on safety boundary detection
+```
+{% endcode %}
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 3B 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//3B       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+
+
+
+## Set the state of Collision Rebound
+
+**Register：60 (3C)**
+
+```
+// Request:
+00 01 00 02 00 02 3C 00  
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//3C       U8, Register
+//00       U8, ollision Rebound switch  0-OFF; 1-ON
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 33 10
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//3C       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+
+
+
+## Start/Stop trajectory record
+
+**Register：61 (3D)**
+
+```
+// Request:
+00 01 00 02 00 02 3D 00  
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//3D       U8, Register
+//00       U8, 0-Stop trajectory record, 1-start trajectory record
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 3D 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//3D       U8, Register
+//00       U8, State
+```
+
+</details>
 
 
 

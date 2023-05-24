@@ -424,6 +424,57 @@ Validation switch
 
 
 
+## Save recorded trajectory
+
+**Register：62 (3E)**
+
+```
+// Request:
+00 01 00 02 00 0A 3E 74 65 73 74 2E 74 72 61 6A 
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 0A    U16, Length 
+//3E       U8, Register
+//74 65 73 74 2E 74 72 61 6A  U8,Trajectory name (max length:80 Bytes)
+e. g. test.traj
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 3E 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//3E       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+
+
+
+
+
+
+
 
 
 

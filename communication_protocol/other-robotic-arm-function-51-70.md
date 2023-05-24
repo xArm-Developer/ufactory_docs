@@ -1,4 +1,4 @@
-# Other Robotic Arm Function(51-100)
+# Other Robotic Arm Function(51-70)
 
 ## Set the gravity direction
 
@@ -672,11 +672,52 @@ e. g. test.traj
 
 
 
+## Set the joint torque (theoretical) and current of servo
 
+**correspond to the contents of reporting port 60\~87 Bytes**
 
+**Register: 70 (46)**
 
+```
+// Request:
+00 01 00 02 00 02 46 00  
+```
 
+<details>
 
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//46       U8, Register
+//00       U8, 
+value of theoretical joint torque)
+0: value of theoretical joint torque, unit : Nm
+1: value of actual current of servo, unit : A
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 46 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//46       U8, Register
+//00       U8, State
+```
+
+</details>
 
 
 

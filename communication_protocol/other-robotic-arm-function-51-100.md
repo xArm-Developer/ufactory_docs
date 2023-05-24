@@ -571,6 +571,111 @@ e. g. test.traj
 
 
 
+## Get the state of recorded trajectory
+
+**Register：65 (41)**
+
+```
+// Request:
+00 01 00 02 00 01 41  
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//41       U8, Register
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 03 41 00 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 03    U16, Length 
+//41       U8, Register
+//00       U8, State
+//00       U8, 
+0: no read/write
+1: loading
+2: load success
+3: load failed
+4: saving
+5: save success
+6: save failed
+```
+
+</details>
+
+
+
+
+
+
+
+## Set allow to avoid overspeed near some singularities using approximate solutions
+
+**Register: 66 (42)**
+
+```
+// Request:
+00 01 00 02 00 02 42 00
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//42       U8, Register
+//00       U8, 0 :Not allow  ,1 :allow
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 42 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//42       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+
+
+
+
+
+
+
 
 
 

@@ -133,11 +133,49 @@ Representation of output pose:
 
 
 
+## Set the self-collision detection function of the robotic arm (The end tools)
 
+**Register: 77 (4D)**
 
+```
+// Request:
+00 01 00 02 00 02 4D 01  
+```
 
+<details>
 
+<summary>Request Description</summary>
 
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//40       U8, Register
+//01       U8, 
+0: turn off self-collision detection
+1: turn on self-collision detection
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 4D 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//4D       U8, Register
+//00       U8, State
+```
+
+</details>
 
 
 

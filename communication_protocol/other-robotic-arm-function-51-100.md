@@ -471,6 +471,102 @@ e. g. test.traj
 
 
 
+## Load recorded trajectory
+
+**Register：63 (3F)**
+
+```
+// Request:
+00 01 00 02 00 0A 3F 74 65 73 74 2E 74 72 61 6A 
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//32       U8, Register
+//74 65 73 74 2E 74 72 61 6A  U8,Trajectory name (max length:80 Bytes)
+e. g. test.traj
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 3F 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//3F       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+
+
+
+
+
+## Playback recorded trajectory
+
+**Register：64 (40)**
+
+```
+// Request:
+00 01 00 02 00 09 40 00 00 00 01 00 00 00 01  
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+<pre><code>//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//32       U8, Register
+//00 00 00 01    U32, Cycles of playback
+
+<strong>//00 00 00 01    U32, 
+</strong>Playback speed
+1: 1multiple
+2: 2multiple
+4: 4multiple
+</code></pre>
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 40 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//40       U8, Register
+//00       U8, State
+```
+
+</details>
+
 
 
 

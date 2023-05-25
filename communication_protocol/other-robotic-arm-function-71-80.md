@@ -317,7 +317,7 @@ If you enter the virtual robotic arm mode, the real robotic arm will not move, b
 
 ```
 // Request:
-00 01 00 02 00 0D 33  
+00 01 00 02 00 02 50 00  
 ```
 
 <details>
@@ -328,14 +328,17 @@ If you enter the virtual robotic arm mode, the real robotic arm will not move, b
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 02    U16, Length 
-//32       U8, Register
+//50       U8, Register
+//00       U8, 
+0 :speed discontinuity，default
+1 :speed continuous
 ```
 
 </details>
 
 ```
 // Response:
-00 01 00 02 00 02 33 10
+00 01 00 02 00 02 50 00
 ```
 
 <details>
@@ -346,8 +349,8 @@ If you enter the virtual robotic arm mode, the real robotic arm will not move, b
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 02    U16, Length 
-//33       U8, Register
-//10       U8, State
+//50       U8, Register
+//00       U8, State
 ```
 
 </details>

@@ -103,15 +103,11 @@ General notes:
 
 {% tabs %}
 {% tab title="Big-endian method:" %}
-|     | 0x100 | 0x101 | 0x102 | 0x103 |     |
-| --- | ----- | ----- | ----- | ----- | --- |
-| ... | 0x12  | 0x34  | 0x56  | 0x78  | ... |
+<table data-header-hidden><thead><tr><th width="115"></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td> </td><td>0x100</td><td>0x101</td><td>0x102</td><td>0x103</td><td> </td></tr><tr><td>...</td><td>0x12</td><td>0x34</td><td>0x56</td><td>0x78</td><td>...</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Little-endian method:" %}
-|     | 0x100 | 0x101 | 0x102 | 0x103 |     |
-| --- | ----- | ----- | ----- | ----- | --- |
-| ... | 0x78  | 0x56  | 0x34  | 0x12  | ... |
+<table data-header-hidden><thead><tr><th width="111"></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td> </td><td>0x100</td><td>0x101</td><td>0x102</td><td>0x103</td><td> </td></tr><tr><td>...</td><td>0x78</td><td>0x56</td><td>0x34</td><td>0x12</td><td>...</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

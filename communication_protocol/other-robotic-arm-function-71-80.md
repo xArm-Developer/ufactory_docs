@@ -181,3 +181,131 @@ Representation of output pose:
 
 
 
+## The geometric model of the end tool added when setting the self-collision detection
+
+**Register: 78 (4E)**
+
+```
+// Request:
+00 01 00 02 00 0E (2+x*4) 4E 00 00 A0 41 00 00 F0 41 00 00 48 42 16 
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+<pre data-overflow="wrap"><code>//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 0E    U16, Length((2+x*4)) 
+//4E       U8, Register
+<strong>//00 00 A0 41    
+</strong>//00 00 F0 41
+//00 00 48 42    3*fp32,
+Parameter 1 (The end tool is a cuboid)
+x=20,y=30,z=50
+Additional definition parameter area: x maximum is 6, the actual length depends on the number of parameters required by the tool type definition. 
+If there is no parameter, there is no data here.
+
+End tool type:
+1) Custom detection model (additional parameters are required):
+*Cylinder:
+Additional definition parameters are: 
+radius (mm), height (mm)
+*Cuboid:
+Additional definition parameters are: 
+length[x(mm)] ,width[y(mm)], height[z(mm)] consistent with the direction of the default TCP coordinate system.
+
+2) Supported detection models (no need to define additional parameters):
+No end tool, xArm gripper, xArm vacuum gripper, xArm BIO gripper, Robotiq 2F-85 gripper, Robotiq 2F-140 gripper.
+<strong>
+</strong>//16    U8, 
+Parameter 2 
+(end tool type number = 22)
+End tool type number:
+1)Custom detection models (additional parameters are required):
+Cylinder: 21
+Cuboid: 22
+2) Supported detection models (no need to define additional parameters):
+No end tools: 0
+xArm gripper: 1
+xArm vacuum gripper: 2
+xArm BIO gripper: 3
+Robotiq 2F-85 gripper: 4
+Robotiq 2F-140 gripper: 5
+</code></pre>
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 4E 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//4E       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+
+
+
+## Set whether to enable the virtual robotic arm mode
+
+Register: 79 (4F)
+
+{% hint style="warning" %}
+If you enter the virtual robotic arm mode, the real robotic arm will not move, but the reported position of the robotic arm will change with the command to drive the virtual robotic arm to move.
+{% endhint %}
+
+```
+// Request:
+00 01 00 02 00 02 4F 01
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//4F       U8, Register
+//01       U8,
+0: the real robotic arm mode
+1: the virtual robotic arm mode
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 4F 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//4F       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+

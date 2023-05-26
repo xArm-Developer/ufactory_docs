@@ -5,7 +5,7 @@
 **Register: 127 (7F)**
 
 <pre><code><strong>// Request:
-</strong>00 01 00 02 00 08 7F  
+</strong>00 01 00 02 00 08 7F 09 1A 0B 00 00 30 41
 </code></pre>
 
 <details>
@@ -15,7 +15,7 @@
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 02    U16, Length 
+//00 08    U16, Length 
 //7F       U8, Register
 //09	   U8, Host ID
 //1A 0B	   U16,Address
@@ -45,6 +45,66 @@
 ```
 
 </details>
+
+
+
+
+
+
+
+## IO control on the End-effector
+
+**Register：127 (7F)**
+
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 08 7F  
+</code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 08    U16, Length 
+//7F       U8, Register
+//09	   U8, Host ID
+//1A 15	   U16,Address
+//00 00 80 43	fp32,
+Open 0
+Data:
+256.0: Close 0  257.0: Open 
+512.0: Close 1  514: Open 1
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 01 7F
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//7F       U8, Register
+```
+
+</details>
+
+
+
+
+
+
+
+
 
 
 

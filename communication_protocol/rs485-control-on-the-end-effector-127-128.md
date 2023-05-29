@@ -1,4 +1,4 @@
-# RS485 Control on the End-effector(124-130)
+# RS485 Control on the End-effector(127-128)
 
 ## Set the end RS485 band rate
 

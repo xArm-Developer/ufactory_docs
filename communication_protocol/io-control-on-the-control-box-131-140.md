@@ -68,7 +68,7 @@ GPIO signal: Bit0 ~ Bit15 Correspond to signals of GPIO0~GPIO15
 
 ```
 // Response:
-00 01 00 02 00 02 33 10
+00 01 00 02 00 04 84 00 00 12
 ```
 
 <details>

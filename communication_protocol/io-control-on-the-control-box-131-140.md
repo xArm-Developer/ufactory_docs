@@ -91,3 +91,75 @@ Corresponding to 0~10V
 
 
 
+## Get analog input AI2
+
+**Register：133 (85)**
+
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 01 85  
+</code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//85       U8, Register
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 04 84 00 00 12
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 04    U16, Length 
+//84       U8, Register
+//00       U8, State
+//00 15    U16,
+Analog input1
+Analog input1, Range 0~4095
+Corresponding to0~10V
+```
+
+</details>
+
+
+
+
+
+
+
+## Set configurable digital GPIO output
+
+**Register：134 (86)**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

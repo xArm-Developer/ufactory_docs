@@ -14,5 +14,5 @@
 * [Other Robotic Arm Function(71-80)](other-robotic-arm-function-71-80.md)
 * [Other Robotic Arm Function(81-100)](other-robotic-arm-function-81-100.md)
 * [Servo Module(101-115)](servo-module-101-115.md)
-* [RS485 Control on the End-effector(127-128)](rs485-control-on-the-end-effector-127-128.md)
+* [RS485 Control on the End-effector(127-128)](rs485-control-on-the-end-effector-124-127.md)
 * [Page 1](page-1.md)

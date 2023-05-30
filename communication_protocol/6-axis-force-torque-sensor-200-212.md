@@ -220,7 +220,7 @@ control mode
 
 ```
 // Response:
-00 01 00 02 00 02 33 10
+00 01 00 02 00 2A CC 00
 ```
 
 <details>
@@ -230,9 +230,18 @@ control mode
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 02    U16, Length 
-//33       U8, Register
-//10       U8, State
+//00 2A    U16, Length   Type 0: 00,2A  Type 1: 00,12
+//CC       U8, Register
+//00       U8, State
+//00,00,00,00
+//00,00,00,00
+    ...
+//00,00,00,00
+Identification result)
+Type=0: N=10.
+[weight(kg), Cx, Cy, Cz(mm), Fx0, Fy0, Fz0(N), Tx0, Ty0, Tz0(Nm)]
+Type=1: N=4.
+[weight(kg), offset_Cx, offset_Cy, offset_Cz(mm)]
 ```
 
 </details>

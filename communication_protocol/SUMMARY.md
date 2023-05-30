@@ -16,4 +16,5 @@
 * [Servo Module(101-115)](servo-module-101-115.md)
 * [RS485 Control on the End-effector(127-128)](rs485-control-on-the-end-effector-124-127.md)
 * [IO Control on the Control Box(131-140)](io-control-on-the-control-box-131-140.md)
+* [Special IO commands(142-147)](special-io-commands-142-147.md)
 * [Page 1](page-1.md)

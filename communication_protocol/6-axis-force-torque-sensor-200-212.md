@@ -192,3 +192,66 @@ control mode
 
 
 
+
+
+## Perform end payload identification
+
+**Register204（CC）**
+
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 02 CC 00
+</code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//CC       U8, Register
+//00       U8, 
+0: 6 Axis Force Torque Sensor identification
+1: current identification
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 33 10
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//33       U8, Register
+//10       U8, State
+```
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -233,7 +233,7 @@ control mode
 //00 2A    U16, Length   Type 0: 00,2A  Type 1: 00,12
 //CC       U8, Register
 //00       U8, State
-//00,00,00,00
+//00,00,00,00    fp32, 4*n Byte
 //00,00,00,00
     ...
 //00,00,00,00

@@ -256,7 +256,51 @@ Type=1: N=4.
 
 **Register205（CD）**
 
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 29 CD 
+</code></pre>
 
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 29    U16, Length 
+//CD       U8, Register
+//00 00 00 00	fp32,  weight: kg
+//00 00 00 00	fp32,  Cx: mm
+//00 00 00 00	fp32,  Cy: mm
+//00 00 00 00	fp32,  Cz: mm
+//00 00 00 00	fp32,  Fx: mm
+//00 00 00 00	fp32,  Fy: mm
+//00 00 00 00	fp32,  Fz: mm
+//00 00 00 00	fp32,  Tx: mm
+//00 00 00 00	fp32,  Ty: mm
+//00 00 00 00	fp32,  Tz: mm
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 CD 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//CD       U8, Register
+//00       U8, State
+```
+
+</details>
 
 
 

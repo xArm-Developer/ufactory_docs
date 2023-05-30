@@ -230,9 +230,10 @@ when the robotic arm reaches the specified position (the area of the sphere spec
 
 **Register146（92）**
 
-<pre><code><strong>// Request:
-</strong>00 01 00 02 00 03 92 00 01 
-</code></pre>
+```
+// Request:
+00 01 00 02 00 03 92 00 01 
+```
 
 <details>
 
@@ -281,13 +282,64 @@ Switch value
 
 
 
+## Operation triggered by the position of the general Analog IO of the control box
 
+**Register147（93）**
 
+{% hint style="warning" %}
+Starting from the moment when the command is issued, the TCP triggers the analog output switch of the control box after it reaches the specified position area, which is valid for a single time.
+{% endhint %}
 
+```
+// Request:
+00 01 00 02 00 14 93 00 00 00 00 c8 43 00 00 00 00 00 00 48 43 00 00 48 42 
+```
 
+<details>
 
+<summary>Request Description</summary>
 
+{% code overflow="wrap" %}
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 92    U16, Length 
+//00       U8, Register
+//00	U8, IO port number of the control box: 0/1
+//00 00	U16, 
+Analog output 0 is 0
+Analog output 0, Range 0~4095
+Corresponding to 0~10V
 
+//00 00 c8 43	fp32, x=400mm
+//00 00 00 00	fp32, y=0mm
+//00 00 48 43	fp32, z=200mm
+//00 00 48 42	fp32, 
+Tolerance radius (tol_r=50mm),
+when the robotic arm reaches the specified position (the area of the sphere specified by the trigger position point (x, y, z) as the center (the radius of the sphere is the tolerance radius)), trigger IO . If the tolerance radius is not set, when the robotic arm passes the specified point at a speed other than 0, it may cause a missed 
+```
+{% endcode %}
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 93 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//93       U8, Register
+//00       U8, State
+```
+
+</details>
 
 
 

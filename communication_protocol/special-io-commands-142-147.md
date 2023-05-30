@@ -226,6 +226,65 @@ when the robotic arm reaches the specified position (the area of the sphere spec
 
 
 
+## Whether the control box and terminal IO are automatically cleared in the STOP state
+
+**Register146（92）**
+
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 03 92 00 01 
+</code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 92    U16, Length 
+//00       U8, Register
+//00       U8, 
+IO type
+0 represents the control box IO
+1 represents the end IO
+//01       U8, 
+Switch value
+0 is off, the STOP status is not cleared
+1 is on, and the STOP status is cleared
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 04 92 00 00 01
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 04    U16, Length 
+//92       U8, Register
+//00       U8, State
+//00 01    U16, Parameter1
+```
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

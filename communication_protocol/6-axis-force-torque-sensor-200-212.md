@@ -252,9 +252,9 @@ Type=1: N=4.
 
 
 
+## Set the payload and offset of 6 Axis Force Torque Sensor
 
-
-
+**Register205（CD）**
 
 
 

@@ -174,7 +174,51 @@ when the robotic arm reaches the specified position (the area of the sphere spec
 Starting from the moment when the instruction is issued, the TCP triggers the end digital output switch after it reaches the specified position area, which is valid for a single time.
 {% endhint %}
 
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 13 91 00 01 00 00 c8 43 00 00 00 00 00 00 48 43 00 00 48 42 
+</code></pre>
 
+<details>
+
+<summary>Request Description</summary>
+
+{% code overflow="wrap" %}
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 13    U16, Length 
+//91       U8, Register
+//00	U8, IO port number of the end: 0/1
+//01 U8,Switch value (on_off): 0 is off, 1 is on
+//00 00 c8 43	fp32, x=400mm
+//00 00 00 00	fp32, y=0mm
+//00 00 48 43	fp32, z=200mm
+//00 00 48 42	fp32, 
+Tolerance radius (tol_r=50mm)
+when the robotic arm reaches the specified position (the area of the sphere specified by the trigger position point (x, y, z) as the center (the radius of the sphere is the tolerance radius)), trigger IO . If the tolerance radius is not set, when the robotic arm passes the specified point at a speed other than 0, it may cause a missed trigger because it cannot be accurately detected.
+```
+{% endcode %}
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 91 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//91       U8, Register
+//00       U8, State
+```
+
+</details>
 
 
 

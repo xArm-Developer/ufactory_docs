@@ -4,8 +4,8 @@
 
 | Parameter              | Python-SDK     | Blockly        | Communication Protocol |
 | ---------------------- | -------------- | -------------- | ---------------------- |
-| X（Y/Z）                 | millimeter（mm） | millimeter（mm） | millimeter（mm）         |
-| Roll（Pitch/Yaw）        | degree（°）      | degree（°）      | radian（rad）            |
+| X/Y/Z                  | millimeter（mm） | millimeter（mm） | millimeter（mm）         |
+| Roll/Pitch/Yaw         | degree（°）      | degree（°）      | radian（rad）            |
 | J1（J2 /J3/J4/J5/J6/J7） | degree（°）      | degree（°）      | radian（rad）            |
 | TCP Speed              | mm/s           | mm/s           | mm/s                   |
 | TCP Acceleration       | mm/s²          | mm/s²          | mm/s²                  |
@@ -16,53 +16,37 @@
 
 ## <mark style="color:blue;">**Terms and Definitions**</mark>
 
-
-
 ### **Control Box**
 
 > The control box, core part of the robotic arm, is the integration of the robotic arm control system.
-
-
 
 ### **End Effector**
 
 > The end effector, installed on the front end of the wrist of the robotic arm, is used to install special tools (such as grippers, vacuum gripper, etc.), which can directly perform work tasks.
 
-
-
 ### **Enable Robotic Arm**
 
 > Power on the robotic arm and turn on the motor of the robotic arm. After the robotic arm is enabled, it can start to move normally.
-
-
 
 ### **TCP**
 
 > Tool center point.
 
-
-
 ### **TCP Motion**
 
 > TCP motion is the Cartesian space motion, with target position in Cartesian space coordinate and the end follows the specified trajectory(arc, line, etc.).
-
-
 
 ### **TCP Payload（End Payload）**
 
 > The payload weight refers to the actual (end tool +other object) weight in Kg; the X / Y / Z-axis indicates the position of the center of mass of the TCP relative to the default tool coordinate system,with unit of mm.
 
-
-
 ### **TCP Offset(Tool Center Point Offset)**
 
 > Set the relative offset between the default tool coordinate system at flange center and the actual tool coordinate system, with distance unit of mm.
 
-
-
 ### **Roll/Pitch/Yaw**
 
-> Roll / Pitch / Yaw sequentially rotates around the X / Y / Z of the selected coordinate system (base coordinate system).The following describes the roll/pitch/yaw orientation representation of {B} relative to {A}:For example, the coordinate system {B} and a known reference coordinate system {A} are first superposed. First rotate {B} around by γ, then around by β, and finally around by α.Each rotation is around a fixed axis of the reference coordinate system {A}. This method is called the XYZ fixed angle coordinate system, and sometimes they are defined as the roll angle, pitch angle, and yaw angle.The above description is shown in the following figure:The equivalent rotation matrix is:&#x20;
+> Roll / Pitch / Yaw sequentially rotates around the X / Y / Z of the selected coordinate system (base coordinate system).The following describes the roll/pitch/yaw orientation representation of {B} relative to {A}:For example, the coordinate system {B} and a known reference coordinate system {A} are first superposed. First rotate {B} around by γ, then around by β, and finally around by α.Each rotation is around a fixed axis of the reference coordinate system {A}. This method is called the XYZ fixed angle coordinate system, and sometimes they are defined as the roll angle, pitch angle, and yaw angle.The above description is shown in the following figure:The equivalent rotation matrix is:
 
 $$
 Rxyz(γ,β,α)=Rz(α)Ry(β)Rx(γ)
@@ -70,7 +54,7 @@ $$
 
 > Note: γ corresponds to roll; β corresponds to pitch; α corresponds to yaw.
 
-<figure><img src="../../.gitbook/assets/RPY.svg" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/RPY.svg" alt="" width="563"><figcaption></figcaption></figure>
 
 ### **Axis-Angle**
 
@@ -106,11 +90,9 @@ q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
 [0.707 * (π / 2), 0.707 * (π / 2), 0]
 ```
 
-
-
 ### **Coordinates**
 
-<figure><img src="../../.gitbook/assets/coordinates.svg" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/coordinates.svg" alt="" width="563"><figcaption></figcaption></figure>
 
 #### **The Base Coordinate System**
 
@@ -124,25 +106,17 @@ q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
 
 * The user coordinate system can be defined as any other referencecoordinate system rather than the robot base.
 
-
-
 ### **Manual Mode**
 
 > In this mode, the robotic arm will enter the ‘zero gravity’ mode, since the gravity is compensated, the user can guide the robotic arm position directly by hand.
-
-
 
 ### **Teach Sensitivity**
 
 > Teach sensitivity range is from 1 to 5 level. The larger the set value, the higher the teach sensitivity level, and the less the force required to drag the joint in the manual mode.
 
-
-
 ### **Collision Sensitivity**
 
 > The collision sensitivity range is from 0 to 5 level. When it is set to 0, it means that collision detection is not enabled. The larger the set value, the higher the collision sensitivity level, and the smaller the force required to trigger the collision protection response of the robotic arm.
-
-
 
 ### **GPIO**
 
@@ -152,15 +126,10 @@ q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
 >
 > For the output, you can write a certain register to make this pin output high or low potential;
 
-
-
 ### **Safety Boundary**
 
 > When this mode is activated, the boundary range of the cartesian space of the robotic arm can be limited. If the tool center point (TCP) exceeds the set safety boundary, the robotic arm will stop moving.
 
-
-
 ### **Reduced Mode**
 
 > When this mode is activated, the maximum linear velocity of the Cartesian motion of the robotic arm, the maximum joint speed, and the range of the joint motion will be limited.
-

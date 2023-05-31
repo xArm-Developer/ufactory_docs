@@ -1,6 +1,6 @@
 # Table of contents
 
-* [ReadMe\_en](README.md)
+* [Introduction](README.md)
 * [Basic Motion(21-30)](basic-motion-21-30.md)
 * [Communication Format](communication-format.md)
 * [Public Port Section（0-10）](public-port-section-0-10.md)

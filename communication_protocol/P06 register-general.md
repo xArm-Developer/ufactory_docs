@@ -100,8 +100,6 @@
 
 </details>
 
-
-
 ## Get Cartesian position
 
 **Register41（0x29）**
@@ -151,8 +149,6 @@
 
 </details>
 
-
-
 ## Linear motion of the target in the axis angle posture
 
 **Register92（0x5C）**
@@ -200,9 +196,12 @@ If the motion coordinate system is the base coordinate system
 
 </details>
 
-<pre data-overflow="wrap"><code>//Response
-00 01 00 02 00 04 5C 00 <a data-footnote-ref href="#user-content-fn-1">00 01</a>
-</code></pre>
+{% code overflow="wrap" %}
+```
+//Response
+00 01 00 02 00 04 5C 00 00 01
+```
+{% endcode %}
 
 <details>
 
@@ -221,7 +220,7 @@ If the motion coordinate system is the base coordinate system
 
 ## The operation triggered by the position of the general digital IO of the control box
 
-**Register145（0x91）x**
+**Register145（0x91）**
 
 {% code overflow="wrap" %}
 ```
@@ -268,11 +267,3 @@ If the motion coordinate system is the base coordinate system
 ```
 
 </details>
-
-
-
-
-
-
-
-[^1]: 

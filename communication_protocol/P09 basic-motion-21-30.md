@@ -13,7 +13,7 @@
 
 <details>
 
-<summary> Request Description</summary>
+<summary>Request Description</summary>
 
 ```
 //00 01    U16, Transaction ID
@@ -33,9 +33,10 @@
 
 </details>
 
-<pre><code>// Response
-00 01 00 02 00 04 15 <a data-footnote-ref href="#user-content-fn-1">00 00 01</a>
-</code></pre>
+```
+// Response
+00 01 00 02 00 04 15 00 00 01
+```
 
 <details>
 
@@ -52,11 +53,9 @@
 
 </details>
 
-
-
 ## Linear motion with circular arc
 
-**Register：22 (0x16)**
+**Register22 (0x16)**
 
 {% code overflow="wrap" %}
 ```
@@ -67,7 +66,7 @@
 
 <details>
 
-<summary> Request Description</summary>
+<summary>Request Description</summary>
 
 ```
 //00 01    U16, Transaction ID
@@ -106,8 +105,6 @@
 ```
 
 </details>
-
-
 
 ## Joint motion (P2P motion)
 
@@ -163,11 +160,9 @@
 
 </details>
 
-
-
 ## Joint motion with circular arc
 
-**Register：24 (0x18)**
+**Register24 (0x18)**
 
 {% code overflow="wrap" %}
 ```
@@ -219,11 +214,9 @@
 
 </details>
 
-
-
 ## Return to zero position
 
-**Register：25 (0x19)**
+**Register25 (0x19)**
 
 ```
 // Request
@@ -265,8 +258,6 @@
 ```
 
 </details>
-
-
 
 ## Pause commands, Command delay
 
@@ -310,10 +301,6 @@
 ```
 
 </details>
-
-
-
-
 
 ## Circular motion
 
@@ -381,10 +368,6 @@ The motion calculates the trajectory of the space circle according to the three-
 
 </details>
 
-
-
-
-
 ## Linear motion in tool coordinate system
 
 **Register：28 (1C)**
@@ -442,10 +425,6 @@ Move in Cartesian linear relative motion based on the current tool coordinate sy
 
 </details>
 
-
-
-
-
 ## Servoj motion
 
 **Register：29 (1D)**
@@ -498,10 +477,6 @@ Move in Cartesian linear relative motion based on the current tool coordinate sy
 ```
 
 </details>
-
-
-
-
 
 ## Servo\_cartesian motion
 
@@ -561,5 +536,3 @@ Motion coordinate system：
 ```
 
 </details>
-
-[^1]: 

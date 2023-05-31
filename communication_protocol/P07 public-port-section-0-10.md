@@ -2,7 +2,7 @@
 
 ## exGet version information
 
-**Register：1(0x01)**
+**Register1(0x01)**
 
 ```
 // Request
@@ -11,7 +11,7 @@
 
 <details>
 
-<summary> Request Description</summary>
+<summary>Request Description</summary>
 
 ```
 //00 01    U16, Transaction ID
@@ -31,7 +31,7 @@
 
 <details>
 
-<summary> Response Description</summary>
+<summary>Response Description</summary>
 
 ```
 //00 01    U16, Transaction ID
@@ -48,13 +48,9 @@
 
 </details>
 
-
-
-
-
 ## Get SN information
 
-**Register：2(0x02)**
+**Register2(0x02)**
 
 ```
 // Request
@@ -98,13 +94,9 @@
 
 </details>
 
-
-
-
-
 ## Reload friction parameters
 
-**Register：4(0x04)**
+**Register4(0x04)**
 
 ```
 // Request
@@ -124,9 +116,10 @@
 
 </details>
 
-<pre><code>// Response
-00 01 00 02 00 02 04 <a data-footnote-ref href="#user-content-fn-1">10 </a>
-</code></pre>
+```
+// Response
+00 01 00 02 00 02 04 10 
+```
 
 <details>
 
@@ -142,13 +135,9 @@
 
 </details>
 
-
-
-
-
 ## Get the value of Joint torque or actual current
 
-**Register: 5(0x05)**
+**Register5(0x05)**
 
 ```
 // Request
@@ -169,7 +158,7 @@
 </details>
 
 <pre><code>// Response
-<strong>00 01 00 02 00 03 05 <a data-footnote-ref href="#user-content-fn-2">00 00</a>
+<strong>00 01 00 02 00 03 05 00 00
 </strong></code></pre>
 
 <details>
@@ -189,11 +178,9 @@
 
 </details>
 
-
-
 ## Get the radius of rotation of the target joint relative to the TCP
 
-**Register：6(0x06)x**
+**Register6(0x06)**
 
 ```
 // Request
@@ -227,22 +214,21 @@
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 06    U16, Length 
-//05       U8, Register
+//06       U8, Register
 //10       U8, State
 //00 00 00 00    U8, Parameter 1(Radius of rotation)
 ```
 
 </details>
 
-
-
 ## Remote shut down the operating system
 
-**Register10（0x0A）**
+**Register10(0x0A）**
 
-<pre><code>// Request
-00 01 00 02 00 02 0A <a data-footnote-ref href="#user-content-fn-3">01 </a>
-</code></pre>
+```
+// Request
+00 01 00 02 00 02 0A 01 
+```
 
 <details>
 
@@ -263,8 +249,6 @@
 00 01 00 02 00 02 0A 10
 ```
 
-
-
 <details>
 
 <summary>Response Description</summary>
@@ -278,33 +262,3 @@
 ```
 
 </details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[^1]: 
-
-[^2]: 
-
-[^3]: 

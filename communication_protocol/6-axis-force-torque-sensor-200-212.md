@@ -667,6 +667,200 @@ Damping coefficient
 
 
 
+## Set impedance control parameter of 6 Axis Force Torque Sensor
+
+**Register211（D3）**
+
+```
+// Request:
+00 01 00 02 00 08 D3 00 00 00 00 00 00 00
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 08    U16, Length 
+//D3       U8, Register
+//00       U8, 
+0: Base coordinate
+1: Tool coordinate
+//00 00 00 00 00 00 
+1: the corresponding direction will produce impedance
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 D3 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//D3       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+
+
+
+
+
+## Get all feedback data of 6 Axis Force Torque Sensor
+
+**Register212（D4）**
+
+```
+// Request:
+00 01 00 02 00 01 D4  
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//D4       U8, Register
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 1A D4 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+<pre><code>//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 1A    U16, Length 
+//D4       U8, Register
+//00       U8, State
+//00 U8, Control mode
+//00 U8, Enable state
+//00 U8, Type
+//08 U8, ID
+//03, E8 U16, Frequency
+//00,00,00,00	fp32, Weight
+//00,00,00,00	fp32, Reserve
+
+//00,00,00,00	fp32, 
+00,00,00,00
+00,00,00,00
+Centroid
+
+//00,00,00,00	fp32, offset
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+
+//00
+Coordinate of impedance control mode
+
+//00,00,00,00,00,00	fp32, Impedance control vector
+
+//00,00,00,00	fp32, 
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+Equivalent mass and
+Moment of inertia
+
+//00,00,00,00	fp32, 
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+Stiffness coefficient
+
+<strong>//00,00,00,00	fp32, 
+</strong>00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+Damping coefficient
+
+//00    U8, Coordinate of force control mode
+
+<strong>//00,00,00,00,00,00	fp32, Force Control vector
+</strong>
+//00,00,00,00	fp32, 
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+Force vector
+
+//00,00,00,00	fp32, 
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+Reserve
+
+//00,00,00,00	fp32, 
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+KP: Proportional gain
+
+
+//00,00,00,00	fp32, 
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+KI: Integral gain
+
+//00,00,00,00	fp32, 
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+KD: Differential gain
+
+//00,00,00,00	fp32, 
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+00,00,00,00
+Max TCP speed vector
+</code></pre>
+
+</details>
+
 
 
 

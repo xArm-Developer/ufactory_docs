@@ -1,6 +1,6 @@
 # Public Port Section（0-10）
 
-## exGet version information
+## Get version information
 
 **Register1(0x01)**
 

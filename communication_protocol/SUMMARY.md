@@ -1,7 +1,6 @@
 # Table of contents
 
-* [ReadMe\_en](README.md)
-* [Table of contents](<P02 SUMMARY.md>)
+* [Introduction](README.md)
 * [Terms and Definitions](<P03 terms-and-definitions.md>)
 * [Robot specifications](P04robot-specifications.md)
 * [Communication Format](P05communication-format.md)

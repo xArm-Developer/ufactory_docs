@@ -128,7 +128,7 @@
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 01    U16, Length 
+//00 02    U16, Length 
 //04       U8, Register
 //10       U8, State
 ```
@@ -194,7 +194,7 @@
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 01    U16, Length 
+//00 02    U16, Length 
 //06       U8, Register
 //06       U8, Parameter 1(target joint:6)
 ```
@@ -256,7 +256,7 @@
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 04    U16, Length 
+//00 02    U16, Length 
 //0A       U8, Register
 //10       U8, State
 ```

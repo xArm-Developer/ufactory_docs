@@ -20,15 +20,15 @@
 //00 02    U16, Protocol Identifier
 //00 25    U16, Length 
 //15       U8, Register
-//00 00 C8 43	fp32, x=400mm
-//00 00 00 00	fp32, z=200mm
-//00 00 48 43	fp32, y=0mm
-//DB 0F 49 40	fp32, roll=π
-//00 00 00 00	fp32, pitch=0
-//00 00 00 00	fp32, yaw=0
-//00 00 C8 42	fp32, speed=100mm/s
-//00 00 FA 44	fp32, acceleration=2000mm/s2）=500*π/180rad/s2
-//00 00 00 00	fp32, 0motion time=0
+//00 00 C8 43	FP32, x=400mm
+//00 00 00 00	FP32, z=200mm
+//00 00 48 43	FP32, y=0mm
+//DB 0F 49 40	FP32, roll=π
+//00 00 00 00	FP32, pitch=0
+//00 00 00 00	FP32, yaw=0
+//00 00 C8 42	FP32, speed=100mm/s
+//00 00 FA 44	FP32, acceleration=2000mm/s2）=500*π/180rad/s2
+//00 00 00 00	FP32, 0motion time=0
 ```
 
 </details>
@@ -74,15 +74,15 @@
 //00 02    U16, Protocol Identifier
 //00 29    U16, Length 
 //16       U8, Register
-//00 00 00 00 fp32, y=0mm
-//00 00 48 43 fp32, z=200mm
-//DB 0F 49 40 fp32, roll=π
-//00 00 00 00 fp32, pitch=0
-//00 00 00 00 fp32, yaw=0
-//00 00 C8 42 fp32, motion speed=100 mm/s
-//00 00 FA 44 fp32, acceleration=2000mm/s2
-//00 00 00 00 fp32, motion time 0
-//00 00 48 42 fp32, Arc blending radius=50 mm
+//00 00 00 00 FP32, y=0mm
+//00 00 48 43 FP32, z=200mm
+//DB 0F 49 40 FP32, roll=π
+//00 00 00 00 FP32, pitch=0
+//00 00 00 00 FP32, yaw=0
+//00 00 C8 42 FP32, motion speed=100 mm/s
+//00 00 FA 44 FP32, acceleration=2000mm/s2
+//00 00 00 00 FP32, motion time 0
+//00 00 48 42 FP32, Arc blending radius=50 mm
 ```
 
 </details>
@@ -100,7 +100,7 @@
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 04    U16, Length 
-//15       U8, Register
+//16       U8, Register
 //00       U8, State
 //00 01    U16, Parameter
 ```
@@ -129,16 +129,16 @@
 //00 02    U16, Protocol Identifier
 //00 29    U16, Length 
 //17       U8, Register
-//92 0A 86 3F	fp32, Joint1=π/3 
-//00 00 00 00	fp32, Joint2=0
-//00 00 00 00	fp32, Joint3=0
-//00 00 00 00	fp32, Joint4=0
-//00 00 00 00	fp32, Joint5=0
-//00 00 00 00	fp32, Joint6=0
-//00 00 00 00	fp32, Joint7=0
-//C2 B8 B2 3E	fp32, speed=20π/180rad/s
-//58 A0 0B 41	fp32, 500π/180rad/s2
-//00 00 00 00	fp32, motion time=0
+//92 0A 86 3F	FP32, Joint1=π/3 
+//00 00 00 00	FP32, Joint2=0
+//00 00 00 00	FP32, Joint3=0
+//00 00 00 00	FP32, Joint4=0
+//00 00 00 00	FP32, Joint5=0
+//00 00 00 00	FP32, Joint6=0
+//00 00 00 00	FP32, Joint7=0
+//C2 B8 B2 3E	FP32, speed=20π/180rad/s
+//58 A0 0B 41	FP32, 500π/180rad/s2
+//00 00 00 00	FP32, motion time=0
 ```
 
 </details>
@@ -185,16 +185,16 @@
 //00 02    U16, Protocol Identifier
 //00 29    U16, Length 
 //18       U8, Register
-//92 0A 86 3F	fp32, Joint1=π/3
-//00 00 00 00	fp32, Joint2=0
-//00 00 00 00	fp32, Joint3=0
-//00 00 00 00	fp32, Joint4=0
-//00 00 00 00	fp32, Joint5=0
-//00 00 00 00	fp32, Joint6=0
-//00 00 00 00	fp32, Joint7=0
-//C2 B8 B2 3E	fp32, speed=20π/180rad/s
-//58 A0 0B 41	fp32, acceleration=500π/180rad/s2
-//00 00 20 41	fp32, Arc blending radius=10mm
+//92 0A 86 3F	FP32, Joint1=π/3
+//00 00 00 00	FP32, Joint2=0
+//00 00 00 00	FP32, Joint3=0
+//00 00 00 00	FP32, Joint4=0
+//00 00 00 00	FP32, Joint5=0
+//00 00 00 00	FP32, Joint6=0
+//00 00 00 00	FP32, Joint7=0
+//C2 B8 B2 3E	FP32, speed=20π/180rad/s
+//58 A0 0B 41	FP32, acceleration=500π/180rad/s2
+//00 00 20 41	FP32, Arc blending radius=10mm
 ```
 
 </details>
@@ -239,9 +239,9 @@
 //00 02    U16, Protocol Identifier
 //00 0D    U16, Length 
 //19       U8, Register
-//DB 0F 49 40	fp32, speed=50rad/s
-//F3 66 DF 40	fp32, acceleration=600rad/s2
-//00 00 00 00	fp32, motion time=0
+//DB 0F 49 40	FP32, speed=50rad/s
+//F3 66 DF 40	FP32, acceleration=600rad/s2
+//00 00 00 00	FP32, motion time=0
 ```
 
 </details>
@@ -286,7 +286,7 @@
 //00 02    U16, Protocol Identifier
 //00 05    U16, Length 
 //1A       U8, Register
-//00 00 40 40 fp32, Pause time=3s
+//00 00 40 40 FP32, Pause time=3s
 ```
 
 </details>
@@ -340,22 +340,22 @@ The motion calculates the trajectory of the space circle according to the three-
 //00 02    U16, Protocol Identifier
 //00 41    U16, Length 
 //1B       U8, Register
-//00 00 C8 43 fp32, x=400mm
-//00 00 00 00 fp32, y=0mm
-//00 00 48 43 fp32, z=200mm
-//DB 0F 49 40 fp32, roll=π
-//00 00 00 00 fp32, pitch=0
-//00 00 00 00 fp32, yaw=0
-//00 00 C8 43 fp32, x=400mm
-//00 00 C8 42 fp32, y=0mm
-//00 00 48 43 fp32, z=200mm
-//DB 0F 49 40 fp32, 0roll=π
-//00 00 00 00 fp32, pitch=0
-//00 00 00 00 fp32, yaw=0
-//00 00 C8 42 fp32, speed=100mm/s
-//00 00 FA 44 fp32, acceleration500*π/180rad/s2
-//00 00 00 00 fp32, motion time=0
-//00 00 48 42 fp32, Percentage of the length of arc in motion to circumference=50%
+//00 00 C8 43 FP32, x=400mm
+//00 00 00 00 FP32, y=0mm
+//00 00 48 43 FP32, z=200mm
+//DB 0F 49 40 FP32, roll=π
+//00 00 00 00 FP32, pitch=0
+//00 00 00 00 FP32, yaw=0
+//00 00 C8 43 FP32, x=400mm
+//00 00 C8 42 FP32, y=0mm
+//00 00 48 43 FP32, z=200mm
+//DB 0F 49 40 FP32, 0roll=π
+//00 00 00 00 FP32, pitch=0
+//00 00 00 00 FP32, yaw=0
+//00 00 C8 42 FP32, speed=100mm/s
+//00 00 FA 44 FP32, acceleration500*π/180rad/s2
+//00 00 00 00 FP32, motion time=0
+//00 00 48 42 FP32, Percentage of the length of arc in motion to circumference=50%
 ```
 {% endcode %}
 
@@ -409,15 +409,15 @@ Move in Cartesian linear relative motion based on the current tool coordinate sy
 //00 02    U16, Protocol Identifier
 //00 25    U16, Length 
 //1C       U8, Register
-//00 00 C8 43	fp32, x=400mm
-//00 00 00 00	fp32, y=0mm
-//00 00 48 43	fp32, z=200mm
-//DB 0F 49 40	fp32, roll=π
-//00 00 00 00	fp32, pitch=0
-//00 00 00 00	fp32, yaw=0
-//C2 B8 B2 3E	fp32, speed=20mm/s
-//00 00 FA 44	fp32, acceleration=2000mm/s2
-//00 00 00 00	fp32, motion time=0
+//00 00 C8 43	FP32, x=400mm
+//00 00 00 00	FP32, y=0mm
+//00 00 48 43	FP32, z=200mm
+//DB 0F 49 40	FP32, roll=π
+//00 00 00 00	FP32, pitch=0
+//00 00 00 00	FP32, yaw=0
+//C2 B8 B2 3E	FP32, speed=20mm/s
+//00 00 FA 44	FP32, acceleration=2000mm/s2
+//00 00 00 00	FP32, motion time=0
 ```
 
 </details>
@@ -466,16 +466,16 @@ Move in Cartesian linear relative motion based on the current tool coordinate sy
 //00 02    U16, Protocol Identifier
 //00 29    U16, Length 
 //1D       U8, Register
-//92 0A 86 3F	fp32, Joint1=π/3
-//00 00 00 00	fp32, Joint2=0
-//00 00 00 00	fp32, Joint3=0
-//00 00 00 00	fp32, Joint4=0
-//00 00 00 00	fp32, Joint5=0
-//00 00 00 00	fp32, Joint6=0
-//00 00 00 00	fp32, Joint7=0
-//00 00 00 00	fp32, speed  meaningless  0
-//00 00 00 00	fp32, acceleration  meaningless  0
-//00 00 00 00	fp32, motion time  meaningless  0
+//92 0A 86 3F	FP32, Joint1=π/3
+//00 00 00 00	FP32, Joint2=0
+//00 00 00 00	FPp32, Joint3=0
+//00 00 00 00	FP32, Joint4=0
+//00 00 00 00	FP32, Joint5=0
+//00 00 00 00	FP32, Joint6=0
+//00 00 00 00	FP32, Joint7=0
+//00 00 00 00	FP32, speed  meaningless  0
+//00 00 00 00	FP32, acceleration  meaningless  0
+//00 00 00 00	FP32, motion time  meaningless  0
 ```
 
 </details>
@@ -527,15 +527,15 @@ Interface for receiving high-frequency continuous cartesian trajectory motion.
 //00 02    U16, Protocol Identifier
 //00 25    U16, Length 
 //1E       U8, Register
-//00 00 C8 43	fp32, x=400mm
-//00 00 00 00	fp32, y=0mm
-//00 00 48 43	fp32, z=200mm
-//DB 0F 49 40	fp32, roll=π
-//00 00 00 00	fp32, pitch=0
-//00 00 00 00	fp32, yaw=0
-//00 00 00 00	fp32, speed, meaningless, 0
-//00 00 00 00	fp32, acceleration, meaningless, 0
-//00 00 00 00	fp32, 
+//00 00 C8 43	FP32, x=400mm
+//00 00 00 00	FP32, y=0mm
+//00 00 48 43	FP32, z=200mm
+//DB 0F 49 40	FP32, roll=π
+//00 00 00 00	FP32, pitch=0
+//00 00 00 00	FP32, yaw=0
+//00 00 00 00	FP32, speed, meaningless, 0
+//00 00 00 00	FP32, acceleration, meaningless, 0
+//00 00 00 00	FP32, 
 Motion coordinate system：
 0 ：the base coordinate system
 1 ：the tool coordinate system

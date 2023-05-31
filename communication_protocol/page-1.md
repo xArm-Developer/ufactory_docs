@@ -1,8 +1,9 @@
 # Page 1
 
-<pre><code><strong>// Request:
-</strong>00 01 00 02 00 0D 33  
-</code></pre>
+```
+// Request:
+00 01 00 02 00 0D 33  
+```
 
 <details>
 

@@ -256,8 +256,8 @@ Type=1: N=4.
 
 **Register205（CD）**
 
-<pre><code><strong>// Request:
-</strong>00 01 00 02 00 29 CD 
+<pre data-overflow="wrap"><code><strong>// Request:
+</strong>00 01 00 02 00 29 CD 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 </code></pre>
 
 <details>
@@ -301,6 +301,226 @@ Type=1: N=4.
 ```
 
 </details>
+
+
+
+
+
+
+
+## Set the current state as the zero point of 6 Axis Force Torque Sensor
+
+**Register206（CE）**
+
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 01 CE
+</code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//CE       U8, Register
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 CE 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//CE       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+
+
+
+
+
+## Set all impedance control parameters of 6 Axis Force Torque Sensor
+
+**Register207（CF）**
+
+<pre data-overflow="wrap"><code><strong>// Request:
+</strong>00 01 00 02 00 50 CF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+</code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 50    U16, Length 
+//CF       U8, Register
+//00	U8, 
+0: Base coordinate
+1: Tool coordinate
+
+//00 00 00 00 00 00	 U8, 
+1: the corresponding direction will produce impedance
+
+//00 00 00 00 	fp32*6 ,
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00
+M => [Mx, My,Mz, Mr, Mp, My]
+Equivalent mass(xyz): 0.02~1.0(kg)
+Moment of inertia(rpy): 0.0001~0.01(kg*m^2)
+
+//00 00 00 00  fp32*6 ,
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00
+Stiffness coefficient.
+K => [kx, ky, kz, kr, kp, ky]
+xyz: 0~2000(N/m)
+rpy: 0~20(Nm/rad)
+
+//00 00 00 00  fp32*6 ,
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00
+Damping coefficient
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 CF 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//CF       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+
+
+
+## Set PID parameter of 6 Axis Force Torque Sensor
+
+**Register208（D0）**
+
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 61 D0
+</code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 61    U16, Length 
+//D0       U8, Register
+//00 00 00 00 		fp32*6, 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00
+Proportional gain: KP
+Kp[i]: 0~0.05
+
+//00 00 00 00  	fp32*6, 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00
+Integral gain: KI
+KI[i]: 0~0.0005
+
+//00 00 00 00  	fp32*6, 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00
+Differential gain: KD
+KD[i]: 0~0.05
+
+//00 00 00 00  	fp32*6, 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00
+Maximum TCP speed along each axis
+VMAX[i]: 0~200(mm/s)
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 02 D0 00
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//D0       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

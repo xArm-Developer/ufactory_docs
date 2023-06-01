@@ -2,9 +2,11 @@
 
 ## Sets the offset of the user coordinate system and the base coordinate system
 
-**Sets the offset of the user coordinate system and the base coordinate system, specifically the offset described by the base coordinate system of the robotic arm under the user-defined coordinate system**
+{% hint style="warning" %}
+Sets the offset of the user coordinate system and the base coordinate system, specifically the offset described by the base coordinate system of the robotic arm under the user-defined coordinate system
+{% endhint %}
 
-**Register: 73 (49)**
+**Register: 73 (0x49)**
 
 {% code overflow="wrap" %}
 ```
@@ -22,12 +24,12 @@
 //00 02    U16, Protocol Identifier
 //00 19    U16, Length 
 //49       U8, Register
-//00 00 C8 43	fp32, Cartesian offset X=400mm
-//00 00 00 00	fp32, Cartesian offset Y=0
-//00 00 48 43	fp32, Cartesian offset Z=200mm
-//DB 0F 49 40	fp32, Cartesian offset Roll=πrad
-//00 00 00 00	fp32, Cartesian offset Pitch=0
-//00 00 00 00	fp32, Cartesian offset Yaw=0
+//00 00 C8 43	FP32, Cartesian offset X=400mm
+//00 00 00 00	FP32, Cartesian offset Y=0
+//00 00 48 43	FP32, Cartesian offset Z=200mm
+//DB 0F 49 40	FP32, Cartesian offset Roll=πrad
+//00 00 00 00	FP32, Cartesian offset Pitch=0
+//00 00 00 00	FP32, Cartesian offset Yaw=0
 ```
 
 </details>
@@ -51,17 +53,13 @@
 
 </details>
 
-
-
-
-
-
-
 ## Calculate the attitude offset of two given points
 
-**Given two coordinate points of the robotic arm, the offset coordinate between them can be calculated.**
+{% hint style="warning" %}
+Given two coordinate points of the robotic arm, the offset coordinate between them can be calculated.
+{% endhint %}
 
-**Register: 76 (4C)**
+**Register: 76 (0x4C)**
 
 {% code overflow="wrap" %}
 ```
@@ -79,24 +77,24 @@
 //00 02    U16, Protocol Identifier
 //00 33    U16, Length 
 //4C       U8, Register
-//00 00 C8 43	fp32, X=400
-//00 00 00 00	fp32, Y=0
-//00 00 48 43	fp32, Z=200
-//DB 0F 49 40	fp32, Roll=π
-//00 00 00 00	fp32, Pitch=0
-//00 00 00 00	fp32, Yaw=0
-//00 00 C8 43	fp32, X=400
-//00 00 00 00	fp32, Y=0
-//00 00 C8 42	fp32, Z=100
-//DB 0F 49 40	fp32, Roll=π
-//00 00 00 00	fp32, Pitch=0
-//00 00 00 00	fp32, Yaw=0
-//00	fp32, 
+//00 00 C8 43	FP32, X=400
+//00 00 00 00	FP32, Y=0
+//00 00 48 43	FP32, Z=200
+//DB 0F 49 40	FP32, Roll=π
+//00 00 00 00	FP32, Pitch=0
+//00 00 00 00	FP32, Yaw=0
+//00 00 C8 43	FP32, X=400
+//00 00 00 00	FP32, Y=0
+//00 00 C8 42	FP32, Z=100
+//DB 0F 49 40	FP32, Roll=π
+//00 00 00 00	FP32, Pitch=0
+//00 00 00 00	FP32, Yaw=0
+//00	FP32, 
 Representation of input pose:
 0 : RPY（Roll,Pitch,Yaw）
 1 : axial angle（Rx,Ry,Rz）
 
-//00	fp32, 
+//00	FP32, 
 Representation of output pose:
 0 : RPY（Roll,Pitch,Yaw）
 1 : axial angle（Rx,Ry,Rz）
@@ -104,10 +102,12 @@ Representation of output pose:
 
 </details>
 
+{% code overflow="wrap" %}
 ```
 // Response:
-00 01 00 02 00 02 33 10
+00 01 00 02 00 1A 4C 00 00 00 00 00 00 00 00 00 00 00 C8 C2 00 00 80 99 00 00 00 80 00 00 00 00
 ```
+{% endcode %}
 
 <details>
 
@@ -119,23 +119,19 @@ Representation of output pose:
 //00 1A    U16, Length 
 //4C       U8, Register
 //00       U8, State
-//00 00 00 00	fp32, Cartesian offset X=0
-//00 00 00 00	fp32, Cartesian offset Y=0
-//00 00 C8 C2	fp32, Cartesian offset Z=-100mm
-//00 00 80 99	fp32, Cartesian offset Roll=-0
-//00 00 00 80	fp32, Cartesian offset Pitch=-0
-//00 00 00 00	fp32, Cartesian offset Yaw=0
+//00 00 00 00	FP32, Cartesian offset X=0
+//00 00 00 00	FP32, Cartesian offset Y=0
+//00 00 C8 C2	FP32, Cartesian offset Z=-100mm
+//00 00 80 99	FP32, Cartesian offset Roll=-0
+//00 00 00 80	FP32, Cartesian offset Pitch=-0
+//00 00 00 00	FP32, Cartesian offset Yaw=0
 ```
 
 </details>
 
-
-
-
-
 ## Set the self-collision detection function of the robotic arm (The end tools)
 
-**Register: 77 (4D)**
+**Register: 77 (0x4D)**
 
 ```
 // Request:
@@ -177,13 +173,9 @@ Representation of output pose:
 
 </details>
 
-
-
-
-
 ## The geometric model of the end tool added when setting the self-collision detection
 
-**Register: 78 (4E)**
+**Register: 78 (0x4E)**
 
 ```
 // Request:
@@ -200,7 +192,7 @@ Representation of output pose:
 //4E       U8, Register
 <strong>//00 00 A0 41    
 </strong>//00 00 F0 41
-//00 00 48 42    3*fp32,
+//00 00 48 42    3*FP32,
 Parameter 1 (The end tool is a cuboid)
 x=20,y=30,z=50
 Additional definition parameter area: x maximum is 6, the actual length depends on the number of parameters required by the tool type definition. 
@@ -217,8 +209,8 @@ length[x(mm)] ,width[y(mm)], height[z(mm)] consistent with the direction of the 
 
 2) Supported detection models (no need to define additional parameters):
 No end tool, xArm gripper, xArm vacuum gripper, xArm BIO gripper, Robotiq 2F-85 gripper, Robotiq 2F-140 gripper.
-<strong>
-</strong>//16    U8, 
+
+//16    U8, 
 Parameter 2 
 (end tool type number = 22)
 End tool type number:
@@ -255,13 +247,9 @@ Robotiq 2F-140 gripper: 5
 
 </details>
 
-
-
-
-
 ## Set whether to enable the virtual robotic arm mode
 
-Register: 79 (4F)
+**Register: 79 (0x4F)**
 
 {% hint style="warning" %}
 If you enter the virtual robotic arm mode, the real robotic arm will not move, but the reported position of the robotic arm will change with the command to drive the virtual robotic arm to move.
@@ -307,13 +295,9 @@ If you enter the virtual robotic arm mode, the real robotic arm will not move, b
 
 </details>
 
-
-
-
-
 ## Global setting for Cartesian motion velocity continuous
 
-**Register: 80 (50)**
+**Register: 80 (0x50)**
 
 ```
 // Request:
@@ -354,12 +338,3 @@ If you enter the virtual robotic arm mode, the real robotic arm will not move, b
 ```
 
 </details>
-
-
-
-
-
-
-
-
-

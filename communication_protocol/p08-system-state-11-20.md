@@ -386,7 +386,8 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 //00 02    U16, Length 
 //13       U8, Register
 
-//00       U8, Motion mode：
+//00       U8, 
+Motion mode：
 0: Position control mode
 1: servo motion mode
 2: Joint teaching mode

@@ -2,7 +2,7 @@
 
 ## Enable/Disable servo (System reset)
 
-**Register：11(0x0B)**
+**Register11(0x0B)**
 
 {% hint style="warning" %}
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
@@ -54,11 +54,9 @@ Whether to enable the servo
 
 </details>
 
-
-
 ## Motion state setting
 
-**Register：12(0x0C)**
+**Register12(0x0C)**
 
 ```
 // Request:
@@ -103,13 +101,9 @@ Motion Sate
 
 </details>
 
-
-
-
-
 ## Get the motion state
 
-**Register：13 (0x0D)**
+**Register13 (0x0D)**
 
 ```
 // Request:
@@ -124,7 +118,7 @@ Motion Sate
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 01    U16, Length 
-//0D      U8, Register
+//0D       U8, Register
 ```
 
 </details>
@@ -155,13 +149,9 @@ Motion state：
 
 </details>
 
-
-
-
-
 ## Get the number of commands in the command buffer
 
-**Register：14 (0x0E)**
+**Register14 (0x0E)**
 
 ```
 // Request
@@ -195,18 +185,15 @@ Motion state：
 //00 02    U16, Protocol Identifier
 //00 04    U16, Length 
 //0E       U8, Register
+//00       U8, State
 //00 00    U16, The number of commands in the buffer
 ```
 
 </details>
 
-
-
-
-
 ## Get error and warning code
 
-**Register：15 (0x0F)**
+**Register15 (0x0F)**
 
 ```
 // Request:
@@ -247,13 +234,9 @@ Motion state：
 
 </details>
 
-
-
-
-
 ## Clear control box error (System reset)
 
-**Register：16 (0x10)**
+**Register16 (0x10)**
 
 {% hint style="warning" %}
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
@@ -296,13 +279,9 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 </details>
 
-
-
-
-
 ## Clear control box warning
 
-**Register：17 (0x11)**
+**Register17 (0x11)**
 
 ```
 // Request:
@@ -341,13 +320,9 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 </details>
 
-
-
-
-
 ## Setting the brake switches separately (System reset)
 
-**Register：18 (0x12)**
+**Register18 (0x12)**
 
 ```
 // Request:
@@ -381,18 +356,16 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 03    U16, Length 
+//00 02    U16, Length 
 //12       U8, Register
 //10       U8, State
 ```
 
 </details>
 
-
-
 ## Setting the system motion mode (System reset)
 
-**Register：19 (0x13)**
+**Register19 (0x13)**
 
 {% hint style="warning" %}
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
@@ -435,7 +408,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 <details>
 
-<summary>esponse Description</summary>
+<summary>Response Description</summary>
 
 ```
 //00 01    U16, Transaction ID
@@ -446,10 +419,3 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 ```
 
 </details>
-
-
-
-
-
-
-

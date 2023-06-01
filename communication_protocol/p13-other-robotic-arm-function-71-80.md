@@ -1,9 +1,9 @@
 # Other Robotic Arm Function(71-80)
 
-## Sets the offset of the user coordinate system and the base coordinate system
+## Set the offset of the user coordinate system and the base coordinate system
 
 {% hint style="warning" %}
-Sets the offset of the user coordinate system and the base coordinate system, specifically the offset described by the base coordinate system of the robotic arm under the user-defined coordinate system
+Set the offset of the user coordinate system and the base coordinate system, specifically the offset described by the base coordinate system of the robotic arm under the user-defined coordinate system
 {% endhint %}
 
 **Register: 73 (0x49)**
@@ -146,7 +146,7 @@ Representation of output pose:
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 02    U16, Length 
-//40       U8, Register
+//4D       U8, Register
 //01       U8, 
 0: turn off self-collision detection
 1: turn on self-collision detection

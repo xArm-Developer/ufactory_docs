@@ -21,7 +21,7 @@ Set the gravity direction for correct torque compensation and collision detectio
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 0D    U16, Length 
-//32       U8, Register
+//33       U8, Register
 //00 00 00 00	FP32, Gravity direction vector X=0 base coordinate system
 //00 00 00 00	FP32, Gravity direction vector Y=0 base coordinate system
 //00 00 80 BF	FP32, Gravity direction vector Z=-1 base coordinate system

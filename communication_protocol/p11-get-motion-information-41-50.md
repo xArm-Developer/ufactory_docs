@@ -55,7 +55,7 @@
 
 ```
 // Request:
-00 01 00 02 00 01 29
+00 01 00 02 00 01 2A
 ```
 
 <details>
@@ -66,7 +66,7 @@
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 01    U16, Length 
-//29       U8, Register
+//2A       U8, Register
 ```
 
 </details>
@@ -74,7 +74,7 @@
 {% code overflow="wrap" %}
 ```
 // Response:
-00 01 00 02 00 1A 29 10 43 00 4F 43 B4 CE 18 3A 3A 00 E0 42 DB 0F 49 40 FD AD 80 B6 7C D9 20 37
+00 01 00 02 00 1A 2A 10 43 00 4F 43 B4 CE 18 3A 3A 00 E0 42 DB 0F 49 40 FD AD 80 B6 7C D9 20 37
 ```
 {% endcode %}
 
@@ -86,7 +86,7 @@
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 1A    U16, Length 
-//29       U8, Register
+//2A       U8, Register
 //10       U8, State
 //43 00 4F 43	FP32, x=207mm
 //B4 CE 18 3A	FP32, y=0mm

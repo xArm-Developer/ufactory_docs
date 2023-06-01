@@ -75,9 +75,9 @@ Whether to enable the servo
 
 //00      U8, 
 Motion Sate
-3: Suspend the current motion
-4: Stop all current motion (restart the system)
 0: Enter the motion mode
+3: Suspend the current motion(Do not clear controller cache)
+4: Stop all current motion (restart the system,clear controller cache)
 ```
 
 </details>

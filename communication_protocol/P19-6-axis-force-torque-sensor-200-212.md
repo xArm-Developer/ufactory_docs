@@ -2,7 +2,7 @@
 
 ## Get external force detection data of 6 Axis Force Torque Sensor
 
-**Register200（C8）**
+**Register:200(0xC8）**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 01 C8
@@ -39,7 +39,7 @@
 //00 1A    U16, Length 
 //C8       U8, Register
 //00       U8, State
-//00, 00, 00, 00, 00, 00, 00, 00,00, 00, 00, 00,00, 00, 00, 00,00, 00, 00, 00,00, 00, 00, 00     fp32, 
+//00, 00, 00, 00, 00, 00, 00, 00,00, 00, 00, 00,00, 00, 00, 00,00, 00, 00, 00,00, 00, 00, 00     FP32, 
 External force detection data:
 After filtering, load and offset compensation
 ```
@@ -47,15 +47,9 @@ After filtering, load and offset compensation
 
 </details>
 
-
-
-
-
-
-
 ## Enable/Disable 6 Axis Force Torque Sensor
 
-**Register201（C9）**
+**Register:201(0xC9）**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 02 C9 00
@@ -94,13 +88,9 @@ After filtering, load and offset compensation
 
 </details>
 
-
-
-
-
 ## Set the control mode of 6 Axis Force Torque Sensor
 
-**Register202（CA）**
+**Register:202(0xCA）**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 02 CA 00  
@@ -126,7 +116,7 @@ control mode
 
 ```
 // Response:
-00 01 00 02 00 02 33 10
+00 01 00 02 00 02 CA 10
 ```
 
 <details>
@@ -137,17 +127,15 @@ control mode
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 02    U16, Length 
-//33       U8, Register
+//CA       U8, Register
 //10       U8, State
 ```
 
 </details>
 
-
-
 ## Get the control mode of 6 Axis Force Torque Sensor
 
-**Register203（CB）**
+**Register:203(0xCB）**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 02 CB
@@ -190,13 +178,9 @@ control mode
 
 </details>
 
-
-
-
-
 ## Perform end payload identification
 
-**Register204（CC）**
+**Register:204(0xCC）**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 02 CC 00
@@ -233,7 +217,7 @@ control mode
 //00 2A    U16, Length   Type 0: 00,2A  Type 1: 00,12
 //CC       U8, Register
 //00       U8, State
-//00,00,00,00    fp32, 4*n Byte
+//00,00,00,00    FP32, 4*n Byte
 //00,00,00,00
     ...
 //00,00,00,00
@@ -246,15 +230,9 @@ Type=1: N=4.
 
 </details>
 
-
-
-
-
-
-
 ## Set the payload and offset of 6 Axis Force Torque Sensor
 
-**Register205（CD）**
+**Register:205(0xCD）**
 
 <pre data-overflow="wrap"><code><strong>// Request:
 </strong>00 01 00 02 00 29 CD 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
@@ -269,16 +247,16 @@ Type=1: N=4.
 //00 02    U16, Protocol Identifier
 //00 29    U16, Length 
 //CD       U8, Register
-//00 00 00 00	fp32,  weight: kg
-//00 00 00 00	fp32,  Cx: mm
-//00 00 00 00	fp32,  Cy: mm
-//00 00 00 00	fp32,  Cz: mm
-//00 00 00 00	fp32,  Fx: mm
-//00 00 00 00	fp32,  Fy: mm
-//00 00 00 00	fp32,  Fz: mm
-//00 00 00 00	fp32,  Tx: mm
-//00 00 00 00	fp32,  Ty: mm
-//00 00 00 00	fp32,  Tz: mm
+//00 00 00 00	FP32,  weight: kg
+//00 00 00 00	FP32,  Cx: mm
+//00 00 00 00	FP32,  Cy: mm
+//00 00 00 00	FP32,  Cz: mm
+//00 00 00 00	FP32,  Fx: mm
+//00 00 00 00	FP32,  Fy: mm
+//00 00 00 00	FP32,  Fz: mm
+//00 00 00 00	FP32,  Tx: mm
+//00 00 00 00	FP32,  Ty: mm
+//00 00 00 00	FP32,  Tz: mm
 ```
 
 </details>
@@ -302,15 +280,9 @@ Type=1: N=4.
 
 </details>
 
-
-
-
-
-
-
 ## Set the current state as the zero point of 6 Axis Force Torque Sensor
 
-**Register206（CE）**
+**Register:206(0xCE）**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 01 CE
@@ -348,15 +320,9 @@ Type=1: N=4.
 
 </details>
 
-
-
-
-
-
-
 ## Set all impedance control parameters of 6 Axis Force Torque Sensor
 
-**Register207（CF）**
+**Register:207(0xCF）**
 
 <pre data-overflow="wrap"><code><strong>// Request:
 </strong>00 01 00 02 00 50 CF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
@@ -371,14 +337,14 @@ Type=1: N=4.
 //00 02    U16, Protocol Identifier
 //00 50    U16, Length 
 //CF       U8, Register
-//00	U8, 
+//00	   U8, 
 0: Base coordinate
 1: Tool coordinate
 
 //00 00 00 00 00 00	 U8, 
 1: the corresponding direction will produce impedance
 
-//00 00 00 00 	fp32*6 ,
+//00 00 00 00 	FP32*6 ,
 00 00 00 00 
 00 00 00 00 
 00 00 00 00 
@@ -388,7 +354,7 @@ M => [Mx, My,Mz, Mr, Mp, My]
 Equivalent mass(xyz): 0.02~1.0(kg)
 Moment of inertia(rpy): 0.0001~0.01(kg*m^2)
 
-//00 00 00 00  fp32*6 ,
+//00 00 00 00  FP32*6 ,
 00 00 00 00 
 00 00 00 00 
 00 00 00 00 
@@ -399,7 +365,7 @@ K => [kx, ky, kz, kr, kp, ky]
 xyz: 0~2000(N/m)
 rpy: 0~20(Nm/rad)
 
-//00 00 00 00  fp32*6 ,
+//00 00 00 00  FP32*6 ,
 00 00 00 00 
 00 00 00 00 
 00 00 00 00 
@@ -429,13 +395,9 @@ Damping coefficient
 
 </details>
 
-
-
-
-
 ## Set PID parameter of 6 Axis Force Torque Sensor
 
-**Register208（D0）**
+**Register:208(0xD0）**
 
 <pre data-overflow="wrap"><code><strong>// Request:
 </strong>00 01 00 02 00 61 D0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
@@ -450,7 +412,7 @@ Damping coefficient
 //00 02    U16, Protocol Identifier
 //00 61    U16, Length 
 //D0       U8, Register
-//00 00 00 00 		fp32*6, 
+//00 00 00 00 	FP32*6, 
 00 00 00 00 
 00 00 00 00 
 00 00 00 00 
@@ -459,7 +421,7 @@ Damping coefficient
 Proportional gain: KP
 Kp[i]: 0~0.05
 
-//00 00 00 00  	fp32*6, 
+//00 00 00 00  	FP32*6, 
 00 00 00 00 
 00 00 00 00 
 00 00 00 00 
@@ -468,7 +430,7 @@ Kp[i]: 0~0.05
 Integral gain: KI
 KI[i]: 0~0.0005
 
-//00 00 00 00  	fp32*6, 
+//00 00 00 00  	FP32*6, 
 00 00 00 00 
 00 00 00 00 
 00 00 00 00 
@@ -477,7 +439,7 @@ KI[i]: 0~0.0005
 Differential gain: KD
 KD[i]: 0~0.05
 
-//00 00 00 00  	fp32*6, 
+//00 00 00 00  	FP32*6, 
 00 00 00 00 
 00 00 00 00 
 00 00 00 00 
@@ -508,15 +470,9 @@ VMAX[i]: 0~200(mm/s)
 
 </details>
 
-
-
-
-
-
-
 ## Set force control parameter of 6 Axis Force Torque Sensor
 
-**Register209（D1）**
+**Register:209(0xD1）**
 
 <pre data-overflow="wrap"><code><strong>// Request:
 </strong>00 01 00 02 00 38 D1 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   
@@ -532,14 +488,14 @@ VMAX[i]: 0~200(mm/s)
 //00 02    U16, Protocol Identifier
 //00 38    U16, Length 
 //D1       U8, Register
-//00	U8, 
+//00	   U8, 
 0: Base coordinate
 1: Tool coordinate
 
 //00 00 00 00 00 00	 U8*6, 
 1: the corresponding direction can be controlled by force
 
-//00 00 00 00	fp32*6, 
+//00 00 00 00	FP32*6, 
 00 00 00 00 
 00 00 00 00 
 00 00 00 00 
@@ -554,7 +510,7 @@ Fr: -4~4(Nm)
 Fp: -4~4(Nm)
 Fy: -4~4(Nm)
 
-//00 00 00 00	fp32*6, 
+//00 00 00 00	FP32*6, 
 00 00 00 00 
 00 00 00 00 
 00 00 00 00 
@@ -569,7 +525,7 @@ VMAX[i]: 0~200(mm/s)
 
 ```
 // Response:
-00 01 00 02 00 02 33 10
+00 01 00 02 00 02 D1 10
 ```
 
 <details>
@@ -586,15 +542,9 @@ VMAX[i]: 0~200(mm/s)
 
 </details>
 
-
-
-
-
-
-
 ## Set MKB parameter under impedance control mode of 6 Axis Force Torque Sensor
 
-**Register210（D2）**
+**Register:210(0xD2）**
 
 {% code overflow="wrap" %}
 ```
@@ -612,7 +562,7 @@ VMAX[i]: 0~200(mm/s)
 //00 02    U16, Protocol Identifier
 //00 49    U16, Length 
 //D2       U8, Register
-//00 00 00 00	fp32*6, 
+//00 00 00 00	FP32*6, 
 00 00 00 00 
 00 00 00 00 
 00 00 00 00 
@@ -622,7 +572,7 @@ M => [Mx, My,Mz, Mr, Mp, My]
 Equivalent mass(xyz): 0.02~1.0(kg)
 Moment of inertia(rpy): 0.0001~0.01(kg*m^2)
 
-//00 00 00 00	fp32*6, 
+//00 00 00 00	FP32*6, 
 00 00 00 00 
 00 00 00 00 
 00 00 00 00 
@@ -633,7 +583,7 @@ K => [kx, ky, kz, kr, kp, ky]
 xyz: 0~2000(N/m)
 rpy: 0~20(Nm/rad)
 
-//00 00 00 00 	fp32*6, 
+//00 00 00 00 	FP32*6, 
 00 00 00 00 
 00 00 00 00 
 00 00 00 00 
@@ -663,13 +613,9 @@ Damping coefficient
 
 </details>
 
-
-
-
-
 ## Set impedance control parameter of 6 Axis Force Torque Sensor
 
-**Register211（D3）**
+**Register:211(0xD3）**
 
 ```
 // Request:
@@ -713,15 +659,9 @@ Damping coefficient
 
 </details>
 
-
-
-
-
-
-
 ## Get all feedback data of 6 Axis Force Torque Sensor
 
-**Register212（D4）**
+**Register:212(0xD4）**
 
 ```
 // Request:
@@ -762,15 +702,15 @@ Damping coefficient
 //00 U8, Type
 //08 U8, ID
 //03, E8 U16, Frequency
-//00,00,00,00	fp32, Weight
-//00,00,00,00	fp32, Reserve
+//00,00,00,00	FP32, Weight
+//00,00,00,00	FP32, Reserve
 
-//00,00,00,00	fp32, 
+//00,00,00,00	FP32, 
 00,00,00,00
 00,00,00,00
 Centroid
 
-//00,00,00,00	fp32, offset
+//00,00,00,00	FP32, offset
 00,00,00,00
 00,00,00,00
 00,00,00,00
@@ -780,9 +720,9 @@ Centroid
 //00
 Coordinate of impedance control mode
 
-//00,00,00,00,00,00	fp32, Impedance control vector
+//00,00,00,00,00,00	FP32, Impedance control vector
 
-//00,00,00,00	fp32, 
+//00,00,00,00	FP32, 
 00,00,00,00
 00,00,00,00
 00,00,00,00
@@ -791,7 +731,7 @@ Coordinate of impedance control mode
 Equivalent mass and
 Moment of inertia
 
-//00,00,00,00	fp32, 
+//00,00,00,00	FP32, 
 00,00,00,00
 00,00,00,00
 00,00,00,00
@@ -799,7 +739,7 @@ Moment of inertia
 00,00,00,00
 Stiffness coefficient
 
-<strong>//00,00,00,00	fp32, 
+<strong>//00,00,00,00	FP32, 
 </strong>00,00,00,00
 00,00,00,00
 00,00,00,00
@@ -809,9 +749,9 @@ Damping coefficient
 
 //00    U8, Coordinate of force control mode
 
-<strong>//00,00,00,00,00,00	fp32, Force Control vector
+<strong>//00,00,00,00,00,00	FP32, Force Control vector
 </strong>
-//00,00,00,00	fp32, 
+//00,00,00,00	FP32, 
 00,00,00,00
 00,00,00,00
 00,00,00,00
@@ -819,7 +759,7 @@ Damping coefficient
 00,00,00,00
 Force vector
 
-//00,00,00,00	fp32, 
+//00,00,00,00	FP32, 
 00,00,00,00
 00,00,00,00
 00,00,00,00
@@ -827,7 +767,7 @@ Force vector
 00,00,00,00
 Reserve
 
-//00,00,00,00	fp32, 
+//00,00,00,00	FP32, 
 00,00,00,00
 00,00,00,00
 00,00,00,00
@@ -836,7 +776,7 @@ Reserve
 KP: Proportional gain
 
 
-//00,00,00,00	fp32, 
+//00,00,00,00	FP32, 
 00,00,00,00
 00,00,00,00
 00,00,00,00
@@ -844,7 +784,7 @@ KP: Proportional gain
 00,00,00,00
 KI: Integral gain
 
-//00,00,00,00	fp32, 
+//00,00,00,00	FP32, 
 00,00,00,00
 00,00,00,00
 00,00,00,00
@@ -852,7 +792,7 @@ KI: Integral gain
 00,00,00,00
 KD: Differential gain
 
-//00,00,00,00	fp32, 
+//00,00,00,00	FP32, 
 00,00,00,00
 00,00,00,00
 00,00,00,00
@@ -862,8 +802,3 @@ Max TCP speed vector
 </code></pre>
 
 </details>
-
-
-
-
-

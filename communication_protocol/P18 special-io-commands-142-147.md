@@ -2,7 +2,7 @@
 
 ## Operation of general digital IO delay output of control box
 
-**Register142（8E）**
+**Register:142(0x8E）**
 
 {% hint style="warning" %}
 Starting from the moment when the command is issued, the digital output switch of the control box is triggered after a period of time.
@@ -23,7 +23,7 @@ Starting from the moment when the command is issued, the digital output switch o
 //8E       U8, Register
 //00       U8, Digital IO port number of control box (0-7)
 //01       U8, Switch value (0 is off, 1 is on)
-//00 00 40 40     fp32, 
+//00 00 40 40     FP32, 
 The time when the delay takes effect from the current time=3s
 ```
 
@@ -48,13 +48,9 @@ The time when the delay takes effect from the current time=3s
 
 </details>
 
-
-
-
-
 ## Operation of the end general digital IO delay output
 
-**Register143（8F）**
+**Register:143(0x8F）**
 
 {% hint style="warning" %}
 Starting from the moment when the command is issued, the end digital output switch is triggered after a period of time.
@@ -75,7 +71,7 @@ Starting from the moment when the command is issued, the end digital output swit
 //8F       U8, Register
 //00       U8, The end digital IO port number of control box (0/1)
 //01       U8, Switch value (0 is off, 1 is on
-//00 00 40 40    fp32, 
+//00 00 40 40    FP32, 
 The time when the delay takes effect from the current time=3s
 ```
 
@@ -100,17 +96,9 @@ The time when the delay takes effect from the current time=3s
 
 </details>
 
-
-
-
-
-
-
-
-
 ## Operation triggered by the position of the general digital IO of the control box
 
-**Register144（90）**
+**Register:144(0x90）**
 
 {% hint style="warning" %}
 Starting from the moment when the instruction is issued, the TCP triggers the digital output switch of the control box after it reaches the specified position area, which is valid for a single time
@@ -130,12 +118,12 @@ Starting from the moment when the instruction is issued, the TCP triggers the di
 //00 02    U16, Protocol Identifier
 //00 13    U16, Length 
 //90       U8, Register
-//00	U8, IO port number of the control box: 0-7
-//01	U8, Switch value (on_off): 0 is off, 1 is on
-//00 00 c8 43	fp32, x=400mm
-//00 00 00 00	fp32, y=0mm
-//00 00 48 43	fp32, z=200mm
-//00 00 48 42	fp32, 
+//00	   U8, IO port number of the control box: 0-7
+//01	   U8, Switch value (on_off): 0 is off, 1 is on
+//00 00 c8 43	FP32, x=400mm
+//00 00 00 00	FP32, y=0mm
+//00 00 48 43	FP32, z=200mm
+//00 00 48 42	FP32, 
 Tolerance radius (tol_r=50mm),
 when the robotic arm reaches the specified position (the area of the sphere specified by the trigger position point (x, y, z) as the center (the radius of the sphere is the tolerance radius)), trigger IO . If the tolerance radius is not set, when the robotic arm passes the specified point at a speed other than 0, it may cause a missed 
 ```
@@ -162,13 +150,9 @@ when the robotic arm reaches the specified position (the area of the sphere spec
 
 </details>
 
-
-
-
-
 ## Operation triggered by the position of the end general digital IO
 
-**Register145（91）**
+**Register:145(0x91）**
 
 {% hint style="warning" %}
 Starting from the moment when the instruction is issued, the TCP triggers the end digital output switch after it reaches the specified position area, which is valid for a single time.
@@ -188,12 +172,12 @@ Starting from the moment when the instruction is issued, the TCP triggers the en
 //00 02    U16, Protocol Identifier
 //00 13    U16, Length 
 //91       U8, Register
-//00	U8, IO port number of the end: 0/1
+//00	   U8, IO port number of the end: 0/1
 //01 U8,Switch value (on_off): 0 is off, 1 is on
-//00 00 c8 43	fp32, x=400mm
-//00 00 00 00	fp32, y=0mm
-//00 00 48 43	fp32, z=200mm
-//00 00 48 42	fp32, 
+//00 00 c8 43	FP32, x=400mm
+//00 00 00 00	FP32, y=0mm
+//00 00 48 43	FP32, z=200mm
+//00 00 48 42	FP32, 
 Tolerance radius (tol_r=50mm)
 when the robotic arm reaches the specified position (the area of the sphere specified by the trigger position point (x, y, z) as the center (the radius of the sphere is the tolerance radius)), trigger IO . If the tolerance radius is not set, when the robotic arm passes the specified point at a speed other than 0, it may cause a missed trigger because it cannot be accurately detected.
 ```
@@ -220,15 +204,9 @@ when the robotic arm reaches the specified position (the area of the sphere spec
 
 </details>
 
-
-
-
-
-
-
 ## Whether the control box and terminal IO are automatically cleared in the STOP state
 
-**Register146（92）**
+**Register:146(92）**
 
 ```
 // Request:
@@ -276,15 +254,9 @@ Switch value
 
 </details>
 
-
-
-
-
-
-
 ## Operation triggered by the position of the general Analog IO of the control box
 
-**Register147（93）**
+**Register:147(93）**
 
 {% hint style="warning" %}
 Starting from the moment when the command is issued, the TCP triggers the analog output switch of the control box after it reaches the specified position area, which is valid for a single time.
@@ -305,16 +277,16 @@ Starting from the moment when the command is issued, the TCP triggers the analog
 //00 02    U16, Protocol Identifier
 //00 92    U16, Length 
 //00       U8, Register
-//00	U8, IO port number of the control box: 0/1
-//00 00	U16, 
+//00	   U8, IO port number of the control box: 0/1
+//00 00	   U16, 
 Analog output 0 is 0
 Analog output 0, Range 0~4095
 Corresponding to 0~10V
 
-//00 00 c8 43	fp32, x=400mm
-//00 00 00 00	fp32, y=0mm
-//00 00 48 43	fp32, z=200mm
-//00 00 48 42	fp32, 
+//00 00 c8 43	FP32, x=400mm
+//00 00 00 00	FP32, y=0mm
+//00 00 48 43	FP32, z=200mm
+//00 00 48 42	FP32, 
 Tolerance radius (tol_r=50mm),
 when the robotic arm reaches the specified position (the area of the sphere specified by the trigger position point (x, y, z) as the center (the radius of the sphere is the tolerance radius)), trigger IO . If the tolerance radius is not set, when the robotic arm passes the specified point at a speed other than 0, it may cause a missed 
 ```
@@ -340,10 +312,3 @@ when the robotic arm reaches the specified position (the area of the sphere spec
 ```
 
 </details>
-
-
-
-
-
-
-

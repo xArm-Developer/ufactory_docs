@@ -1,14 +1,12 @@
 # 485 peripheral transparent transmission(240-241)
 
-
-
 ## Peripheral 485 transparent transmission timeout
 
-**Register：240(F0)**
+**Register:240(0xF0)**
 
 ```
 // Request:
-00 01 00 02 00 0B F0 01 
+00 01 00 02 00 02 F0 01 
 ```
 
 <details>
@@ -18,7 +16,7 @@
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 0B    U16, Length 
+//00 02    U16, Length 
 //F0       U8, Register
 //01       U8, Timeout(s)
 ```
@@ -27,7 +25,7 @@
 
 ```
 // Response:
-00 01 00 02 00 08 F0 00
+00 01 00 02 00 02 F0 00
 ```
 
 <details>
@@ -37,20 +35,16 @@
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 08    U16, Length 
+//00 02    U16, Length 
 //F0       U8, Register
 //00       U8, State
 ```
 
 </details>
 
-
-
-
-
 ## Peripheral 485 transparent transmission communication
 
-**Register：241(F1)**
+**Register:241(0xF1)**
 
 ```
 // Request:
@@ -98,4 +92,3 @@ Control box 485：0A
 ```
 
 </details>
-

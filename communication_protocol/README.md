@@ -1,6 +1,6 @@
 # Introduction
 
-**(1)** This manual is dedicated for developers who develop the applications base on the xArm Modbus-TCP communication protocol. For xArm Studio application development, please refer to "xArm User Manual". For Python (C++ or ROS) application development
+**(1)** This manual is dedicated for developers who develop the applications base on the xArm Modbus-TCP communication protocol. For xArm Studio application development, please refer to "xArm User Manual".
 
 **(2)** Considering the potential risks of using xArm Modbus-TCP communication protocol for application development, operators need to read and understand all the contents of "xArm User Manual", familiar with xArm risk assessment and robot motion planning, and proficient in robot parameter setting and program creating in "xArm Studio" before Modbus-TCP end developing.
 

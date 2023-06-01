@@ -2,7 +2,7 @@
 
 ## Get the state of the current robotic arm servo
 
-**Register：106 (6A)**
+**Register:106 (0x6A)**
 
 ```
 // Request:
@@ -60,15 +60,9 @@ Commands execution state:
 
 </details>
 
-
-
-
-
-
-
 ## Start the joint friction identification process
 
-**Register：115 (73)**
+**Register:115 (0x73)**
 
 {% hint style="warning" %}
 Recommended to use the Studio
@@ -86,8 +80,8 @@ Recommended to use the Studio
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 02    U16, Length 
-//32       U8, Register
+//00 0F    U16, Length 
+//73       U8, Register
 //58 49 31 32 30 33 30 37 32 30 31 4C 31 42    U8,
 The serial number of the  xArm to be identified
 （E.g：XI120307201L1B）Refer to ASCII code
@@ -110,13 +104,10 @@ The serial number of the  xArm to be identified
 //00 07    U16, Length 
 //73       U8, Register
 //00       U8, State
-//00 00 00 00    fp32, 
+//00 00 00 00    FP32, 
 Identification status
 0,0：Identify success
 -1,0：Identify failed
 ```
 
 </details>
-
-
-

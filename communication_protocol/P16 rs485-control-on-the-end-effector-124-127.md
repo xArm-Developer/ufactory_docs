@@ -2,7 +2,7 @@
 
 ## Set the end RS485 band rate
 
-**Register: 127 (7F)**
+**Register: 127 (0x7F)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 08 7F 09 1A 0B 00 00 30 41
@@ -19,7 +19,7 @@
 //7F       U8, Register
 //09	   U8, Host ID
 //1A 0B	   U16,Address
-//00 00 30 41	fp32,
+//00 00 30 41	FP32,
 0:4800 bps； 1:9600bps；2:19200bps；3:38400bps；
 4:57600bps；5:115200bps
 6:230400bps；7: 460800bps；8:921600bps；9: 1000000bps；
@@ -46,15 +46,9 @@
 
 </details>
 
-
-
-
-
-
-
 ## IO control on the End-effector
 
-**Register：127 (7F)**
+**Register:127 (0x7F)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 08 7F 09 1A 15 00 00 80 43
@@ -71,7 +65,7 @@
 //7F       U8, Register
 //09	   U8, Host ID
 //1A 15	   U16,Address
-//00 00 80 43	fp32,
+//00 00 80 43	FP32,
 Open 0
 Data:
 256.0: Close 0  257.0: Open 
@@ -99,17 +93,9 @@ Data:
 
 </details>
 
-
-
-
-
-
-
-
-
 ## Get the input of the end digital quantity
 
-**Register：128 (80)**
+**Register:128 (0x80)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 04 80 09 0A 14
@@ -153,13 +139,9 @@ The end byte indicates the input status. The digit of 0 corresponds to input 0 a
 
 </details>
 
-
-
-
-
 ## Get the input of the end analog
 
-**Register：128 (80)**
+**Register:128 (0x80)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 04 80 09 0A 16
@@ -205,20 +187,3 @@ Corresponding to 0~3.3V
 {% endcode %}
 
 </details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -370,7 +370,7 @@ The motion calculates the trajectory of the space circle according to the three-
 
 ## Linear motion in tool coordinate system
 
-**Register:28 (1C)**
+**Register:28 (0x1C)**
 
 {% hint style="warning" %}
 Move in Cartesian linear relative motion based on the current tool coordinate system.
@@ -427,7 +427,7 @@ Move in Cartesian linear relative motion based on the current tool coordinate sy
 
 ## Servoj motion
 
-**Register:29 (1D)**
+**Register:29 (0x1D)**
 
 {% code overflow="wrap" %}
 ```
@@ -480,7 +480,7 @@ Move in Cartesian linear relative motion based on the current tool coordinate sy
 
 ## Servo\_cartesian motion
 
-**Register:30 (1E)**
+**Register:30 (0x1E)**
 
 {% hint style="warning" %}
 Interface for receiving high-frequency continuous cartesian trajectory motion.

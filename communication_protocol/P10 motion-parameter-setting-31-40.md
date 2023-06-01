@@ -2,7 +2,7 @@
 
 ## Set the jerk of the Cartesian space translation
 
-**Register:31 (1F)**
+**Register:31 (0x1F)**
 
 ```
 // Request:
@@ -45,7 +45,7 @@
 
 ## Set the maximum acceleration of the Cartesian space translation
 
-R**egister:32 (20)**
+R**egister:32 (0x20)**
 
 ```
 // Request:
@@ -88,7 +88,7 @@ R**egister:32 (20)**
 
 ## Set the joint space jerk
 
-Register:33 (21)
+**Register:33 (0x21)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 05 21 00 40 1C 46 
@@ -130,7 +130,7 @@ Register:33 (21)
 
 ## Set joint space max acceleration
 
-**Register:34 (22)**
+**Register:34 (0x22)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 05 22 00 00 C8 43
@@ -172,7 +172,7 @@ Register:33 (21)
 
 ## Set the offset of the robotic arm end-effector (System reset)
 
-**Register:35 (23)**
+**Register:35 (0x23)**
 
 {% hint style="warning" %}
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
@@ -222,7 +222,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 ## End payload setting
 
-**Register:36 (24)**
+**Register:36 (0x24)**
 
 <pre data-overflow="wrap"><code><strong>// Request:
 </strong><strong>00 01 00 02 00 11 24 00 00 80 3F 00 00 C8 43 00 00 00 00 00 00 48 43 
@@ -266,7 +266,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 ## Set collision detection sensitivity (System reset)
 
-**Register:37(25)**
+**Register:37(0x25)**
 
 {% hint style="warning" %}
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
@@ -311,7 +311,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 ## Set teaching sensitivity for teaching mode (System reset)
 
-**Register:38(26)**
+**Register:38(0x26)**
 
 {% hint style="warning" %}
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
@@ -356,7 +356,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 ## Delete the current system configuration parameters
 
-**Register:39 (27)**
+**Register:39 (0x27)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 01 27 
@@ -396,7 +396,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 ## Save the current system configuration parameters
 
-**Register:40 (28)**
+**Register:40 (0x28)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 01 28 

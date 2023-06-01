@@ -2,7 +2,7 @@
 
 ## Get the current Cartesian position of the robotic arm
 
-**Register41（29）**
+**Register:41(0x29）**
 
 ```
 // Request:
@@ -39,23 +39,19 @@
 //00 1A    U16, Length 
 //29       U8, Register
 //10       U8, State
-//43 00 4F 43	fp32, x=207mm
-//B4 CE 18 3A	fp32, y=0mm
-//3A 00 E0 42	fp32, z=112mm
-//DB 0F 49 40	fp32, roll=π
-//FD AD 80 B6	fp32, pitch=0
-//7C D9 20 37	fp32, yaw=0
+//43 00 4F 43	FP32, x=207mm
+//B4 CE 18 3A	FP32, y=0mm
+//3A 00 E0 42	FP32, z=112mm
+//DB 0F 49 40	FP32, roll=π
+//FD AD 80 B6	FP32, pitch=0
+//7C D9 20 37	FP32, yaw=0
 ```
 
 </details>
-
-
-
-
 
 ## Get the current joint position of the robotic arm
 
-**Register：42 (2A)**
+**Register:42 (0x2A)**
 
 ```
 // Request:
@@ -92,23 +88,19 @@
 //00 1A    U16, Length 
 //29       U8, Register
 //10       U8, State
-//43 00 4F 43	fp32, x=207mm
-//B4 CE 18 3A	fp32, y=0mm
-//3A 00 E0 42	fp32, z=112mm
-//DB 0F 49 40	fp32, roll=π
-//FD AD 80 B6	fp32, pitch=0
-//7C D9 20 37	fp32, yaw=0
+//43 00 4F 43	FP32, x=207mm
+//B4 CE 18 3A	FP32, y=0mm
+//3A 00 E0 42	FP32, z=112mm
+//DB 0F 49 40	FP32, roll=π
+//FD AD 80 B6	FP32, pitch=0
+//7C D9 20 37	FP32, yaw=0
 ```
 
 </details>
 
-
-
-
-
 ## Get the solution of the inverse kinematics
 
-**Register：43 (2B)**
+**Register:43 (0x2B)**
 
 {% code overflow="wrap" %}
 ```
@@ -126,12 +118,12 @@
 //00 02    U16, Protocol Identifier
 //00 19    U16, Length 
 //2B       U8, Register
-//00 00 C8 43	fp32, x=400mm
-//00 00 00 00	fp32, y=0mm
-//00 00 48 43	fp32, z=200mm
-//DB 0F 49 40	fp32, roll=π
-//00 00 00 00	fp32, pitch=0
-//00 00 00 00	fp32, yaw=0
+//00 00 C8 43	FP32, x=400mm
+//00 00 00 00	FP32, y=0mm
+//00 00 48 43	FP32, z=200mm
+//DB 0F 49 40	FP32, roll=π
+//00 00 00 00	FP32, pitch=0
+//00 00 00 00	FP32, yaw=0
 ```
 
 </details>
@@ -150,29 +142,23 @@
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 19    U16, Length 
+//00 1E    U16, Length 
 //2B       U8, Register
 //00       U8, State
-//D8 C8 B2 A4     fp32, joint1= 0
-//0A 86 A7 3D     fp32, joint2=0.081803
-//B1 22 24 BF     fp32, joint3=-0.641152
-//F2 A9 3C 8A     fp32, joint4=0
-//EF 31 0F 3F     fp32, joint5=0.559349
-//D8 C8 B2 A4     fp32, joint6=0
-//00 00 00 00     fp32, joint7=0
+//D8 C8 B2 A4     FP32, joint1= 0
+//0A 86 A7 3D     FP32, joint2=0.081803
+//B1 22 24 BF     FP32, joint3=-0.641152
+//F2 A9 3C 8A     FP32, joint4=0
+//EF 31 0F 3F     FP32, joint5=0.559349
+//D8 C8 B2 A4     FP32, joint6=0
+//00 00 00 00     FP32, joint7=0
 ```
 
 </details>
 
-
-
-
-
-
-
 ## Get the solution of the forward kinematics
 
-**Register：44 (2C)**
+**Register:44 (0x2C)**
 
 {% code overflow="wrap" %}
 ```
@@ -190,13 +176,13 @@
 //00 02    U16, Protocol Identifier
 //00 1D    U16, Length 
 //2C       U8, Register
-//92 0A 86 3F	fp32, joint1= π/3
-//00 00 00 00	fp32, joint2=0
-//00 00 00 00	fp32, joint3=0
-//00 00 00 00	fp32, joint4=0
-//00 00 00 00	fp32, joint5=0
-//00 00 00 00	fp32, joint6=0
-//00 00 00 00	fp32, joint7=0
+//92 0A 86 3F	FP32, joint1= π/3
+//00 00 00 00	FP32, joint2=0
+//00 00 00 00	FP32, joint3=0
+//00 00 00 00	FP32, joint4=0
+//00 00 00 00	FP32, joint5=0
+//00 00 00 00	FP32, joint6=0
+//00 00 00 00	FP32, joint7=0
 ```
 
 </details>
@@ -218,23 +204,19 @@
 //00 1A    U16, Length 
 //2C       U8, Register
 //00       U8, State
-//FF FF CE 42	fp32, x=103.5mm
-//6B 44 33 43	fp32, y=179.27mm
-//00 00 E0 42	fp32, z=112mm
-//DB 0F 49 C0	fp32, roll=-π
-//00 00 00 80	fp32, pitch=-0
-//92 0A 86 3F	fp32, yaw=-π/3
+//FF FF CE 42	FP32, x=103.5mm
+//6B 44 33 43	FP32, y=179.27mm
+//00 00 E0 42	FP32, z=112mm
+//DB 0F 49 C0	FP32, roll=-π
+//00 00 00 80	FP32, pitch=-0
+//92 0A 86 3F	FP32, yaw=-π/3
 ```
 
 </details>
 
-
-
-
-
 ## Check the limit of joint space
 
-**Register：45 (2D)**
+**Register:45 (0x2D)**
 
 {% code overflow="wrap" %}
 ```
@@ -252,13 +234,13 @@
 //00 02    U16, Protocol Identifier
 //00 1D    U16, Length 
 //2D       U8, Register
-//92 0A 86 3F	fp32, joint1=π/3
-//00 00 00 00	fp32, joint2=0
-//00 00 00 00	fp32, joint3=0
-//00 00 00 00	fp32, joint4=0
-//00 00 00 00	fp32, joint5=0
-//00 00 00 00	fp32, joint6=0
-//00 00 00 00	fp32, joint7=0
+//92 0A 86 3F	FP32, joint1=π/3
+//00 00 00 00	FP32, joint2=0
+//00 00 00 00	FP32, joint3=0
+//00 00 00 00	FP32, joint4=0
+//00 00 00 00	FP32, joint5=0
+//00 00 00 00	FP32, joint6=0
+//00 00 00 00	FP32, joint7=0
 ```
 
 </details>
@@ -283,13 +265,9 @@
 
 </details>
 
-
-
-
-
 ## Set TCP speed limit in Reduced Mode
 
-**Register：47 (2F)**
+**Register:47 (0x2F)**
 
 ```
 // Request:
@@ -322,20 +300,16 @@
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 04    U16, Length 
+//00 02    U16, Length 
 //2F       U8, Register
 //00       U8, State
 ```
 
 </details>
 
-
-
-
-
 ## Set Joint speed limit in Reduced Mode
 
-**Register：48 (30)**
+**Register:48 (0x30)**
 
 ```
 // Request:
@@ -350,7 +324,7 @@
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 05    U16, Length 
-//2F       U8, Register
+//30       U8, Register
 //00 00 C8 43    U8,  Max joint speed=1.0 rad/s
 ```
 
@@ -375,17 +349,13 @@
 
 </details>
 
-
-
-
-
 ## Get the state of the Reduced Mode
 
-**Register：49 (31)**
+**Register:49 (0x31)**
 
 ```
 // Request:
-00 01 00 02 00 05 31
+00 01 00 02 00 01 31
 ```
 
 <details>
@@ -403,7 +373,7 @@
 
 ```
 // Response:
-00 01 00 03 00 02 30 00
+00 01 00 03 00 03 30 00 00
 ```
 
 <details>
@@ -421,13 +391,9 @@
 
 </details>
 
-
-
-
-
 ## Set the state of the Reduced Mode
 
-**Register：50 (32)**
+**Register:50 (0x32)**
 
 ```
 // Request:
@@ -450,7 +416,7 @@
 
 ```
 // Response:
-00 01 00 03 00 02 30 00
+00 01 00 03 00 02 32 00
 ```
 
 <details>

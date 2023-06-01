@@ -2,7 +2,7 @@
 
 ## Get version information
 
-**Register1(0x01)**
+**Register:1(0x01)**
 
 ```
 // Request
@@ -50,7 +50,7 @@
 
 ## Get SN information
 
-**Register2(0x02)**
+**Register:2(0x02)**
 
 ```
 // Request
@@ -96,7 +96,7 @@
 
 ## Reload friction parameters
 
-**Register4(0x04)**
+**Register:4(0x04)**
 
 ```
 // Request
@@ -137,7 +137,7 @@
 
 ## Get the value of Joint torque or actual current
 
-**Register5(0x05)**
+**Register:5(0x05)**
 
 ```
 // Request
@@ -180,7 +180,7 @@
 
 ## Get the radius of rotation of the target joint relative to the TCP
 
-**Register6(0x06)**
+**Register:6(0x06)**
 
 ```
 // Request
@@ -223,7 +223,7 @@
 
 ## Remote shut down the operating system
 
-**Register10(0x0A）**
+**Register:10(0x0A）**
 
 ```
 // Request

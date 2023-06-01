@@ -2,7 +2,7 @@
 
 ## Joint motion (P2P motion)
 
-**Register23(0x17）**
+**Register:23(0x17）**
 
 {% code overflow="wrap" fullWidth="false" %}
 ```
@@ -60,7 +60,7 @@
 
 ## Set the maximum acceleration of TCP motion
 
-**Register32(0x20）**
+**Register:32(0x20）**
 
 ```
 // Request
@@ -102,7 +102,7 @@
 
 ## Get Cartesian position
 
-**Register41(0x29）**
+**Register:41(0x29）**
 
 ```
 // Request
@@ -151,7 +151,7 @@
 
 ## Linear motion of the target in the axis angle posture
 
-**Register92(0x5C）**
+**Register:92(0x5C）**
 
 {% code overflow="wrap" %}
 ```
@@ -220,7 +220,7 @@ The given parameters 1-6 coordinates are based on the current an offset of posit
 
 ## The operation triggered by the position of the general digital IO of the control box
 
-**Register145(0x91）**
+**Register:145(0x91）**
 
 {% code overflow="wrap" %}
 ```

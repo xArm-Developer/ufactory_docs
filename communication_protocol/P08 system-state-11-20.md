@@ -2,7 +2,7 @@
 
 ## Enable/Disable servo (System reset)
 
-**Register11(0x0B)**
+**Register:11(0x0B)**
 
 {% hint style="warning" %}
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
@@ -56,7 +56,7 @@ Whether to enable the servo
 
 ## Motion state setting
 
-**Register12(0x0C)**
+**Register:12(0x0C)**
 
 ```
 // Request:
@@ -103,7 +103,7 @@ Motion Sate
 
 ## Get the motion state
 
-**Register13 (0x0D)**
+**Register:13 (0x0D)**
 
 ```
 // Request:
@@ -151,7 +151,7 @@ Motion state：
 
 ## Get the number of commands in the command buffer
 
-**Register14 (0x0E)**
+**Register:14 (0x0E)**
 
 ```
 // Request
@@ -193,7 +193,7 @@ Motion state：
 
 ## Get error and warning code
 
-**Register15 (0x0F)**
+**Register:15 (0x0F)**
 
 ```
 // Request:
@@ -236,7 +236,7 @@ Motion state：
 
 ## Clear control box error (System reset)
 
-**Register16 (0x10)**
+**Register:16 (0x10)**
 
 {% hint style="warning" %}
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
@@ -281,7 +281,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 ## Clear control box warning
 
-**Register17 (0x11)**
+**Register:17 (0x11)**
 
 ```
 // Request:
@@ -322,7 +322,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 ## Setting the brake switches separately (System reset)
 
-**Register18 (0x12)**
+**Register:18 (0x12)**
 
 ```
 // Request:
@@ -365,7 +365,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 ## Setting the system motion mode (System reset)
 
-**Register19 (0x13)**
+**Register:19 (0x13)**
 
 {% hint style="warning" %}
 The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.

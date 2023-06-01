@@ -2,7 +2,7 @@
 
 ## Cartesian linear motion
 
-**Register21（0x15）**
+**Register:21(0x15）**
 
 {% code overflow="wrap" %}
 ```
@@ -55,7 +55,7 @@
 
 ## Linear motion with circular arc
 
-**Register22 (0x16)**
+**Register:22 (0x16)**
 
 {% code overflow="wrap" %}
 ```
@@ -108,7 +108,7 @@
 
 ## Joint motion (P2P motion)
 
-**Register23（0x17）**
+**Register:23(0x17）**
 
 {% code overflow="wrap" fullWidth="false" %}
 ```
@@ -162,7 +162,7 @@
 
 ## Joint motion with circular arc
 
-**Register24 (0x18)**
+**Register:24 (0x18)**
 
 {% code overflow="wrap" %}
 ```
@@ -216,7 +216,7 @@
 
 ## Return to zero position
 
-**Register25 (0x19)**
+**Register:25 (0x19)**
 
 ```
 // Request
@@ -261,7 +261,7 @@
 
 ## Pause commands, Command delay
 
-**Register：26(0x1A)**
+**Register:26(0x1A)**
 
 ```
 // Request
@@ -304,7 +304,7 @@
 
 ## Circular motion
 
-**RRegister：27 (0x1B)**
+**RRegister:27 (0x1B)**
 
 {% hint style="warning" %}
 The motion calculates the trajectory of the space circle according to the three-point coordinates, and the three-point coordinates are (current starting point, parameter 1, parameter 2)
@@ -370,7 +370,7 @@ The motion calculates the trajectory of the space circle according to the three-
 
 ## Linear motion in tool coordinate system
 
-**Register：28 (1C)**
+**Register:28 (1C)**
 
 {% hint style="warning" %}
 Move in Cartesian linear relative motion based on the current tool coordinate system.
@@ -427,7 +427,7 @@ Move in Cartesian linear relative motion based on the current tool coordinate sy
 
 ## Servoj motion
 
-**Register：29 (1D)**
+**Register:29 (1D)**
 
 {% code overflow="wrap" %}
 ```
@@ -447,7 +447,7 @@ Move in Cartesian linear relative motion based on the current tool coordinate sy
 //1D       U8, Register
 //92 0A 86 3F	FP32, Joint1=π/3
 //00 00 00 00	FP32, Joint2=0
-//00 00 00 00	FPp32, Joint3=0
+//00 00 00 00	FP32, Joint3=0
 //00 00 00 00	FP32, Joint4=0
 //00 00 00 00	FP32, Joint5=0
 //00 00 00 00	FP32, Joint6=0
@@ -480,7 +480,7 @@ Move in Cartesian linear relative motion based on the current tool coordinate sy
 
 ## Servo\_cartesian motion
 
-**Register：30 (1E)**
+**Register:30 (1E)**
 
 {% hint style="warning" %}
 Interface for receiving high-frequency continuous cartesian trajectory motion.

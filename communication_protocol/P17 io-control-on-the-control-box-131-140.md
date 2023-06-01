@@ -2,7 +2,7 @@
 
 ## Get configurable digital GPIO input
 
-**Register：131 (83)**
+**Register:131 (0x83)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 01 83  
@@ -16,7 +16,7 @@
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 01    U16, Length 
-//03       U8, Register
+//83       U8, Register
 ```
 
 </details>
@@ -43,11 +43,9 @@ GPIO signal: Bit0 ~ Bit15 Correspond to signals of GPIO0~GPIO15
 
 </details>
 
-
-
 ## Get analog input AI1
 
-**Register：132 (84)**
+**Register:132 (0x84)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 01 84  
@@ -89,11 +87,9 @@ Corresponding to 0~10V
 
 </details>
 
-
-
 ## Get analog input AI2
 
-**Register：133 (85)**
+**Register:133 (0x85)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 01 85  
@@ -135,15 +131,9 @@ Corresponding to0~10V
 
 </details>
 
-
-
-
-
-
-
 ## Set configurable digital GPIO output
 
-**Register：134 (86)**
+**Register:134 (0x86)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 03 86 80 00 80 00  
@@ -191,15 +181,9 @@ and the lower 8 bits are the set bit
 
 </details>
 
-
-
-
-
-
-
 ## Set the analog output AO1
 
-**Register：135 (87)**
+**Register:135 (0x87)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 03 87 00 00  
@@ -242,15 +226,9 @@ Corresponding to 0~10V
 
 </details>
 
-
-
-
-
-
-
 ## Set the analog output AO2
 
-**Register：136 (88)**
+**Register:136 (0x88)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 03 88 00 00  
@@ -293,13 +271,9 @@ Corresponding to 0~10V
 
 </details>
 
-
-
-
-
 ## Configure digital input IO function
 
-**Register：137 (89)**
+**Register:137 (0x89)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 03 89 07 00
@@ -350,13 +324,9 @@ Function number
 
 </details>
 
-
-
-
-
 ## Configure digital output IO function
 
-**Register：138 (8A)**
+**Register:138 (0x8A)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 03 8A 0F 00  
@@ -411,15 +381,9 @@ Function number
 
 </details>
 
-
-
-
-
-
-
 ## Get GPIO state
 
-**Register：139 (8B)**
+**Register:139 (0x8B)**
 
 <pre><code><strong>// Request:
 </strong>00 01 00 02 00 01 8B  
@@ -479,20 +443,3 @@ Not 0: Error code
 ```
 
 </details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

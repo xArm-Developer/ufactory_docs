@@ -19,3 +19,7 @@
 * [Special IO commands(142-147)](p18-special-io-commands-142-147.md)
 * [6 Axis Force Torque Sensor(200-212)](p19-6-axis-force-torque-sensor-200-212.md)
 * [485 peripheral transparent transmission(240-241)](p20-485-peripheral-transparent-transmission-240-241.md)
+* [Error Reporting and Handling](error-reporting-and-handling/README.md)
+  * [Joints Error Message and Error Handling](error-reporting-and-handling/joints-error-message-and-error-handling.md)
+  * [Control Box Error Code and Error Handling](error-reporting-and-handling/control-box-error-code-and-error-handling.md)
+  * [Gripper Error Code & Error Handling](error-reporting-and-handling/gripper-error-code-and-error-handling.md)

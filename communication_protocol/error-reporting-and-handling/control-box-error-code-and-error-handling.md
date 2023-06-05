@@ -235,29 +235,167 @@ Error Code：0x21
 
 
 
+### Software Error Code：C34
+
+Error Code：0x22
+
+> {% code overflow="wrap" %}
+> ```
+> Recording Timeout
+> The track recording duration exceeds the maximum duration limit of 5 minutes. It is recommended to re-record.
+> ```
+> {% endcode %}
+
+
+
+### Software Error Code：C35
+
+Error Code：0x23
+
+> {% code overflow="wrap" %}
+> ```
+> Safety Boundary Limit
+> The xArm reaches the safety boundary. Please let the xArm work within the safety boundary.
+> ```
+> {% endcode %}
 
 
 
 
 
+### Software Error Code：C36
+
+Error Code：0x24
+
+> {% code overflow="wrap" %}
+> ```
+> The number of delay commands exceeds the limit
+> 1. Please check whether there are too many position detection or IO delay commands.
+> 2. Increase the tolerance of the position detection command.
+> ```
+> {% endcode %}
 
 
 
 
 
+### Software Error Code：C37
+
+Error Code：0x25
+
+> {% code overflow="wrap" %}
+> ```
+> Abnormal Motion in Manual Mode
+> Please check whether the TCP payload setting of the robotic arm and the installation method of the robotic arm match the actual settings. 
+> ```
+> {% endcode %}
 
 
 
 
 
+### Software Error Code：C38
+
+Error Code：0x26
+
+> {% code overflow="wrap" %}
+> ```
+> Abnormal Joint Angle
+> Please stop the xArm by pressing the Emergency Stop Button on the Control Box
+> ```
+> {% endcode %}
+
+
+
+### Software Error Code：C39
+
+Error Code：0x27
+
+> {% code overflow="wrap" %}
+> ```
+> Abnormal Communication Between Master and Slave IC of Power Board.
+> ```
+> {% endcode %}
+
+
+
+### Software Error Code：C50
+
+Error Code：0x32
+
+> {% code overflow="wrap" %}
+> ```
+> Six-axis Force Torque Sensor Error
+> Please check the sensor error code, locate the problem, and power on again. If it cannot be resolved, please contact technical support.
+> ```
+> {% endcode %}
+
+
+
+### Software Error Code：C51
+
+Error Code：0x33
+
+> {% code overflow="wrap" %}
+> ```
+> Six-axis Force Torque Sensor Mode Setting Error
+> Please make sure that the robotic arm is not in Manual Mode, check whether the given value of this command is 0/1/2
+> ```
+> {% endcode %}
 
 
 
 
 
+### Software Error Code：C52
+
+Error Code：0x34
+
+> {% code overflow="wrap" %}
+> ```
+> Six-axis Force Torque Sensor Zero Setting Error
+> Please check the sensor communication wiring and whether the power is normal. 
+> ```
+> {% endcode %}
 
 
 
+### Software Error Code：C53
+
+Error Code：0x35
+
+> {% code overflow="wrap" %}
+> ```
+> Six-axis Force Torque Sensor Overload
+> Please reduce the payload or applied external force.
+> ```
+> {% endcode %}
+
+
+
+### Software Error Code：C110
+
+Error Code：0x6E
+
+> {% code overflow="wrap" %}
+> ```
+> Robot Arm Base Board Communication Error
+> Please contact technical support. 
+> ```
+> {% endcode %}
+
+
+
+### Software Error Code：C111
+
+Error Code：0x6F
+
+> {% code overflow="wrap" %}
+> ```
+> Control Box External 485 Device Communication Error.
+> Please contact technical support.
+> ```
+> {% endcode %}
 
 
 

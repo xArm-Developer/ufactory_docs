@@ -110,7 +110,7 @@ Corresponding to 0~10V
 
 ```
 // Response:
-00 01 00 02 00 04 84 00 00 12
+00 01 00 02 00 04 85 00 00 15
 ```
 
 <details>
@@ -121,7 +121,7 @@ Corresponding to 0~10V
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
 //00 04    U16, Length 
-//84       U8, Register
+//85       U8, Register
 //00       U8, State
 //00 15    U16,
 Analog input1

@@ -75,9 +75,9 @@ Whether to enable the servo
 
 //00      U8, 
 Motion Sate
-3: Suspend the current motion
-4: Stop all current motion (restart the system)
 0: Enter the motion mode
+3: Suspend the current motion(Do not clear controller cache)
+4: Stop all current motion (restart the system,clear controller cache)
 ```
 
 </details>
@@ -386,7 +386,8 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 //00 02    U16, Length 
 //13       U8, Register
 
-//00       U8, Motion mode：
+//00       U8, 
+Motion mode：
 0: Position control mode
 1: servo motion mode
 2: Joint teaching mode

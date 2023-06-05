@@ -54,7 +54,7 @@ $$
 
 > Note: γ corresponds to roll; β corresponds to pitch; α corresponds to yaw.
 
-<figure><img src="../.gitbook/assets/RPY.svg" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/RPY.svg" alt="" width="563"><figcaption></figcaption></figure>
 
 ### **Axis-Angle**
 
@@ -92,7 +92,7 @@ q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
 
 ### **Coordinates**
 
-<figure><img src="../.gitbook/assets/coordinates.svg" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/coordinates.svg" alt="" width="563"><figcaption></figcaption></figure>
 
 #### **The Base Coordinate System**
 

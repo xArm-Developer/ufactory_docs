@@ -243,7 +243,7 @@ When planning a linear motion, the target pose is expressed in terms of axial an
 {% code overflow="wrap" %}
 ```
 // Request:
-00 01 00 02 00 0D 33 00 00 96 43 00 00 00 00 00 00 16 43 DB 0F 49 40 00 00 00 00 00  00 00 00 00 00 48 43 00 00 FA 44 00 00 00 00 00 00 
+00 01 00 02 00 0D 5C 00 00 96 43 00 00 00 00 00 00 16 43 DB 0F 49 40 00 00 00 00 00  00 00 00 00 00 48 43 00 00 FA 44 00 00 00 00 00 00 
 ```
 {% endcode %}
 
@@ -255,8 +255,8 @@ When planning a linear motion, the target pose is expressed in terms of axial an
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 02    U16, Length 
-//32       U8, Register
+//00 0D    U16, Length 
+//5C       U8, Register
 //00 00 96 43	FP32, X=300mm
 //00 00 00 00	FP32, Y=0
 //00 00 16 43	FP32, Z=150mm

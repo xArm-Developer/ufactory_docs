@@ -24,6 +24,30 @@ Error Code：0A
 
 
 
+### Software Error Code：S11
+
+Error Code：0B
+
+> ```
+> Joint Overcurrent
+> Please restart the xArm with the Emergency Stop Button on the xArm Control Box.
+> ```
+
+
+
+### Software Error Code：S12
+
+Error Code：0C
+
+> ```
+> Joint Overspeed
+> Please restart the xArm with the Emergency Stop Button on the xArm Control Box.
+> ```
+
+
+
+
+
 
 
 

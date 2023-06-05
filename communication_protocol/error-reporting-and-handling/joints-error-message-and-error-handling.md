@@ -13,6 +13,15 @@ Error Code：00
 
 
 
+### Software Error Code：S10
+
+Error Code：0A
+
+> ```
+> Current Detection Error
+> Please restart the xArm with the Emergency Stop Button on the xArm Control Box.
+> ```
+
 
 
 

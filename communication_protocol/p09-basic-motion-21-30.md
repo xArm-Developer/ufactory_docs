@@ -304,7 +304,7 @@
 
 ## Circular motion
 
-**RRegister:27 (0x1B)**
+**Register:27 (0x1B)**
 
 {% hint style="warning" %}
 The motion calculates the trajectory of the space circle according to the three-point coordinates, and the three-point coordinates are (current starting point, parameter 1, parameter 2)

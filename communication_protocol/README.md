@@ -17,7 +17,7 @@ It will reduce the potential risks as well as increase the efficiency of your ap
 * ROS Library & Github: [https://github.com/xArm-Developer/xarm\_ros](https://github.com/xArm-Developer/xarm\_ros)
 * xArm Python SDK Library: [https://github.com/xArm-Developer/xArm-Python-SDK](https://github.com/xArm-Developer/xArm-Python-SDK)
 * xArm CPLUS SDK Library: [https://github.com/xArm-Developer/xArm-CPLUS-SDK](https://github.com/xArm-Developer/xArm-CPLUS-SDK)
-* Note: For the above three developer resources, we have detailed installation steps andcommands on github. Please download the installation package for further development.
+* Note: For the above three developer resources, we have detailed installation steps and commands on github. Please download the installation package for further development.
 
 ## More Information <a href="#_toc17347" id="_toc17347"></a>
 

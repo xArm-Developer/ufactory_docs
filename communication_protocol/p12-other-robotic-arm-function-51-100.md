@@ -582,10 +582,9 @@ e. g. test.traj
 
 **Register: 66 (0x42)**
 
-```
-// Request:
-00 01 00 02 00 02 42 00
-```
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 02 42 00
+</code></pre>
 
 <details>
 
@@ -619,6 +618,249 @@ e. g. test.traj
 ```
 
 </details>
+
+
+
+## Get DH parameters
+
+**Register: 67 (0x43)**
+
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 01 43
+</code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//43       U8, Register
+```
+
+</details>
+
+{% code overflow="wrap" %}
+```
+// Response:
+00 01 00 02 00 72 43 00 00 00 00 00 00 80 85 43 00 00 00 00 00 00 00 00 FD 44 B1 BF 00 00 00 00 DB 0F C9 BF 00 00 00 00 FD 44 B1 3F 00 00 00 00 00 00 00 00 49 BE 90 43 00 00 00 00 00 40 AB 43 DB 0F C9 BF 00 00 9B 42 00 00 00 00 00 00 00 00 DB 0F C9 3F 00 00 00 00 00 00 00 00 00 00 C2 42 DB 0F C9 BF 00 00 98 42 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+```
+{% endcode %}
+
+<details>
+
+<summary>Response Description</summary>
+
+<pre><code>//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 72    U16, Length 
+//43       U8, Register
+//00       U8, State
+
+<strong>Note:
+</strong><strong>4 float parameters per joint
+</strong>A total of 112 bytes, 28 floating-point data, 
+only the first 24 floating-point data of the xArm6 are valid data
+
+For example: xArm6  SN:XI120204201B02
+
+//J1
+00 00 00 00 
+00 80 85 43 
+00 00 00 00 
+00 00 00 00 
+//J2
+FD 44 B1 BF 
+00 00 00 00 
+DB 0F C9 BF 
+00 00 00 00 
+//J3
+FD 44 B1 3F 
+00 00 00 00 
+00 00 00 00 
+49 BE 90 43 
+//J4
+00 00 00 00 
+00 40 AB 43 
+DB 0F C9 BF 
+00 00 9B 42 
+//J5
+00 00 00 00 
+00 00 00 00 
+DB 0F C9 3F 
+00 00 00 00 
+//J6
+00 00 00 00 
+00 00 C2 42 
+DB 0F C9 BF 
+00 00 98 42 
+//J7
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00
+</code></pre>
+
+</details>
+
+
+
+## Set  DH parameters
+
+**Register: 68 (0x44)**
+
+<pre data-overflow="wrap"><code><strong>// Request:
+</strong>00 01 00 02 00 73 44 00 00 00 00 00 00 80 85 43 00 00 00 00 00 00 00 00 FD 44 B1 BF 00 00 00 00 DB 0F C9 BF 00 00 00 00 FD 44 B1 3F 00 00 00 00 00 00 00 00 49 BE 90 43 00 00 00 00 00 40 AB 43 DB 0F C9 BF 00 00 9B 42 00 00 00 00 00 00 00 00 DB 0F C9 3F 00 00 00 00 00 00 00 00 00 00 C2 42 DB 0F C9 BF 00 00 98 42 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+</code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 73    U16, Length 
+//44       U8, Register
+
+Note:
+4 float parameters per joint
+A total of 112 bytes, 28 floating-point data, 
+only the first 24 floating-point data of the xArm6 are valid data
+
+For example: xArm6  SN:XI120204201B02
+
+//J1
+00 00 00 00 
+00 80 85 43 
+00 00 00 00 
+00 00 00 00 
+//J2
+FD 44 B1 BF 
+00 00 00 00 
+DB 0F C9 BF 
+00 00 00 00 
+//J3
+FD 44 B1 3F 
+00 00 00 00 
+00 00 00 00 
+49 BE 90 43 
+//J4
+00 00 00 00 
+00 40 AB 43 
+DB 0F C9 BF 
+00 00 9B 42 
+//J5
+00 00 00 00 
+00 00 00 00 
+DB 0F C9 3F 
+00 00 00 00 
+//J6
+00 00 00 00 
+00 00 C2 42 
+DB 0F C9 BF 
+00 00 98 42 
+//J7
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00
+
+//00     U8,Set flag
+0: use the set DH parameters, but do not save to the configuration file
+1: Use the set DH parameters and save them to the configuration file
+2: Use the set DH parameters and delete the configuration file
+3: Use the default DH parameters, but do not delete the configuration file
+4: Use the default DH parameters and delete the configuration file
+```
+
+</details>
+
+{% code overflow="wrap" %}
+```
+// Response:
+00 01 00 02 00 02 44 00
+```
+{% endcode %}
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//44       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+
+## Get the currently executing command
+
+It needs to be parsed according to different registers
+
+**Register: 69 (0x45)**
+
+```
+// Request:
+00 01 00 02 00 01 45
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//45       U8, Register
+```
+
+</details>
+
+{% code overflow="wrap" %}
+```
+// Response:
+00 01 00 02 00 2B 45 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 13 34 2E 3E 58 A0 0B 41 00 00 00 00
+```
+{% endcode %}
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 2B    U16, Length 
+//45       U8, Register
+//00       U8, State
+//17       U8, 
+Current execution motion instruction register:
+0x15: Cartesian linear motion
+0x16: Linear motion with arc blending
+0x17: P2P joint movement
+0x18: joint blending movement
+0x19: Back to zero movement
+0x1B: arc movement
+0x1C: Linear motion in tool coordinate system
+0x5C: linear motion of axis angle attitude target
+
+
+```
+
+</details>
+
+
+
+
 
 ## Set the joint torque (theoretical) and current of servo
 
@@ -666,3 +908,6 @@ value of theoretical joint torque)
 ```
 
 </details>
+
+
+

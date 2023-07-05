@@ -828,7 +828,7 @@ It needs to be parsed according to different registers
 {% code overflow="wrap" %}
 ```
 // Response:
-00 01 00 02 00 2B 45 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 13 34 2E 3E 58 A0 0B 41 00 00 00 00
+00 01 00 02 00 2B 45 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 C2 B8 B2 3E 58 A0 0B 41 00 00 00 00
 ```
 {% endcode %}
 
@@ -853,7 +853,16 @@ Current execution motion instruction register:
 0x1C: Linear motion in tool coordinate system
 0x5C: linear motion of axis angle attitude target
 
-
+//00 00 00 00	FP32, Joint1=0 
+//00 00 00 00	FP32, Joint2=0
+//00 00 00 00	FP32, Joint3=0
+//00 00 00 00	FP32, Joint4=0
+//00 00 00 00	FP32, Joint5=0
+//00 00 00 00	FP32, Joint6=0
+//00 00 00 00	FP32, Joint7=0
+//C2 B8 B2 3E	FP32, speed=20π/180rad/s
+//58 A0 0B 41	FP32, 500π/180rad/s2
+//00 00 00 00	FP32, motion time=0
 ```
 
 </details>

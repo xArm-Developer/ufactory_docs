@@ -1,6 +1,6 @@
 # RS485 Control on the End-effector(127-128)
 
-## Set the end RS485 band rate
+## Set the end RS485 baud rate
 
 **Register: 127 (0x7F)**
 

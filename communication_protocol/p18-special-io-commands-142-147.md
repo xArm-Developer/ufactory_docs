@@ -206,7 +206,7 @@ when the robotic arm reaches the specified position (the area of the sphere spec
 
 ## Whether the control box and terminal IO are automatically cleared in the STOP state
 
-**Register:146(92）**
+**Register:146(0x92）**
 
 ```
 // Request:
@@ -220,8 +220,8 @@ when the robotic arm reaches the specified position (the area of the sphere spec
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 92    U16, Length 
-//00       U8, Register
+//00 03    U16, Length 
+//92       U8, Register
 //00       U8, 
 IO type
 0 represents the control box IO
@@ -256,7 +256,7 @@ Switch value
 
 ## Operation triggered by the position of the general Analog IO of the control box
 
-**Register:147(93）**
+**Register:147(0x93）**
 
 {% hint style="warning" %}
 Starting from the moment when the command is issued, the TCP triggers the analog output switch of the control box after it reaches the specified position area, which is valid for a single time.
@@ -275,8 +275,8 @@ Starting from the moment when the command is issued, the TCP triggers the analog
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 92    U16, Length 
-//00       U8, Register
+//00 14    U16, Length 
+//93       U8, Register
 //00	   U8, IO port number of the control box: 0/1
 //00 00	   U16, 
 Analog output 0 is 0

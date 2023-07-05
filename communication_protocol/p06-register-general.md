@@ -6,7 +6,7 @@
 
 {% code overflow="wrap" fullWidth="false" %}
 ```
-// Request
+// Request:
 00 01 00 02 00 29 17 92 0A 86 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 C2 B8 B2 3E 58 A0 0B 41 00 00 00 00
 ```
 {% endcode %}
@@ -37,7 +37,7 @@
 </details>
 
 ```
-//Response
+//Response:
 00 01 00 02 00 04 17 00 00 01
 ```
 
@@ -63,7 +63,7 @@
 **Register:32(0x20）**
 
 ```
-// Request
+// Request:
 00 01 00 02 00 05 20 00 00 7A 44
 ```
 
@@ -82,7 +82,7 @@
 </details>
 
 ```
-//Response
+//Response:
 00 01 00 02 00 04 20 00 00 01
 ```
 
@@ -105,7 +105,7 @@
 **Register:41(0x29）**
 
 ```
-// Request
+// Request:
 00 01 00 02 00 01 29
 ```
 
@@ -124,7 +124,7 @@
 
 {% code overflow="wrap" %}
 ```
-//Response
+//Response:
 00 01 00 02 00 1A 29 00 00 00 4F 43 5F F1 23 29 00 00 E0 42 DB 0F 49 C0 00 00 00 80 00 00 00 09
 ```
 {% endcode %}
@@ -155,7 +155,7 @@
 
 {% code overflow="wrap" %}
 ```
-// Request
+// Request:
 00 01 00 02 00 27 5C 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 DB 0F C9 40 00 00 C8 42 00 00 FA 44 00 00 00 00 00 01
 ```
 {% endcode %}
@@ -198,7 +198,7 @@ The given parameters 1-6 coordinates are based on the current an offset of posit
 
 {% code overflow="wrap" %}
 ```
-//Response
+//Response:
 00 01 00 02 00 04 5C 00 00 01
 ```
 {% endcode %}
@@ -224,7 +224,7 @@ The given parameters 1-6 coordinates are based on the current an offset of posit
 
 {% code overflow="wrap" %}
 ```
-// Request
+// Request:
 00 01 00 02 00 13 91 00 01 00 00 96 43 00 00 00 00 00 00 96 43 00 00 40 40
 ```
 {% endcode %}
@@ -250,7 +250,7 @@ The given parameters 1-6 coordinates are based on the current an offset of posit
 </details>
 
 ```
-//Response
+//Response:
 00 01 00 02 00 02 91 00
 ```
 

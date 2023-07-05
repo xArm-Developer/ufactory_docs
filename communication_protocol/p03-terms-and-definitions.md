@@ -22,7 +22,7 @@
 
 ### **End Effector**
 
-> The end effector, installed on the front end of the wrist of the robotic arm, is used to install special tools (such as grippers, vacuum gripper, etc.), which can directly perform work tasks.
+> The end effector, installed on the front end of the wrist of the robotic arm, is used to install special tools (such as gripper, vacuum gripper, etc.), which can directly perform work tasks.
 
 ### **Enable Robotic Arm**
 

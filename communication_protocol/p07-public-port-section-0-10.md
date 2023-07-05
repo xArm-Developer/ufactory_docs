@@ -5,7 +5,7 @@
 **Register:1(0x01)**
 
 ```
-// Request
+// Request:
 00 01 00 02 00 01 01 
 ```
 
@@ -24,7 +24,7 @@
 
 {% code overflow="wrap" %}
 ```
-// Response
+// Response:
 00 01 00 02 00 2A 01 00 36 2C 36 2C 58 49 31 32 30 32 2C 41 43 31 33 30 32 2C 76 31 2E 31 32 2E 31 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 ```
 {% endcode %}
@@ -53,7 +53,7 @@
 **Register:2(0x02)**
 
 ```
-// Request
+// Request:
  00 01 00 02 00 01 02
 ```
 
@@ -72,7 +72,7 @@
 
 {% code overflow="wrap" %}
 ```
-// Response
+// Response:
 00 01 00 02 00 2A 02 00 58 49 31 32 30 32 30 34 32 30 31 42 30 32 00 41 43 31 33 30 32 30 32 42 30 32 4C 30 32 0A 00 00 00 00 00 00 00 00 00 00
 ```
 {% endcode %}
@@ -99,7 +99,7 @@
 **Register:4(0x04)**
 
 ```
-// Request
+// Request:
 00 01 00 02 00 01 04 
 ```
 
@@ -117,7 +117,7 @@
 </details>
 
 ```
-// Response
+// Response:
 00 01 00 02 00 02 04 10 
 ```
 
@@ -140,7 +140,7 @@
 **Register:5(0x05)**
 
 ```
-// Request
+// Request:
 00 01 00 02 00 01 05
 ```
 
@@ -157,7 +157,7 @@
 
 </details>
 
-<pre><code>// Response
+<pre><code>// Response:
 <strong>00 01 00 02 00 03 05 00 00
 </strong></code></pre>
 
@@ -183,7 +183,7 @@
 **Register:6(0x06)**
 
 ```
-// Request
+// Request:
 00 01 00 02 00 02 06 06 
 ```
 
@@ -202,7 +202,7 @@
 </details>
 
 ```
-// Response
+// Response:
 00 01 00 02 00 06 06 10 00 00 00 00
 ```
 
@@ -226,7 +226,7 @@
 **Register:10(0x0A）**
 
 ```
-// Request
+// Request:
 00 01 00 02 00 02 0A 01 
 ```
 
@@ -245,7 +245,7 @@
 </details>
 
 ```
-// Response
+// Response:
 00 01 00 02 00 02 0A 10
 ```
 

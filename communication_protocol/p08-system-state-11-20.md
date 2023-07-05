@@ -154,7 +154,7 @@ Motion state：
 **Register:14 (0x0E)**
 
 ```
-// Request
+// Request:
 00 01 00 02 00 01 0E
 ```
 

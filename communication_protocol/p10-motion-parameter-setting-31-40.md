@@ -109,7 +109,7 @@ R**egister:32 (0x20)**
 </details>
 
 ```
-// Request:
+// Response:
 00 01 00 02 00 04 21 00 00 01  
 ```
 
@@ -151,7 +151,7 @@ R**egister:32 (0x20)**
 </details>
 
 ```
-// Request:
+// Response:
 00 01 00 02 00 04 22 00 00 01  
 ```
 
@@ -202,7 +202,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 </details>
 
 ```
-// Request:
+// Response:
 00 01 00 02 00 02 23 10 
 ```
 
@@ -246,7 +246,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 </details>
 
 ```
-// Request:
+// Response:
 00 01 00 02 00 02 24 20
 ```
 
@@ -291,7 +291,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 </details>
 
 ```
-// Request:
+// Response:
 00 01 00 02 00 02 25 10
 ```
 
@@ -336,8 +336,8 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 </details>
 
 ```
-// Request:
-00 01 00 02 00 02 25 10
+// Response:
+00 01 00 02 00 02 26 10
 ```
 
 <details>
@@ -376,7 +376,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 </details>
 
 ```
-// Request:
+// Response:
 00 01 00 02 00 02 27 10
 ```
 
@@ -416,7 +416,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 </details>
 
 ```
-// Request:
+// Response:
 00 01 00 02 00 02 28 10
 ```
 

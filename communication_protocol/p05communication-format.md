@@ -41,7 +41,7 @@ Parameter:
 > Protocol: 0x00 0x02 Control (Only this one for now)
 
 {% tabs %}
-{% tab title="Request Commands Format" %}
+{% tab title="Request Command Format" %}
 | Format                                        | Transaction Identifier (u16) | Protocol (u16) | Length (u16) | Register (u8) | <p>Parameters</p><p>(Refer to the statement of each commands</p> |
 | --------------------------------------------- | ---------------------------- | -------------- | ------------ | ------------- | ---------------------------------------------------------------- |
 | Length                                        | 2 Bytes                      | 2 Bytes        | 2 Bytes      | 1 Byte        | n Bytes                                                          |

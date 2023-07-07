@@ -139,7 +139,7 @@ The end byte indicates the input status. The digit of 0 corresponds to input 0 a
 
 </details>
 
-## Get the input of the end analog
+## Get the status of the tool digital input
 
 **Register:128 (0x80)**
 

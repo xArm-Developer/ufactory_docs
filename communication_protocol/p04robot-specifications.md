@@ -66,10 +66,10 @@ Working Range:
 
 | Joint 1 | ±360°      |
 | ------- | ---------- |
-| Joint 2 | -118°～120° |
-| Joint 3 | -225°～11°  |
+| Joint 2 | ±132°      |
+| Joint 3 | -242°～3.5° |
 | Joint 4 | ±360°      |
-| Joint 5 | -97°～180°  |
+| Joint 5 | ±124°      |
 | Joint 6 | ±360°      |
 {% endtab %}
 {% endtabs %}

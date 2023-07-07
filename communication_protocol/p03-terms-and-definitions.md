@@ -67,7 +67,7 @@ $$
 > Then the representation of the axial angle:
 
 ```
-[Rx, Ry, Rz] = [x * phi, y * phi, z * phi] 
+[Rx, Ry, Rz] = [x * φ, y * φ, z * φ] 
 ```
 
 > Note:
@@ -81,7 +81,7 @@ $$
 > 4\. Using phi and \[x, y, z] can also derive the attitude representation as unit quaternion
 
 ```
-q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
+q = [cos (φ / 2), sin (φ / 2) * x, sin (φ / 2) * y, sin (φ / 2) * z]
 ```
 
 > For example:The vector of the rotation axis represented by the base coordinate system is \[1, 0, 0], and the rotation angle is 180 degrees (π), then the axis angle representation of this pose is \[π, 0, 0].The rotation axis is \[0.707, 0.707, 0] and the rotation angle is 90 degrees (π / 2), then the axis angle posture is

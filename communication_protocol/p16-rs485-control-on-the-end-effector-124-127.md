@@ -46,7 +46,7 @@
 
 </details>
 
-## IO control on the End-effector
+## Set tool digital output
 
 **Register:127 (0x7F)**
 
@@ -93,7 +93,7 @@ Data:
 
 </details>
 
-## Get the input of the end digital quantity
+## Get the status of the tool digital input
 
 **Register:128 (0x80)**
 
@@ -139,7 +139,7 @@ The end byte indicates the input status. The digit of 0 corresponds to input 0 a
 
 </details>
 
-## Get the status of the tool digital input
+## Get the value of the tool analog input
 
 **Register:128 (0x80)**
 

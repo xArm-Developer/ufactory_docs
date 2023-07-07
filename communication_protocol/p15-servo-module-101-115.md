@@ -64,10 +64,6 @@ Commands execution state:
 
 **Register:115 (0x73)**
 
-{% hint style="warning" %}
-Recommended to use the Studio
-{% endhint %}
-
 ```
 // Request:
 00 01 00 02 00 0F 73 58 49 31 32 30 33 30 37 32 30 31 4C 31 42  

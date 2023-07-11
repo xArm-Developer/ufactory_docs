@@ -170,7 +170,7 @@ R**egister:32 (0x20)**
 
 </details>
 
-## Set the offset of the robotic arm end-effector (System reset)
+## Set TCP offset
 
 **Register:35 (0x23)**
 
@@ -220,7 +220,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 </details>
 
-## End payload setting
+## Set TCP payload
 
 **Register:36 (0x24)**
 

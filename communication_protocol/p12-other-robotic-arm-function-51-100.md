@@ -737,39 +737,46 @@ Note:
 A total of 112 bytes, 28 floating-point data, 
 only the first 24 floating-point data of the xArm6 are valid data
 
+
+T2_offset = -atan(284.5/53.5) = -1.3849179 (-79.34995°)
+T3_offset = atan(284.5/53.5)+atan(0.3425/0.0775) = 2.7331843 (156.599924°)
+a2 = sqrt(284.5^2+53.5^2) = 289.48866
+T4_offset = -atan(342.5/77.5) = -1.3482664 (-77.249974°)
+a3 = sqrt(77.5^2+342.5^2) = 351.158796
+
 For example: xArm6  SN:XI120204201B02
 
-//J1
+//J1     d(mm):267  alpha(rad):0 a(mm):0 offset(rad):0
 00 00 00 00 
 00 80 85 43 
 00 00 00 00 
 00 00 00 00 
-//J2
+//J2     d(mm):0  alpha(rad):-pi/2  a(mm):0  offset(rad):T2_offset
 FD 44 B1 BF 
 00 00 00 00 
 DB 0F C9 BF 
 00 00 00 00 
-//J3
+//J3     d(mm):0  alpha(rad):0  a(mm):a2  offset(rad):T3_offset
 FD 44 B1 3F 
 00 00 00 00 
 00 00 00 00 
 49 BE 90 43 
-//J4
+//J4     d(mm):342.5  alpha(rad):-pi/2  a(mm):77.5  offset(rad):0
 00 00 00 00 
 00 40 AB 43 
 DB 0F C9 BF 
 00 00 9B 42 
-//J5
+//J5     d(mm):0  alpha(rad):pi/2  a(mm):0  offset(rad):0
 00 00 00 00 
 00 00 00 00 
-DB 0F C9 3F 
+DB 0F C9 BF 
 00 00 00 00 
-//J6
+//J6     d(mm):97  alpha(rad):-pi/2  a(mm):76  offset(rad):0
 00 00 00 00 
 00 00 C2 42 
 DB 0F C9 BF 
 00 00 98 42 
-//J7
+//J7      Null
 00 00 00 00 
 00 00 00 00 
 00 00 00 00 

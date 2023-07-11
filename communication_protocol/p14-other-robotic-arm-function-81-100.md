@@ -5,7 +5,7 @@
 **Register:81 (0x51)**
 
 {% hint style="warning" %}
-Set joint target speed, for Joint speed control mode-mode 4
+SSet target joint velocity for joint velocity mode(mode 4)
 {% endhint %}
 
 {% code overflow="wrap" %}
@@ -25,13 +25,13 @@ Set joint target speed, for Joint speed control mode-mode 4
 //00 02    U16, Protocol Identifier
 //00 22    U16, Length 
 //51       U8, Register
-//91 0A 06 3F	FP32, Joint 1 target speed: π/6 rad/s
-//CC CC CC BD	FP32, Joint 2 target speed: -0.1 rad/s
-//00 00 00 00	FP32, Joint 3 target speed: 0 rad/s
-//00 00 00 00	FP32, Joint 4 target speed: 0 rad/s
-//00 00 00 00	FP32, Joint 5 target speed: 0 rad/s
-//00 00 00 00	FP32, Joint 6 target speed: 0 rad/s
-//00 00 00 00	FP32, Joint 7 target speed: 0 rad/s
+//91 0A 06 3F	FP32, Joint 1 target velocity: π/6 rad/s
+//CC CC CC BD	FP32, Joint 2 target velocity: -0.1 rad/s
+//00 00 00 00	FP32, Joint 3 target velocity: 0 rad/s
+//00 00 00 00	FP32, Joint 4 target velocity: 0 rad/s
+//00 00 00 00	FP32, Joint 5 target velocity: 0 rad/s
+//00 00 00 00	FP32, Joint 6 target velocity: 0 rad/s
+//00 00 00 00	FP32, Joint 7 target velocity: 0 rad/s
 //01	U8, whether all joints accelerate and decelerate synchronously: 1-True
 //CC CC 4C 3E	FP32, duration: 0.2s
 ```
@@ -113,7 +113,7 @@ Set target cartesian linear velocity and angular velocity, for cartesian velocit
 
 </details>
 
-## Relative motion control
+## Relative motion&#x20;
 
 **Register: 83 (0x53)**
 

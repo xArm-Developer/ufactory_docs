@@ -247,13 +247,9 @@ Robotiq 2F-140 gripper: 5
 
 </details>
 
-## Set whether to enable the virtual robotic arm mode
+## Simulation Robot
 
 **Register: 79 (0x4F)**
-
-{% hint style="warning" %}
-If you enter the virtual robotic arm mode, the real robotic arm will not move, but the reported position of the robotic arm will change with the command to drive the virtual robotic arm to move.
-{% endhint %}
 
 ```
 // Request:
@@ -270,8 +266,8 @@ If you enter the virtual robotic arm mode, the real robotic arm will not move, b
 //00 02    U16, Length 
 //4F       U8, Register
 //01       U8,
-0: the real robotic arm mode
-1: the virtual robotic arm mode
+0: Real robot
+1: Simulation
 ```
 
 </details>

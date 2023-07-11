@@ -666,37 +666,37 @@ only the first 24 floating-point data of the xArm6 are valid data
 
 For example: xArm6  SN:XI120204201B02
 
-//J1
+//J1      Mass(KG):2.382   Center of Mass(mm):[0.13,29.4,-12.4]
 00 00 00 00 
 00 80 85 43 
 00 00 00 00 
 00 00 00 00 
-//J2
+//J2      Mass(KG):2.267   Center of Mass(mm):[38.8,-227.8,34.96]
 FD 44 B1 BF 
 00 00 00 00 
 DB 0F C9 BF 
 00 00 00 00 
-//J3
+//J3      Mass(KG):1.875   Center of Mass(mm):[70.4,116.3,10.7]
 FD 44 B1 3F 
 00 00 00 00 
 00 00 00 00 
 49 BE 90 43 
-//J4
+//J4      Mass(KG):1.319   Center of Mass(mm):[-0.2,18.0,-22.9]
 00 00 00 00 
 00 40 AB 43 
 DB 0F C9 BF 
 00 00 9B 42 
-//J5
+//J5      Mass(KG):1.34   Center of Mass(mm):[65.1,30.96,3.15]
 00 00 00 00 
 00 00 00 00 
 DB 0F C9 3F 
 00 00 00 00 
-//J6
+//J6      Mass(KG):0.17   Center of Mass(mm):[0,-6.77,-10.98]
 00 00 00 00 
 00 00 C2 42 
 DB 0F C9 BF 
 00 00 98 42 
-//J7
+//J7      Null
 00 00 00 00 
 00 00 00 00 
 00 00 00 00 

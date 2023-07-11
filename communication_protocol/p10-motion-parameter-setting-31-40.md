@@ -309,7 +309,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 
 </details>
 
-## Set teaching sensitivity for teaching mode (System reset)
+## Set teaching sensitivity for manual mode (System reset)
 
 **Register:38(0x26)**
 

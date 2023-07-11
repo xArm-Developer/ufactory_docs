@@ -885,9 +885,9 @@ Current execution motion instruction register:
 
 
 
-## Set the joint torque (theoretical) and current of servo
+## Select current data or torque data to report
 
-**correspond to the contents of reporting port 60\~87 Bytes**
+**Correspond to the report contents "60\~87 Bytes" of TCP ports 30001/30002/30003**
 
 **Register: 70 (0x46)**
 

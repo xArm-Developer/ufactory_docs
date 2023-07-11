@@ -683,22 +683,22 @@ FD 44 B1 BF
 00 00 00 00 
 DB 0F C9 BF 
 00 00 00 00 
-//J3     d(mm):0  alpha(rad):0 a(mm):a2 offset(rad):T3_offset
+//J3     d(mm):0  alpha(rad):0  a(mm):a2  offset(rad):T3_offset
 FD 44 B1 3F 
 00 00 00 00 
 00 00 00 00 
 49 BE 90 43 
-//J4     d(mm):342.5  alpha(rad):-pi/2 a(mm):77.5 offset(rad):0
+//J4     d(mm):342.5  alpha(rad):-pi/2  a(mm):77.5  offset(rad):0
 00 00 00 00 
 00 40 AB 43 
 DB 0F C9 BF 
 00 00 9B 42 
-//J5     d(mm):0  alpha(rad):pi/2 a(mm):0 offset(rad):0
+//J5     d(mm):0  alpha(rad):pi/2  a(mm):0  offset(rad):0
 00 00 00 00 
 00 00 00 00 
 DB 0F C9 BF 
 00 00 00 00 
-//J6     d(mm):97  alpha(rad):-pi/2 a(mm):76 offset(rad):0
+//J6     d(mm):97  alpha(rad):-pi/2  a(mm):76  offset(rad):0
 00 00 00 00 
 00 00 C2 42 
 DB 0F C9 BF 

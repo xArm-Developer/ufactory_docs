@@ -5,7 +5,7 @@
 **Register:51 (0x33)**
 
 {% hint style="warning" %}
-Set the gravity direction for correct torque compensation and collision detection. After modification, it shall call the save\_conf () function or refer to Register: 40(28) to save the setting, otherwise it will be invalid after the next restart.
+Set the gravity direction for correct torque compensation and collision detection. After modification, it shall call the save\_conf () function or refer to Register: 40(28) to save the setting, otherwise it will be invalid after reboot.
 {% endhint %}
 
 ```
@@ -156,7 +156,7 @@ C35 Set the boundary range of the safety fence in the three-dimensional space. I
 
 </details>
 
-## Get current joint torque of the servo
+## Get the current of each joint
 
 **Register:55 (0x37)**
 
@@ -260,12 +260,12 @@ Estimate the joint torque based on current and theoretical model, which is for r
 
 </details>
 
-## Safety boundary start switch
+## Safety boundary  switch
 
 **Register: 59 (0x3B)**
 
 {% hint style="warning" %}
-Set the safety fence boundary validation switch in three-dimensional space. If the TCP of the robotic arm exceeds this boundary after validation, error C35 of the Control Box will be triggered.
+Set the safety boundary switch in three-dimensional space. If the TCP of the robotic arm exceeds this boundary after validation, error C35 of the Control Box will be triggered.
 {% endhint %}
 
 ```
@@ -330,7 +330,7 @@ Validation switch
 //00 02    U16, Protocol Identifier
 //00 02    U16, Length 
 //3C       U8, Register
-//00       U8, ollision Rebound switch  0-OFF; 1-ON
+//00       U8, Collision Rebound switch  0-OFF; 1-ON
 ```
 
 </details>

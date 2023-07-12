@@ -74,7 +74,7 @@
 //7F       U8, Register
 //09	   U8, Host ID
 //1A 15	   U16, Register start address
-//00 00 80 43	FP32, Parameter 1, 256 in decimal, set digital output 0 low
+//00 00 80 43	FP32, Parameter 1, 256 in decimal, set tool digital output 0 low
 Data:
 256: Set tool digital output 0 to low
 257: Set tool digital output 0 to high
@@ -121,7 +121,7 @@ Data:
 //00 04    U16, Length 
 //80       U8, Register
 //09	   U8, Host ID
-//0A 14	   U16,Address
+//0A 14	   U16, Register start address
 ```
 
 </details>
@@ -167,9 +167,9 @@ The end byte indicates the input status. The digit of 0 corresponds to input 0 a
 //00 04    U16, Length 
 //80       U8, Register
 //09	   U8, Host ID
-//0A 16	   U16,Address
-Address 0A 16 ： input 0
-Address 0A 17 ： input 1
+//0A 16	   U16, Address
+Address 0A 16 ： Analog input 0
+Address 0A 17 ： Analog input 1
 ```
 
 </details>
@@ -190,9 +190,7 @@ Address 0A 17 ： input 1
 //00 06    U16, Length 
 //80       U8, Register
 //00       U8, State
-//00 00 07 0D    U8, 
-Analog input, range 0~4095,
-Corresponding to 0~3.3V
+//00 00 07 0D    U8, analog input, range 0~4095, corresponding to 0~3.3V
 ```
 {% endcode %}
 

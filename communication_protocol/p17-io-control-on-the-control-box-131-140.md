@@ -131,7 +131,7 @@
 **Register:134 (0x86)**
 
 <pre><code><strong>// Request:
-</strong>00 01 00 02 00 03 86 80 00 80 00  
+</strong>00 01 00 02 00 05 86 80 00 80 00  
 </code></pre>
 
 <details>
@@ -141,18 +141,10 @@
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 03    U16, Length 
+//00 05    U16, Length 
 //86       U8, Register
-//80 00    U16，
-The signal of GPIO7 is low
-GPIO signal: 
-the upper 8 bits are the enable bits, 
-and the lower 8 bits are the set bits
-//80 00    U16, 
-The signal of GPIO15 is low
-GPIO signal: 
-the upper 8 bits are the enable bits, 
-and the lower 8 bits are the set bit
+//80 00    U16, Set controller output 7 to 0.
+//80 00    U16, Set controller output 15 to 0.
 ```
 
 </details>
@@ -176,7 +168,7 @@ and the lower 8 bits are the set bit
 
 </details>
 
-## Set the analog output AO1
+## Set controller analog output AO 0
 
 **Register:135 (0x87)**
 
@@ -193,11 +185,7 @@ and the lower 8 bits are the set bit
 //00 02    U16, Protocol Identifier
 //00 03    U16, Length 
 //87       U8, Register
-//00 00    U16,
-Analog output 0 is 0
- Analog output0
- Range 0~4095
-Corresponding to 0~10V
+//00 00    U16, output voltage value, range 0~4095, corresponding to 0~10V.
 ```
 
 </details>
@@ -221,7 +209,7 @@ Corresponding to 0~10V
 
 </details>
 
-## Set the analog output AO2
+## Set controller analog output AO 1
 
 **Register:136 (0x88)**
 
@@ -238,11 +226,7 @@ Corresponding to 0~10V
 //00 02    U16, Protocol Identifier
 //00 03    U16, Length 
 //88       U8, Register
-//00 00    u16, 
-Analog output 1 is 0
- Analog output 1, 
- Range 0~4095
-Corresponding to 0~10V
+//00 00    u16, output voltage value, range 0~4095, corresponding to 0~10V.
 ```
 
 </details>
@@ -266,12 +250,12 @@ Corresponding to 0~10V
 
 </details>
 
-## Configure digital input IO function
+## Set controller digital input function
 
 **Register:137 (0x89)**
 
 <pre><code><strong>// Request:
-</strong>00 01 00 02 00 03 89 07 00
+</strong>00 01 00 02 00 03 89 0F 00
 </code></pre>
 
 <details>
@@ -283,12 +267,8 @@ Corresponding to 0~10V
 //00 02    U16, Protocol Identifier
 //00 03    U16, Length 
 //89       U8, Register
-//07       U8, 
-GPIO15
-GPIO serial number,0~7
-Corresponding to GPIO0 ~ GPIO7
-//00       U8,
-Function number
+//07       U8, Controller digital input number,0~15
+//00       U8, Function number
 0: General input
 1: Stop moving
 2: Safeguard reset
@@ -319,7 +299,7 @@ Function number
 
 </details>
 
-## Configure digital output IO function
+## Set controller digital output function
 
 **Register:138 (0x8A)**
 
@@ -336,12 +316,8 @@ Function number
 //00 02    U16, Protocol Identifier
 //00 03    U16, Length 
 //8A       U8, Register
-//0F       U8, 
-GPIO15
-GPIO serial number,0~15
-Corresponding to GPIO0 ~ GPIO15
-//00       U8, 
-Function number
+//0F       U8, Controller digital output number, 0~15
+//00       U8, Function number
 0: General output
 1: Motion stopped
 2: Robot moving
@@ -352,7 +328,7 @@ Function number
 15: Offline task running
 16: Reduced mode
 17: Robot enabled
-18:Press down E stop button
+18: Emergency stop is pressed
 ```
 
 </details>

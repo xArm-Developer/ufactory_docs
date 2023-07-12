@@ -46,22 +46,27 @@ Parameter:
 {% endtab %}
 
 {% tab title="Response Command Format" %}
-<table data-header-hidden><thead><tr><th width="154"></th><th width="130"></th><th width="134"></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Format</td><td><p>Transaction Identifier</p><p>U16</p></td><td><p>Protocol</p><p>(u16)</p></td><td><p>Length</p><p>(u16)</p></td><td><p>Register</p><p>(u8)</p></td><td><p>Status</p><p>(u8)</p></td><td><p>Parameters</p><p></p></td></tr><tr><td>Length</td><td>2 Bytes</td><td>2 Bytes</td><td>2 Bytes</td><td>1 Byte</td><td>1 Byte</td><td>n Bytes</td></tr><tr><td><p>Example</p><p>Enable the robot</p></td><td>00 01</td><td>00 02</td><td>00 02</td><td>0B</td><td>00</td><td>none</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="154"></th><th width="130"></th><th width="134"></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Format</td><td><p>Transaction Identifier</p><p>U16</p></td><td><p>Protocol</p><p>U16</p></td><td><p>Length</p><p>U16</p></td><td><p>Register</p><p>U8</p></td><td><p>Status</p><p>U8</p></td><td><p>Parameters</p><p></p></td></tr><tr><td>Length</td><td>2 Bytes</td><td>2 Bytes</td><td>2 Bytes</td><td>1 Byte</td><td>1 Byte</td><td>n Bytes</td></tr><tr><td><p>Example</p><p>Enable the robot</p></td><td>00 01</td><td>00 02</td><td>00 02</td><td>0B</td><td>00</td><td>none</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 
 Status Bit of the Response Format
 
-| Bit7      | Bit6                            | Bit5                              | Bit4                                            | Bit3      | Bit2      | Bit1      | Bit0      |
-| --------- | ------------------------------- | --------------------------------- | ----------------------------------------------- | --------- | --------- | --------- | --------- |
-| 0: normal | <p>1: error</p><p>0: normal</p> | <p>1: warning</p><p>0: normal</p> | <p>1: cannot perform motion</p><p>0: normal</p> | 0: normal | 0: normal | 0: normal | 0: normal |
+* Bit 0,  reserved.
+* Bit 1, reserved.
+* Bit 2, reserved.
+* Bit 3, reserved.
+* Bit 4, 0 is normal. 1 means unable to move.
+* Bit 5, 0 is normal, 1 means there is warning.&#x20;
+* Bit 6, 0 is normal, 1 means there is error.
+* Bit 7, reserved
 
 {% hint style="warning" %}
 General notes:
 {% endhint %}
 
 * Transaction Identifier: Generally, 1 is added after each communication to distinguish different communication data packets.
-* Protocol : 0x00 0x02 means ModbusTCP protocol.
+* Protocol : 00 02 means Modbus TCP protocol.
 * Length: Indicates the next data length in bytes.
 * Register: Device address.
 
@@ -69,21 +74,21 @@ General notes:
 
 #### Modbus-TCP control protocol:
 
-> 1\. The transaction identifier (u16) are analyzed in big endian order.
+> 1\. The transaction identifier (u16) are in big endian order.
 >
-> 2\. protocol identifier (u16) and are analyzed in big endian order.
+> 2\. protocol identifier (u16) and are in big endian order.
 >
-> 3\. length (u16) of the message head are analyzed in big endian order.
+> 3\. length (u16) of the message head are in big endian order.
 >
-> 4\. The 32-bit data (fp32, int32) in the parameter are analyzed in little endian order.
+> 4\. The 32-bit data (fp32, int32) in the parameter are in little endian order.
 >
-> 5\. Integer data(u16) involving GPIO operation are analyzed in big endian order.
+> 5\. Integer data(u16) involving GPIO operation are in big endian order.
 
 #### Automatic reporting data analysis:
 
-> 1\. Integer data (16/32 bits) are analyzed in big endian order.
+> 1\. Integer data (16/32 bits) are in big endian order.
 >
-> 2\. Floating-point (fp32) data is analyzed in little endian order.
+> 2\. Floating-point (fp32) data is in little endian order.
 
 **Example:**
 

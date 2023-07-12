@@ -1,6 +1,6 @@
 # RS485 Control on the End-effector(127-128)
 
-## Set the end RS485 baud rate
+## Set the robot RS485 baud rate
 
 **Register: 127 (0x7F)**
 
@@ -19,11 +19,20 @@
 //7F       U8, Register
 //09	   U8, Host ID
 //1A 0B	   U16,Address
-//00 00 30 41	FP32,
-0:4800 bps； 1:9600bps；2:19200bps；3:38400bps；
-4:57600bps；5:115200bps
-6:230400bps；7: 460800bps；8:921600bps；9: 1000000bps；
-10:1500000bps；11:2000000bps；12:2500000bps；
+//00 00 30 41	FP32, Parameter 1, by default is 11(2000000 bps).
+0: 4800 bps； 
+1: 9600 bps；
+2: 19200 bps；
+3: 38400 bps；
+4: 57600 bps；
+5: 115200 bps
+6: 230400 bps；
+7: 460800 bps；
+8: 921600 bps；
+9: 1000000 bps；
+10: 1500000 bps；
+11: 2000000 bps；
+12: 2500000 bps；
 ```
 
 </details>

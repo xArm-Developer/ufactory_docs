@@ -92,10 +92,10 @@ General notes:
 
 {% tabs %}
 {% tab title="Big-endian method:" %}
-<table data-header-hidden><thead><tr><th width="115"></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td>0x100</td><td>0x101</td><td>0x102</td><td>0x103</td><td></td></tr><tr><td>...</td><td>0x12</td><td>0x34</td><td>0x56</td><td>0x78</td><td>...</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="115"></th><th width="110"></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td>0x100</td><td>0x101</td><td>0x102</td><td>0x103</td><td></td></tr><tr><td>...</td><td>0x12</td><td>0x34</td><td>0x56</td><td>0x78</td><td>...</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Little-endian method:" %}
-<table data-header-hidden><thead><tr><th width="111"></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td>0x100</td><td>0x101</td><td>0x102</td><td>0x103</td><td></td></tr><tr><td>...</td><td>0x78</td><td>0x56</td><td>0x34</td><td>0x12</td><td>...</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="111"></th><th width="136"></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td>0x100</td><td>0x101</td><td>0x102</td><td>0x103</td><td></td></tr><tr><td>...</td><td>0x78</td><td>0x56</td><td>0x34</td><td>0x12</td><td>...</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}

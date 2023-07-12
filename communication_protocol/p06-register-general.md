@@ -28,8 +28,8 @@
 //00 00 00 00    FP32, Joint5（J5=0）
 //00 00 00 00    FP32, Joint6（J6=0）
 //00 00 00 00    FP32, Joint7（J7=0）
-//C2 B8 B2 3E    FP32, speed=20*π/180rad/s
-//58 A0 0B 41    FP32, acceleration=500*π/180rad/s2
+//C2 B8 B2 3E    FP32, speed=0.3491 rad/s
+//58 A0 0B 41    FP32, acceleration= 8.7266 rad/s²
 //00 00 00 00    FP32, motion time=0
 ```
 {% endcode %}
@@ -176,20 +176,20 @@
 //00 00 00 00	FP32,  Rx=0
 //00 00 00 00	FP32,  Ry=0
 //DB 0F C9 40	FP32,  Rz=2π
-//00 00 C8 42	FP32,  speed=100mm/s
-//00 00 FA 44	FP32,  acceleration=2000mm/s2
+//00 00 C8 42	FP32,  speed=100 mm/s
+//00 00 FA 44	FP32,  acceleration=2000 mm/s²
 //00 00 00 00	FP32,  motion time=0
 
 //00  U8
 Motion coordinate system: 
-0: represents base coordinate system motion
-1: represents tool coordinate system motion
+0: base coordinate system.
+1: tool coordinate system
 
 //01  U8
-absolute pose
+Absolute motion or relative motion.
 If the motion coordinate system is the base coordinate system
-0: represents the given pose is an absolute pose
-1: represents the given pose is a relative pose
+0: absolute motion.
+1: relative motion.
 The given parameters 1-6 coordinates are based on the current an offset of position
 ```
 {% endcode %}

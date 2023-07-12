@@ -94,7 +94,7 @@ After the delay time has elapsed the tool digital output will be activated.
 
 </details>
 
-## Position trigger of controller output
+## Position trigger of controller digital output
 
 **Register:144(0x90）**
 
@@ -122,7 +122,7 @@ Controller digital output will be activated when the robot reaches the specified
 //00 00 00 00	FP32, y=0mm
 //00 00 48 43	FP32, z=200mm
 //00 00 48 42	FP32, tolerance radius, here is 50 mm.
-* When the robot reaches the area (400,0,200) with the tolerance of 50 mm, controller outpout 0 will be set to 1(high) . 
+* When the robot reaches the area (400,0,200) with the tolerance of 50 mm, controller digital outpout 0 will be set to 1(high). 
 *If the tolerance radius is not set, it will not work. 
 ```
 {% endcode %}
@@ -148,7 +148,7 @@ Controller digital output will be activated when the robot reaches the specified
 
 </details>
 
-## Position triggered of tool output
+## Position triggered of tool digital output
 
 **Register:145(0x91）**
 
@@ -252,12 +252,12 @@ Switch value
 
 </details>
 
-## Operation triggered by the position of the general Analog IO of the control box
+## Position trigger of controller analog output
 
 **Register:147(0x93）**
 
 {% hint style="warning" %}
-Starting from the moment when the command is issued, the TCP triggers the analog output switch of the control box after it reaches the specified position area, which is valid for a single time.
+Controller analog output will be activated when the robot reaches the specified area, which is valid for a single time
 {% endhint %}
 
 ```
@@ -275,18 +275,15 @@ Starting from the moment when the command is issued, the TCP triggers the analog
 //00 02    U16, Protocol Identifier
 //00 14    U16, Length 
 //93       U8, Register
-//00	   U8, IO port number of the control box: 0/1
-//00 00	   U16, 
-Analog output 0 is 0
-Analog output 0, Range 0~4095
-Corresponding to 0~10V
+//00	   U8, Controller analog output number 0~1, here is 0.
+//00 00	   U16, Analog output value, range 0~4095, corresponding to 0~10 V.
 
 //00 00 c8 43	FP32, x=400mm
 //00 00 00 00	FP32, y=0mm
 //00 00 48 43	FP32, z=200mm
-//00 00 48 42	FP32, 
-Tolerance radius (tol_r=50mm),
-when the robotic arm reaches the specified position (the area of the sphere specified by the trigger position point (x, y, z) as the center (the radius of the sphere is the tolerance radius)), trigger IO . If the tolerance radius is not set, when the robotic arm passes the specified point at a speed other than 0, it may cause a missed 
+//00 00 48 42	FP32, tolerance radius, here is 50 mm.
+* When the robot reaches the area (400,0,200) with the tolerance of 50 mm, controller analog outpout 0 will be set to 0 V. 
+*If the tolerance radius is not set, it will not work. 
 ```
 {% endcode %}
 

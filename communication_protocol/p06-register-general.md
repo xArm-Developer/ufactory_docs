@@ -218,52 +218,5 @@ The given parameters 1-6 coordinates are based on the current an offset of posit
 
 </details>
 
-## The operation triggered by the position of the general digital IO of the control box
-
-**Register:145(0x91）**
-
-{% code overflow="wrap" %}
 ```
-// Request:
-00 01 00 02 00 13 91 00 01 00 00 96 43 00 00 00 00 00 00 96 43 00 00 40 40
 ```
-{% endcode %}
-
-<details>
-
-<summary>Request Description</summary>
-
-```
-//00 01    U16, Transaction ID
-//00 02    U16, Protocol Identifier
-//00 13    U16, Length 
-//91       U8, Register
-//00	   U8, iomum=0
-//01	   U8, on:1, off:0
-//00 00 96 43	FP32, x=300
-//00 00 00 00	FP32, y=0
-//00 00 96 43	FP32, z=300
-//00 00 40 40	FP32, Tolerance radiustol_r=3
-
-```
-
-</details>
-
-```
-//Response:
-00 01 00 02 00 02 91 00
-```
-
-<details>
-
-<summary>Response Description</summary>
-
-```
-//00 01    U16, Transaction ID
-//00 02    U16, Protocol Identifier
-//00 02    U16, Length 
-//91       U8, Register
-//00       U8, State
-```
-
-</details>

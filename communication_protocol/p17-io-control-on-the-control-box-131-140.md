@@ -376,7 +376,7 @@
 {% code overflow="wrap" %}
 ```
 // Response:
-00 01 00 02 00 02 24 8B 00 00 00 01 00 FF FD 00 00 FF 00 00 11 00 15 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  00 00 00 
+00 01 00 02 00 34 8B 00 00 00 01 00 FF FF 00 00 00 00 00 09 00 0A 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 ```
 {% endcode %}
 
@@ -387,24 +387,22 @@
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 24    U16, Length 
+//00 34    U16, Length 
 //8B       U8, Register
 //00       U8, State
-//00	   U8, 
-GPIO Module status
+//00	   U8, IO Module status
 0: Normal
 3: Gripper has error message
 6: Communication failure
-//00	   U8,
-GPIO module error code
- 0: Normal
+//00	   U8, GPIO module error code
+0: Normal
 Not 0: Error code
 //01 00	U16, Digital input function IO status
-//FF FD	U16, Digital input configuration IO status
+//FF FF	U16, Digital input configuration IO status
 //00 00	U16, Digital output function IO status
-//FF 00	U16, Digital output configuration IO status
-//00 11	U16, Analog input 1
-//00 15	U16, Analog input 2
+//00 00	U16, Digital output configuration IO status
+//00 09 U16, Analog input 1
+//00 0A U16, Analog input 2
 //00 00	U16, Analog output 1
 //00 00	U16, Analog output 2
 //00 00 00 00 00 00 00 00   U8, Digital input IO0-IO7 configuration message

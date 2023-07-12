@@ -1,11 +1,11 @@
 # Special IO commands(142-147)
 
-## Operation of general digital IO delay output of control box
+## Set controller digital output delay&#x20;
 
 **Register:142(0x8E）**
 
 {% hint style="warning" %}
-Starting from the moment when the command is issued, the digital output switch of the control box is triggered after a period of time.
+After the delay time has elapsed the controller digital output will be activated.
 {% endhint %}
 
 <pre><code><strong>// Request:
@@ -21,10 +21,9 @@ Starting from the moment when the command is issued, the digital output switch o
 //00 02    U16, Protocol Identifier
 //00 07    U16, Length 
 //8E       U8, Register
-//00       U8, Digital IO port number of control box (0-7)
-//01       U8, Switch value (0 is off, 1 is on)
-//00 00 40 40     FP32, 
-The time when the delay takes effect from the current time=3s
+//00       U8, Controller digital output number 0~15, here is CO 0.
+//01       U8, Digital output value, 0 or 1, here is 1.
+//00 00 40 40     FP32, delay time, 3 seconds.
 ```
 
 </details>
@@ -48,12 +47,12 @@ The time when the delay takes effect from the current time=3s
 
 </details>
 
-## Operation of the end general digital IO delay output
+## Set tool digital output delay
 
 **Register:143(0x8F）**
 
 {% hint style="warning" %}
-Starting from the moment when the command is issued, the end digital output switch is triggered after a period of time.
+After the delay time has elapsed the tool digital output will be activated.
 {% endhint %}
 
 <pre><code><strong>// Request:
@@ -69,10 +68,9 @@ Starting from the moment when the command is issued, the end digital output swit
 //00 02    U16, Protocol Identifier
 //00 07    U16, Length 
 //8F       U8, Register
-//00       U8, The end digital IO port number of control box (0/1)
-//01       U8, Switch value (0 is off, 1 is on
-//00 00 40 40    FP32, 
-The time when the delay takes effect from the current time=3s
+//00       U8, Tool digital output number, 0~1, here is TO 0.
+//01       U8, Digital output value, 0 or 1, here is 1.
+//00 00 40 40    FP32, delay time, 3 seconds.
 ```
 
 </details>

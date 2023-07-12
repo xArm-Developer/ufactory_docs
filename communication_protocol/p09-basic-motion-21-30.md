@@ -27,7 +27,7 @@
 //00 00 00 00	FP32, pitch=0
 //00 00 00 00	FP32, yaw=0
 //00 00 C8 42	FP32, speed=100mm/s
-//00 00 FA 44	FP32, acceleration=2000mm/s2）=500*π/180rad/s2
+//00 00 FA 44	FP32, acceleration=2000mm/s²
 //00 00 00 00	FP32, 0motion time=0
 ```
 

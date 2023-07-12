@@ -15,7 +15,7 @@
 * [Other Robotic Arm Function(81-100)](p14-other-robotic-arm-function-81-100.md)
 * [Servo Module(101-115)](p15-servo-module-101-115.md)
 * [RS485 Control on the End-effector(127-128)](p16-rs485-control-on-the-end-effector-124-127.md)
-* [IO Control on the Control Box(131-140)](p17-io-control-on-the-control-box-131-140.md)
+* [IO Control on the Control Box(131-138)](p17-io-control-on-the-control-box-131-140.md)
 * [Special IO commands(142-147)](p18-special-io-commands-142-147.md)
 * [6 Axis Force Torque Sensor(200-212)](p19-6-axis-force-torque-sensor-200-212.md)
 * [485 peripheral transparent transmission(240-241)](p20-485-peripheral-transparent-transmission-240-241.md)

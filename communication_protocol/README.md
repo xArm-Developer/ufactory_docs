@@ -1,12 +1,7 @@
 # Introduction
 
-**(1)** This manual is dedicated for developers who develop the applications base on the Modbus-TCP communication protocol. For UFACTORY Studio application development, please refer to "xArm&850 User Manual".
-
-**(2)** Considering the potential risks of using Modbus-TCP communication protocol for application development, operators need to read and understand all the contents of "xArm&850 User Manual", familiar with risk assessment and robot motion planning, and proficient in robot parameter setting and program creating in "UFACTORY Studio" before Modbus-TCP end developing.
-
-we strongly recommend operators should refer to 'xArm&850 User Manual' and program robot by UFACTORY Studio. Until then, operators could start Modbus-TCP application development based on the communication protocol provided.
-
-It will reduce the potential risks as well as increase the efficiency of your application development based on Modbus-TCP.
+* This private protocol is dedicated for developers who develop the applications base on the TCP protocol. For UFACTORY Studio application development, please refer to the product user manual.
+* Considering the potential risks of using protocol for application development, operators need to read and understand all the contents of the product user manual, familiar with risk assessment and robot motion planning, and proficient in robot parameter setting and program creating in "UFACTORY Studio" before development.
 
 ## Control Box Communication Protocol
 
@@ -14,10 +9,9 @@ It will reduce the potential risks as well as increase the efficiency of your ap
 
 ## Further Developer Resources <a href="#_toc21764" id="_toc21764"></a>
 
-* ROS Library & Github: [https://github.com/xArm-Developer/xarm\_ros](https://github.com/xArm-Developer/xarm\_ros)
-* xArm Python SDK Library: [https://github.com/xArm-Developer/xArm-Python-SDK](https://github.com/xArm-Developer/xArm-Python-SDK)
-* xArm CPLUS SDK Library: [https://github.com/xArm-Developer/xArm-CPLUS-SDK](https://github.com/xArm-Developer/xArm-CPLUS-SDK)
-* Note: For the above three developer resources, we have detailed installation steps and commands on github. Please download the installation package for further development.
+* ROS Library : [https://github.com/xArm-Developer/xarm\_ros](https://github.com/xArm-Developer/xarm\_ros)
+* Python SDK : [https://github.com/xArm-Developer/xArm-Python-SDK](https://github.com/xArm-Developer/xArm-Python-SDK)
+* C++ SDK : [https://github.com/xArm-Developer/xArm-CPLUS-SDK](https://github.com/xArm-Developer/xArm-CPLUS-SDK)
 
 ## More Information <a href="#_toc17347" id="_toc17347"></a>
 

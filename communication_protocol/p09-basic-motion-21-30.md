@@ -392,14 +392,14 @@ Move in Cartesian linear relative motion based on the current tool coordinate sy
 //00 02    U16, Protocol Identifier
 //00 25    U16, Length 
 //1C       U8, Register
-//00 00 C8 43	FP32, x=400mm
-//00 00 00 00	FP32, y=0mm
-//00 00 48 43	FP32, z=200mm
+//00 00 C8 43	FP32, x=400 mm
+//00 00 00 00	FP32, y=0 mm
+//00 00 48 43	FP32, z=200 mm
 //DB 0F 49 40	FP32, roll=π
 //00 00 00 00	FP32, pitch=0
 //00 00 00 00	FP32, yaw=0
-//C2 B8 B2 3E	FP32, speed=20mm/s
-//00 00 FA 44	FP32, acceleration=2000mm/s2
+//C2 B8 B2 3E	FP32, speed=20 mm/s
+//00 00 FA 44	FP32, acceleration=2000 mm/s²
 //00 00 00 00	FP32, motion time=0
 ```
 

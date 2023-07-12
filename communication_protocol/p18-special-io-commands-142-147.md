@@ -94,12 +94,12 @@ After the delay time has elapsed the tool digital output will be activated.
 
 </details>
 
-## Operation triggered by the position of the general digital IO of the control box
+## Position trigger of controller output
 
 **Register:144(0x90）**
 
 {% hint style="warning" %}
-Starting from the moment when the instruction is issued, the TCP triggers the digital output switch of the control box after it reaches the specified position area, which is valid for a single time
+Controller digital output will be activated when the robot reaches the specified area, which is valid for a single time
 {% endhint %}
 
 <pre><code><strong>// Request:
@@ -116,14 +116,14 @@ Starting from the moment when the instruction is issued, the TCP triggers the di
 //00 02    U16, Protocol Identifier
 //00 13    U16, Length 
 //90       U8, Register
-//00	   U8, IO port number of the control box: 0-7
-//01	   U8, Switch value (on_off): 0 is off, 1 is on
+//00	   U8, Controller digital output number, 0~15, here is CO 0.
+//01	   U8, Digital output value, 0(low) or 1(high) , here is 1.
 //00 00 c8 43	FP32, x=400mm
 //00 00 00 00	FP32, y=0mm
 //00 00 48 43	FP32, z=200mm
-//00 00 48 42	FP32, 
-Tolerance radius (tol_r=50mm),
-when the robotic arm reaches the specified position (the area of the sphere specified by the trigger position point (x, y, z) as the center (the radius of the sphere is the tolerance radius)), trigger IO . If the tolerance radius is not set, when the robotic arm passes the specified point at a speed other than 0, it may cause a missed 
+//00 00 48 42	FP32, tolerance radius, here is 50 mm.
+* When the robot reaches the area (400,0,200) with the tolerance of 50 mm, controller outpout 0 will be set to 1(high) . 
+*If the tolerance radius is not set, it will not work. 
 ```
 {% endcode %}
 
@@ -148,12 +148,12 @@ when the robotic arm reaches the specified position (the area of the sphere spec
 
 </details>
 
-## Operation triggered by the position of the end general digital IO
+## Position triggered of tool output
 
 **Register:145(0x91）**
 
 {% hint style="warning" %}
-Starting from the moment when the instruction is issued, the TCP triggers the end digital output switch after it reaches the specified position area, which is valid for a single time.
+Tool digital output will be activated when the robot reaches the specified area, which is valid for a single time
 {% endhint %}
 
 <pre><code><strong>// Request:
@@ -170,14 +170,14 @@ Starting from the moment when the instruction is issued, the TCP triggers the en
 //00 02    U16, Protocol Identifier
 //00 13    U16, Length 
 //91       U8, Register
-//00	   U8, IO port number of the end: 0/1
-//01 U8,Switch value (on_off): 0 is off, 1 is on
+//00	   U8, Tool digital output number, 0~1, here is TO 0.
+//01       U8, Digital output value, 0(low) or 1(high) , here is 1.
 //00 00 c8 43	FP32, x=400mm
 //00 00 00 00	FP32, y=0mm
 //00 00 48 43	FP32, z=200mm
-//00 00 48 42	FP32, 
-Tolerance radius (tol_r=50mm)
-when the robotic arm reaches the specified position (the area of the sphere specified by the trigger position point (x, y, z) as the center (the radius of the sphere is the tolerance radius)), trigger IO . If the tolerance radius is not set, when the robotic arm passes the specified point at a speed other than 0, it may cause a missed trigger because it cannot be accurately detected.
+//00 00 48 42	FP32, tolerance radius, here is 50 mm.
+* When the robot reaches the area (400,0,200) with the tolerance of 50 mm, tool digital outpout 0 will be set to 1(high) . 
+*If the tolerance radius is not set, it will not work. 
 ```
 {% endcode %}
 

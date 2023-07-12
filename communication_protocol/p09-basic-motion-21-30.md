@@ -79,7 +79,7 @@
 //00 00 00 00 FP32, pitch=0
 //00 00 00 00 FP32, yaw=0
 //00 00 C8 42 FP32, motion speed=100 mm/s
-//00 00 FA 44 FP32, acceleration=2000mm/s2
+//00 00 FA 44 FP32, acceleration=2000 mm/s²
 //00 00 00 00 FP32, motion time 0
 //00 00 48 42 FP32, Arc blending radius=50 mm
 ```
@@ -133,8 +133,8 @@
 //00 00 00 00	FP32, Joint5=0
 //00 00 00 00	FP32, Joint6=0
 //00 00 00 00	FP32, Joint7=0
-//C2 B8 B2 3E	FP32, speed=20π/180rad/s
-//58 A0 0B 41	FP32, 500π/180rad/s2
+//C2 B8 B2 3E	FP32, speed=0.3491 rad/s
+//58 A0 0B 41	FP32, acceleration= 8.7266 rad/s²
 //00 00 00 00	FP32, motion time=0
 ```
 

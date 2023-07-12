@@ -98,7 +98,7 @@
 //00 07    U16, Length 
 //73       U8, Register
 //00       U8, State
-//00 00 00 00    FP32, Identification status  0.0: success. 1.0：failed.
+//00 00 00 00    FP32, Identification status  0.0: success. -1.0：failed.
 ```
 
 </details>

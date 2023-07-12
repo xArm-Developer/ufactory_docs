@@ -18,7 +18,7 @@
 //00 02    U16, Protocol Identifier
 //00 05    U16, Length 
 //1F       U8, Register
-//00 00 FA 44       fp32, Jerk=2000 mm/s3 
+//00 00 FA 44       FP32, TCP Jerk=2000 mm/s³
 ```
 
 </details>
@@ -61,7 +61,7 @@ R**egister:32 (0x20)**
 //00 02    U16, Protocol Identifier
 //00 05    U16, Length 
 //20       U8, Register
-//00 80 BB 45       fp32, Maximum acceleration=6000mm/s2
+//00 80 BB 45       FP32, Maximum acceleration=6000 mm/s²
 ```
 
 </details>
@@ -103,7 +103,7 @@ R**egister:32 (0x20)**
 //00 02    U16, Protocol Identifier
 //00 05    U16, Length 
 //21       U8, Register
-//00 40 1C 46       fp32, Jerk=10000rad/s3
+//00 40 1C 46       FP32, Jerk=10000 rad/s³
 ```
 
 </details>
@@ -145,7 +145,7 @@ R**egister:32 (0x20)**
 //00 02    U16, Protocol Identifier
 //00 05    U16, Length 
 //22       U8, Register
-//00 00 C8 43       fp32, Jerk=10000rad/s3
+//00 00 C8 43       FP32, Jerk=10000 rad/s³
 ```
 
 </details>
@@ -191,9 +191,9 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 //00 02    U16, Protocol Identifier
 //00 19    U16, Length 
 //23       U8, Register
-//00 00 C8 43	FP32, x=400mm
-//00 00 00 00	FP32, y=0mm
-//00 00 48 43	FP32, z=200mm
+//00 00 C8 43	FP32, x=400 mm
+//00 00 00 00	FP32, y=0 mm
+//00 00 48 43	FP32, z=200 mm
 //DB 0F 49 40	FP32, roll=π
 //00 00 00 00	FP32, pitch=0
 //00 00 00 00	FP32, yaw=0

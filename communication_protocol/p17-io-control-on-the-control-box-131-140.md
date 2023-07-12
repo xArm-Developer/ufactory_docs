@@ -1,6 +1,6 @@
 # IO Control on the Control Box(131-140)
 
-## Get configurable digital GPIO input
+## Get controller digital input
 
 **Register:131 (0x83)**
 
@@ -36,9 +36,10 @@
 //00 04    U16, Length 
 //83       U8, Register
 //00       U8, State
-//FF FD    U16,
-The signal of GPIO1 is low）
-GPIO signal: Bit0 ~ Bit15 Correspond to signals of GPIO0~GPIO15
+//FF FD    U16, Parameter 1, input status of controller.
+
+* Bit0 to Bit15 correspond to signals of input 0 to input 15.
+* FF FD, is 1111 1111 1111 1101 in binary, means input 1 is low.
 ```
 
 </details>

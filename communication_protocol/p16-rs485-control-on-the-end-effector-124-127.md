@@ -73,12 +73,13 @@
 //00 08    U16, Length 
 //7F       U8, Register
 //09	   U8, Host ID
-//1A 15	   U16,Address
-//00 00 80 43	FP32,
-Open 0
+//1A 15	   U16, Register start address
+//00 00 80 43	FP32, Parameter 1, 256 in decimal, set digital output 0 low
 Data:
-256.0: Close 0  257.0: Open 
-512.0: Close 1  514: Open 1
+256: Set tool digital output 0 to low
+257: Set tool digital output 0 to high
+512: Set tool digital output 1 to low
+514: Set tool digital output 0 to high
 ```
 
 </details>

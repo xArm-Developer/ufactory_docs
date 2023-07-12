@@ -42,17 +42,11 @@ Parameter:
 
 {% tabs %}
 {% tab title="Request Command Format" %}
-| Format                                        | Transaction Identifier (u16) | Protocol (u16) | Length (u16) | Register (u8) | <p>Parameters</p><p>(Refer to the statement of each commands</p> |
-| --------------------------------------------- | ---------------------------- | -------------- | ------------ | ------------- | ---------------------------------------------------------------- |
-| Length                                        | 2 Bytes                      | 2 Bytes        | 2 Bytes      | 1 Byte        | n Bytes                                                          |
-| <p>Example</p><p>(Enable the robotic arm)</p> | 0x00 0x01                    | 0x00 0x02      | 0x00 0x03    | 0x0B          | 0x08 0x01                                                        |
+<table data-header-hidden><thead><tr><th></th><th width="147"></th><th width="108"></th><th width="103"></th><th></th><th></th></tr></thead><tbody><tr><td>Format</td><td>Transaction Identifier U16</td><td>Protocol<br>U16</td><td>Length U16</td><td>Register <br>U8</td><td><p>Parameter</p><p></p></td></tr><tr><td>Length</td><td>2 Bytes</td><td>2 Bytes</td><td>2 Bytes</td><td>1 Byte</td><td>n Bytes</td></tr><tr><td><p>Example</p><p>(Enable the robot)</p></td><td>00 01</td><td>00 02</td><td>00 03</td><td>0B</td><td>08 01</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Response Command Format" %}
-| Format                                        | <p>Transaction Identifier</p><p>(u16)</p> | <p>Protocol</p><p>(u16)</p> | <p>Length</p><p>(u16)</p> | <p>Register</p><p>(u8)</p> | <p>Status</p><p>(u8)</p> | <p>Parameters</p><p>(Refer to the statement of each commands)</p> |
-| --------------------------------------------- | ----------------------------------------- | --------------------------- | ------------------------- | -------------------------- | ------------------------ | ----------------------------------------------------------------- |
-| Length                                        | 2 Bytes                                   | 2 Bytes                     | 2 Bytes                   | 1 Byte                     | 1 Byte                   | n Bytes                                                           |
-| <p>Example</p><p>(Enable the robotic arm)</p> | 0x00 0x01                                 | 0x00 0x02                   | 0x00 0x02                 | 0x0B                       | 0x00                     | none                                                              |
+<table data-header-hidden><thead><tr><th width="154"></th><th width="130"></th><th width="134"></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Format</td><td><p>Transaction Identifier</p><p>U16</p></td><td><p>Protocol</p><p>(u16)</p></td><td><p>Length</p><p>(u16)</p></td><td><p>Register</p><p>(u8)</p></td><td><p>Status</p><p>(u8)</p></td><td><p>Parameters</p><p></p></td></tr><tr><td>Length</td><td>2 Bytes</td><td>2 Bytes</td><td>2 Bytes</td><td>1 Byte</td><td>1 Byte</td><td>n Bytes</td></tr><tr><td><p>Example</p><p>Enable the robot</p></td><td>00 01</td><td>00 02</td><td>00 02</td><td>0B</td><td>00</td><td>none</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

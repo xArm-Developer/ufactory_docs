@@ -232,8 +232,8 @@
 //00 02    U16, Protocol Identifier
 //00 0D    U16, Length 
 //19       U8, Register
-//DB 0F 49 40	FP32, speed=50rad/s
-//F3 66 DF 40	FP32, acceleration=600rad/s2
+//DB 0F 49 40	FP32, speed=50 rad/s
+//F3 66 DF 40	FP32, acceleration=600 rad/s²
 //00 00 00 00	FP32, motion time=0
 ```
 
@@ -327,20 +327,20 @@ The motion calculates the trajectory of the space circle according to the three-
 //00 02    U16, Protocol Identifier
 //00 41    U16, Length 
 //1B       U8, Register
-//00 00 C8 43 FP32, x=400mm
+//00 00 C8 43 FP32, x=400 mm
 //00 00 00 00 FP32, y=0mm
-//00 00 48 43 FP32, z=200mm
+//00 00 48 43 FP32, z=200 mm
 //DB 0F 49 40 FP32, roll=π
 //00 00 00 00 FP32, pitch=0
 //00 00 00 00 FP32, yaw=0
-//00 00 C8 43 FP32, x=400mm
+//00 00 C8 43 FP32, x=400 mm
 //00 00 C8 42 FP32, y=0mm
-//00 00 48 43 FP32, z=200mm
-//DB 0F 49 40 FP32, 0roll=π
+//00 00 48 43 FP32, z=200 mm
+//DB 0F 49 40 FP32, roll=π
 //00 00 00 00 FP32, pitch=0
 //00 00 00 00 FP32, yaw=0
-//00 00 C8 42 FP32, speed=100mm/s
-//00 00 FA 44 FP32, acceleration500*π/180rad/s2
+//00 00 C8 42 FP32, speed=100 mm/s
+//00 00 FA 44 FP32, acceleration 2000 mm/s²
 //00 00 00 00 FP32, motion time=0
 //00 00 48 42 FP32, Percentage of the length of arc in motion to circumference=50%
 ```

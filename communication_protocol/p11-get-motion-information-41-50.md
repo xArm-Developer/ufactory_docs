@@ -88,13 +88,13 @@
 //00 1E    U16, Length 
 //2A       U8, Register
 //00       U8, State
-//92 0A 86 3F 	FP32, J1=1.0471 rad
-//00 00 00 00 	FP32, J2=0 rad
-//00 00 00 00 	FP32, J3=0 rad
-//00 00 00 00 	FP32, J4=0 rad
-//00 00 00 00 	FP32, J5=0 rad
-//00 00 00 00 	FP32, J6=0 rad
-//00 00 00 00 	FP32, J7=0 rad
+//92 0A 86 3F 	FP32, Joint1=1.0471 rad
+//00 00 00 00 	FP32, Joint2=0 rad
+//00 00 00 00 	FP32, Joint3=0 rad
+//00 00 00 00 	FP32, Joint4=0 rad
+//00 00 00 00 	FP32, Joint5=0 rad
+//00 00 00 00 	FP32, Joint6=0 rad
+//00 00 00 00 	FP32, Joint7=0 rad
 ```
 
 </details>
@@ -177,13 +177,13 @@
 //00 02    U16, Protocol Identifier
 //00 1D    U16, Length 
 //2C       U8, Register
-//92 0A 86 3F	FP32, joint1= π/3 rad
-//00 00 00 00	FP32, joint2=0 rad
-//00 00 00 00	FP32, joint3=0
-//00 00 00 00	FP32, joint4=0
-//00 00 00 00	FP32, joint5=0
-//00 00 00 00	FP32, joint6=0
-//00 00 00 00	FP32, joint7=0
+//92 0A 86 3F	FP32, Joint1= π/3 rad
+//00 00 00 00	FP32, Joint2=0 rad
+//00 00 00 00	FP32, Joint3=0 rad
+//00 00 00 00	FP32, Joint4=0 rad
+//00 00 00 00	FP32, Joint5=0 rad
+//00 00 00 00	FP32, Joint6=0 rad
+//00 00 00 00	FP32, Joint7=0 rad
 ```
 
 </details>
@@ -284,7 +284,7 @@
 //00 02    U16, Protocol Identifier
 //00 05    U16, Length 
 //2F       U8, Register
-//00 00 C8 43    U8,  Max TCP speed=400mm/s
+//00 00 C8 43    U8,  Max TCP speed=400 mm/s
 ```
 
 </details>
@@ -387,7 +387,7 @@
 //00 03    U16, Length 
 //31       U8, Register
 //00       U8, State
-//00       U8, 0– OFF; 1 - ON
+//00       U8, 0 means OFF; 1 means ON
 ```
 
 </details>

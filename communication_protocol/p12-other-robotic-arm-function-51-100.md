@@ -48,12 +48,12 @@ Set the gravity direction for correct torque compensation and collision detectio
 
 </details>
 
-## Set the safe boundary range
+## Set the safe boundary
 
 **Register:52 (0x34)**
 
 {% hint style="warning" %}
-C35 Set the boundary range of the safety fence in the three-dimensional space. If TCP of the robotic arm exceeds this boundary, error C35of the Control Box will be triggered.
+C35 Set the boundary range of the safety fence in the three-dimensional space. If TCP of the robotic arm exceeds this boundary, error C35 of the Control Box will be triggered.
 {% endhint %}
 
 {% code overflow="wrap" %}
@@ -72,12 +72,12 @@ C35 Set the boundary range of the safety fence in the three-dimensional space. I
 //00 02    U16, Protocol Identifier
 //00 19    U16, Length 
 //34       U8, Register
-//58,02,00,00	FP32, Cartesian boundary value x+=600mm
-//C8,00,00,00	FP32, Cartesian boundary value x-=200mm
-//F4,01,00,00	FP32, Cartesian boundary value y+ =500mm
-//64,00,00,00	FP32, Cartesian boundary value y- =100mm
-//58,02,00,00	FP32, Cartesian boundary value z+=600mm
-//C8,00,00,00	FP32, Cartesian boundary value z-=200mm
+//58,02,00,00	FP32, Cartesian boundary value x+ =600 mm
+//C8,00,00,00	FP32, Cartesian boundary value x- =200 mm
+//F4,01,00,00	FP32, Cartesian boundary value y+ =500 mm
+//64,00,00,00	FP32, Cartesian boundary value y- =100 mm
+//58,02,00,00	FP32, Cartesian boundary value z+ =600 mm
+//C8,00,00,00	FP32, Cartesian boundary value z- =200 mm
 ```
 
 </details>
@@ -143,11 +143,15 @@ C35 Set the boundary range of the safety fence in the three-dimensional space. I
 //10       U8, State
 //10       U8, State
 //00	   U16,	The state of Reduce mode: 0-OFF; 1-ON
-//01 2C 00 64 01 2C FF F6 01 2C 00 32 	int16, Safety Boundary: [x_max=300, x_min=100, y_max=300, y_min=-10, z_max=300, z_min=50]
-//00 00 C8 42 fp32, Max TCP speed=100mm/s
-//DB 0F 49 40 fp32, max Joint speed=180 °/s
+//01 2C 00 64  01 2C FF F6 01 2C 00 32
+int16*6, safety boundary
+[x_max=300, x_min=100, y_max=300, y_min=-10, z_max=300, z_min=50]
 
-//DB 0F C9 C0 DB 0F C9 40 15 C6 03 C0 91 0A 06 40 CE 53 7B C0 68 96 44 3E DB 0F C9 C0 DB 0F C9 40 35 B3 D8 BF DB 0F 49 40 DB 0F C9 C0 DB 0F C9 40 00 00 00 00 00 00 00 00 	FP32, Joint range: [J1_min, J1_max, …, J7_min, J7_max]
+//00 00 C8 42 FP32, Max TCP speed=100mm/s
+//DB 0F 49 40 FP32, max Joint speed=180 °/s
+
+//DB 0F C9 C0 DB 0F C9 40 15 C6 03 C0 91 0A 06 40 CE 53 7B C0 68 96 44 3E DB 0F C9 C0 DB 0F C9 40 35 B3 D8 BF DB 0F 49 40 DB 0F C9 C0 DB 0F C9 40 00 00 00 00 00 00 00 00 	
+FP32*7, Joint range: [J1_min, J1_max, …, J7_min, J7_max]
 
 //01  U8, The state of Safety Boundary: 0- OFF; 1-ON
 //01  U8, The state of Collision Rebound: 0- OFF; 1-ON 

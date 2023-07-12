@@ -44,7 +44,7 @@
 
 </details>
 
-## Get analog input AI1
+## Get controller analog input AI 0
 
 **Register:132 (0x84)**
 
@@ -80,15 +80,12 @@
 //00 04    U16, Length 
 //84       U8, Register
 //00       U8, State
-//00 12    U16,
-Analog input0
-Analog input0, Range 0~4095
-Corresponding to 0~10V
+//00 12    U16, value of controller analog input 0, Range 0~4095 corresponding to 0~10V
 ```
 
 </details>
 
-## Get analog input AI2
+## Get controller analog input AI 1
 
 **Register:133 (0x85)**
 
@@ -124,15 +121,12 @@ Corresponding to 0~10V
 //00 04    U16, Length 
 //85       U8, Register
 //00       U8, State
-//00 15    U16,
-Analog input1
-Analog input1, Range 0~4095
-Corresponding to0~10V
+//00 15    U16, controller analog input 1, Range 0~4095, corresponding to0~10V
 ```
 
 </details>
 
-## Set configurable digital GPIO output
+## Set controller digital output
 
 **Register:134 (0x86)**
 

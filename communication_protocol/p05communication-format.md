@@ -4,15 +4,15 @@
 
 The following explains some of the symbols used in the examples and tables:
 
-> **【u8】:** 1 Byte, 8-bit unsigned int
+> **U8:** 1 Byte, 8-bit unsigned int
 >
-> **【u16】:** 2 Bytes, 16-bit unsigned int
+> **U16:** 2 Bytes, 16-bit unsigned int
 >
-> **【fp32】:** 4 Bytes, float
+> **FP32:** 4 Bytes, float
 >
-> **【str】:** String
+> **str:** String
 >
-> **【System reset】:** The user just enters the state after the mode switch or changes some settings (such as TCP offset, sensitivity, etc.). The above operations will terminate the ongoing movement of the robotic arm and clear the cache command, which is the same as the STOP state.
+> **System reset:** The user just enters the state after the mode switch or changes some settings (such as TCP offset, sensitivity, etc.). It will terminate the ongoing movement of the robot and clear all the cache commands, which is the same as the STOP state.
 
 ## Private protocol Format <a href="#_toc23244" id="_toc23244"></a>
 
@@ -30,15 +30,15 @@ Private protocol Process:
 >
 > 4\. Waiting for a response under the same connection.
 >
-> 5\. Use the recv command to read the message and complete a data exchange.
+> 5\. Use the receive command to read the message and complete a data exchange.
 >
 > 6\. When the communication task ends, close the TCP connection.
 
 Parameter:
 
-> Default TCP Port: 502
+> TCP Port: 502
 >
-> Protocol: 0x00 0x02 Control (Only this one for now)
+> Protocol: 00 02
 
 {% tabs %}
 {% tab title="Request Command Format" %}
@@ -70,25 +70,21 @@ General notes:
 * Length: Indicates the next data length in bytes.
 * Register: Device address.
 
-## **On the problem of users using communication protocols to organize data in big endian and little endian:**
+## **Data in big endian and little endian:**
 
-#### Modbus-TCP control protocol:
+#### This  protocol:
 
-> 1\. The transaction identifier (u16) are in big endian order.
+> 1\. The transaction identifier (U16) are in big endian order.
 >
-> 2\. protocol identifier (u16) and are in big endian order.
+> 2\. Protocol identifier (U16) and are in big endian order.
 >
-> 3\. length (u16) of the message head are in big endian order.
+> 3\. Length (U16) of the message head are in big endian order.
 >
-> 4\. The 32-bit data (fp32, int32) in the parameter are in little endian order.
+> 4\. The 32-bit data (FP32, int32) in the parameter are in little endian order.
 >
-> 5\. Integer data(u16) involving GPIO operation are in big endian order.
+> 5\. Integer data(U16) include GPIO operation are in big endian order.
 
-#### Automatic reporting data analysis:
 
-> 1\. Integer data (16/32 bits) are in big endian order.
->
-> 2\. Floating-point (fp32) data is in little endian order.
 
 **Example:**
 

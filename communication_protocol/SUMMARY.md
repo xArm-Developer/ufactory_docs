@@ -4,7 +4,7 @@
 * [Terms and Definitions](p03-terms-and-definitions.md)
 * [Robot specifications](p04robot-specifications.md)
 * [Communication Format](p05communication-format.md)
-* [Register (General)](p06-register-general.md)
+* [Untitled](p06-register-general.md)
 * [Public Port Section（0-10）](p07-public-port-section-0-10.md)
 * [System State(11-20)](p08-system-state-11-20.md)
 * [Basic Motion(21-30)](p09-basic-motion-21-30.md)

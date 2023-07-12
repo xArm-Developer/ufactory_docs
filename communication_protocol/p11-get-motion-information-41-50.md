@@ -1,6 +1,6 @@
 # Get Motion Information(41-50)
 
-## Get the current Cartesian position of the robotic arm
+## Get the current Cartesian position of the robot
 
 **Register:41(0x29）**
 
@@ -39,9 +39,9 @@
 //00 1A    U16, Length 
 //29       U8, Register
 //10       U8, State
-//43 00 4F 43	FP32, x=207mm
-//B4 CE 18 3A	FP32, y=0mm
-//3A 00 E0 42	FP32, z=112mm
+//43 00 4F 43	FP32, x= 207mm
+//B4 CE 18 3A	FP32, y=0 mm
+//3A 00 E0 42	FP32, z=112 mm
 //DB 0F 49 40	FP32, roll=π
 //FD AD 80 B6	FP32, pitch=0
 //7C D9 20 37	FP32, yaw=0
@@ -49,7 +49,7 @@
 
 </details>
 
-## Get the current joint position of the robotic arm
+## Get the current joint position of the robot
 
 **Register:42 (0x2A)**
 
@@ -74,7 +74,7 @@
 {% code overflow="wrap" %}
 ```
 // Response:
-00 01 00 02 00 1A 2A 10 43 00 4F 43 B4 CE 18 3A 3A 00 E0 42 DB 0F 49 40 FD AD 80 B6 7C D9 20 37
+00 01 00 02 00 1E 2A 00 92 0A 86 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 ```
 {% endcode %}
 
@@ -85,15 +85,16 @@
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 1A    U16, Length 
+//00 1E    U16, Length 
 //2A       U8, Register
-//10       U8, State
-//43 00 4F 43	FP32, x=207mm
-//B4 CE 18 3A	FP32, y=0mm
-//3A 00 E0 42	FP32, z=112mm
-//DB 0F 49 40	FP32, roll=π
-//FD AD 80 B6	FP32, pitch=0
-//7C D9 20 37	FP32, yaw=0
+//00       U8, State
+//92 0A 86 3F 	FP32, J1=1.0471 rad
+//00 00 00 00 	FP32, J2=0 rad
+//00 00 00 00 	FP32, J3=0 rad
+//00 00 00 00 	FP32, J4=0 rad
+//00 00 00 00 	FP32, J5=0 rad
+//00 00 00 00 	FP32, J6=0 rad
+//00 00 00 00 	FP32, J7=0 rad
 ```
 
 </details>
@@ -118,12 +119,12 @@
 //00 02    U16, Protocol Identifier
 //00 19    U16, Length 
 //2B       U8, Register
-//00 00 C8 43	FP32, x=400mm
-//00 00 00 00	FP32, y=0mm
-//00 00 48 43	FP32, z=200mm
-//DB 0F 49 40	FP32, roll=π
-//00 00 00 00	FP32, pitch=0
-//00 00 00 00	FP32, yaw=0
+//00 00 C8 43	FP32, x=400 mm
+//00 00 00 00	FP32, y=0 mm
+//00 00 48 43	FP32, z=200 mm
+//DB 0F 49 40	FP32, roll=π rad
+//00 00 00 00	FP32, pitch=0 rad
+//00 00 00 00	FP32, yaw=0 rad
 ```
 
 </details>
@@ -145,13 +146,13 @@
 //00 1E    U16, Length 
 //2B       U8, Register
 //00       U8, State
-//D8 C8 B2 A4     FP32, joint1= 0
-//0A 86 A7 3D     FP32, joint2=0.081803
-//B1 22 24 BF     FP32, joint3=-0.641152
-//F2 A9 3C 8A     FP32, joint4=0
-//EF 31 0F 3F     FP32, joint5=0.559349
-//D8 C8 B2 A4     FP32, joint6=0
-//00 00 00 00     FP32, joint7=0
+//D8 C8 B2 A4     FP32, J1=0 rad
+//0A 86 A7 3D     FP32, J2=0.081803 rad
+//B1 22 24 BF     FP32, J3=-0.641152 rad
+//F2 A9 3C 8A     FP32, J4=0 rad
+//EF 31 0F 3F     FP32, J5=0.5593 rad
+//D8 C8 B2 A4     FP32, J6=0 rad
+//00 00 00 00     FP32, J7=0 rad
 ```
 
 </details>
@@ -176,8 +177,8 @@
 //00 02    U16, Protocol Identifier
 //00 1D    U16, Length 
 //2C       U8, Register
-//92 0A 86 3F	FP32, joint1= π/3
-//00 00 00 00	FP32, joint2=0
+//92 0A 86 3F	FP32, joint1= π/3 rad
+//00 00 00 00	FP32, joint2=0 rad
 //00 00 00 00	FP32, joint3=0
 //00 00 00 00	FP32, joint4=0
 //00 00 00 00	FP32, joint5=0
@@ -204,12 +205,12 @@
 //00 1A    U16, Length 
 //2C       U8, Register
 //00       U8, State
-//FF FF CE 42	FP32, x=103.5mm
-//6B 44 33 43	FP32, y=179.27mm
-//00 00 E0 42	FP32, z=112mm
-//DB 0F 49 C0	FP32, roll=-π
-//00 00 00 80	FP32, pitch=-0
-//92 0A 86 3F	FP32, yaw=-π/3
+//FF FF CE 42	FP32, x=103.5 mm
+//6B 44 33 43	FP32, y=179.27 mm
+//00 00 E0 42	FP32, z=112 mm
+//DB 0F 49 C0	FP32, roll=-π rad
+//00 00 00 80	FP32, pitch=-0 rad
+//92 0A 86 3F	FP32, yaw=-π/3 rad
 ```
 
 </details>

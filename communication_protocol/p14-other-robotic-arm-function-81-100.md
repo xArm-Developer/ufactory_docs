@@ -5,7 +5,7 @@
 **Register:81 (0x51)**
 
 {% hint style="warning" %}
-SSet target joint velocity for joint velocity mode(mode 4)
+Set target joint velocity for joint velocity mode (mode 4)
 {% endhint %}
 
 {% code overflow="wrap" %}
@@ -63,7 +63,7 @@ SSet target joint velocity for joint velocity mode(mode 4)
 **Register:82 (0x52)**
 
 {% hint style="warning" %}
-Set target cartesian linear velocity and angular velocity, for cartesian velocity control mode-mode 5
+Set target Cartesian linear velocity and angular velocity, for cartesian velocity control mode (mode 5)
 {% endhint %}
 
 {% code overflow="wrap" %}
@@ -134,27 +134,19 @@ Set target cartesian linear velocity and angular velocity, for cartesian velocit
 //00 02    U16, Protocol Identifier
 //00 1E    U16, Length 
 //53       U8, Register
-//00 00 00 00	FP32, TCP control，Parameter is X (mm) Joint control，Parameter is J1 (rad)
-//00 00 00 00	FP32, TCP control，Parameter is y (mm) Joint control，Parameter is J2 (rad)
-//00 00 00 00	FP32, TCP control，Parameter is z (mm) Joint control，Parameter isJ3 (rad)
-//00 00 00 00	FP32, TCP control，Parameter is roll (rad) Joint control，Parameter is J4 (rad)
-//00 00 00 00	FP32, TCP control，Parameter is pitch (rad) Joint control，Parameter is J5 (rad)
-//00 00 00 00	FP32, TCP control，Parameter isyaw (rad) Joint control，Parameter is J6 (rad)
-//00 00 00 00	FP32, TCP control，Parameter is meaningless Joint control，Parameter is J7 (rad)
+//00 00 00 00	FP32, if TCP motion，parameter is X (mm). If joint motion，Parameter is J1 (rad)
+//00 00 00 00	FP32, if TCP motion，parameter is y (mm). If joint motion，parameter is J2 (rad)
+//00 00 00 00	FP32, If TCP motion，parameter is z (mm). If joint control，parameter is J3 (rad)
+//00 00 00 00	FP32, If TCP motion，parameter is roll (rad). If joint motion，parameter is J4 (rad)
+//00 00 00 00	FP32, If TCP motion，parameter is pitch (rad). If joint motion，parameter is J5 (rad)
+//00 00 00 00	FP32, If TCP motion，parameter is yaw (rad). If joint motion，parameter is J6 (rad)
+//00 00 00 00	FP32, If TCP motion，parameter is meaningless. If joint motion，parameter is J7 (rad)
 //00 00 00 00	FP32, speed(mm/s, rad/s)
-//00 00 00 00	FP32, acceleration(mm/s^2, rad/s^2)
+//00 00 00 00	FP32, acceleration(mm/s², rad/s²)
 //00 00 00 00	FP32, move time（useless, just 0）
 //00 00 00 00	FP32, radius(mm)
-
-//00	U8,
-TCP or Joint
-0: TCP
-1: Joint
-
-//00	U8,
-RPY control，only in TCP control（ 2 is 0）
-0: RPY control
-1: Angle control
+//00	U8, 0 is TCP motion, 1 is joint motion.
+//00	U8, Only available in TCP motion. 0 is RPY, 1 is aixs angle.
 ```
 {% endcode %}
 
@@ -179,7 +171,7 @@ RPY control，only in TCP control（ 2 is 0）
 
 </details>
 
-## Get the attitude represented by the axis angle attitude
+## Get the attitude represented by the axis angle
 
 **Register:91 (0x5B)**
 
@@ -222,22 +214,22 @@ Get the current TCP pose, and use the axial angle to represent the pose of the r
 //00 1A    U16, Length 
 //5B       U8, Register
 //00       U8, State
-//00 00 96 43	FP32,  Current Cartesian coordinate X=300mm
-//00 00 00 00	FP32,  Current Cartesian coordinate Y=0
-//00 00 16 43	FP32,  Current Cartesian coordinate Z=150mm
-//DB 0F 49 40	FP32,  Current Cartesian coordinate Rx=π rad 
-//00 00 00 00	FP32,  Current Cartesian coordinate Ry=0 
-//00 00 00 00	FP32,  Current Cartesian coordinate Rz=0 
+//00 00 96 43	FP32,  X=300mm
+//00 00 00 00	FP32,  Y=0 mm
+//00 00 16 43	FP32,  Z=150mm
+//DB 0F 49 40	FP32,  Rx=π rad 
+//00 00 00 00	FP32,  Ry=0 rad
+//00 00 00 00	FP32,  Rz=0 rad
 ```
 
 </details>
 
-## Linear motion with axis angle attitude as target
+## Linear motion with axis angle
 
 **Register:92 (0x5C)**
 
 {% hint style="warning" %}
-When planning a linear motion, the target pose is expressed in terms of axial angles, which supports the absolute target pose/relative target pose, as well as the motion options of the base coordinate system/tool coordinate system.
+When planning a linear motion, the target pose is expressed in terms of axis angle, which supports the absolute and relative target pose, as well as the motion options of the base coordinate system and tool coordinate system.
 {% endhint %}
 
 {% code overflow="wrap" %}
@@ -264,20 +256,10 @@ When planning a linear motion, the target pose is expressed in terms of axial an
 //00 00 00 00	FP32, Ry=0
 //00 00 00 00	FP32, Rz=0
 //00 00 48 43	FP32, motion speed=200 mm/s
-//00 00 FA 44	FP32, acceleration=2000mm/s2
+//00 00 FA 44	FP32, acceleration=2000 mm/s²
 //00 00 00 00	FP32, motion time, 0
-//00	U8, 
-0base coordinate system motion
-Motion coordinate system：
-0: the base coordinate system motion
-1: the tool coordinate system motion
-
-//00	U8, 
- absolute pose
- If the motion coordinate system is the base coordinate system.
-0 represents the given pose is an absolute pose
-1 represents the given pose is a relative pose
- (the given parameters 1-6 coordinates are based on the current an offset of position)
+//00	U8, motion reference, 0 is robot base (coordinate system), 1 is robot tool (coordinate system).
+//00	U8, If the motion reference is the robot base, then 0 is absolute pose, 1 is relative pose.
 ```
 {% endcode %}
 
@@ -302,12 +284,12 @@ Motion coordinate system：
 
 </details>
 
-## Servo\_cartesian motion (axis angle)
+## Servo\_Cartesian motion (axis angle)
 
 **Register:93 (0x5D)**
 
 {% hint style="warning" %}
-An interface for receiving high-frequency continuous Cartesian trajectory motion, and the posture is represented by the axis angle.
+An interface for receiving high-frequency continuous Cartesian motion, and the posture is represented by the axis angle.
 {% endhint %}
 
 {% code overflow="wrap" %}
@@ -327,26 +309,16 @@ An interface for receiving high-frequency continuous Cartesian trajectory motion
 //00 02    U16, Protocol Identifier
 //00 26    U16, Length 
 //5D       U8, Register
-//00 00 96 43	FP32, X=300mm
+//00 00 96 43	FP32, X=300 mm
 //00 00 00 00	FP32, Y=0
-//00 00 16 43	FP32, Z=150mm
-//db 0f 49 40	FP32, Rx=πrad
+//00 00 16 43	FP32, Z=150 mm
+//db 0f 49 40	FP32, Rx=π rad
 //00 00 00 00	FP32, Ry=0
 //00 00 00 00	FP32, Rz=0
-//00 00 48 43	FP32, motion speed=200mm/s
-//00 00 FA 44	FP32, acceleration=2000mm/s2
-//00 00 00 00	FP32, 
-base coordinate system motion
-Motion coordinate system：
-0: the base coordinate system motion
-1: the tool coordinate system motion
-
-//00
-0absolute pose
-If the motion coordinate system is the base coordinate system.
-0 represents the given pose is an absolute pose
-1 represents the given pose is a relative pose
-The given parameters 1-6 coordinates are based on the current an offset of position
+//00 00 48 43	FP32, motion speed=200 mm/s
+//00 00 FA 44	FP32, acceleration=2000 mm/s²
+//00 00 00 00	FP32, 0 i the robot base coordinate system, 1 is robot tool coordinate system.
+//00  U8,  If the motion reference is the robot base, then 0 is absolute pose, 1 is relative pose.
 ```
 {% endcode %}
 

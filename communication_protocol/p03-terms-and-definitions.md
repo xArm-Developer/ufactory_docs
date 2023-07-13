@@ -22,7 +22,7 @@
 
 ### **End Effector**
 
-> The end effector, installed on the front end of the wrist of the robotic arm, is used to install special tools (such as grippers, vacuum gripper, etc.), which can directly perform work tasks.
+> The end effector, installed on the front end of the wrist of the robotic arm, is used to install special tools (such as gripper, vacuum gripper, etc.), which can directly perform work tasks.
 
 ### **Enable Robotic Arm**
 
@@ -67,7 +67,7 @@ $$
 > Then the representation of the axial angle:
 
 ```
-[Rx, Ry, Rz] = [x * phi, y * phi, z * phi] 
+[Rx, Ry, Rz] = [x * φ, y * φ, z * φ] 
 ```
 
 > Note:
@@ -76,15 +76,15 @@ $$
 >
 > 2\. The vector length (modulus) of \[Rx, Ry, Rz] can be used to estimate the rotation angle, and the vector direction is the rotation direction.
 >
-> 3\. If you want to express reverse rotation, invert the rotation axis vector \[x, y, z], and the value of phi remains unchanged.
+> 3\. If you want to express reverse rotation, invert the rotation axis vector \[x, y, z], and the value of φ remains unchanged.
 >
-> 4\. Using phi and \[x, y, z] can also derive the attitude representation as unit quaternion
+> 4\. Using φ and \[x, y, z] can also derive the attitude representation as unit quaternion
 
 ```
-q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
+q = [cos (φ / 2), sin (φ / 2) * x, sin (φ / 2) * y, sin (φ / 2) * z]
 ```
 
-> For example:The vector of the rotation axis represented by the base coordinate system is \[1, 0, 0], and the rotation angle is 180 degrees (π), then the axis angle representation of this pose is \[π, 0, 0].The rotation axis is \[0.707, 0.707, 0] and the rotation angle is 90 degrees (π / 2), then the axis angle posture is
+> For example:The vector of the rotation axis represented by the base coordinate system is \[1, 0, 0], and the rotation angle is 180 degrees (π), then the axis angle representation of this pose is \[π, 0, 0]. The rotation axis is \[0.707, 0.707, 0] and the rotation angle is 90 degrees (π / 2), then the axis angle posture is
 
 ```
 [0.707 * (π / 2), 0.707 * (π / 2), 0]
@@ -100,11 +100,11 @@ q = [cos (phi / 2), sin (phi / 2) * x, sin (phi / 2) * y, sin (phi / 2) * z]
 
 #### **Tool Coordinate System**
 
-* Consists of tool center point and coordinate orientation. If the TCP offset is not set, the default tool coordinate system is located at flange center.For tool coordinate system based motion: The tool center point is taken as the zero point, and the trajectory of the robotic arm refers to the tool coordinate system.
+* Consists of tool center point and coordinate orientation. If the TCP offset is not set, the default tool coordinate system is located at flange center. For tool coordinate system based motion: The tool center point is taken as the zero point, and the trajectory of the robotic arm refers to the tool coordinate system.
 
 #### **User Coordinate System**
 
-* The user coordinate system can be defined as any other referencecoordinate system rather than the robot base.
+* The user coordinate system can be defined as any other reference coordinate system rather than the robot base.
 
 ### **Manual Mode**
 

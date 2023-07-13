@@ -154,7 +154,7 @@ Motion state：
 **Register:14 (0x0E)**
 
 ```
-// Request
+// Request:
 00 01 00 02 00 01 0E
 ```
 
@@ -368,7 +368,7 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 **Register:19 (0x13)**
 
 {% hint style="warning" %}
-The above operations will terminate the ongoing movement of the robotic arm and clear the cache commands, which is the same as the STOP state.
+This operation will terminate the ongoing movement of the robot and clear the cache commands, which is the same as the STOP state.
 {% endhint %}
 
 ```
@@ -385,19 +385,17 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 //00 02    U16, Protocol Identifier
 //00 02    U16, Length 
 //13       U8, Register
-
-//00       U8, 
-Motion mode：
+//00       U8, Motion mode
 0: Position control mode
-1: servo motion mode
-2: Joint teaching mode
+1: Servo motion mode
+2: Joint teaching mode (manual mode)
 3: Cartesian teaching mode (not yet available)
 4: Joint velocity control mode
 5: Cartesian velocity control mode
 6: Joint online trajectory planning mode
 7: Cartesian online trajectory planning mode
 
-//00       U8, Teach mode load detection  0:ON   1:OFF
+//00       U8, Payload detection before turn on manual mode. 0 is ON, 1 is OFF.
 ```
 
 </details>

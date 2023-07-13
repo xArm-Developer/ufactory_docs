@@ -5,7 +5,7 @@
 **Register:51 (0x33)**
 
 {% hint style="warning" %}
-Set the gravity direction for correct torque compensation and collision detection. After modification, it shall call the save\_conf () function or refer to Register: 40(28) to save the setting, otherwise it will be invalid after the next restart.
+Set the gravity direction for correct torque compensation and collision detection. After modification, it shall call the save\_conf () function or refer to Register: 40(28) to save the setting, otherwise it will be invalid after reboot.
 {% endhint %}
 
 ```
@@ -48,12 +48,12 @@ Set the gravity direction for correct torque compensation and collision detectio
 
 </details>
 
-## Set the safe boundary range
+## Set the safe boundary
 
 **Register:52 (0x34)**
 
 {% hint style="warning" %}
-C35 Set the boundary range of the safety fence in the three-dimensional space. If TCP of the robotic arm exceeds this boundary, error C35of the Control Box will be triggered.
+C35 Set the boundary range of the safety fence in the three-dimensional space. If TCP of the robotic arm exceeds this boundary, error C35 of the Control Box will be triggered.
 {% endhint %}
 
 {% code overflow="wrap" %}
@@ -72,12 +72,12 @@ C35 Set the boundary range of the safety fence in the three-dimensional space. I
 //00 02    U16, Protocol Identifier
 //00 19    U16, Length 
 //34       U8, Register
-//58,02,00,00	FP32, Cartesian boundary value x+=600mm
-//C8,00,00,00	FP32, Cartesian boundary value x-=200mm
-//F4,01,00,00	FP32, Cartesian boundary value y+ =500mm
-//64,00,00,00	FP32, Cartesian boundary value y- =100mm
-//58,02,00,00	FP32, Cartesian boundary value z+=600mm
-//C8,00,00,00	FP32, Cartesian boundary value z-=200mm
+//58,02,00,00	FP32, Cartesian boundary value x+ =600 mm
+//C8,00,00,00	FP32, Cartesian boundary value x- =200 mm
+//F4,01,00,00	FP32, Cartesian boundary value y+ =500 mm
+//64,00,00,00	FP32, Cartesian boundary value y- =100 mm
+//58,02,00,00	FP32, Cartesian boundary value z+ =600 mm
+//C8,00,00,00	FP32, Cartesian boundary value z- =200 mm
 ```
 
 </details>
@@ -143,11 +143,15 @@ C35 Set the boundary range of the safety fence in the three-dimensional space. I
 //10       U8, State
 //10       U8, State
 //00	   U16,	The state of Reduce mode: 0-OFF; 1-ON
-//01 2C 00 64 01 2C FF F6 01 2C 00 32 	int16, Safety Boundary: [x_max=300, x_min=100, y_max=300, y_min=-10, z_max=300, z_min=50]
-//00 00 C8 42 fp32, Max TCP speed=100mm/s
-//DB 0F 49 40 fp32, max Joint speed=180 °/s
+//01 2C 00 64  01 2C FF F6 01 2C 00 32
+int16*6, safety boundary
+[x_max=300, x_min=100, y_max=300, y_min=-10, z_max=300, z_min=50]
 
-//DB 0F C9 C0 DB 0F C9 40 15 C6 03 C0 91 0A 06 40 CE 53 7B C0 68 96 44 3E DB 0F C9 C0 DB 0F C9 40 35 B3 D8 BF DB 0F 49 40 DB 0F C9 C0 DB 0F C9 40 00 00 00 00 00 00 00 00 	FP32, Joint range: [J1_min, J1_max, …, J7_min, J7_max]
+//00 00 C8 42 FP32, Max TCP speed=100mm/s
+//DB 0F 49 40 FP32, max Joint speed=180 °/s
+
+//DB 0F C9 C0 DB 0F C9 40 15 C6 03 C0 91 0A 06 40 CE 53 7B C0 68 96 44 3E DB 0F C9 C0 DB 0F C9 40 35 B3 D8 BF DB 0F 49 40 DB 0F C9 C0 DB 0F C9 40 00 00 00 00 00 00 00 00 	
+FP32*7, Joint range: [J1_min, J1_max, …, J7_min, J7_max]
 
 //01  U8, The state of Safety Boundary: 0- OFF; 1-ON
 //01  U8, The state of Collision Rebound: 0- OFF; 1-ON 
@@ -156,7 +160,7 @@ C35 Set the boundary range of the safety fence in the three-dimensional space. I
 
 </details>
 
-## Get current joint torque of the servo
+## Get the current of each joint
 
 **Register:55 (0x37)**
 
@@ -260,12 +264,12 @@ Estimate the joint torque based on current and theoretical model, which is for r
 
 </details>
 
-## Safety boundary start switch
+## Safety boundary  switch
 
 **Register: 59 (0x3B)**
 
 {% hint style="warning" %}
-Set the safety fence boundary validation switch in three-dimensional space. If the TCP of the robotic arm exceeds this boundary after validation, error C35 of the Control Box will be triggered.
+Set the safety boundary in three-dimensional space. If the TCP of the robot exceeds this boundary, error C35 will be triggered.
 {% endhint %}
 
 ```
@@ -283,11 +287,7 @@ Set the safety fence boundary validation switch in three-dimensional space. If t
 //00 02    U16, Protocol Identifier
 //00 02    U16, Length 
 //3B       U8, Register
-
-//00       U8, 
-Validation switch
-0: Turn off safety boundary detection
-1: Turn on safety boundary detection
+//00       U8, 0: Disable safety boundary. 1: Enable safety boundary.
 ```
 {% endcode %}
 
@@ -330,7 +330,7 @@ Validation switch
 //00 02    U16, Protocol Identifier
 //00 02    U16, Length 
 //3C       U8, Register
-//00       U8, ollision Rebound switch  0-OFF; 1-ON
+//00       U8, Collision Rebound switch  0-OFF; 1-ON
 ```
 
 </details>
@@ -500,12 +500,10 @@ e. g. test.traj
 //00 09    U16, Length 
 //40       U8, Register
 //00 00 00 01    FP32, Cycles of playback
-
-<strong>//00 00 00 01    FP32, 
-</strong>Playback speed
-1: 1multiple
-2: 2multiple
-4: 4multiple
+<strong>//00 00 00 01    FP32, playback speed
+</strong>1: 1x speed
+2: 2x speed
+4: 4x speed
 </code></pre>
 
 </details>
@@ -578,14 +576,13 @@ e. g. test.traj
 
 </details>
 
-## Set allow to avoid overspeed near some singularities using approximate solutions
+## Set allow to avoid over speed near some singularities using approximate solutions
 
 **Register: 66 (0x42)**
 
-```
-// Request:
-00 01 00 02 00 02 42 00
-```
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 02 42 00
+</code></pre>
 
 <details>
 
@@ -620,9 +617,275 @@ e. g. test.traj
 
 </details>
 
-## Set the joint torque (theoretical) and current of servo
 
-**correspond to the contents of reporting port 60\~87 Bytes**
+
+## Get D-H parameters
+
+**Register: 67 (0x43)**
+
+<pre><code><strong>// Request:
+</strong>00 01 00 02 00 01 43
+</code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//43       U8, Register
+```
+
+</details>
+
+{% code overflow="wrap" %}
+```
+// Response:
+00 01 00 02 00 72 43 00 00 00 00 00 00 80 85 43 00 00 00 00 00 00 00 00 FD 44 B1 BF 00 00 00 00 DB 0F C9 BF 00 00 00 00 FD 44 B1 3F 00 00 00 00 00 00 00 00 49 BE 90 43 00 00 00 00 00 40 AB 43 DB 0F C9 BF 00 00 9B 42 00 00 00 00 00 00 00 00 DB 0F C9 3F 00 00 00 00 00 00 00 00 00 00 C2 42 DB 0F C9 BF 00 00 98 42 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+```
+{% endcode %}
+
+<details>
+
+<summary>Response Description</summary>
+
+<pre><code>//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 72    U16, Length 
+//43       U8, Register
+//00       U8, State
+
+<strong>Note:
+</strong><strong>4 float parameters per joint
+</strong>A total of 112 bytes, 28 floating-point data, 
+only the first 24 floating-point data of the xArm6 are valid data
+
+
+T2_offset = -atan(284.5/53.5) = -1.3849179 (-79.34995°)
+T3_offset = atan(284.5/53.5)+atan(0.3425/0.0775) = 2.7331843 (156.599924°)
+a2 = sqrt(284.5^2+53.5^2) = 289.48866
+T4_offset = -atan(342.5/77.5) = -1.3482664 (-77.249974°)
+a3 = sqrt(77.5^2+342.5^2) = 351.158796
+
+For example: xArm6  SN:XI120204201B02
+
+//J1     d(mm):267  alpha(rad):0 a(mm):0 offset(rad):0
+00 00 00 00 
+00 80 85 43 
+00 00 00 00 
+00 00 00 00 
+//J2     d(mm):0  alpha(rad):-pi/2  a(mm):0  offset(rad):T2_offset
+FD 44 B1 BF 
+00 00 00 00 
+DB 0F C9 BF 
+00 00 00 00 
+//J3     d(mm):0  alpha(rad):0  a(mm):a2  offset(rad):T3_offset
+FD 44 B1 3F 
+00 00 00 00 
+00 00 00 00 
+49 BE 90 43 
+//J4     d(mm):342.5  alpha(rad):-pi/2  a(mm):77.5  offset(rad):0
+00 00 00 00 
+00 40 AB 43 
+DB 0F C9 BF 
+00 00 9B 42 
+//J5     d(mm):0  alpha(rad):pi/2  a(mm):0  offset(rad):0
+00 00 00 00 
+00 00 00 00 
+DB 0F C9 BF 
+00 00 00 00 
+//J6     d(mm):97  alpha(rad):-pi/2  a(mm):76  offset(rad):0
+00 00 00 00 
+00 00 C2 42 
+DB 0F C9 BF 
+00 00 98 42 
+//J7      Null
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00
+</code></pre>
+
+</details>
+
+
+
+## Set  D-H parameters
+
+**Register: 68 (0x44)**
+
+<pre data-overflow="wrap"><code><strong>// Request:
+</strong>00 01 00 02 00 73 44 00 00 00 00 00 00 80 85 43 00 00 00 00 00 00 00 00 FD 44 B1 BF 00 00 00 00 DB 0F C9 BF 00 00 00 00 FD 44 B1 3F 00 00 00 00 00 00 00 00 49 BE 90 43 00 00 00 00 00 40 AB 43 DB 0F C9 BF 00 00 9B 42 00 00 00 00 00 00 00 00 DB 0F C9 3F 00 00 00 00 00 00 00 00 00 00 C2 42 DB 0F C9 BF 00 00 98 42 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+</code></pre>
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 73    U16, Length 
+//44       U8, Register
+
+Note:
+4 float parameters per joint
+A total of 112 bytes, 28 floating-point data, 
+only the first 24 floating-point data of the xArm6 are valid data
+
+
+T2_offset = -atan(284.5/53.5) = -1.3849179 (-79.34995°)
+T3_offset = atan(284.5/53.5)+atan(0.3425/0.0775) = 2.7331843 (156.599924°)
+a2 = sqrt(284.5^2+53.5^2) = 289.48866
+T4_offset = -atan(342.5/77.5) = -1.3482664 (-77.249974°)
+a3 = sqrt(77.5^2+342.5^2) = 351.158796
+
+For example: xArm6  SN:XI120204201B02
+
+//J1     d(mm):267  alpha(rad):0 a(mm):0 offset(rad):0
+00 00 00 00 
+00 80 85 43 
+00 00 00 00 
+00 00 00 00 
+//J2     d(mm):0  alpha(rad):-pi/2  a(mm):0  offset(rad):T2_offset
+FD 44 B1 BF 
+00 00 00 00 
+DB 0F C9 BF 
+00 00 00 00 
+//J3     d(mm):0  alpha(rad):0  a(mm):a2  offset(rad):T3_offset
+FD 44 B1 3F 
+00 00 00 00 
+00 00 00 00 
+49 BE 90 43 
+//J4     d(mm):342.5  alpha(rad):-pi/2  a(mm):77.5  offset(rad):0
+00 00 00 00 
+00 40 AB 43 
+DB 0F C9 BF 
+00 00 9B 42 
+//J5     d(mm):0  alpha(rad):pi/2  a(mm):0  offset(rad):0
+00 00 00 00 
+00 00 00 00 
+DB 0F C9 BF 
+00 00 00 00 
+//J6     d(mm):97  alpha(rad):-pi/2  a(mm):76  offset(rad):0
+00 00 00 00 
+00 00 C2 42 
+DB 0F C9 BF 
+00 00 98 42 
+//J7      Null
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00
+
+//00     U8,Set flag
+0: use the set DH parameters, but do not save to the configuration file
+1: Use the set DH parameters and save them to the configuration file
+2: Use the set DH parameters and delete the configuration file
+3: Use the default DH parameters, but do not delete the configuration file
+4: Use the default DH parameters and delete the configuration file
+```
+
+</details>
+
+{% code overflow="wrap" %}
+```
+// Response:
+00 01 00 02 00 02 44 00
+```
+{% endcode %}
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 02    U16, Length 
+//44       U8, Register
+//00       U8, State
+```
+
+</details>
+
+
+
+## Get the currently executing command
+
+It needs to be parsed according to different registers
+
+**Register: 69 (0x45)**
+
+```
+// Request:
+00 01 00 02 00 01 45
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//45       U8, Register
+```
+
+</details>
+
+{% code overflow="wrap" %}
+```
+// Response:
+00 01 00 02 00 2B 45 00 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 C2 B8 B2 3E 58 A0 0B 41 00 00 00 00
+```
+{% endcode %}
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 2B    U16, Length 
+//45       U8, Register
+//00       U8, State
+//17       U8, 
+Current execution motion instruction register:
+0x15: Cartesian linear motion
+0x16: Linear motion with arc blending
+0x17: P2P joint movement
+0x18: joint blending movement
+0x19: Back to zero movement
+0x1B: arc movement
+0x1C: Linear motion in tool coordinate system
+0x5C: linear motion of axis angle attitude target
+
+//00 00 00 00	FP32, Joint1=0 
+//00 00 00 00	FP32, Joint2=0
+//00 00 00 00	FP32, Joint3=0
+//00 00 00 00	FP32, Joint4=0
+//00 00 00 00	FP32, Joint5=0
+//00 00 00 00	FP32, Joint6=0
+//00 00 00 00	FP32, Joint7=0
+//C2 B8 B2 3E	FP32, speed=20π/180 rad/s
+//58 A0 0B 41	FP32, 500π/180 rad/s²
+//00 00 00 00	FP32, motion time=0
+```
+
+</details>
+
+
+
+
+
+## Select current data or torque data to report
+
+**Correspond to the report contents "60\~87 Bytes" of TCP ports 30001/30002/30003**
 
 **Register: 70 (0x46)**
 
@@ -666,3 +929,6 @@ value of theoretical joint torque)
 ```
 
 </details>
+
+
+

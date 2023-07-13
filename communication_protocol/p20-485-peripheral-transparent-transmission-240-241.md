@@ -60,11 +60,8 @@
 //00 02    U16, Protocol Identifier
 //00 0B    U16, Length 
 //F1       U8, Register
-//09       U8, 
-Hhost ID:
-Tool485：09
-Control box 485：0A
-//00    User data
+//09       U8, Host ID, robot tool 485 is 09, control box 485 is 0A.
+//00       User data
 ```
 
 </details>
@@ -84,11 +81,8 @@ Control box 485：0A
 //00 08    U16, Length 
 //F1       U8, Register
 //00       U8, State
-//09       U8, 
-Hhost ID:
-Tool485：09
-Control box 485：0A
-//00    User data
+//09       U8, Host ID, robot tool 485 is 09, control box 485 is 0A.
+//00       User data
 ```
 
 </details>

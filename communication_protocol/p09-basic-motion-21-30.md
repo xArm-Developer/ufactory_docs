@@ -27,7 +27,7 @@
 //00 00 00 00	FP32, pitch=0
 //00 00 00 00	FP32, yaw=0
 //00 00 C8 42	FP32, speed=100mm/s
-//00 00 FA 44	FP32, acceleration=2000mm/s2）=500*π/180rad/s2
+//00 00 FA 44	FP32, acceleration=2000mm/s²
 //00 00 00 00	FP32, 0motion time=0
 ```
 
@@ -79,7 +79,7 @@
 //00 00 00 00 FP32, pitch=0
 //00 00 00 00 FP32, yaw=0
 //00 00 C8 42 FP32, motion speed=100 mm/s
-//00 00 FA 44 FP32, acceleration=2000mm/s2
+//00 00 FA 44 FP32, acceleration=2000 mm/s²
 //00 00 00 00 FP32, motion time 0
 //00 00 48 42 FP32, Arc blending radius=50 mm
 ```
@@ -133,8 +133,8 @@
 //00 00 00 00	FP32, Joint5=0
 //00 00 00 00	FP32, Joint6=0
 //00 00 00 00	FP32, Joint7=0
-//C2 B8 B2 3E	FP32, speed=20π/180rad/s
-//58 A0 0B 41	FP32, 500π/180rad/s2
+//C2 B8 B2 3E	FP32, speed=0.3491 rad/s
+//58 A0 0B 41	FP32, acceleration= 8.7266 rad/s²
 //00 00 00 00	FP32, motion time=0
 ```
 
@@ -187,9 +187,9 @@
 //00 00 00 00	FP32, Joint5=0
 //00 00 00 00	FP32, Joint6=0
 //00 00 00 00	FP32, Joint7=0
-//C2 B8 B2 3E	FP32, speed=20π/180rad/s
-//58 A0 0B 41	FP32, acceleration=500π/180rad/s2
-//00 00 20 41	FP32, Arc blending radius=10mm
+//C2 B8 B2 3E	FP32, speed=0.3491 rad/s
+//58 A0 0B 41	FP32, acceleration=8.7266 rad/s²
+//00 00 20 41	FP32, radius=10 mm
 ```
 
 </details>
@@ -232,8 +232,8 @@
 //00 02    U16, Protocol Identifier
 //00 0D    U16, Length 
 //19       U8, Register
-//DB 0F 49 40	FP32, speed=50rad/s
-//F3 66 DF 40	FP32, acceleration=600rad/s2
+//DB 0F 49 40	FP32, speed=50 rad/s
+//F3 66 DF 40	FP32, acceleration=600 rad/s²
 //00 00 00 00	FP32, motion time=0
 ```
 
@@ -304,7 +304,7 @@
 
 ## Circular motion
 
-**RRegister:27 (0x1B)**
+**Register:27 (0x1B)**
 
 {% hint style="warning" %}
 The motion calculates the trajectory of the space circle according to the three-point coordinates, and the three-point coordinates are (current starting point, parameter 1, parameter 2)
@@ -327,20 +327,20 @@ The motion calculates the trajectory of the space circle according to the three-
 //00 02    U16, Protocol Identifier
 //00 41    U16, Length 
 //1B       U8, Register
-//00 00 C8 43 FP32, x=400mm
+//00 00 C8 43 FP32, x=400 mm
 //00 00 00 00 FP32, y=0mm
-//00 00 48 43 FP32, z=200mm
+//00 00 48 43 FP32, z=200 mm
 //DB 0F 49 40 FP32, roll=π
 //00 00 00 00 FP32, pitch=0
 //00 00 00 00 FP32, yaw=0
-//00 00 C8 43 FP32, x=400mm
+//00 00 C8 43 FP32, x=400 mm
 //00 00 C8 42 FP32, y=0mm
-//00 00 48 43 FP32, z=200mm
-//DB 0F 49 40 FP32, 0roll=π
+//00 00 48 43 FP32, z=200 mm
+//DB 0F 49 40 FP32, roll=π
 //00 00 00 00 FP32, pitch=0
 //00 00 00 00 FP32, yaw=0
-//00 00 C8 42 FP32, speed=100mm/s
-//00 00 FA 44 FP32, acceleration500*π/180rad/s2
+//00 00 C8 42 FP32, speed=100 mm/s
+//00 00 FA 44 FP32, acceleration 2000 mm/s²
 //00 00 00 00 FP32, motion time=0
 //00 00 48 42 FP32, Percentage of the length of arc in motion to circumference=50%
 ```
@@ -392,14 +392,14 @@ Move in Cartesian linear relative motion based on the current tool coordinate sy
 //00 02    U16, Protocol Identifier
 //00 25    U16, Length 
 //1C       U8, Register
-//00 00 C8 43	FP32, x=400mm
-//00 00 00 00	FP32, y=0mm
-//00 00 48 43	FP32, z=200mm
+//00 00 C8 43	FP32, x=400 mm
+//00 00 00 00	FP32, y=0 mm
+//00 00 48 43	FP32, z=200 mm
 //DB 0F 49 40	FP32, roll=π
 //00 00 00 00	FP32, pitch=0
 //00 00 00 00	FP32, yaw=0
-//C2 B8 B2 3E	FP32, speed=20mm/s
-//00 00 FA 44	FP32, acceleration=2000mm/s2
+//C2 B8 B2 3E	FP32, speed=20 mm/s
+//00 00 FA 44	FP32, acceleration=2000 mm/s²
 //00 00 00 00	FP32, motion time=0
 ```
 

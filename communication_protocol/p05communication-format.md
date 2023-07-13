@@ -4,15 +4,15 @@
 
 The following explains some of the symbols used in the examples and tables:
 
-> **【u8】:** 1 Byte, 8-bit unsigned int
+> **U8:** 1 Byte, 8-bit unsigned int
 >
-> **【u16】:** 2 Bytes, 16-bit unsigned int
+> **U16:** 2 Bytes, 16-bit unsigned int
 >
-> **【fp32】:** 4 Bytes, float
+> **FP32:** 4 Bytes, float
 >
-> **【str】:** String
+> **str:** String
 >
-> **【System reset】:** The user just enters the state after the mode switch or changes some settings (such as TCP offset, sensitivity, etc.). The above operations will terminate the ongoing movement of the robotic arm and clear the cache command, which is the same as the STOP state.
+> **System reset:** The user just enters the state after the mode switch or changes some settings (such as TCP offset, sensitivity, etc.). It will terminate the ongoing movement of the robot and clear all the cache commands, which is the same as the STOP state.
 
 ## Private protocol Format <a href="#_toc23244" id="_toc23244"></a>
 
@@ -30,66 +30,61 @@ Private protocol Process:
 >
 > 4\. Waiting for a response under the same connection.
 >
-> 5\. Use the recv command to read the message and complete a data exchange.
+> 5\. Use the receive command to read the message and complete a data exchange.
 >
 > 6\. When the communication task ends, close the TCP connection.
 
 Parameter:
 
-> Default TCP Port: 502
+> TCP Port: 502
 >
-> Protocol: 0x00 0x02 Control (Only this one for now)
+> Protocol: 00 02
 
 {% tabs %}
-{% tab title="Request Commands Format" %}
-| Format                                        | Transaction Identifier (u16) | Protocol (u16) | Length (u16) | Register (u8) | <p>Parameters</p><p>(Refer to the statement of each commands</p> |
-| --------------------------------------------- | ---------------------------- | -------------- | ------------ | ------------- | ---------------------------------------------------------------- |
-| Length                                        | 2 Bytes                      | 2 Bytes        | 2 Bytes      | 1 Byte        | n Bytes                                                          |
-| <p>Example</p><p>(Enable the robotic arm)</p> | 0x00 0x01                    | 0x00 0x02      | 0x00 0x03    | 0x0B          | 0x08 0x01                                                        |
+{% tab title="Request Command Format" %}
+<table data-header-hidden><thead><tr><th></th><th width="147"></th><th width="108"></th><th width="103"></th><th></th><th></th></tr></thead><tbody><tr><td>Format</td><td>Transaction Identifier U16</td><td>Protocol<br>U16</td><td>Length U16</td><td>Register <br>U8</td><td><p>Parameter</p><p></p></td></tr><tr><td>Length</td><td>2 Bytes</td><td>2 Bytes</td><td>2 Bytes</td><td>1 Byte</td><td>n Bytes</td></tr><tr><td><p>Example</p><p>(Enable the robot)</p></td><td>00 01</td><td>00 02</td><td>00 03</td><td>0B</td><td>08 01</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Response Command Format" %}
-| Format                                        | <p>Transaction Identifier</p><p>(u16)</p> | <p>Protocol</p><p>(u16)</p> | <p>Length</p><p>(u16)</p> | <p>Register</p><p>(u8)</p> | <p>Status</p><p>(u8)</p> | <p>Parameters</p><p>(Refer to the statement of each commands)</p> |
-| --------------------------------------------- | ----------------------------------------- | --------------------------- | ------------------------- | -------------------------- | ------------------------ | ----------------------------------------------------------------- |
-| Length                                        | 2 Bytes                                   | 2 Bytes                     | 2 Bytes                   | 1 Byte                     | 1 Byte                   | n Bytes                                                           |
-| <p>Example</p><p>(Enable the robotic arm)</p> | 0x00 0x01                                 | 0x00 0x02                   | 0x00 0x02                 | 0x0B                       | 0x00                     | none                                                              |
+<table data-header-hidden><thead><tr><th width="154"></th><th width="130"></th><th width="103"></th><th width="98"></th><th></th><th width="86"></th><th></th></tr></thead><tbody><tr><td>Format</td><td><p>Transaction Identifier</p><p>U16</p></td><td><p>Protocol</p><p>U16</p></td><td><p>Length</p><p>U16</p></td><td><p>Register</p><p>U8</p></td><td><p>Status</p><p>U8</p></td><td><p>Parameters</p><p></p></td></tr><tr><td>Length</td><td>2 Bytes</td><td>2 Bytes</td><td>2 Bytes</td><td>1 Byte</td><td>1 Byte</td><td>n Bytes</td></tr><tr><td><p>Example</p><p>Enable the robot</p></td><td>00 01</td><td>00 02</td><td>00 02</td><td>0B</td><td>00</td><td>none</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 
 Status Bit of the Response Format
 
-| Bit7      | Bit6                            | Bit5                              | Bit4                                            | Bit3      | Bit2      | Bit1      | Bit0      |
-| --------- | ------------------------------- | --------------------------------- | ----------------------------------------------- | --------- | --------- | --------- | --------- |
-| 0: normal | <p>1: error</p><p>0: normal</p> | <p>1: warning</p><p>0: normal</p> | <p>1: cannot perform motion</p><p>0: normal</p> | 0: normal | 0: normal | 0: normal | 0: normal |
+* Bit 0,  reserved.
+* Bit 1, reserved.
+* Bit 2, reserved.
+* Bit 3, reserved.
+* Bit 4, 0 is normal. 1 means unable to move.
+* Bit 5, 0 is normal, 1 means there is warning.&#x20;
+* Bit 6, 0 is normal, 1 means there is error.
+* Bit 7, reserved
 
 {% hint style="warning" %}
 General notes:
 {% endhint %}
 
 * Transaction Identifier: Generally, 1 is added after each communication to distinguish different communication data packets.
-* Protocol : 0x00 0x02 means ModbusTCP protocol.
+* Protocol : 00 02 means Modbus TCP protocol.
 * Length: Indicates the next data length in bytes.
 * Register: Device address.
 
-## **On the problem of users using communication protocols to organize data in big endian and little endian:**
+## **Data in big endian and little endian:**
 
-#### Modbus-TCP control protocol:
+#### This  protocol:
 
-> 1\. The transaction identifier (u16) are analyzed in big endian order.
+> 1\. The transaction identifier (U16) are in big endian order.
 >
-> 2\. protocol identifier (u16) and are analyzed in big endian order.
+> 2\. Protocol identifier (U16) and are in big endian order.
 >
-> 3\. length (u16) of the message head are analyzed in big endian order.
+> 3\. Length (U16) of the message head are in big endian order.
 >
-> 4\. The 32-bit data (fp32, int32) in the parameter are analyzed in little endian order.
+> 4\. The 32-bit data (FP32, int32) in the parameter are in little endian order.
 >
-> 5\. Integer data(u16) involving GPIO operation are analyzed in big endian order.
+> 5\. Integer data(U16) include GPIO operation are in big endian order.
 
-#### Automatic reporting data analysis:
 
-> 1\. Integer data (16/32 bits) are analyzed in big endian order.
->
-> 2\. Floating-point (fp32) data is analyzed in little endian order.
 
 **Example:**
 
@@ -97,10 +92,10 @@ General notes:
 
 {% tabs %}
 {% tab title="Big-endian method:" %}
-<table data-header-hidden><thead><tr><th width="115"></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td>0x100</td><td>0x101</td><td>0x102</td><td>0x103</td><td></td></tr><tr><td>...</td><td>0x12</td><td>0x34</td><td>0x56</td><td>0x78</td><td>...</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="115"></th><th width="110"></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td>0x100</td><td>0x101</td><td>0x102</td><td>0x103</td><td></td></tr><tr><td>...</td><td>0x12</td><td>0x34</td><td>0x56</td><td>0x78</td><td>...</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Little-endian method:" %}
-<table data-header-hidden><thead><tr><th width="111"></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td>0x100</td><td>0x101</td><td>0x102</td><td>0x103</td><td></td></tr><tr><td>...</td><td>0x78</td><td>0x56</td><td>0x34</td><td>0x12</td><td>...</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="111"></th><th width="136"></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td>0x100</td><td>0x101</td><td>0x102</td><td>0x103</td><td></td></tr><tr><td>...</td><td>0x78</td><td>0x56</td><td>0x34</td><td>0x12</td><td>...</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}

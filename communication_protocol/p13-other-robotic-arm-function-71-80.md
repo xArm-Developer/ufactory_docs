@@ -1,12 +1,12 @@
 # Other Robotic Arm Function(71-80)
 
-## Set the offset of the user coordinate system and the base coordinate system
-
-{% hint style="warning" %}
-Set the offset of the user coordinate system and the base coordinate system, specifically the offset described by the base coordinate system of the robotic arm under the user-defined coordinate system
-{% endhint %}
+## Set coordinate system
 
 **Register: 73 (0x49)**
+
+{% hint style="warning" %}
+The coordinate system parameter to be set is to describe the robot base in the coordinate system you define
+{% endhint %}
 
 {% code overflow="wrap" %}
 ```
@@ -129,7 +129,7 @@ Representation of output pose:
 
 </details>
 
-## Set the self-collision detection function of the robotic arm (The end tools)
+## Self-collision detection switchSet geometric model for self-collision detection
 
 **Register: 77 (0x4D)**
 
@@ -173,7 +173,7 @@ Representation of output pose:
 
 </details>
 
-## The geometric model of the end tool added when setting the self-collision detection
+## Set geometric model for self-collision detection
 
 **Register: 78 (0x4E)**
 
@@ -193,7 +193,7 @@ Representation of output pose:
 <strong>//00 00 A0 41    
 </strong>//00 00 F0 41
 //00 00 48 42    3*FP32,
-Parameter 1 (The end tool is a cuboid)
+Parameter 1 (Geometric model is a cuboid)
 x=20,y=30,z=50
 Additional definition parameter area: x maximum is 6, the actual length depends on the number of parameters required by the tool type definition. 
 If there is no parameter, there is no data here.
@@ -247,13 +247,9 @@ Robotiq 2F-140 gripper: 5
 
 </details>
 
-## Set whether to enable the virtual robotic arm mode
+## Simulation Robot
 
 **Register: 79 (0x4F)**
-
-{% hint style="warning" %}
-If you enter the virtual robotic arm mode, the real robotic arm will not move, but the reported position of the robotic arm will change with the command to drive the virtual robotic arm to move.
-{% endhint %}
 
 ```
 // Request:
@@ -270,8 +266,8 @@ If you enter the virtual robotic arm mode, the real robotic arm will not move, b
 //00 02    U16, Length 
 //4F       U8, Register
 //01       U8,
-0: the real robotic arm mode
-1: the virtual robotic arm mode
+0: Real robot
+1: Simulation
 ```
 
 </details>

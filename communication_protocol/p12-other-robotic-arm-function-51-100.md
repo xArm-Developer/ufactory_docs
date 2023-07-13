@@ -269,7 +269,7 @@ Estimate the joint torque based on current and theoretical model, which is for r
 **Register: 59 (0x3B)**
 
 {% hint style="warning" %}
-Set the safety boundary switch in three-dimensional space. If the TCP of the robotic arm exceeds this boundary after validation, error C35 of the Control Box will be triggered.
+Set the safety boundary in three-dimensional space. If the TCP of the robot exceeds this boundary, error C35 will be triggered.
 {% endhint %}
 
 ```
@@ -287,11 +287,7 @@ Set the safety boundary switch in three-dimensional space. If the TCP of the rob
 //00 02    U16, Protocol Identifier
 //00 02    U16, Length 
 //3B       U8, Register
-
-//00       U8, 
-Validation switch
-0: Turn off safety boundary detection
-1: Turn on safety boundary detection
+//00       U8, 0: Disable safety boundary. 1: Enable safety boundary.
 ```
 {% endcode %}
 
@@ -504,12 +500,10 @@ e. g. test.traj
 //00 09    U16, Length 
 //40       U8, Register
 //00 00 00 01    FP32, Cycles of playback
-
-<strong>//00 00 00 01    FP32, 
-</strong>Playback speed
-1: 1multiple
-2: 2multiple
-4: 4multiple
+<strong>//00 00 00 01    FP32, playback speed
+</strong>1: 1x speed
+2: 2x speed
+4: 4x speed
 </code></pre>
 
 </details>
@@ -582,7 +576,7 @@ e. g. test.traj
 
 </details>
 
-## Set allow to avoid overspeed near some singularities using approximate solutions
+## Set allow to avoid over speed near some singularities using approximate solutions
 
 **Register: 66 (0x42)**
 
@@ -625,7 +619,7 @@ e. g. test.traj
 
 
 
-## Get DH parameters
+## Get D-H parameters
 
 **Register: 67 (0x43)**
 
@@ -718,7 +712,7 @@ DB 0F C9 BF
 
 
 
-## Set  DH parameters
+## Set  D-H parameters
 
 **Register: 68 (0x44)**
 
@@ -878,8 +872,8 @@ Current execution motion instruction register:
 //00 00 00 00	FP32, Joint5=0
 //00 00 00 00	FP32, Joint6=0
 //00 00 00 00	FP32, Joint7=0
-//C2 B8 B2 3E	FP32, speed=20π/180rad/s
-//58 A0 0B 41	FP32, 500π/180rad/s2
+//C2 B8 B2 3E	FP32, speed=20π/180 rad/s
+//58 A0 0B 41	FP32, 500π/180 rad/s²
 //00 00 00 00	FP32, motion time=0
 ```
 

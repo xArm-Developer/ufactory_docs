@@ -34,11 +34,9 @@ Please provide the SN and contact us<[support@ufactory.cc](mailto:support@ufacto
 
 
 
-{% hint style="warning" %}
+{% hint style="success" %}
 The calibration parameters are not saved in the control box, swapping another control box will not affect the accuracy of the robot.
 {% endhint %}
-
-
 
 #### Appendix: <a href="#h_25addac8c1" id="h_25addac8c1"></a>
 

@@ -35,4 +35,5 @@
 
 * [Programming](support-articles/programming/README.md)
   * [UFACTORY Studio "Server is not ready"](support-articles/programming/ufactory-studio-server-is-not-ready.md)
-* [Hardware](support-articles/hardware.md)
+* [Hardware](support-articles/hardware/README.md)
+  * [What should I do if I swap the robot control box?](support-articles/hardware/what-should-i-do-if-i-swap-the-robot-control-box.md)

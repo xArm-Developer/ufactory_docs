@@ -10,6 +10,9 @@ Error Code：0x09
 > {% endcode %}
 
 > ```
+> ```
+
+> ```
 > Gripper Current Detection Error
 > Please restart the xArm with the Emergency Stop Button on the xArm Control Box.
 > ```

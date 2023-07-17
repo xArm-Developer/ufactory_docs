@@ -28,6 +28,10 @@ Regardless of the model of the control box:
 
 Press down the E stop button and release, the friction parameters will load automatically.
 
+
+
+
+
 2\) If your arm is 12xx model:
 
 Please provide the SN and contact us<[support@ufactory.cc](mailto:support@ufactory.cc)> to remotely put the original friction parameters into the new control box.
@@ -42,9 +46,11 @@ The calibration parameters are not saved in the control box, swapping another co
 
 
 
+
+
 #### Appendix: <a href="#h_25addac8c1" id="h_25addac8c1"></a>
 
-1\. What parameters are saved in the configuration file?
+<mark style="color:blue;">1. What parameters are saved in the configuration file?</mark>
 
 * Motion: Acceleration, Position Step, Attitude Step, Teach Sensitivity, Collision Sensitivity, Initial Position.
 * TCP payload, TCP offset
@@ -52,10 +58,12 @@ The calibration parameters are not saved in the control box, swapping another co
 * Mounting: Tilt Angle, Rotate Angle.
 * Coordinate System(word\_offset).
 
-2\. How to simply judge if the friction parameters are loaded successfully?
+<mark style="color:blue;">2. How to simply judge if the friction parameters are loaded successfully?</mark>
 
 1\) You should see the 'Recording' module on UFactory Studio software.
 
 2\) You can enable the manual mode on the ‘Live Control’ page.
 
-3\. The main difference between xArm 12xx and 13xx?
+<mark style="color:blue;">3. The main difference between xArm 12xx and 13xx?</mark>
+
+[http://help.ufactory.cc/en/articles/5688912-the-main-difference-between-xarm-xf-xi-xs12xx-and-xarm-xf-xi-xs13xx](http://help.ufactory.cc/en/articles/5688912-the-main-difference-between-xarm-xf-xi-xs12xx-and-xarm-xf-xi-xs13xx)

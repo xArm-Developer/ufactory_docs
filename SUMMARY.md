@@ -31,6 +31,6 @@
 * [websocketapi](websocketapi/README.md)
   * [WebsocketAPI](websocketapi/websocketapi.md)
 
-## Group 1
+## Support Articles
 
-* [Support Articles](group-1/support-articles.md)
+* [Programming](support-articles/programming.md)

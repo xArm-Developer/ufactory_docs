@@ -8,7 +8,7 @@ Problem explanation
 
 ● “Server is not ready” means that the client cannot access the server.
 
-● UFACTORY xArm Studio is divided into server and client.
+● UFACTORY Studio is divided into server and client.
 
 Client:
 
@@ -16,13 +16,11 @@ UFACTORY xArm Studio Client is installed on the user's computer. The client is t
 
 Server:
 
-UFACTORY xArm Studio Server is installed and running in the UFACTORY xArm control box. Before the UFACTORY xArm leaves the factory, UFACTORY xArm Studio has been installed in the control box, so users do not need to install it by themselves.
+UFACTORY Studio Server is installed and running in the UFACTORY xArm control box. Before the UFACTORY robots leaves the factory, UFACTORY Studio has been installed in the control box, so users do not need to install it by themselves.
 
 \* Note:
 
-1, For control boxes shipped before 2019.5.1, UFACTORY xArm Studio is not installed in the control box.
-
-2, It takes 1-2 minutes to boot the firmware and xArmStudio. After each reboot, please wait for 1-2 minutes before connecting.
+It takes 1-2 minutes to boot the firmware and xArmStudio. After each reboot, please wait for 1-2 minutes before connecting.
 
 Troubleshoot the problem step by step:
 
@@ -54,6 +52,6 @@ Appendix
 
 ● For the installation package of UFACTORY xArm Tool GUI and the installation method of UFACTORY xArm Studio, please check the link:
 
-● For the method of configuring IP, please check the link:
+● For the method of configuring IP, please check the user manual
 
-● Please contact technical support by email:
+● Please contact technical support by email: [support@ufactory.cc](mailto:Support@ufactory.cc)

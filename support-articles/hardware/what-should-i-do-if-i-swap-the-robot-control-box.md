@@ -34,9 +34,13 @@ Please provide the SN and contact us<[support@ufactory.cc](mailto:support@ufacto
 
 
 
-Note：
+
+
+<mark style="color:red;">**Note：**</mark>
 
 The calibration parameters are not saved in the control box, swapping another control box will not affect the accuracy of the xArm.
+
+
 
 #### Appendix: <a href="#h_25addac8c1" id="h_25addac8c1"></a>
 

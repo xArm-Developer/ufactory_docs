@@ -1,2 +1,2 @@
-# 📍 Error Reporting and Handling
+# Error Reporting and Handling
 

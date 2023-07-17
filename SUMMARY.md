@@ -35,3 +35,4 @@
 
 * [Programming](support-articles/programming/README.md)
   * [UFACTORY Studio "Server is not ready"](support-articles/programming/ufactory-studio-server-is-not-ready.md)
+* [Hardware](support-articles/hardware.md)

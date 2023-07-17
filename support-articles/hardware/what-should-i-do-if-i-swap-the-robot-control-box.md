@@ -28,9 +28,7 @@ Regardless of the model of the control box:
 
 Press down the E stop button and release, the friction parameters will load automatically.
 
-
-
-
+\<br>
 
 2\) If your arm is 12xx model:
 
@@ -38,13 +36,13 @@ Please provide the SN and contact us<[support@ufactory.cc](mailto:support@ufacto
 
 
 
+{% hint style="warning" %}
+The calibration parameters are not saved in the control box, swapping another control box will not affect the accuracy of the robot.
+{% endhint %}
 
 
-<mark style="color:red;">**Note：**</mark>
 
-The calibration parameters are not saved in the control box, swapping another control box will not affect the accuracy of the xArm.
-
-
+\<br>
 
 
 

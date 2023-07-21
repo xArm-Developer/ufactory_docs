@@ -1,6 +1,7 @@
 # Table of contents
 
-* [Table of contents](README.md)
+* [Home Page](README.md)
+* [Table of contents](<README (1).md>)
 * [Introduction](communication\_protocol/README.md)
   * [Table of contents](communication\_protocol/SUMMARY.md)
   * [Terms and Definitions](communication\_protocol/p03-terms-and-definitions.md)

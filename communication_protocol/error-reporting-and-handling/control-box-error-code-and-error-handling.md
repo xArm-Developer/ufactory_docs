@@ -13,6 +13,9 @@ Error Code：0x01
 > ```
 
 > ```
+> ```
+
+> ```
 > The Emergency Stop Button on the Control Box is Pushed in to Stop
 > Please release the Emergency Stop Button, and then click "Enable Robot"
 > ```

@@ -1,13 +1,19 @@
-# Table of contents
+---
+layout:
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: false
+  outline:
+    visible: false
+  pagination:
+    visible: false
+---
 
-* [firmware](firmware/)
-  * [communication\_protocol](firmware/communication\_protocol/)
-    * [ReadMe\_en.md](firmware/communication\_protocol/ReadMe\_en.md)
-    * [Terms and Definitions](firmware/communication\_protocol/terms-and-definitions.md)
-    * [Robot specifications](firmware/communication\_protocol/robot-specifications.md)
-  * [report](firmware/report/)
-    * [get\_report\_data\_with\_port30000.py](firmware/report/get\_report\_data\_with\_port30000.py)
-    * [ReadMe\_en.md](firmware/report/ReadMe\_en.md)
-    * [ReadMe\_cn.md](firmware/report/ReadMe\_cn.md)
-* [websocketapi](websocketapi/)
-  * [websocketapi.md](websocketapi/websocketapi.md)
+# Home Page
+
+<img src=".gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
+
+<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Private TCP protocol</td><td></td><td></td><td><a href=".gitbook/assets/TCP.svg">TCP.svg</a></td><td><a href="communication_protocol/">communication_protocol</a></td></tr><tr><td>Python</td><td></td><td></td><td><a href=".gitbook/assets/Python.svg">Python.svg</a></td><td><a href="https://github.com/xArm-Developer/xArm-Python-SDK">https://github.com/xArm-Developer/xArm-Python-SDK</a></td></tr><tr><td>ROS</td><td></td><td></td><td><a href=".gitbook/assets/ROS.svg">ROS.svg</a></td><td><a href="https://github.com/xArm-Developer/xarm_ros">https://github.com/xArm-Developer/xarm_ros</a></td></tr><tr><td>ROS2</td><td></td><td></td><td><a href=".gitbook/assets/ROS2.svg">ROS2.svg</a></td><td><a href="https://github.com/xArm-Developer/xarm_ros2">https://github.com/xArm-Developer/xarm_ros2</a></td></tr><tr><td>test</td><td></td><td></td><td><a href=".gitbook/assets/test.png">test.png</a></td><td></td></tr></tbody></table>

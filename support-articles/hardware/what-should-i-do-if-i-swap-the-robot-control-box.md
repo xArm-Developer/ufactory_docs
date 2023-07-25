@@ -28,25 +28,15 @@ Regardless of the model of the control box:
 
 Press down the E stop button and release, the friction parameters will load automatically.
 
-
-
-
-
 2\) If your arm is 12xx model:
 
 Please provide the SN and contact us<[support@ufactory.cc](mailto:support@ufactory.cc)> to remotely put the original friction parameters into the new control box.
 
 
 
-
-
-<mark style="color:red;">**Note：**</mark>
-
-The calibration parameters are not saved in the control box, swapping another control box will not affect the accuracy of the xArm.
-
-
-
-
+{% hint style="success" %}
+The calibration parameters are not saved in the control box, swapping another control box will not affect the accuracy of the robot.
+{% endhint %}
 
 #### Appendix: <a href="#h_25addac8c1" id="h_25addac8c1"></a>
 

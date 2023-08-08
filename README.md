@@ -5,15 +5,17 @@ layout:
   description:
     visible: false
   tableOfContents:
-    visible: true
+    visible: false
   outline:
-    visible: true
+    visible: false
   pagination:
-    visible: true
+    visible: false
 ---
 
 # Home Page
 
 <img src=".gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
+
+&#x20;
 
 <img src=".gitbook/assets/file.excalidraw (2).svg" alt="" class="gitbook-drawing">

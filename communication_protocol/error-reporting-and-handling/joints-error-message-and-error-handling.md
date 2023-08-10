@@ -16,6 +16,12 @@ Error Code：0x00
 > ```
 
 > ```
+> ```
+
+> ```
+> ```
+
+> ```
 > Joint Communication Error
 > Please restart the xArm with the Emergency Stop Button on the Control Box. If multiple reboots do not work, please contact technical support.
 > ```

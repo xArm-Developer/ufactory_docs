@@ -1,0 +1,15 @@
+# Table of contents
+
+* [Hardware](README.md)
+  * [What should I do if I swap the robot control box?](hardware/what-should-i-do-if-i-swap-the-robot-control-box.md)
+* [Software](software.md)
+* [FAQ](faq/README.md)
+  * [Page](faq/page.md)
+* [Developer](developer/README.md)
+  * [Kinematic and Dynamic Parameters](developer/kinematic-and-dynamic-parameters/README.md)
+    * [xArm Series](developer/kinematic-and-dynamic-parameters/xarm-series/README.md)
+      * [xArm 7](developer/kinematic-and-dynamic-parameters/xarm-series/xarm-7.md)
+      * [xArm 6](developer/kinematic-and-dynamic-parameters/xarm-series/xarm-6.md)
+      * [xArm 5 Lite](developer/kinematic-and-dynamic-parameters/xarm-series/xarm-5-lite.md)
+    * [UFactory 850](developer/kinematic-and-dynamic-parameters/ufactory-850.md)
+    * [Lite6](developer/kinematic-and-dynamic-parameters/lite6.md)

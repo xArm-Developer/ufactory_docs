@@ -11,5 +11,6 @@
       * [xArm 7](developer/kinematic-and-dynamic-parameters/xarm-series/xarm-7.md)
       * [xArm 6](developer/kinematic-and-dynamic-parameters/xarm-series/xarm-6.md)
       * [xArm 5 Lite](developer/kinematic-and-dynamic-parameters/xarm-series/xarm-5-lite.md)
+      * [xArm 6](developer/kinematic-and-dynamic-parameters/xarm-series/xarm-6-1.md)
     * [Lite6](developer/kinematic-and-dynamic-parameters/lite6.md)
     * [UFactory 850](developer/kinematic-and-dynamic-parameters/ufactory-850.md)

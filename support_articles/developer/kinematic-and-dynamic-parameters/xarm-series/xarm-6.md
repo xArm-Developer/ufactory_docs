@@ -34,7 +34,7 @@ T3\_offset = -T2\_offset = 1.3849179 (79.34995°);
 
 <mark style="color:blue;">**xArm 6 - Model 1**</mark>
 
-<table><thead><tr><th width="190">Dynamics</th><th width="184.33333333333331">Mass(kg)</th><th>Center of Mass(mm)</th></tr></thead><tbody><tr><td>Link1</td><td>2.177</td><td>[0.15, 27.24, -13.75]</td></tr><tr><td>Link2</td><td>2.011</td><td>[36.7, -220.9, 33.56]</td></tr><tr><td>Link3</td><td>1.725</td><td>[69.77, 113.5, 11.6]</td></tr><tr><td>Link4</td><td>1.211</td><td>[-0.2, 20.0, 26.0]</td></tr><tr><td>Link5</td><td>1.206</td><td>[63.87, 29.3, 3.5]</td></tr><tr><td>Link6</td><td>0.17</td><td>[0.0, -6.77, -0.98]</td></tr></tbody></table>
+<table><thead><tr><th width="190">Dynamics</th><th width="184.33333333333331">Mass(kg)</th><th>Center of Mass(mm)</th></tr></thead><tbody><tr><td>Link1</td><td>2.177</td><td>[0.15, 27.24, -13.75]</td></tr><tr><td>Link2</td><td>2.011</td><td>[36.7, -220.9, 33.56]</td></tr><tr><td>Link3</td><td>1.725</td><td>[69.77, 113.5, 11.6]</td></tr><tr><td>Link4</td><td>1.211</td><td>[-0.2, 20.0, 26.0]</td></tr><tr><td>Link5</td><td>1.206</td><td>[63.87, 29.3, 3.5]</td></tr><tr><td>Link6</td><td>0.17</td><td>[0.0, -6.77, -10.98]</td></tr></tbody></table>
 
 <mark style="color:blue;">**xArm 6 - Model 2**</mark>
 

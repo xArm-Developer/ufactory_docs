@@ -4,6 +4,7 @@
   * [What should I do if I swap the robot control box?](hardware/what-should-i-do-if-i-swap-the-robot-control-box.md)
 * [Software](software/README.md)
   * [How to solve the error C24: Speed Exceeds Limit](software/how-to-solve-the-error-c24-speed-exceeds-limit.md)
+  * [How to improve the jitter of the robotic arm?](software/how-to-improve-the-jitter-of-the-robotic-arm.md)
 * [FAQ](faq/README.md)
   * [Page](faq/page.md)
 * [Developer](developer/README.md)

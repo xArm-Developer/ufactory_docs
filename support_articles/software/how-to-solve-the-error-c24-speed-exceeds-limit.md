@@ -21,7 +21,7 @@ Reducing TCP motion speed/acceleration/jerk in the program.
 
 2\) Python SDK: set\_allow\_approx\_motion(self, on\_off)
 
-## **Example:**
+### **Example:**
 
 <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 

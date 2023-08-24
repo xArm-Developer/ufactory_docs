@@ -2,7 +2,8 @@
 
 * [Hardware](README.md)
   * [What should I do if I swap the robot control box?](hardware/what-should-i-do-if-i-swap-the-robot-control-box.md)
-* [Software](software.md)
+* [Software](software/README.md)
+  * [How to solve the error C24: Speed Exceeds Limit](software/how-to-solve-the-error-c24-speed-exceeds-limit.md)
 * [FAQ](faq/README.md)
   * [Page](faq/page.md)
 * [Developer](developer/README.md)

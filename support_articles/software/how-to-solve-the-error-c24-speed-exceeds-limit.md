@@ -5,7 +5,7 @@ There are 2 reasons for C24 error:
 1. The motion speed(calculated joint speed) is too high.
 2. Singularity appears in the motion path.
 
-### **Solution：**
+### **Solution**
 
 **1. Reduce TCP speed**
 
@@ -21,7 +21,7 @@ Reducing TCP motion speed/acceleration/jerk in the program.
 
 2\) Python SDK: set\_allow\_approx\_motion(self, on\_off)
 
-### **Example:**
+### **Example**
 
 <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 

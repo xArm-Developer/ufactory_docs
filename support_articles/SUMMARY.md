@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Hardware](README.md)
+  * [The difference between UFACTORY xArm5, xArm6 and xArm7](hardware/the-difference-between-ufactory-xarm5-xarm6-and-xarm7.md)
   * [What should I do if I swap the robot control box?](hardware/what-should-i-do-if-i-swap-the-robot-control-box.md)
 * [Software](software/README.md)
   * [How to solve the error C24: Speed Exceeds Limit](software/how-to-solve-the-error-c24-speed-exceeds-limit.md)

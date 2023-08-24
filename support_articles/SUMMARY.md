@@ -7,7 +7,7 @@
   * [How to solve the error C24: Speed Exceeds Limit](software/how-to-solve-the-error-c24-speed-exceeds-limit.md)
   * [How to improve the jitter of the robotic arm?](software/how-to-improve-the-jitter-of-the-robotic-arm.md)
 * [FAQ](faq/README.md)
-  * [How to align the tool end flange of xArm 5 Lite?](faq/how-to-align-the-tool-end-flange-of-xarm-5-lite.md)
+  * [How to align the tool end flange of xArm 5 Lite?](faq/page.md)
 * [Developer](developer/README.md)
   * [Kinematic and Dynamic Parameters](developer/kinematic-and-dynamic-parameters/README.md)
     * [xArm Series](developer/kinematic-and-dynamic-parameters/xarm-series/README.md)

@@ -42,7 +42,7 @@ Reducing TCP motion speed/acceleration/jerk in the program.
 
 
 {% hint style="info" %}
-Note: If the above methods can not solve your issue, please send the files below to the support team.
+**Note:** If the above methods can not solve your issue, please send the files below to the support team.
 {% endhint %}
 
 1\. The firmware and UFactory Studio version.

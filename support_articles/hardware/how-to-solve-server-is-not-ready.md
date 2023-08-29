@@ -24,14 +24,14 @@ UFactory Studio client is installed on the user's computer. The client is the sa
 
 Please check the following information and provide all information to the support team if any problems.
 
-1\)The SN of the robot and control box.
+1\) The SN of the robot and control box.
 
-2\)Check if the power and LAN indicators are normal. Kindly shoot a video and send it to us.
+2\) Check if the power and LAN indicators are normal. Kindly shoot a video and send it to us.
 
 * Power indicator: one is always on and the other one is blinking.
 * LAN indicator: Blinking
 
-3\)Check if the IP address of computer is on the same network segment as the robotic arm.
+3\) Check if the IP address of computer is on the same network segment as the robotic arm.
 
 * The default IP of robotic arm is 192.168.1.xxx
 

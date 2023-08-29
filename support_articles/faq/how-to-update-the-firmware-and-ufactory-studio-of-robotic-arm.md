@@ -30,7 +30,7 @@ Go to \[My Device] → \[Check for Update], click "Check for Update", if there i
 
 * Use UFactory Studio to do an offline upgrade:
 
-Download the latest offline package.
+Download the latest offline package.  [_xArm/UF850_](https://drive.google.com/drive/folders/11T6ixZy28ePsIlJ4r5RBgRK8HmmpPs7v?usp=drive\_link)   [_Lite6_](https://drive.google.com/drive/folders/1rLXSXA2BPXONl5iOBUJkanyLqhad6u8N?usp=drive\_link)
 
 Go to \[My Device] - \[Check Update], click "Install" to load the offline package downloaded in advance, reboot the system, it will take 2-3 minutes.
 

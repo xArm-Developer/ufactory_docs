@@ -103,12 +103,11 @@ arm.getset_tgpio_modbus_data(datas)
 #data_frame = [<a data-footnote-ref href="#user-content-fn-1">0x09</a>, 0x10, 0x03, 0xE8, 0x00, 0x03, 0x06, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00]
 </code></pre>
 
-
-
-
-
 {% hint style="warning" %}
-**Note:** When using the SDK to control the gripper, there is no need to send the CRC, we will add it automatically.
+**Note:**&#x20;
+
+1. When using the SDK to control the gripper, there is no need to send the CRC, we will add it automatically.
+2. Please note that if you modify the slaver ID of robotiq gripper, you can only can it via arm.getset\_tgpio\_modbus\_data.
 {% endhint %}
 
 [^1]: Slaver ID&#x20;

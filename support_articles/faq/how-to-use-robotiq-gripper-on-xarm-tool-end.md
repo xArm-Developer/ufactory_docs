@@ -107,7 +107,7 @@ arm.getset_tgpio_modbus_data(datas)
 **Note:**&#x20;
 
 1. When using the SDK to control the gripper, there is no need to send the CRC, we will add it automatically.
-2. Please note that if you modify the slaver ID of robotiq gripper, you can only can it via arm.getset\_tgpio\_modbus\_data.
+2. Please note that if you modify the slaver ID of Robotiq gripper, you can only can it via arm.getset\_tgpio\_modbus\_data.
 {% endhint %}
 
 [^1]: Slaver ID&#x20;

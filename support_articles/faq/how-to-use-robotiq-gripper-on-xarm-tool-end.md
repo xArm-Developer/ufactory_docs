@@ -50,8 +50,8 @@ arm.set_tgpio_modbus_baudrate(115200)
 
 TCP Payload and offset:
 
+{% code title="// Code Example" %}
 ```python
-// Code Example
 # Robotiq 2F/85 Gripper
 arm.set_tcp_load(0.925, [0, 0, 58])
 arm.set_tcp_offset([0, 0, 174, 0, 0, 0])
@@ -62,17 +62,19 @@ arm.set_tcp_load(1.025, [0, 0, 73])
 arm.set_tcp_offset([0, 0, 244, 0, 0, 0])
 arm.save_conf()
 ```
+{% endcode %}
 
 Self-Collision Prevention Model:
 
+{% code title="// Code Example" %}
 ```python
-// Code Example
 # Robotiq 2F/85 Gripper
 arm.set_collision_tool_model(4)
 
 # Robotiq 2F/140 Gripper
 arm.set_collision_tool_model(5)
 ```
+{% endcode %}
 
 ### 4. Control Method
 
@@ -92,8 +94,7 @@ UFactory Studio - Blockly:
 
 #### 2) Control it via Python SDK
 
-<pre class="language-python"><code class="lang-python">// Code Example
-arm.set_tgpio_modbus_baudrate(115200)  
+<pre class="language-python" data-title="// Code Example"><code class="lang-python">arm.set_tgpio_modbus_baudrate(115200)  
 arm.robotiq_reset()
 arm.robotiq_set_activate()    #enable the robotiq gripper
 arm.robotiq_close()

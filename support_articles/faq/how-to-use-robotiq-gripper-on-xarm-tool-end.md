@@ -155,6 +155,4 @@ For your reference:
 **Note:** When using the SDK to control the gripper, there is no need to send the CRC, we will add it automatically.
 {% endhint %}
 
-Note:
-
 [^1]: 

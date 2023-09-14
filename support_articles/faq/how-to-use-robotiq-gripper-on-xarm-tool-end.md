@@ -6,7 +6,7 @@ description: >-
 
 # How to use Robotiq Gripper on xArm tool end?
 
-### 1. Hardware
+1\. Hardware
 
 * Gripper: Robotiq 2F-85/ Robotiq 2F-140
 * Robotic Arm: xArm5/ xarm6/ xArm7
@@ -27,17 +27,15 @@ The main parameter is the Baud rate, TCP offset, TCP payload, and self-collision
 
 #### 1) Config the parameter via UFactory Studio
 
-Baud rate: 'Settings-Externals-Modbus RTU - **Robot Arm** - Baud Rate', and modify to 115200.
-
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
-
 TCP Payload and offset: 'Settings-Motion-TCP'.
 
 <figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Self-collision prevention model: 'Settings-Live Control-End Effector', choose Robotiq Gripper.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+Please choose 'yes', It will set the baud rate to 115200, the default baud rate is 2000000.
+
+<figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 
 #### 2) Config the parameter via Python SDK
 
@@ -92,30 +90,6 @@ UFactory Studio - Blockly:
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-UFactory Studio - Settings - Externals - Modbus RTU.
-
-You need to send the Modbus RTU command to control the Robotiq Gripper yourself on this page.
-
-<pre><code>// Example 1
-<a data-footnote-ref href="#user-content-fn-1">09 10 03 E8 00 03 06 00 00 00 00 00 00 73 30</a>
-09: Slave ID
-10: Function Code 16(Preset Multiple Registers)
-03E8: Address of the first register
-0003: Number of registers written to
-06: Number of data bytes to follow(3 registers x 2 bytes/register = 6 bytes)
-0000: Value to write to register 0x03E9
-0000: Value written to register 0x03EA
-0000: Value written to register 0x03EB
-7330: CRC
-</code></pre>
-
-```
-// Example 2
-09 10 03 E8 00 03 06 01 00 00 00 00 00 72 E1
-```
-
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
-
 #### 2) Control it via Python SDK
 
 Using robotiq\_xxx method:
@@ -154,5 +128,3 @@ For your reference:
 {% hint style="warning" %}
 **Note:** When using the SDK to control the gripper, there is no need to send the CRC, we will add it automatically.
 {% endhint %}
-
-[^1]: 

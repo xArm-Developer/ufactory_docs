@@ -34,7 +34,7 @@ It is recommended to adjust the jerk to the maximum, which will speed up the mot
 
 'Settings-General-Advanced Settings-Parameters'
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 * Parameter adjustment via Python SDK
 

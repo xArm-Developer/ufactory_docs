@@ -27,11 +27,11 @@ Reducing TCP motion speed/acceleration/jerk in the program.
 
 1\) Reduce TCP Speed
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 2\) Re-plan the path
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 3\) Enable 'Bypassing Singularities'.
 

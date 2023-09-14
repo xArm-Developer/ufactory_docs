@@ -109,5 +109,5 @@ arm.robotiq_open()
 
 1\. When using the SDK to control the gripper, there is no need to send the CRC, we will add it automatically.
 
-2\. Please note that we consider the slaver ID of the Robotiq gripper as **9** by default. If you modify the ID of the gripper, UFactory Studio or SDK above should not work, you can only use getset\_tgpio\_modbus\_data to control it.
+2\. Please note that we consider the slaver ID of the Robotiq gripper as **ID=9** by default. If you modify the ID of the gripper, UFactory Studio or SDK above should not work, you can only use getset\_tgpio\_modbus\_data to control it.
 {% endhint %}

@@ -92,39 +92,23 @@ UFactory Studio - Blockly:
 
 #### 2) Control it via Python SDK
 
-Using robotiq\_xxx method:
-
-```python
-// Code Example
-arm.set_tgpio_modbus_baudrate(115200)
+<pre class="language-python"><code class="lang-python">// Code Example
+arm.set_tgpio_modbus_baudrate(115200)  
 arm.robotiq_reset()
-arm.robotiq_set_activate()
-code, ret = arm.robotiq_close()
-print('robotiq_close, code={}, ret={}'.format(code, ret))
-code, ret = arm.robotiq_open()
-print('robotiq_open, code={}, ret={}'.format(code, ret))
-```
+arm.robotiq_set_activate()    #enable the robotiq gripper
+arm.robotiq_close()
+arm.robotiq_open()
+arm.getset_tgpio_modbus_data(datas)  
+#datas example: 
+#data_frame = [<a data-footnote-ref href="#user-content-fn-1">0x09</a>, 0x10, 0x03, 0xE8, 0x00, 0x03, 0x06, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00]
+</code></pre>
 
-Using getset\_tgpio\_modbus\_data:
 
-```python
-// Code Example
-code, ret = arm.getset_tgpio_modbus_data([0x08, 0x06, 0x01, 0x00, 0x00, 0x01])
-print('set_bio_gripper_enable, code={}, ret={}'.format(code, ret))
-code, ret = arm.getset_tgpio_modbus_data([0x08, 0x10, 0x07, 0x00, 0x00, 0x02, 0x04, 0x0, 0x0, 0x0, 0x82])
-print('open_bio_gripper, code={}, ret={}'.format(code, ret))
-code, ret = arm.getset_tgpio_modbus_data([0x08, 0x10, 0x07, 0x00, 0x00, 0x02, 0x04, 0x0, 0x0, 0x0, 0x32])
-print('close_bio_gripper, code={}, ret={}'.format(code, ret))
-```
-
-For your reference:
-
-[robotiq\_xxx](https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/example/wrapper/thridparty/set\_robotiq\_gripper.py)
-
-[getset\_tgpio\_modbus\_data](https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/example/wrapper/common/5000-set\_tgpio\_modbus.py)
 
 
 
 {% hint style="warning" %}
 **Note:** When using the SDK to control the gripper, there is no need to send the CRC, we will add it automatically.
 {% endhint %}
+
+[^1]: Slaver ID&#x20;

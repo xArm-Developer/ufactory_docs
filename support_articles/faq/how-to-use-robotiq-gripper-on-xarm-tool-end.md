@@ -6,7 +6,7 @@ description: >-
 
 # How to use Robotiq Gripper on xArm tool end?
 
-1\. Hardware
+### 1.  Hardware
 
 * Gripper: Robotiq 2F-85/ Robotiq 2F-140
 * Robotic Arm: xArm5/ xarm6/ xArm7

@@ -94,22 +94,20 @@ UFactory Studio - Blockly:
 
 #### 2) Control it via Python SDK
 
-<pre class="language-python" data-title="// Code Example"><code class="lang-python">arm.set_tgpio_modbus_baudrate(115200)  
+{% code title="// Code Example" %}
+```python
+arm.set_tgpio_modbus_baudrate(115200)  
 arm.robotiq_reset()
 arm.robotiq_set_activate()    #enable the robotiq gripper
 arm.robotiq_close()
 arm.robotiq_open()
-arm.getset_tgpio_modbus_data(datas)  
-#datas example: 
-#data_frame = [<a data-footnote-ref href="#user-content-fn-1">0x09</a>, 0x10, 0x03, 0xE8, 0x00, 0x03, 0x06, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00]
-</code></pre>
+```
+{% endcode %}
 
 {% hint style="warning" %}
 **Note:**&#x20;
 
 1\. When using the SDK to control the gripper, there is no need to send the CRC, we will add it automatically.
 
-2\. Please note that if you modify the slaver ID of Robotiq gripper, you can only control it via arm.getset\_tgpio\_modbus\_data.
+2\. Please note that we consider the slaver ID of the Robotiq gripper as **9** by default. If you modify the ID of the gripper, UFactory Studio or SDK above should not work, you can only use getset\_tgpio\_modbus\_data to control it.
 {% endhint %}
-
-[^1]: Slaver ID&#x20;

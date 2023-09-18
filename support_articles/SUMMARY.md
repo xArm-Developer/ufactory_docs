@@ -8,6 +8,7 @@
   * [How to solve the error C24: Speed Exceeds Limit](software/how-to-solve-the-error-c24-speed-exceeds-limit.md)
   * [How to improve the jitter of the robotic arm?](software/how-to-improve-the-jitter-of-the-robotic-arm.md)
 * [FAQ](faq/README.md)
+  * [Q & A](faq/q-and-a.md)
   * [How to use Robotiq Gripper on xArm tool end?](faq/how-to-use-robotiq-gripper-on-xarm-tool-end.md)
   * [How to update the firmware and UFactory Studio of Robotic Arm?](faq/how-to-update-the-firmware-and-ufactory-studio-of-robotic-arm.md)
   * [How to align the tool end flange of xArm 5 Lite?](faq/page.md)

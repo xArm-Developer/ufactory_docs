@@ -22,3 +22,4 @@
       * [xArm 5 Lite](developer/kinematic-and-dynamic-parameters/xarm-series/xarm-5-lite.md)
     * [Lite6](developer/kinematic-and-dynamic-parameters/lite6.md)
     * [UFactory 850](developer/kinematic-and-dynamic-parameters/ufactory-850.md)
+  * [How to connect the Raspberry Pi to xarm with ethernet cable and control the Pi through WiFi?](developer/how-to-connect-the-raspberry-pi-to-xarm-with-ethernet-cable-and-control-the-pi-through-wifi.md)

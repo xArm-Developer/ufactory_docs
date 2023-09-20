@@ -30,5 +30,6 @@ Try to lower the 'Settings-Motion-Parameters-collision sensitivity' to verify th
 
 <figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-
-
+{% hint style="warning" %}
+**Note:** If there are still problems, please provide the information above to the support team.
+{% endhint %}

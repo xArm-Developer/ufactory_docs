@@ -33,7 +33,7 @@ Download link:[https://www.raspberrypi.org/software/operating-systems/#raspberry
 
 ### 3. Connection&#x20;
 
-#### Method 1:
+### Method 1:
 
 Raspberry Pi directly connects to xArm controller box via the network cable.
 
@@ -77,7 +77,7 @@ After the modification is successful, reconnect the Raspberry Pi network cable t
 
 </div>
 
-#### Method 2
+### Method 2:
 
 Raspberry Pi and xArm are connected to the same route, xArm is connected to the router through a network cable.
 

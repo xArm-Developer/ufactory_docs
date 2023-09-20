@@ -84,13 +84,13 @@ UFactory Studio - Live Control:
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/image.png" alt="" width="338"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt="" width="338"><figcaption></figcaption></figure>
 
 </div>
 
 UFactory Studio - Blockly:
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 2) Control it via Python SDK
 

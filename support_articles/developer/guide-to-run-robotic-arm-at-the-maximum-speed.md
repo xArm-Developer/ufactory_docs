@@ -53,3 +53,18 @@ arm.save_conf()
 
 
 ### 2. Motion Planning
+
+Adjust Parameters to do continuous motion.
+
+* radius > 0
+* wait = False
+
+Example:
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Radius>0, wait=False;    Video: [https://youtu.be/oX\_J8RplEw4](https://youtu.be/oX\_J8RplEw4)
+
+Radius>0, wait=True;      Video:[https://youtu.be/wpBzt3a30L0](https://youtu.be/wpBzt3a30L0)
+
+Radius<0, wait=False;     Video:[https://youtu.be/pi-5PPhPpfg](https://youtu.be/pi-5PPhPpfg)

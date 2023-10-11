@@ -37,7 +37,7 @@ Respond:
 
 
 
-<mark style="color:blue;">**Example to Set AO1 to 3V**</mark>
+<mark style="color:blue;">**Example to Set AO1 to 1V**</mark>
 
 ```
 Send: 00 01 00 00 00 06 01 06 00 04 03 E8

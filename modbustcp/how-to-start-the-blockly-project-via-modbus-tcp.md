@@ -44,7 +44,7 @@ Send: 00 01 00 00 00 09 01 10 00 30 00 01 02 00 1E
 
 Start 2 Blockly projects named 00001 and 00012.
 
-{% code fullWidth="true" %}
+{% code fullWidth="false" %}
 ```
 Send: 00 01 00 00 00 0B 01 10 00 30 00 02 04 00 01 00 0C
 ```

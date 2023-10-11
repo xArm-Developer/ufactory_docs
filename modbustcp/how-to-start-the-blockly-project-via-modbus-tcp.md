@@ -18,8 +18,9 @@ registers: 0x30
 
 Start 1 Blocky project named 00030.
 
-<pre data-full-width="true"><code><strong>Send: 00 01 00 00 00 09 01 10 00 30 00 01 02 00 1E
-</strong></code></pre>
+```
+Send: 00 01 00 00 00 09 01 10 00 30 00 01 02 00 1E
+```
 
 00 01 00 00: fixed
 
@@ -41,7 +42,7 @@ Start 1 Blocky project named 00030.
 
 <mark style="color:blue;">**Example to start 2 Blockly projects**</mark>
 
-Start 2 Blockly projects named 00001 and 00012.Command:&#x20;
+Start 2 Blockly projects named 00001 and 00012.
 
 {% code fullWidth="true" %}
 ```

@@ -18,9 +18,8 @@ registers: 0x30
 
 Start 1 Blocky project named 00030.
 
-{% hint style="success" %}
-Command: 00 01 00 00 <mark style="color:blue;">00 09</mark> 01 <mark style="color:blue;">10</mark> 00 30 <mark style="color:blue;">00 01</mark> 02 <mark style="color:blue;">00 1E</mark>
-{% endhint %}
+<pre data-full-width="true"><code><strong>Send: 00 01 00 00 00 09 01 10 00 30 00 01 02 00 1E
+</strong></code></pre>
 
 00 01 00 00: fixed
 
@@ -42,11 +41,13 @@ Command: 00 01 00 00 <mark style="color:blue;">00 09</mark> 01 <mark style="colo
 
 <mark style="color:blue;">**Example to start 2 Blockly projects**</mark>
 
-Start 2 Blockly projects named 00001 and 00012.
+Start 2 Blockly projects named 00001 and 00012.Command:&#x20;
 
-{% hint style="success" %}
-Command: 00 01 00 00 <mark style="color:blue;">00 0B</mark> 01 <mark style="color:blue;">10</mark> 00 30 <mark style="color:blue;">00 02</mark> 04 <mark style="color:blue;">00 01</mark> 00 0C
-{% endhint %}
+{% code fullWidth="true" %}
+```
+Send: 00 01 00 00 00 0B 01 10 00 30 00 02 04 00 01 00 0C
+```
+{% endcode %}
 
 00 01 00 00: fixed
 

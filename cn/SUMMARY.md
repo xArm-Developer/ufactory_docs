@@ -4,6 +4,7 @@
   * [UFactory-Gcode](gcode/ufactory-gcode.md)
 * [Modbus Tcp](modbustcp/README.md)
   * [UF\_ModbusTcp\_Manual](modbustcp/uf\_modbustcp\_manual.md)
+  * [附录](modbustcp/fu-lu.md)
 * [firmware](firmware/README.md)
   * [report](firmware/report/README.md)
     * [ReadMe\_cn](firmware/report/ReadMe\_cn.md)

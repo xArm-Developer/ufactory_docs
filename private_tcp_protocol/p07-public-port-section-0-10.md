@@ -221,6 +221,48 @@
 
 </details>
 
+## Read whether some configs are enabled or not
+
+**Register: 07(0x07)**
+
+```
+// Request:
+00 01 00 02 00 01 07
+```
+
+<details>
+
+<summary>Request Description</summary>
+
+```
+//00 01    U16, Transaction ID
+//00 02    U16, Protocol Identifier
+//00 01    U16, Length 
+//07       U8,  Register
+```
+
+</details>
+
+```
+// Response:
+00 01 00 02 00 06 07 00 00 00 00 01
+```
+
+<details>
+
+<summary>Response Description</summary>
+
+```
+//00 01        U16, Transaction ID
+//00 02        U16, Protocol Identifier
+//00 06        U16, Length 
+//07           U8, Register
+//00           U8, State
+//00 00 00 01  U32, bit0: Bypassing Singularities, bit1~31: Reserved.
+```
+
+</details>
+
 ## Remote shut down the operating system
 
 **Register:10(0x0A）**

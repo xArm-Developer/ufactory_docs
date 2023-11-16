@@ -373,7 +373,7 @@ This operation will terminate the ongoing movement of the robot and clear the ca
 
 ```
 // Request:
-00 01 00 02 00 02 13 00 00
+00 01 00 02 00 03 13 00 00
 ```
 
 <details>
@@ -383,7 +383,7 @@ This operation will terminate the ongoing movement of the robot and clear the ca
 ```
 //00 01    U16, Transaction ID
 //00 02    U16, Protocol Identifier
-//00 02    U16, Length 
+//00 03    U16, Length 
 //13       U8, Register
 //00       U8, Motion mode
 0: Position control mode
@@ -394,8 +394,7 @@ This operation will terminate the ongoing movement of the robot and clear the ca
 5: Cartesian velocity control mode
 6: Joint online trajectory planning mode
 7: Cartesian online trajectory planning mode
-
-//00       U8, Payload detection before turn on manual mode. 0 is ON, 1 is OFF.
+//00       U8, Payload detection before enabling manual mode. 0 is ON, 1 is OFF.
 ```
 
 </details>

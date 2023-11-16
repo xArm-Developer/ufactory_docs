@@ -1,9 +1,9 @@
 # Table of contents
 
 * [Gcode](README.md)
-  * [ufactory-gcode](gcode/ufactory-gcode.md)
-* [modbustcp](modbustcp/README.md)
-  * [uf\_modbustcp\_manual](modbustcp/uf\_modbustcp\_manual.md)
+  * [UFactory-Gcode](gcode/ufactory-gcode.md)
+* [Modbus Tcp](modbustcp/README.md)
+  * [UF\_ModbusTcp\_Manual](modbustcp/uf\_modbustcp\_manual.md)
 * [firmware](firmware/README.md)
   * [report](firmware/report/README.md)
     * [ReadMe\_cn](firmware/report/ReadMe\_cn.md)

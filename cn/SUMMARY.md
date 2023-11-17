@@ -7,6 +7,5 @@
 * [firmware](firmware/README.md)
   * [report](firmware/report.md)
 * [support\_articles](support\_articles/README.md)
-  * [software](support\_articles/software/README.md)
-    * [how-to-improve-the-jitter-of-the-robotic-arm](support\_articles/software/how-to-improve-the-jitter-of-the-robotic-arm.md)
   * [更换控制器或者控制器混用，应该如何设置？](support\_articles/what-should-i-do-if-i-swap-the-robot-control-box.md)
+  * [如何使用第三方设备](support\_articles/ru-he-shi-yong-di-san-fang-she-bei.md)

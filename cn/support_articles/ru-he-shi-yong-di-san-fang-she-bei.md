@@ -57,9 +57,9 @@ UFACTORY xArm的末端工具法兰参照DIN ISO 9409-1-A50/A63标准。 可以�
 
 #### 1.1 **TCP 负载设置**
 
-● **UFACTORY** **Studio上设置TCP 负载**
+#### ● **UFACTORY** **Studio上设置TCP 负载**
 
-1. 进入“设置”-“TCP”-“TCP-Payload”
+1. 进入“设置”-“运动参数”-“TCP设置”
 2. 点击【新建】按钮，创建末端执行器的TCP Payload
 3. 创建新的TCP payload有两种方式：（1）手动输入（2）自动识别
 
@@ -78,6 +78,34 @@ UFACTORY xArm的末端工具法兰参照DIN ISO 9409-1-A50/A63标准。 可以�
 
 \* 如果选择自动识别，当前的机械臂必须安装在平稳的地面上。
 {% endhint %}
+
+
+
+<figure><img src="../.gitbook/assets/图片 (5).png" alt=""><figcaption></figcaption></figure>
+
+#### ● Python-SDK **上设置TCP 负载**
+
+请使用以下接口设置末端执行器的TCP 负载。
+
+<pre class="language-python"><code class="lang-python"><strong>set_tcp_load()
+</strong></code></pre>
+
+接口的详细内容请参考文档：
+
+{% embed url="https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api.md" fullWidth="false" %}
+
+## 1.2 **TCP偏移设置**
+
+#### ● **UFACTORY Studio 上设置TCP 偏移**
+
+1. 进入“设置”-“TCP设置”-“TCP偏移”
+2. 点击【新建】按钮，创建末端执行器的TCP 偏移
+
+#### ● **Python-SDK 上设置TCP 偏移**
+
+请使用以下接口设置末端执行器的TCP 偏移。
+
+
 
 
 

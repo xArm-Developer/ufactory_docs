@@ -105,6 +105,24 @@ UFACTORY xArm的末端工具法兰参照DIN ISO 9409-1-A50/A63标准。 可以�
 
 请使用以下接口设置末端执行器的TCP 偏移。
 
+```python
+set_tcp_offset()
+```
+
+接口的详细内容请参考文档：
+
+{% embed url="https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api.md" fullWidth="false" %}
+
+## 2.自动防撞模型设置
+
+**上设置自碰撞预防模型** UFACTORY **xArm Studio**
+
+1. 进入“设置”-“末端执行器”
+2. 机械臂末端安装第三方末端执行器（官方未提供）时，请选择【其他】。
+3. 可选择可包裹末端执行器的3D模型（圆柱体/长方体）作为末端执行器的防自撞模型。
+4. 打开自防撞模型的开关
+5. 点击“保存”按钮
+
 
 
 

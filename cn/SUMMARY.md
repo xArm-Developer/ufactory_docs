@@ -13,3 +13,8 @@
   * [为什么当我调整 Roll 和 Yaw 时机器人表现相同？](support\_articles/wei-shi-mo-dang-wo-tiao-zheng-roll-he-yaw-shi-ji-qi-ren-biao-xian-xiang-tong.md)
 * [Studio  API](studio-api/README.md)
   * [Studio  API说明](studio-api/studio-api-shuo-ming.md)
+  * [实时控制API](studio-api/shi-shi-kong-zhi-api/README.md)
+    * [1.xarm\_move\_step](studio-api/shi-shi-kong-zhi-api/1.xarm\_move\_step.md)
+    * [2.xarm\_move\_step\_over](studio-api/shi-shi-kong-zhi-api/2.xarm\_move\_step\_over.md)
+    * [3.xarm\_move\_joint](studio-api/shi-shi-kong-zhi-api/3.xarm\_move\_joint.md)
+  * [Page](studio-api/page.md)

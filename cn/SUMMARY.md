@@ -17,4 +17,5 @@
     * [1.xarm\_move\_step](studio-api/shi-shi-kong-zhi-api/1.xarm\_move\_step.md)
     * [2.xarm\_move\_step\_over](studio-api/shi-shi-kong-zhi-api/2.xarm\_move\_step\_over.md)
     * [3.xarm\_move\_joint](studio-api/shi-shi-kong-zhi-api/3.xarm\_move\_joint.md)
+    * [4.switch\_mode\_lite6](studio-api/shi-shi-kong-zhi-api/4.switch\_mode\_lite6.md)
   * [Page](studio-api/page.md)

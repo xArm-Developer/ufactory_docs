@@ -16,11 +16,11 @@
 
 <figure><img src="../.gitbook/assets/图片 (3) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/图片 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/图片 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 第二步：将旧控制器下载的配置文件导入到新控制器里面，设置-高级设置-高级工具-配置文件，点击导入
 
-<figure><img src="../.gitbook/assets/图片 (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/图片 (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 第三步：拆卸手臂的末端执行器，以及自制的负载工具，水平安装，然后重新进行摩擦力辨识（PS：可以联系技术支持协助） 设置-高级设置-高级工具-摩擦力辨识  然后按照软件页面指引进行摩擦力辨识。
 

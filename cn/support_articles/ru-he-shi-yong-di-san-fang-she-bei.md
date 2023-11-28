@@ -125,7 +125,37 @@ set_tcp_offset()
 
 
 
+● **Python-SDK 上设置自碰撞预防模型**
 
+请使用以下接口设置末端执行器的防碰撞模型。
 
+```python
+set_collision_tool_model()
+```
 
+接口的详细内容请参考文档：
+
+{% embed url="https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/doc/api/xarm_api.md" %}
+
+## 3.末端执行器的控制方式
+
+#### 3.1通过数字IO控制末端执行器
+
+<figure><img src="../.gitbook/assets/图片 (7).png" alt=""><figcaption></figcaption></figure>
+
+**● Python-SDK**
+
+```python
+#set Tool Output 0 to low
+arm.set_tgpio_digital(0,0)
+
+#set Tool Output 0 to high
+arm.set_tgpio_digital(0,1)
+```
+
+#### 3.2 通过Modbus-RTU通讯协议控制末端执行器
+
+通过 xArm-Python-SDK 发送命令来控制 Robotiq Gripper ( 2F-85 / 2F-140 ) 的示例
+
+{% embed url="https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/example/wrapper/thridparty/set_robotiq_gripper.py" %}
 

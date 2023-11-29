@@ -42,3 +42,4 @@
     * [8.ide\_to\_python\_allow](studio-api/python-ide/8.ide\_to\_python\_allow.md)
     * [9.ide\_blockly\_to\_python](studio-api/python-ide/9.ide\_blockly\_to\_python.md)
     * [10.ide\_write\_file](studio-api/python-ide/10.ide\_write\_file.md)
+    * [11.ide\_get\_file](studio-api/python-ide/11.ide\_get\_file.md)

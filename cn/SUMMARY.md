@@ -22,4 +22,7 @@
     * [7.xarm\_set\_speed](studio-api/shi-shi-kong-zhi-api/7.xarm\_set\_speed.md)
     * [8.xarm\_set\_lite6\_gripper](studio-api/shi-shi-kong-zhi-api/8.xarm\_set\_lite6\_gripper.md)
     * [9.xarm\_switch\_mode](studio-api/shi-shi-kong-zhi-api/9.xarm\_switch\_mode.md)
-  * [Page](studio-api/page.md)
+  * [Blockly](studio-api/blockly/README.md)
+    * [1.xarm\_move\_arc\_line](studio-api/blockly/1.xarm\_move\_arc\_line.md)
+    * [2.xarm\_move\_circle](studio-api/blockly/2.xarm\_move\_circle.md)
+    * [3.xarm\_set\_blockly\_init](studio-api/blockly/3.xarm\_set\_blockly\_init.md)

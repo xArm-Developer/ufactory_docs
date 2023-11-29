@@ -26,3 +26,8 @@
     * [1.xarm\_move\_arc\_line](studio-api/blockly/1.xarm\_move\_arc\_line.md)
     * [2.xarm\_move\_circle](studio-api/blockly/2.xarm\_move\_circle.md)
     * [3.xarm\_set\_blockly\_init](studio-api/blockly/3.xarm\_set\_blockly\_init.md)
+    * [4.run\_blockly](studio-api/blockly/4.run\_blockly.md)
+    * [5.get\_app\_xml\_data](studio-api/blockly/5.get\_app\_xml\_data.md)
+    * [6.get\_app\_info](studio-api/blockly/6.get\_app\_info.md)
+    * [7.app\_save\_info](studio-api/blockly/7.app\_save\_info.md)
+    * [8.app\_create\_file](studio-api/blockly/8.app\_create\_file.md)

@@ -31,3 +31,7 @@
     * [6.get\_app\_info](studio-api/blockly/6.get\_app\_info.md)
     * [7.app\_save\_info](studio-api/blockly/7.app\_save\_info.md)
     * [8.app\_create\_file](studio-api/blockly/8.app\_create\_file.md)
+  * [Python IDE](studio-api/python-ide/README.md)
+    * [1.ide\_list\_projects](studio-api/python-ide/1.ide\_list\_projects.md)
+    * [2.ide\_get\_project](studio-api/python-ide/2.ide\_get\_project.md)
+    * [3.ide\_create\_project](studio-api/python-ide/3.ide\_create\_project.md)

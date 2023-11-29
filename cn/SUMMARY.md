@@ -38,3 +38,7 @@
     * [4.ide\_delete\_project](studio-api/python-ide/4.ide\_delete\_project.md)
     * [5.ide\_rename\_project](studio-api/python-ide/5.ide\_rename\_project.md)
     * [6.ide\_save\_project](studio-api/python-ide/6.ide\_save\_project.md)
+    * [7.ide\_create\_file](studio-api/python-ide/7.ide\_create\_file.md)
+    * [8.ide\_to\_python\_allow](studio-api/python-ide/8.ide\_to\_python\_allow.md)
+    * [9.ide\_blockly\_to\_python](studio-api/python-ide/9.ide\_blockly\_to\_python.md)
+    * [10.ide\_write\_file](studio-api/python-ide/10.ide\_write\_file.md)

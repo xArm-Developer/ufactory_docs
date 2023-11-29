@@ -43,3 +43,5 @@
     * [9.ide\_blockly\_to\_python](studio-api/python-ide/9.ide\_blockly\_to\_python.md)
     * [10.ide\_write\_file](studio-api/python-ide/10.ide\_write\_file.md)
     * [11.ide\_get\_file](studio-api/python-ide/11.ide\_get\_file.md)
+    * [12.ide\_delete\_file](studio-api/python-ide/12.ide\_delete\_file.md)
+    * [13.ide\_rename\_file](studio-api/python-ide/13.ide\_rename\_file.md)

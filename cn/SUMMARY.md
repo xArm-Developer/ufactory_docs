@@ -18,4 +18,8 @@
     * [2.xarm\_move\_step\_over](studio-api/shi-shi-kong-zhi-api/2.xarm\_move\_step\_over.md)
     * [3.xarm\_move\_joint](studio-api/shi-shi-kong-zhi-api/3.xarm\_move\_joint.md)
     * [4.switch\_mode\_lite6](studio-api/shi-shi-kong-zhi-api/4.switch\_mode\_lite6.md)
+    * [6.xarm\_set\_simulation\_robot](studio-api/shi-shi-kong-zhi-api/6.xarm\_set\_simulation\_robot.md)
+    * [7.xarm\_set\_speed](studio-api/shi-shi-kong-zhi-api/7.xarm\_set\_speed.md)
+    * [8.xarm\_set\_lite6\_gripper](studio-api/shi-shi-kong-zhi-api/8.xarm\_set\_lite6\_gripper.md)
+    * [9.xarm\_switch\_mode](studio-api/shi-shi-kong-zhi-api/9.xarm\_switch\_mode.md)
   * [Page](studio-api/page.md)

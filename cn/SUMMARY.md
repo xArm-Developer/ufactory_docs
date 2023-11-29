@@ -45,3 +45,8 @@
     * [11.ide\_get\_file](studio-api/python-ide/11.ide\_get\_file.md)
     * [12.ide\_delete\_file](studio-api/python-ide/12.ide\_delete\_file.md)
     * [13.ide\_rename\_file](studio-api/python-ide/13.ide\_rename\_file.md)
+    * [14.ide\_create\_folder](studio-api/python-ide/14.ide\_create\_folder.md)
+    * [15.ide\_delete\_folder](studio-api/python-ide/15.ide\_delete\_folder.md)
+    * [16.ide\_rename\_folder](studio-api/python-ide/16.ide\_rename\_folder.md)
+    * [17.run\_python\_program](studio-api/python-ide/17.run\_python\_program.md)
+    * [18.stop\_python\_program](studio-api/python-ide/18.stop\_python\_program.md)

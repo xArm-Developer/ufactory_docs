@@ -35,3 +35,6 @@
     * [1.ide\_list\_projects](studio-api/python-ide/1.ide\_list\_projects.md)
     * [2.ide\_get\_project](studio-api/python-ide/2.ide\_get\_project.md)
     * [3.ide\_create\_project](studio-api/python-ide/3.ide\_create\_project.md)
+    * [4.ide\_delete\_project](studio-api/python-ide/4.ide\_delete\_project.md)
+    * [5.ide\_rename\_project](studio-api/python-ide/5.ide\_rename\_project.md)
+    * [6.ide\_save\_project](studio-api/python-ide/6.ide\_save\_project.md)

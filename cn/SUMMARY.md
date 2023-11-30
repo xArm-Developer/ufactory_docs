@@ -52,4 +52,5 @@
     * [18.stop\_python\_program](studio-api/python-ide/18.stop\_python\_program.md)
   * [设置](studio-api/she-zhi/README.md)
     * [1.xarm\_set\_effector\_modbus\_rtu\_cmd](studio-api/she-zhi/1.xarm\_set\_effector\_modbus\_rtu\_cmd.md)
+    * [2.xarm\_set\_cgpio\_digital](studio-api/she-zhi/2.xarm\_set\_cgpio\_digital.md)
   * [Page](studio-api/page.md)

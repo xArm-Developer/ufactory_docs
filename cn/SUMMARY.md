@@ -91,3 +91,5 @@
     * [38.xarm\_set\_reduced\_mode](studio-api/she-zhi/38.xarm\_set\_reduced\_mode.md)
     * [39.xarm\_set\_reduced\_tcp\_boundary](studio-api/she-zhi/39.xarm\_set\_reduced\_tcp\_boundary.md)
     * [40.xarm\_set\_fense\_mode](studio-api/she-zhi/40.xarm\_set\_fense\_mode.md)
+  * [通用](studio-api/tong-yong/README.md)
+    * [1.xarm\_clear\_error\_warn](studio-api/tong-yong/1.xarm\_clear\_error\_warn.md)

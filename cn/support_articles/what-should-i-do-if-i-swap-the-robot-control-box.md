@@ -36,11 +36,11 @@
 
 
 
-第一步：需要把原有控制器的配置文件先下载下来。去到设置-高级设置-配置文件，点击下载
+第一步：需要把原有控制器的配置文件先下载下来。去到设置-通过设置-高级设置-配置文件，点击下载
 
 <figure><img src="../.gitbook/assets/图片 (10).png" alt=""><figcaption></figcaption></figure>
 
-第二步：将旧控制器下载的配置文件导入到新控制器里面，设置-高级设置-配置文件，点击导入
+第二步：将旧控制器下载的配置文件导入到新控制器里面，设置-通用设置-高级设置-配置文件，点击导入
 
 <figure><img src="../.gitbook/assets/图片 (11).png" alt=""><figcaption></figcaption></figure>
 

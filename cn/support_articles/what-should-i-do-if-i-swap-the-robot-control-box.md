@@ -38,7 +38,11 @@
 
 第一步：需要把原有控制器的配置文件先下载下来。去到设置-高级设置-配置文件，点击下载
 
+<figure><img src="../.gitbook/assets/图片 (10).png" alt=""><figcaption></figcaption></figure>
+
 第二步：将旧控制器下载的配置文件导入到新控制器里面，设置-高级设置-配置文件，点击导入
+
+<figure><img src="../.gitbook/assets/图片 (11).png" alt=""><figcaption></figcaption></figure>
 
 第三步：将新的控制器连接手臂，通电，连接上studio，然后点击“使能手臂”按钮，按下控制器上的红色急停按钮，等待五秒，拉起控制器上的急停按钮，重新上电使能手臂，完成更换配置
 

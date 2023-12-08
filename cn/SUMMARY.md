@@ -93,5 +93,5 @@
     * [40.xarm\_set\_fense\_mode](studio-api/settings/40.xarm\_set\_fense\_mode.md)
   * [General](studio-api/general/README.md)
     * [1.xarm\_clear\_error\_warn](studio-api/general/1.xarm\_clear\_error\_warn.md)
-  * [Code](studio-api/code/README.md)
-    * [API Code](studio-api/code/api-code.md)
+  * [API Code](studio-api/api-code/README.md)
+    * [API Code](studio-api/api-code/api-code.md)

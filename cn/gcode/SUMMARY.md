@@ -1,3 +1,3 @@
 # Table of contents
 
-* [ufactory-gcode](README.md)
+* [G-code](README.md)

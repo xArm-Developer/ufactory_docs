@@ -1,4 +1,4 @@
 # Table of contents
 
-* [websocketapi](README.md)
+* [WebSocket API](README.md)
 * [WebsocketAPI](websocketapi.md)

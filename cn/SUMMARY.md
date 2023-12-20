@@ -93,5 +93,6 @@
     * [40.xarm\_set\_fense\_mode](studio-api/settings/40.xarm\_set\_fense\_mode.md)
   * [General](studio-api/general/README.md)
     * [1.xarm\_clear\_error\_warn](studio-api/general/1.xarm\_clear\_error\_warn.md)
+    * [加载导入机械臂参数文件](studio-api/general/jia-zai-dao-ru-ji-xie-bi-can-shu-wen-jian.md)
   * [API Code](studio-api/api-code/README.md)
     * [API Code](studio-api/api-code/api-code.md)

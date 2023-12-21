@@ -15,9 +15,9 @@
 
 UFACTORY xArm 随附 12pin工具连接电缆。 UFACTORY xArm 和第三方末端执行器可以使用末端工具连接线连接。
 
-<figure><img src="../.gitbook/assets/图片 (3).png" alt="" width="305"><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt="" width="305"><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/图片 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 排线内部有12个不同颜色的管脚，每种颜色代表不同的功能，请参考下表：
 
@@ -47,7 +47,7 @@ UFACTORY xArm的末端工具法兰参照DIN ISO 9409-1-A50/A63标准。 可以�
 
 1300型号的末端工具法兰螺孔如图所示：
 
-<figure><img src="../.gitbook/assets/图片 (2) (1) (1).png" alt=""><figcaption><p><strong><code>末端执行器法兰机械尺寸（单位：mm）</code></strong></p></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption><p><strong><code>末端执行器法兰机械尺寸（单位：mm）</code></strong></p></figcaption></figure>
 
 
 
@@ -81,7 +81,7 @@ UFACTORY xArm的末端工具法兰参照DIN ISO 9409-1-A50/A63标准。 可以�
 
 
 
-<figure><img src="../.gitbook/assets/图片 (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 #### ● Python-SDK **上设置TCP 负载**
 
@@ -121,7 +121,7 @@ set_tcp_offset()
 2. 机械臂末端安装第三方末端执行器（官方未提供）时，请选择【其他】。
 3. 可选择可包裹末端执行器的3D模型（圆柱体/长方体）作为末端执行器的防自撞模型。点击"确定"
 
-<figure><img src="../.gitbook/assets/图片 (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -141,7 +141,7 @@ set_collision_tool_model()
 
 #### 3.1通过数字IO控制末端执行器
 
-<figure><img src="../.gitbook/assets/图片 (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 **● Python-SDK**
 

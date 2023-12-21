@@ -14,15 +14,15 @@
 
 #### 块状示例
 
-<figure><img src="../.gitbook/assets/图片 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 #### 典型关节力矩图（J3）
 
-<figure><img src="../.gitbook/assets/图片 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 #### 典型接头电流图（J3）
 
-<figure><img src="../.gitbook/assets/图片 (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 可以通过接口 **set\_report\_tau\_or\_i()**
 

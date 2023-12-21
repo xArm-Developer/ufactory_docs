@@ -18,6 +18,7 @@
     * [2.xarm\_move\_step\_over](studio-api/live-contorl-api/2.xarm\_move\_step\_over.md)
     * [3.xarm\_move\_joint](studio-api/live-contorl-api/3.xarm\_move\_joint.md)
     * [4.switch\_mode\_lite6](studio-api/live-contorl-api/4.switch\_mode\_lite6.md)
+    * [5.xarm\_urgent\_stop](studio-api/live-contorl-api/5.xarm\_urgent\_stop.md)
     * [6.xarm\_set\_simulation\_robot](studio-api/live-contorl-api/6.xarm\_set\_simulation\_robot.md)
     * [7.xarm\_set\_speed](studio-api/live-contorl-api/7.xarm\_set\_speed.md)
     * [8.xarm\_set\_lite6\_gripper](studio-api/live-contorl-api/8.xarm\_set\_lite6\_gripper.md)

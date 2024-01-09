@@ -4,7 +4,7 @@ description: Gimbal Lock.
 
 # Why the robot performs the same when adjusting the Roll and Yaw?
 
-It normally happens when the Pitch=±90°, it's the gimbal lock, the arm will lose one degree of freedom.
+It normally happens when the Pitch=±90°, it's the[ <mark style="color:blue;">**Gimbal lock**</mark>](https://en.wikipedia.org/wiki/Gimbal\_lock), the arm will lose one degree of freedom.
 
 There are 2 typical features of the gimbal lock situation on the robotic arm.
 
@@ -22,11 +22,11 @@ A simple way to verify is:  (Roll\_send - Roll\_report) ±  (Yaw\_send - Yaw\_re
 
 <figure><img src="../.gitbook/assets/rotation_matrix (1).jpg" alt=""><figcaption></figcaption></figure>
 
-### An example to show the feature1
+### Example for feature1
 
 
 
-### An example to show the feature2
+### Example for feature2
 
 1\) Move your arm to \[350, 0, 200, 90, 0, 0]
 

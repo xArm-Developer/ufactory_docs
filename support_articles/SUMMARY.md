@@ -14,6 +14,7 @@
   * [How to update the firmware and UFactory Studio of Robotic Arm?](faq/how-to-update-the-firmware-and-ufactory-studio-of-robotic-arm.md)
   * [How to align the tool end flange of xArm 5 Lite?](faq/page.md)
 * [Developer](developer/README.md)
+  * [Why the robot performs the same when adjusting the Roll and Yaw?](developer/why-the-robot-performs-the-same-when-adjusting-the-roll-and-yaw.md)
   * [Guide to run robotic arm at the maximum speed?](developer/guide-to-run-robotic-arm-at-the-maximum-speed.md)
   * [Kinematic and Dynamic Parameters](developer/kinematic-and-dynamic-parameters/README.md)
     * [xArm Series](developer/kinematic-and-dynamic-parameters/xarm-series/README.md)

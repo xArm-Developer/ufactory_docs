@@ -8,3 +8,8 @@
   * [switch\_mode\_lite6](websocketapi/switch\_mode\_lite6.md)
   * [xarm\_urgent\_stop](websocketapi/xarm\_urgent\_stop.md)
   * [xarm\_set\_simulation\_robot](websocketapi/xarm\_set\_simulation\_robot.md)
+  * [xarm\_set\_speed](websocketapi/xarm\_set\_speed.md)
+  * [xarm\_set\_lite6\_gripper](websocketapi/xarm\_set\_lite6\_gripper.md)
+  * [xarm\_switch\_mode](websocketapi/xarm\_switch\_mode.md)
+  * [xarm\_set\_bio\_gripper\_enable](websocketapi/xarm\_set\_bio\_gripper\_enable.md)
+  * [xarm\_set\_gripper\_position](websocketapi/xarm\_set\_gripper\_position.md)

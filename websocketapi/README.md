@@ -11,7 +11,7 @@ description: WebsocketAPI is used for UFactory Studio software.
 * _webSocket：ws://{ip}:18333/ws_
 * _http/1.1：http://{ip}:18333_
 
-### 2. Communication flow chart
+### 2. Flow Chart
 
 * front\_end: UI-UFactory Studio
 * Background:  encapsulate xArm-Python-SDK

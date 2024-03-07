@@ -31,7 +31,7 @@ short-press: move a step in a certain direction.
 <table data-full-width="true"><thead><tr><th width="132">Name</th><th width="79">Type</th><th width="99">Required fields</th><th>Description</th></tr></thead><tbody><tr><td>isloop</td><td>bool</td><td>Yes</td><td>whether a long press or not</td></tr><tr><td>direction</td><td>String</td><td>Yes</td><td>Direction of movement： 'position-x-increase’;'position-x-decrease’; ’position-y-increase’;’position-y-decrease’; ’position-z-increase’;’position-z-decrease’; ’attitude-roll-increase’;'attitude-roll-decrease'; ’attitude-pitch-increase’;'attitude-pitch-decrease'; 'attitude-yaw-increase';'attitude-yaw-decrease'; Change of Joint angle： 'joint-angle-increase';'joint-angle-decrease'; Aligning the Hand(for xArm5 only)： 'set-end-level' ;</td></tr><tr><td>isMoveTool</td><td>bool</td><td>Yes</td><td>whether use Tool Coordinate or not(Base Coordinate by default)</td></tr><tr><td>isSetInitialPoint</td><td>bool</td><td>No</td><td>Not Used</td></tr></tbody></table>
 {% endtab %}
 
-{% tab title="Respond" %}
+{% tab title="Response" %}
 ```
 code=0->success;
 code!=0->Failed, refer to xarm_api_code
@@ -43,7 +43,7 @@ code!=0->Failed, refer to xarm_api_code
 
 #### background
 
-```javascript
+```python
 if direction == 'position-x-increase' or direction == 'position-x-decrease':
     self._xarm_sync_tcp(0)
     x = GLOBAL.XArm.xarm_position_step if direction == 'position-x-increase' else -GLOBAL.XArm.xarm_position_step

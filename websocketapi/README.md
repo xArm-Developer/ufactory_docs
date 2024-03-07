@@ -21,6 +21,12 @@ description: WebsocketAPI is used for UFactory Studio software.
 * private\_servo\_control\_protocol: controller-to-servo motor
 * Externals：xArm gripper, xArm vacuum gripper, third-party devices,...
 
+<div align="left">
+
+<figure><img src=".gitbook/assets/websocket_flowchart.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
 ### 3. Data report
 
 After establishing the WebSocket connection, the background will report the real-time status of the robot continually, the data format please check as below:
@@ -126,4 +132,4 @@ After establishing the WebSocket connection, the background will report the real
 
 ```
 
-The respond code please refer to :api\_code
+The response code please refer to api\_code.

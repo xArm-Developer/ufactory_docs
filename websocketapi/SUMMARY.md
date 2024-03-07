@@ -47,7 +47,7 @@
   * [start\_motion\_callback](general/start\_motion\_callback.md)
   * [xarm\_clear\_error](general/xarm\_clear\_error.md)
   * [xarm\_clear\_warn](general/xarm\_clear\_warn.md)
-* [xarm\_api\_code](xarm\_api\_code.md)
 * [Download/Upload](download-upload/README.md)
   * [Download Blockly Project](download-upload/download-blockly-project.md)
   * [Import Blockly project](download-upload/import-blockly-project.md)
+* [xarm\_api\_code](xarm\_api\_code.md)

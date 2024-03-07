@@ -8,7 +8,7 @@ Import the Blockly project.
 
 {% tabs %}
 {% tab title="Request" %}
-<table data-full-width="true"><thead><tr><th width="96">Name</th><th width="85">Type</th><th width="144">Required fields</th><th>Description</th></tr></thead><tbody><tr><td>path</td><td>String</td><td>Yes</td><td>Path to upload to the Blockly folder</td></tr><tr><td>data</td><td>Json</td><td>Yes</td><td>Blockly information： {"type":"dir","name":"test_1","uuid":"/[D]test_1"}</td></tr><tr><td>File</td><td>Binary</td><td>Yes</td><td>Binary data of file</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="96">Name</th><th width="87">Type</th><th width="147">Required fields</th><th>Description</th></tr></thead><tbody><tr><td>path</td><td>String</td><td>Yes</td><td>Path to upload to the Blockly folder</td></tr><tr><td>data</td><td>Json</td><td>Yes</td><td>Blockly information： {"type":"dir","name":"test_1","uuid":"/[D]test_1"}</td></tr><tr><td>File</td><td>Binary</td><td>Yes</td><td>Binary data of file</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

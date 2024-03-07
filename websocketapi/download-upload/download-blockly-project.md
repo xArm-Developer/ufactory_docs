@@ -8,7 +8,7 @@ Download the Blockly project.
 
 {% tabs %}
 {% tab title="Request" %}
-<table data-full-width="true"><thead><tr><th width="142">Name</th><th width="79">Type</th><th width="144">Required fields</th><th>Description</th></tr></thead><tbody><tr><td>path</td><td>String</td><td>Yes</td><td>Relative path</td></tr><tr><td>data</td><td>Json</td><td>Yes</td><td>Path information: {"type":"file","name":"Lite6_Logic_test_1","children":[],"uuid":"/Lite6_Logic_test_1"}</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="96">Name</th><th width="79">Type</th><th width="156">Required fields</th><th>Description</th></tr></thead><tbody><tr><td>path</td><td>String</td><td>Yes</td><td>Relative path</td></tr><tr><td>data</td><td>Json</td><td>Yes</td><td>Path information: {"type":"file","name":"Lite6_Logic_test_1","children":[],"uuid":"/Lite6_Logic_test_1"}</td></tr></tbody></table>
 {% endtab %}
 {% endtabs %}
 

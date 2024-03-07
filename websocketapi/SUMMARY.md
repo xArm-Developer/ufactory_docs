@@ -22,3 +22,8 @@
   * [get\_app\_info](blockly/get\_app\_info.md)
   * [app\_save\_info](blockly/app\_save\_info.md)
   * [app\_create\_file](blockly/app\_create\_file.md)
+* [Settings](settings.md)
+* [General](general.md)
+* [Python IDE](python-ide.md)
+* [xarm\_api\_code](xarm\_api\_code.md)
+* [Download/Upload](download-upload.md)

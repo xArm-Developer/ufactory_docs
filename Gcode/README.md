@@ -18,17 +18,17 @@ TCP port: 504
 
 * **G0** X Y Z A B C   // The speed is 240mm/s by default
 * **G1** X Y Z A B C F  // XYZ(mm),  ABC(RPY,degree), F(speed,mm/min)
-* **G4** P    // Dwell, Unit: s
-* **G20**    // use inches for length units
-* **G21**    // use millimeters for length units
-* **G90**  //absolute distance mode
-* **G91**   //incremental distance mode
 * **G2**    //Arc move, clockwise arc (G2 X Y Z R P F ) (G2 X Y Z I J K P F),  R-radius, I- X offset, J- Y offset, K- Z offset, P-number of turns, default is 1
 * **G3**     //Arc move, counterclockwise arc (G3 X Y Z R P F) (G3 X Y Z I J K P F)
+* **G4** P    // Dwell, Unit: s
 * **G17**    //Z-axis, XY-plane
 * **G18**   //Y-axis, YZ-plane
 * **G19**   //X-axis, YZ-plane
+* **G20**    // use inches for length units
+* **G21**    // use millimeters for length units
+* **G90**  //absolute distance mode
 * **G90.1**  //absolute distance mode for I, J & K offsets
+* **G91**   //incremental distance mode
 * **G91.1**  //incremental distance mode for I, J & K offsets
 
 {% code title="//Code Example" lineNumbers="true" %}

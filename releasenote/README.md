@@ -23,3 +23,7 @@ description: Update Summary.
 * ROS2
 
 &#x20;           [v2.0.0-foxy](https://github.com/xArm-Developer/xarm\_ros2/releases/tag/v2.0.0-foxy)     [v2.0.0-galactic](https://github.com/xArm-Developer/xarm\_ros2/releases/tag/v2.0.0-galactic)     [v2.2.0-humble](https://github.com/xArm-Developer/xarm\_ros2/releases/tag/v2.0.0-humble)     [v2.0.0-rolling](https://github.com/xArm-Developer/xarm\_ros2/releases/tag/v2.0.0-rolling)
+
+
+
+FAQ: [How to update the firmware and UFactory Studio of Robotic Arm?](https://app.gitbook.com/s/xqpSs3BbFPFzgUjBqYuO/faq/how-to-update-the-firmware-and-ufactory-studio-of-robotic-arm)

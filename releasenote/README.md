@@ -26,4 +26,6 @@ description: Update Summary.
 
 
 
-FAQ: [How to update the firmware and UFactory Studio of Robotic Arm?](https://app.gitbook.com/s/xqpSs3BbFPFzgUjBqYuO/faq/how-to-update-the-firmware-and-ufactory-studio-of-robotic-arm)
+FAQ:&#x20;
+
+[How to update the firmware and UFactory Studio of Robotic Arm?](https://app.gitbook.com/s/xqpSs3BbFPFzgUjBqYuO/faq/how-to-update-the-firmware-and-ufactory-studio-of-robotic-arm)

@@ -1,6 +1,8 @@
 # 软件升级记录
 
-### 固件， Studio， SDK对应关系：
+### 推荐版本：
+
+下面列举了推荐使用的匹配版本。
 
 <table><thead><tr><th width="160">固件</th><th width="162">Studio</th><th>Python SDK</th><th>ROS&#x26;ROS2</th></tr></thead><tbody><tr><td>2.3.0</td><td>2.3.0</td><td>1.13.18</td><td>2.0.0</td></tr><tr><td>2.2.0</td><td>2.2.0</td><td>1.13.13</td><td>2.0.0</td></tr><tr><td>2.1.0</td><td>2.1.0</td><td>1.13.8</td><td>2.0.0</td></tr><tr><td>2.0.0</td><td>2.0.0</td><td>1.12.1</td><td>2.0.0</td></tr></tbody></table>
 

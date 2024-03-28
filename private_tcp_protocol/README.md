@@ -5,17 +5,17 @@
 
 ## Control Box Communication Protocol
 
-<img src="../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
+<img src=".gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
 
-## Further Developer Resources <a href="#_toc21764" id="_toc21764"></a>
+## Further Developer Resources <a href="#toc21764" id="toc21764"></a>
 
-* ROS 1 Library : [https://github.com/xArm-Developer/xarm\_ros](https://github.com/xArm-Developer/xarm\_ros)
+* ROS 1 Library: [https://github.com/xArm-Developer/xarm\_ros](https://github.com/xArm-Developer/xarm\_ros)
 * ROS 2 Library: [https://github.com/xArm-Developer/xarm\_ros2](https://github.com/xArm-Developer/xarm\_ros2)
-* Python SDK : [https://github.com/xArm-Developer/xArm-Python-SDK](https://github.com/xArm-Developer/xArm-Python-SDK)
-* C++ SDK : [https://github.com/xArm-Developer/xArm-CPLUS-SDK](https://github.com/xArm-Developer/xArm-CPLUS-SDK)
+* Python SDK: [https://github.com/xArm-Developer/xArm-Python-SDK](https://github.com/xArm-Developer/xArm-Python-SDK)
+* C++ SDK: [https://github.com/xArm-Developer/xArm-CPLUS-SDK](https://github.com/xArm-Developer/xArm-CPLUS-SDK)
 
-## More Information <a href="#_toc17347" id="_toc17347"></a>
+## More Information <a href="#toc17347" id="toc17347"></a>
 
 * More product information: https://www.ufactory.cc
-* For technical support, please email to: support@ufactory.cc
-* For sales support, please email to: sales@ufactory.cc
+* For technical support, please email: support@ufactory.cc
+* For sales support, please email: sales@ufactory.cc

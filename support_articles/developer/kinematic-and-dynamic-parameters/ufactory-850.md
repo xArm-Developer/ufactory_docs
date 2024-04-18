@@ -6,7 +6,7 @@ description: Kinematic and Dynamic Parameters of UFACTORY 850
 
 <mark style="color:blue;">**1. Modified D-H Parameters**</mark>
 
-<table data-full-width="false"><thead><tr><th>Size Parameters: (unit:mm)</th><th>Joint Coordinate Definition</th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/image (2) (1) (1).png" alt="" data-size="original"></td><td><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""></td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th>Size Parameters: (unit:mm)</th><th>Joint Coordinate Definition</th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/850_modifiedDH_and_Dynamics.png" alt="" data-size="original"></td><td><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""></td></tr></tbody></table>
 
 <table data-full-width="false"><thead><tr><th width="163">Kinematics</th><th width="166">theta offset(deg)</th><th>d(mm)</th><th>alpha(deg)</th><th>a(mm)</th></tr></thead><tbody><tr><td>Joint1</td><td>0</td><td>364</td><td>0</td><td>0</td></tr><tr><td>Joint2</td><td>90</td><td>0</td><td>90</td><td>0</td></tr><tr><td>Joint3</td><td>90</td><td>0</td><td>180</td><td>390</td></tr><tr><td>Joint4</td><td>0</td><td>426</td><td>-90</td><td>150</td></tr><tr><td>Joint5</td><td>0</td><td>0</td><td>-90</td><td>0</td></tr><tr><td>Joint6</td><td>0</td><td>90</td><td>90</td><td>0</td></tr></tbody></table>
 

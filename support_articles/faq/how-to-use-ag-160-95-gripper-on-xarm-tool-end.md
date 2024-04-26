@@ -19,7 +19,7 @@ description: >-
 
 2\) Connection
 
-<table><thead><tr><th width="185">AG-160-95</th><th width="179">AG-160-95</th><th width="182">xArm tool end</th><th>xArm tool end</th></tr></thead><tbody><tr><td>color</td><td>Signal</td><td>Color</td><td>Signal</td></tr><tr><td>Red</td><td>24V</td><td>Brownl or Blue</td><td>24V</td></tr><tr><td>Black</td><td>GND</td><td>White or Green</td><td>GND</td></tr><tr><td>Green</td><td>485-A</td><td>pink</td><td>485-A</td></tr><tr><td>Blue</td><td>485-B</td><td>yellow</td><td>485-B</td></tr></tbody></table>
+<table><thead><tr><th width="185">AG-160-95</th><th width="179">AG-160-95</th><th width="182">xArm tool end</th><th>xArm tool end</th></tr></thead><tbody><tr><td>color</td><td>Signal</td><td>Color</td><td>Signal</td></tr><tr><td>Red</td><td>24V</td><td>Brown or Blue</td><td>24V</td></tr><tr><td>Black</td><td>GND</td><td>White or Green</td><td>GND</td></tr><tr><td>Green</td><td>485-A</td><td>pink</td><td>485-A</td></tr><tr><td>Blue</td><td>485-B</td><td>yellow</td><td>485-B</td></tr></tbody></table>
 
 ### 3. Parameter Config
 

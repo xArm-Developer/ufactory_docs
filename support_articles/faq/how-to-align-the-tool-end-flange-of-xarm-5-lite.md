@@ -4,7 +4,7 @@
 
 'Live Control - Position Control - Control- Aligning the Hand'.
 
-<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
 ### 2. Python SDK
 

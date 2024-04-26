@@ -15,7 +15,7 @@ description: >-
 
 1\) Pin Definition
 
-
+<figure><img src="../.gitbook/assets/AG-160-95 gripper.jpg" alt=""><figcaption></figcaption></figure>
 
 2\) Connection
 
@@ -27,7 +27,7 @@ The main parameter is the Baud rate, TCP offset, TCP payload, and self-collision
 
 1\) Enter into 'Settings-Externals-Modbus RTU', choose '**115200**', and save.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 2\) Send command.
 

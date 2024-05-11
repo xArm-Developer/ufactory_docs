@@ -40,11 +40,11 @@ Send: 00 01 00 00 00 09 01 10 00 40 00 01 02 00 14
 
 02: data length
 
-00 14: Blockly project name
+00 14: Gcode file name
 
 
 
-<mark style="color:blue;">**Example to start 2 Blockly projects**</mark>
+<mark style="color:blue;">**Example to start 2 Gcode files**</mark>
 
 Start 2 Blockly projects named 00001 and 00032.
 

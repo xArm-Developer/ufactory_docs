@@ -14,7 +14,7 @@ registers: 0x40
 
 **It will only trigger the Gcode file under the modbus\_tcp folder.**
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

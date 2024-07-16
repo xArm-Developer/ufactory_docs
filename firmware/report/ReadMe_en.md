@@ -22,7 +22,8 @@
 | Actual Joint Velocities               | FP32 | 145        | 172       | 28     | rad/s        |                   |
 | Actual Joint Accelerations            | FP32 | 173        | 200       | 28     | rad/s²       |                   |
 | Actual Joint Currents                 | FP32 | 201        | 228       | 28     | A            |                   |
-| Estimated Joint Torques               | FP32 | 229        | 256       | 28     | N            |                   |
+| Estimated Joint Torques               | FP32 | 229        | 256       | 28     | N·m
+            |                   |
 | Reserved for Joints                   | FP32 | 257        | 424       | 168    |              |                   |
 | Target TCP Pose                       | FP32 | 425        | 448       | 24     | mm & rad     | \[x,y,z,rx,ry,rz] |
 | Target TCP Speed                      | FP32 | 449        | 472       | 24     | mm/s & rad/s |                   |

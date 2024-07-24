@@ -63,7 +63,7 @@ You can debug and check more examples via 'UFACTORY Studio-Gcode' page.
 * **M64 P**     //turn on digital output immediately(wait=False).
 * **M65 P**     //turn off digital output immediately(wait=False).
 * **E67 E Q**  //set controller analog output synchronized with motion(wait=True).
-*   **E68 E Q**  //set controller analog output immediately(wait=False).                                                              P: IONUM(0-15, 0-7: CO0-CO7, 8-15: DO0-DO7)
+*   **E68 E Q**  //set controller analog output immediately(wait=False).                                                                P: IONUM(0-15, 0-7: CO0-CO7, 8-15: DO0-DO7)
 
     E: IONUM(0-1), Q: value(0-10)
 * **M100 P{} Q{}**  //enable or disable the robot.                                                                                                          P1-enable,  P0-disable,  Q-joint ID(8 by default, stands for all joints).
@@ -71,10 +71,49 @@ You can debug and check more examples via 'UFACTORY Studio-Gcode' page.
 * **M102**   //clear warning
 * **M103 P{}** //set mode
 * **M104 P{}**  //set state
-*   **M115 P{} Q{}** //set TGPIO                                                                                                                                            P: IONUM   0/1/2/3/4
+* **M115 P{} Q{}** //set TGPIO                                                                                                                                          &#x20;
 
-    Q:  0/ 1/ 10/ 11                                                                                                                                                             Q0: turn off(low level) tool digital output synchronized with motion(wait=True).                                                                      Q1: turn on(high level) tool digital output synchronized with motion(wait=True).                                                                       Q10: turn off tool digital output immediately(wait=False).                                                                                        Q11: turn on tool digital output immediately(wait=False).
-* **M116 P{} Q{}**  //control the end effector                                                                                                                          P1: xArm Gripper, Q-position(-10\~850)                                                                                                                                      P2: xArm Vacuum Gripper,                                                                                                                  Q0:open(wait=True), Q1:close(wait=True), Q10:open(wait=False), Q11:close(wait=False)                            P3: xArm BIO Gripper, Q0:close, Q1:                                                                                                                    P4/P5: Robotiq-2F-85 Gripper, Robotiq-2F-140 Gripper, Q:position(0\~255)                                         P11: Lite6 Gripper,                                                                                                                                  Q0:close(wait=True), Q1:open(wait=True), Q10:close(wait=False), Q11:open(wait=False)                           P12: Lite6 Vacuum Gripper,                                                                                                                      Q0:close(wait=True), Q1:open(wait=True), Q10:close(wait=False), Q11:open(wait=False)  &#x20;
+&#x20;      P:  IONUM   0/1/2/3/4
+
+&#x20;      Q: 0/ 1/ 10/ 11&#x20;
+
+&#x20;            Q0:turn off(low level) tool digital output synchronized with motion(wait=True).&#x20;
+
+&#x20;            Q1:turn on(high level) tool digital output synchronized with motion(wait=True).&#x20;
+
+&#x20;            Q10: turn off tool digital output immediately(wait=False). &#x20;
+
+&#x20;            Q11: turn on tool digital output immediately(wait=False). &#x20;
+
+* **M116 P{} Q{}**  //control the end effector        &#x20;
+
+&#x20;       P1: xArm Gripper, Q-position
+
+&#x20;       P2: xArm Vacuum Gripper
+
+&#x20;             Q0:open(wait=True), Q1:close(wait=True),&#x20;
+
+&#x20;             Q10:open(wait=False), Q11:close(wait=False)
+
+&#x20;      P3: xArm BIO Gripper
+
+&#x20;             Q0: close, Q1: open
+
+&#x20;      P4/P5: Robotiq-2F-85 Gripper, Robotiq-2F-140 Gripper, Q:position(0\~255)
+
+&#x20;      P11: Lite6 Gripper
+
+&#x20;             Q0:close(wait=True), Q1:open(wait=True),&#x20;
+
+&#x20;             Q10:close(wait=False), Q11:open(wait=False)
+
+&#x20;      P12: Lite6 Vacuum Gripper
+
+&#x20;             Q0:close(wait=True), Q1:open(wait=True),&#x20;
+
+&#x20;             Q10:close(wait=False), Q11:open(wait=False)
+
+
 
 {% code title="//Code Example" lineNumbers="true" %}
 ```gcode

@@ -6,9 +6,11 @@ description: >-
 
 # UFACTORY Gcode
 
-Firmware version:  v2.3.0 or later
+Updated: 2024-07-24
 
-UFACTORY Studio version:  V2.3.0 or later
+Firmware version:  v2.5.0 or later
+
+UFACTORY Studio version:  V2.5.0 or later
 
 TCP port: 504
 
@@ -55,17 +57,63 @@ You can debug and check more examples via 'UFACTORY Studio-Gcode' page.
 
 ### 2. M command
 
-* M2/M30  //end program
-* M62 P      //turn on digital output synchronized with motion(wait=True).
-* M63 P      //turn off digital output synchronized with motion(wait=True).
-* M64 P     //turn on digital output immediately(wait=False).
-* M65 P     //turn off digital output immediately(wait=False).
-* E67 E Q  //set controller analog output synchronized with motion(wait=True).
-* E68 E Q  //set controller analog output immediately(wait=False).
+* **M2/M30**  //end program
+* **M62 P**     //turn on digital output synchronized with motion(wait=True).
+* **M63 P**     //turn off digital output synchronized with motion(wait=True).
+* **M64 P**     //turn on digital output immediately(wait=False).
+* **M65 P**     //turn off digital output immediately(wait=False).
+* **E67 E Q**  //set controller analog output synchronized with motion(wait=True).
+*   **E68 E Q**  //set controller analog output immediately(wait=False).                                                                P: IONUM(0-15, 0-7: CO0-CO7, 8-15: DO0-DO7)
 
-P: IONUM(0-15, 0-7: CO0-CO7, 8-15: DO0-DO7)
+    E: IONUM(0-1), Q: value(0-10)
+* **M100 P{} Q{}**  //enable or disable the robot.                                                                                                          P1-enable,  P0-disable,  Q-joint ID(8 by default, stands for all joints).
+* **M101**    //clear error
+* **M102**   //clear warning
+* **M103 P{}** //set mode
+* **M104 P{}**  //set state
+* **M115 P{} Q{}** //set TGPIO                                                                                                                                          &#x20;
 
-E: IONUM(0-1), Q: value(0-10)
+&#x20;      P:  IONUM   0/1/2/3/4
+
+&#x20;      Q: 0/ 1/ 10/ 11&#x20;
+
+&#x20;            Q0:turn off(low level) tool digital output synchronized with motion(wait=True).&#x20;
+
+&#x20;            Q1:turn on(high level) tool digital output synchronized with motion(wait=True).&#x20;
+
+&#x20;            Q10: turn off tool digital output immediately(wait=False). &#x20;
+
+&#x20;            Q11: turn on tool digital output immediately(wait=False). &#x20;
+
+* **M116 P{} Q{}**  //control the end effector        &#x20;
+
+&#x20;       P1: xArm Gripper, Q-position
+
+&#x20;       P2: xArm Vacuum Gripper
+
+&#x20;             Q0:open(wait=True), Q1:close(wait=True),&#x20;
+
+&#x20;             Q10:open(wait=False), Q11:close(wait=False)
+
+&#x20;      P3: xArm BIO Gripper
+
+&#x20;             Q0: close, Q1: open
+
+&#x20;      P4/P5: Robotiq-2F-85 Gripper, Robotiq-2F-140 Gripper, Q:position(0\~255)
+
+&#x20;      P11: Lite6 Gripper
+
+&#x20;             Q0:close(wait=True), Q1:open(wait=True),&#x20;
+
+&#x20;             Q10:close(wait=False), Q11:open(wait=False)
+
+&#x20;      P12: Lite6 Vacuum Gripper
+
+&#x20;             Q0:close(wait=True), Q1:open(wait=True),&#x20;
+
+&#x20;             Q10:close(wait=False), Q11:open(wait=False)
+
+
 
 {% code title="//Code Example" lineNumbers="true" %}
 ```gcode
@@ -73,6 +121,10 @@ M62 P1            ;set CO1 to high level, wait=True
 M64 P15           ;set DO7 to high level, wait=False
 M67 E0 Q10        ;set AO0 to 10V, wait=True
 M68 E1 Q2         ;set AO1 to 2V, wait=False
+
+
+M116 P2 Q10       ;open xArm Vacuum Gripper, wait=False
+M116 P2 Q11       ;close xArm Vacuum Gripper, wait=False
 ```
 {% endcode %}
 

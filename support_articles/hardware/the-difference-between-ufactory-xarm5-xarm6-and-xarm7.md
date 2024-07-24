@@ -18,4 +18,4 @@ description: >-
 
 xArm 5 Lite: Due to the robot configuration, <mark style="color:orange;">**the actual flexible degrees**</mark> of freedom of linear and circular motions <mark style="color:orange;">**in Cartesian space is 4**</mark>, which is \[x, y, z, yaw], similar to a SCARA manipulator with four degrees of freedom. Before initiating Cartesian control movement, it is necessary to ensure that the end flange surface of xArm5 and the base are completely parallel. If mounted on a horizontal plane, the roll and pitch should be \[± 180 degrees, 0 degrees], otherwise the trajectory is likely to have no solution.
 
-[How to align the tool end flange of xArm 5 Lite?](../faq/page.md)
+[How to align the tool end flange of xArm 5 Lite?](../faq/how-to-align-the-tool-end-flange-of-xarm-5-lite.md)

@@ -12,7 +12,7 @@ description: Kinematic and Dynamic Parameters of xArm 7
 
 <mark style="color:blue;">**2. Standard D-H Parameters**</mark>
 
-<figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/xarm7_standardDH.jpg" alt=""><figcaption></figcaption></figure>
 
 <table><thead><tr><th width="147.33333333333331">Kinematics</th><th width="117">theta(rad)</th><th width="99">d(mm)</th><th width="123">alpha(rad)</th><th width="104">a(mm)</th><th>offset(rad)</th></tr></thead><tbody><tr><td>Joint1</td><td>0</td><td>267</td><td>-pi/2</td><td>0</td><td>0</td></tr><tr><td>Joint2</td><td>0</td><td>0</td><td>pi/2</td><td>0</td><td>0</td></tr><tr><td>Joint3</td><td>0</td><td>293</td><td>pi/2</td><td>52.5</td><td>0</td></tr><tr><td>Joint4</td><td>0</td><td>0</td><td>pi/2</td><td>77.5</td><td>0</td></tr><tr><td>Joint5</td><td>0</td><td>342.5</td><td>pi/2</td><td>0</td><td>0</td></tr><tr><td>Joint6</td><td>0</td><td>0</td><td>-pi/2</td><td>76</td><td>0</td></tr><tr><td>Joint7</td><td>0</td><td>97</td><td>0</td><td>0</td><td>0</td></tr></tbody></table>
 

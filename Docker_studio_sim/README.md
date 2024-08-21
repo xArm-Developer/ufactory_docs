@@ -17,7 +17,7 @@ Implemented via docker: Control simulated UFACTORY robots in UFACTORY Studio wit
 * Download and install UFACTORY Studio docker image, download link:[ Docker - Google ドライブ ](https://drive.google.com/drive/folders/1gae-RRkVPG7pH7n3KtrRHRkzKYW0GTbO)
 
 
-If you follow the guidance, you will start the Lite 6 robot by default.
+If you follow the guidance, you will start the xArm 6 robot by default.
 
 **Note: The following example is installed a new ubuntu image.**
 ## 1.Download and install ubuntu  

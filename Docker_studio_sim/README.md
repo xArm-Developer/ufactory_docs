@@ -77,7 +77,7 @@ rm -rf uf_sim*
 ```
 //unzip
 
-        unzip docker_sim_update_V2.4.0.zip
+        unzip docker_sim_update-*.zip
         cd docker_sim_update_*
         tar -xf xarmcontroller-x86_64-*.tar.gz
         tar -xf xarmstudio-x86_64-*.tar.gz --wildcards linux/xarm.tar.gz && tar -xf linux/xarm.tar.gz -C ./ && rm -rf linux

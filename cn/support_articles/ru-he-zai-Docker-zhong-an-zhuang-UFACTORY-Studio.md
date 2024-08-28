@@ -12,7 +12,7 @@
 
 * 下载并安装docker，docker官网下载链接： **https://www.docker.com/** （若官网无法访问，可找其他安装方法）
 
-* 下载Ufactory studio安装包:[阿里云盘 ](https://www.alipan.com/drive/file/all/66cee7917c8111d68cca4118a179b34daa725ec7)
+* 下载Ufactory studio安装包:[UFACTORY STudio](https://share.weiyun.com/R2aq65N4)
 
   如果你按照以下步骤进行操作，默认开启仿真xArm 6机械臂.
 

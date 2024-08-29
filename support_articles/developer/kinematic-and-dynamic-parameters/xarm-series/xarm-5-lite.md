@@ -6,13 +6,13 @@ description: Kinematic and Dynamic Parameters of xArm 5 Lite
 
 <mark style="color:blue;">**1. Modified D-H Parameters**</mark>
 
-<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
 <table data-full-width="false"><thead><tr><th width="139">Kinematics</th><th width="127">theta (rad)</th><th width="107">d(mm)</th><th width="121">alpha(rad)</th><th width="95">a(mm)</th><th>offset(rad)</th></tr></thead><tbody><tr><td>Joint1</td><td>0</td><td>267</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Joint2</td><td>0</td><td>0</td><td>-pi/2</td><td>0</td><td><mark style="color:orange;">T2_offset</mark></td></tr><tr><td>Joint3</td><td>0</td><td>0</td><td>0</td><td><mark style="color:orange;">a2</mark></td><td><mark style="color:orange;">T3_offset</mark></td></tr><tr><td>Joint4</td><td>0</td><td>0</td><td>0</td><td><mark style="color:orange;">a3</mark></td><td><mark style="color:orange;">T4_offset</mark></td></tr><tr><td>Joint5</td><td>0</td><td>97</td><td>-pi/2</td><td>0</td><td>0</td></tr></tbody></table>
 
 <mark style="color:blue;">**2. Standard D-H Parameters**</mark>
 
-<figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
 <table><thead><tr><th width="147.33333333333331">Kinematics</th><th width="117">theta(rad)</th><th width="99">d(mm)</th><th width="123">alpha(rad)</th><th width="104">a(mm)</th><th>offset(rad)</th></tr></thead><tbody><tr><td>Joint1</td><td>0</td><td>267</td><td>-pi/2</td><td>0</td><td>0</td></tr><tr><td>Joint2</td><td>0</td><td>0</td><td>0</td><td><mark style="color:orange;">a2</mark></td><td><mark style="color:orange;">T2_offset</mark></td></tr><tr><td>Joint3</td><td>0</td><td>0</td><td>0</td><td><mark style="color:orange;">a3</mark></td><td><mark style="color:orange;">T3_offset</mark></td></tr><tr><td>Joint4</td><td>0</td><td>0</td><td>-pi/2</td><td>76</td><td><mark style="color:orange;">T4_offset</mark></td></tr><tr><td>Joint5</td><td>0</td><td>97</td><td>0</td><td>0</td><td>0</td></tr></tbody></table>
 
@@ -36,7 +36,7 @@ a3 = sqrt(77.5^2+342.5^2) = 351.158796;
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (16).png" alt="" width="213"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (41).png" alt="" width="213"><figcaption></figcaption></figure>
 
 </div>
 

@@ -34,7 +34,7 @@ It is recommended to adjust the jerk to the maximum, which will speed up the mot
 
 'Settings-General-Advanced Settings-Parameters'
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 * Parameter adjustment via Python SDK
 
@@ -61,7 +61,7 @@ Adjust Parameters to do continuous motion.
 
 Example:
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 Radius>0, wait=False;    Video: [https://youtu.be/oX\_J8RplEw4](https://youtu.be/oX\_J8RplEw4)
 

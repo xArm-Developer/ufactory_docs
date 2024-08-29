@@ -8,7 +8,7 @@ description: You can improve the jitter of the robotic arm through the method be
 
 Reduce the jerk via 'Settings-General-Advanced Settings-Parameters-Jerk'.
 
-<figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
 ### 2. Check whether the robotic arm passes through or near the singularity.
 

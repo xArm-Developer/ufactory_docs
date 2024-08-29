@@ -5,7 +5,7 @@
   * [The difference between UFACTORY xArm5, xArm6 and xArm7](hardware/the-difference-between-ufactory-xarm5-xarm6-and-xarm7.md)
   * [What should I do if I swap the robot control box?](hardware/what-should-i-do-if-i-swap-the-robot-control-box.md)
 * [Software](software/README.md)
-  * [How to solve the error C24: Speed Exceeds Limit](software/how-to-solve-the-error-c24-speed-exceeds-limit.md)
+  * [How to solve C24 error?](software/how-to-solve-the-error-c24-speed-exceeds-limit.md)
   * [How to improve the jitter of the robotic arm?](software/how-to-improve-the-jitter-of-the-robotic-arm.md)
   * [How to update the firmware and UFactory Studio of Robotic Arm?](software/how-to-update-the-firmware-and-ufactory-studio-of-robotic-arm.md)
   * [How to install UFACTORY Studio in Docker](software/how-to-install-ufactory-studio-in-docker.md)

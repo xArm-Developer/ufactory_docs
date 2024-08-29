@@ -1,4 +1,12 @@
-# How to solve the error C31: Abnormal Current
+---
+description: 'C31: Abnormal Current'
+---
+
+# How to solve C31 error?
+
+Product: xArm series, UF 850, Lite6
+
+UFactory version: V2.1.0+
 
 When the actual obtained current exceeds the expected current threshold, our software will report a C31 error and stop the arm to protect it.
 

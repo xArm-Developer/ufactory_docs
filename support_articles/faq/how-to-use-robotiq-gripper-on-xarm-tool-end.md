@@ -84,7 +84,7 @@ UFactory Studio - Live Control:
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/image (4).png" alt="" width="338"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt="" width="338"><figcaption></figcaption></figure>
 
 </div>
 

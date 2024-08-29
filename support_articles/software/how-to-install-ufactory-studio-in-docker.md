@@ -145,7 +145,7 @@ Windows: the robot IP is 127.0.0.1
 #### 1. Get the docker image <a href="#id-1.get-the-docker-image" id="id-1.get-the-docker-image"></a>
 
 ```
-    docker pull danielwang123321/uf-ubuntu-docker
+docker pull danielwang123321/uf-ubuntu-docker
 ```
 
 #### 2. Create and run container <a href="#id-2.create-and-run-container" id="id-2.create-and-run-container"></a>
@@ -153,7 +153,7 @@ Windows: the robot IP is 127.0.0.1
 **On Linux Ubuntu**
 
 ```
-    docker run -it --name uf_software danielwang123321/uf-ubuntu-docker
+docker run -it --name uf_software danielwang123321/uf-ubuntu-docker
 ```
 
 **On Windows**
@@ -167,13 +167,13 @@ docker run -it --name uf_software -p 18333:18333 danielwang123321/uf-ubuntu-dock
 * If you want use not only the UFACTORY Studio but also the xArm SDK on Windows, please use this command:
 
 ```
-    docker run -it --name uf_software -p 18333:18333 -p 502:502 -p 503:503 -p 504:504 -p 30000:30000 -p 30001:30001 -p 30002:30002 -p 30003:30003  danielwang123321/uf-ubuntu-docker
+docker run -it --name uf_software -p 18333:18333 -p 502:502 -p 503:503 -p 504:504 -p 30000:30000 -p 30001:30001 -p 30002:30002 -p 30003:30003  danielwang123321/uf-ubuntu-docker
 ```
 
 #### 3.Run the xArm robot firmware and UFACTORY Studio <a href="#id-3.run-the-xarm-robot-firmware-and-ufactory-studio" id="id-3.run-the-xarm-robot-firmware-and-ufactory-studio"></a>
 
 ```
-    /xarm_scripts/xarm_start.sh 6 6
+/xarm_scripts/xarm_start.sh 6 6
 ```
 
 **Note: The 6 6 means xArm 6, restarting the container choose the robot according to your preferences:**

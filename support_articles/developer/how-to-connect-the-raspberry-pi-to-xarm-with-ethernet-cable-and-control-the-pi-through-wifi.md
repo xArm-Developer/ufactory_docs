@@ -65,7 +65,7 @@ pi@raspberrypi:\~ $ sudo nano /etc/dhcpcd.conf
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 

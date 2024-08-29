@@ -43,7 +43,7 @@ Download the[ xarm-tool-gui ](https://drive.google.com/drive/folders/1WOcMMRXo0X
 2\) Click \[xArmStudio] - \[Offline Installation], select the offline package downloaded in advance, click \[Install], the interface will pop up a prompt "Install Studio successfully".\
 3\) Click \[Reboot Control Box], wait for 2-3 minutes for the controller to finish rebooting and reconnect.
 
-<figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Note:** If the online upgrade fails, you can try the offline upgrade. When the offline upgrade is still unsuccessful, please contact the support team(support@ufactory.cc).

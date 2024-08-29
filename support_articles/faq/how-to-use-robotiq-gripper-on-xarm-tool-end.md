@@ -29,13 +29,13 @@ The main parameter is the Baud rate, TCP offset, TCP payload, and self-collision
 
 TCP Payload and offset: 'Settings-Motion-TCP'.
 
-<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 Self-collision prevention model: 'Settings-Live Control-End Effector', choose Robotiq Gripper.
 
 Please choose 'yes', It will set the baud rate to 115200, the default baud rate is 2000000.
 
-<figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
 
 #### 2) Config the parameter via Python SDK
 

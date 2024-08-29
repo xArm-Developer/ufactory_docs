@@ -6,15 +6,15 @@ Each xArm/UF850 should come with a control box, and there’s no problem replaci
 
 Export and import the configuration file easily to the new control box via 'Settings-General-Advanced Settings-Logic-Export/Import Configuration'.
 
-![](../../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (37).png>)
 
 **2. ‘Blcokly Project’ and ‘Recording File’**
 
 Export and import the projects via the ‘Blockly’/’Recording’ module.
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (1) (1).png>)
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (2) (1).png>)
 
 **3. Friction parameters**
 
@@ -31,8 +31,6 @@ Press down the E stop button and release, the friction parameters will load auto
 2\) If your arm is 12xx model:
 
 Please provide the SN and contact us<[support@ufactory.cc](mailto:support@ufactory.cc)> to remotely put the original friction parameters into the new control box.
-
-
 
 {% hint style="success" %}
 The calibration parameters are not saved in the control box, swapping another control box will not affect the accuracy of the robot.

@@ -24,7 +24,7 @@ SDK: [https://github.com/xArm-Developer](https://github.com/xArm-Developer)
 
 Go to \[My Device] → \[Check for Update], click "Check for Update", if there is a new version, click "Download", click "Install" to load the downloaded installation package, and wait for the system to reboot. The reboot will take about 2-3 minutes.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 2. Offline Upgrade: When the PC has no network connection.
 
@@ -34,7 +34,7 @@ Download the latest offline package.  [_xArm/UF850_](https://drive.google.com/dr
 
 Go to \[My Device] - \[Check Update], click "Install" to load the offline package downloaded in advance, reboot the system, it will take 2-3 minutes.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Use the xArm-tool-gui tool to do the offline upgrade:
 

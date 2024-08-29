@@ -10,6 +10,7 @@
   * [How to update the firmware and UFactory Studio of Robotic Arm?](software/how-to-update-the-firmware-and-ufactory-studio-of-robotic-arm.md)
   * [How to install UFACTORY Studio in Docker](software/how-to-install-ufactory-studio-in-docker.md)
   * [How to solve S18 error?](software/how-to-solve-s18-error.md)
+  * [How to solve S17 error?](software/how-to-solve-s17-error.md)
 * [FAQ](faq/README.md)
   * [Q & A](faq/q-and-a.md)
   * [Robot state and mode explanation](faq/robot-state-and-mode-explanation.md)

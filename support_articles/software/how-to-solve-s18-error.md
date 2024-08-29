@@ -15,7 +15,7 @@ Please note that if the arm is not used for a long time(**≥3 months**), you ne
 
 
 * [x] If you haven't used the arm for a long time and encounter S18 error, please follow the steps below to clear it.
-* [ ] If you encounter S18 error when you receive the arm, please take a screenshot of the error page and contact \<support@ufactory.cc>
+* [ ] If you encounter S18 error when you receive the arm, please take a screenshot of the error page and contact [support@ufactory.cc](mailto:support@ufactory.cc)
 
 
 

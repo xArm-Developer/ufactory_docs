@@ -7,6 +7,7 @@
 * [Software](software/README.md)
   * [How to solve the error C24: Speed Exceeds Limit](software/how-to-solve-the-error-c24-speed-exceeds-limit.md)
   * [How to improve the jitter of the robotic arm?](software/how-to-improve-the-jitter-of-the-robotic-arm.md)
+  * [Page](software/page.md)
 * [FAQ](faq/README.md)
   * [Q & A](faq/q-and-a.md)
   * [Robot state and mode explanation](faq/robot-state-and-mode-explanation.md)

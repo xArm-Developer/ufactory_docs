@@ -20,9 +20,9 @@ description: Kinematic and Dynamic Parameters of UFACTORY Lite 6
 
 <mark style="color:blue;">**3. Mass Parameters**</mark>
 
-| Size Parameters: (unit:mm)                  | Joint Coordinate Definition                 |
-| ------------------------------------------- | ------------------------------------------- |
-| ![](<../../.gitbook/assets/image (11).png>) | ![](<../../.gitbook/assets/image (12).png>) |
+| Size Parameters: (unit:mm)                      | Joint Coordinate Definition                 |
+| ----------------------------------------------- | ------------------------------------------- |
+| ![](<../../.gitbook/assets/image (11) (1).png>) | ![](<../../.gitbook/assets/image (12).png>) |
 
 <table><thead><tr><th width="190">Dynamics</th><th width="184.33333333333331">Mass(kg)</th><th>Center of Mass(mm)</th></tr></thead><tbody><tr><td>Link1</td><td>1.411</td><td>[-0.36, 41.95, -2.5]</td></tr><tr><td>Link2</td><td>1.34</td><td>[179.0, 0.0, 58.4]</td></tr><tr><td>Link3</td><td>0.953</td><td>[72.0, -35.7, -1.0]</td></tr><tr><td>Link4</td><td>1.284</td><td>[-2.0, -28.5, -81.3]</td></tr><tr><td>Link5</td><td>0.084</td><td>[0.0, 10.0, 1.9]</td></tr><tr><td>Link6</td><td>0.13</td><td>[0.0, -1.94, -10.2]</td></tr></tbody></table>
 

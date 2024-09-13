@@ -72,7 +72,7 @@ while cnt<1000:
 
 get\_joint\_angle\_30000.py:  Read actual joint angles via port 30000 and save to joint\_pos.csv.
 
-read\_csv.py:  read the data and&#x20;
+read\_csv.py:  read the data and use 'matplotib' to draw the curve.
 
 {% code title="get_joint_angle_30000.py" lineNumbers="true" %}
 ```python
@@ -188,3 +188,12 @@ plt.show()
 ```
 {% endcode %}
 
+
+
+Example:
+
+{% file src="../../.gitbook/assets/joint_pos.csv" %}
+
+Result:
+
+<figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>

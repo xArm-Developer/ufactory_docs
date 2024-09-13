@@ -20,7 +20,7 @@ Connect the pin module back to controller's IO.
 
 1\) Enter 'Settings-Externals-Controller IO', CI0 & CI1 should in 1(high level).
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 2\) Switch to 'Robot IO', set TO0 & TO1 to 1(high level).
 

@@ -15,6 +15,8 @@
   * [How to solve C31 error?](software/how-to-solve-c31-error.md)
   * [How to solve S18 error?](software/how-to-solve-s18-error.md)
   * [How to solve S17 error?](software/how-to-solve-s17-error.md)
+  * [How to solve C60 error?](software/how-to-solve-c60-error.md)
+  * [How to judge whether the joint servo zero point is lost?](software/how-to-judge-whether-the-joint-servo-zero-point-is-lost.md)
 * [FAQ](faq/README.md)
   * [Q & A](faq/q-and-a.md)
   * [Robot state and mode explanation](faq/robot-state-and-mode-explanation.md)

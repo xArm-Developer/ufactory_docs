@@ -12,9 +12,9 @@ Export and import the configuration file easily to the new control box via 'Sett
 
 Export and import the projects via the ‘Blockly’/’Recording’ module.
 
-![](<../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
-![](<../.gitbook/assets/image (2) (1) (1).png>)
+![](<../.gitbook/assets/image (2) (1) (1) (1).png>)
 
 **3. Friction parameters**
 

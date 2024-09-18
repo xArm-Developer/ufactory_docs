@@ -35,5 +35,5 @@
     * [UFactory 850](developer/kinematic-and-dynamic-parameters/ufactory-850.md)
   * [How to connect the Raspberry Pi to xarm with ethernet cable and control the Pi through WiFi?](developer/how-to-connect-the-raspberry-pi-to-xarm-with-ethernet-cable-and-control-the-pi-through-wifi.md)
   * [Firmware](developer/firmware/README.md)
-    * [How to get the reported data via TCP port?](developer/firmware/how-to-get-the-reported-data-via-tcp-port.md)
+    * [How to get the real-time data via TCP 30000 port?](developer/firmware/how-to-get-the-real-time-data-via-tcp-30000-port.md)
     * [Data Description of TCP port](developer/firmware/data-description-of-tcp-port.md)

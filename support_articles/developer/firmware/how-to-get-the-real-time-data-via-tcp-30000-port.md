@@ -2,11 +2,11 @@
 description: Take port 30000 as an example.
 ---
 
-# How to get the reported data via TCP port?
+# How to get the real-time data via TCP 30000 port?
 
 ### 1. Introduction <a href="#id-1.-introduction" id="id-1.-introduction"></a>
 
-We provide TCP port 30000 to get the robot data in real-time, **the frequency is 200HZ**. The following briefly describes how to use data reporting with the 30000 port.
+We provide TCP port 30000 to get the robot data in real-time, **the frequency is 250HZ**(200HZ with FT sensor). The following briefly describes how to use data reporting with the 30000 port.
 
 [Data Description of TCP port](data-description-of-tcp-port.md)
 
@@ -15,9 +15,9 @@ We provide TCP port 30000 to get the robot data in real-time, **the frequency is
 {% code lineNumbers="true" %}
 ```python
 '''
-Base on TCP port 30000, 200HZ.
+Base on TCP port 30000, 250HZ.
 Firmware version should be 2.1.101 or later.
-Here is an example to get actual joint currents by TCP port 30000, unit: Ampere.
+Here is an example to get actual joint currents by TCP 30000 port, unit: Ampere.
 '''
 
 import socket

@@ -14,7 +14,7 @@ For safety reasons, we give a TCP speed limit under ServoJ mode even for joint m
 
 
 
-When the arm works at extended reach, the TCP speed can easily exceed the threshold. Therefore, we increase theis threshold and provide a parameter to set the limit by themselves, please modify it carefully after safety evalution.
+When the arm works at extended reach, the TCP speed can easily exceed the threshold. Therefore, we increase this threshold and provide a parameter to set the limit by themselves, please modify it carefully after safety evalution.
 
 
 
@@ -22,7 +22,7 @@ When the arm works at extended reach, the TCP speed can easily exceed the thresh
 * get\_linear\_spd\_limit\_factor
 
 1. factor\*1000 = TCP speed limit, the default value is 1.2.
-2. 1.2\*1000=12000mm/s for xArm/UF850,  1.2\*500=600mm/s for Lite6
+2. 1.2\*1000=1200mm/s for xArm/UF850,  1.2\*500=600mm/s for Lite6
 3. call save\_conf() to save this config after calling set\_linear\_spd\_limit\_factor.
 
 <div align="left">

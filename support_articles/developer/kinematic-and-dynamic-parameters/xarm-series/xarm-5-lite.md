@@ -51,3 +51,7 @@ a3 = sqrt(77.5^2+342.5^2) = 351.158796;
 <mark style="color:blue;">**xArm 5 Lite - Model 3**</mark>
 
 <table><thead><tr><th width="190">Dynamics</th><th width="184.33333333333331">Mass(kg)</th><th>Center of Mass(mm)</th></tr></thead><tbody><tr><td>Link1</td><td>2.382</td><td>[0.13, 29.4, -12.4]</td></tr><tr><td>Link2</td><td>2.164</td><td>[37.88, -225.4, 34.47]</td></tr><tr><td>Link3</td><td>2.121</td><td>[68.83, 229.85, 1.02]</td></tr><tr><td>Link4</td><td>1.317</td><td>[64.9, 31.2, 3.2]</td></tr><tr><td>Link5</td><td>0.17</td><td>[0.0, -6.77, -10.98]</td></tr></tbody></table>
+
+<mark style="color:blue;">**xArm 5 Lite - Model 4**</mark>
+
+<table><thead><tr><th width="190">Dynamics</th><th width="184.33333333333331">Mass(kg)</th><th>Center of Mass(mm)</th></tr></thead><tbody><tr><td>Link1</td><td>2.53</td><td>[-0.164, 35.94, -6.5]</td></tr><tr><td>Link2</td><td>2.242</td><td>[40.84, -240.3, 32.54]</td></tr><tr><td>Link3</td><td>2.24</td><td>[72.0, 236.3, 0.83]</td></tr><tr><td>Link4</td><td>1.345</td><td>[68.24, 33.42, 2.64]</td></tr><tr><td>Link5</td><td>0.173</td><td>[0.8, -3.59, -13.26]</td></tr></tbody></table>

@@ -7,17 +7,15 @@
 * xArm目前支持的末端执行器有UFACTORY xArm Gripper，UFACTORY xArm 真空夹持器、xArm BIO 夹持器、Robotiq-2F-85 夹持器、Robotiq-2F-140 夹持器。
 * 您使用的第三方末端执行器必须支持Modbus-RTU通讯协议（基于RS-485）或IO控制。
 
-
-
 ## **第三方末端执行器的硬件安装**
 
 ### **1.电气设置**
 
 UFACTORY xArm 随附 12pin工具连接电缆。 UFACTORY xArm 和第三方末端执行器可以使用末端工具连接线连接。
 
-<figure><img src="broken-reference" alt="" width="305"><figcaption></figcaption></figure>
+<figure><img src="../broken-reference" alt="" width="305"><figcaption></figcaption></figure>
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../broken-reference" alt=""><figcaption></figcaption></figure>
 
 排线内部有12个不同颜色的管脚，每种颜色代表不同的功能，请参考下表：
 
@@ -32,14 +30,12 @@ UFACTORY xArm 随附 12pin工具连接电缆。 UFACTORY xArm 和第三方末端
 <table data-header-hidden><thead><tr><th width="223"></th><th width="149"></th><th width="127"></th><th width="112"></th><th></th></tr></thead><tbody><tr><td>参数</td><td>最小值</td><td>典型值</td><td>最大值</td><td>单位</td></tr><tr><td>24V 模式下的电源电压</td><td>-</td><td>24</td><td>30</td><td>V</td></tr><tr><td>电源电流 *</td><td>-</td><td>-</td><td>1800</td><td>mA</td></tr></tbody></table>
 
 {% hint style="danger" %}
-**注意：**数字输出以带集电极开路（OC）的 NPN 形式实现。&#x20;
+\*\*注意：\*\*数字输出以带集电极开路（OC）的 NPN 形式实现。
 {% endhint %}
 
 当数字输出被激活时，相应的连接器将被驱动到 GND。 当数字输出被禁用时，相应的连接器将打开（集电极开路/漏极开路）。 电气规格如下：
 
 <table data-header-hidden><thead><tr><th width="218"></th><th></th><th></th><th width="146"></th><th></th></tr></thead><tbody><tr><td>参数</td><td>最小值</td><td>典型值</td><td>最大值</td><td>单位</td></tr><tr><td>开路电压</td><td>-0.5</td><td>-</td><td>30</td><td>V</td></tr><tr><td>灌注50mA时的电压</td><td>-</td><td>0.05</td><td>0.20</td><td>在V</td></tr><tr><td>灌注电流</td><td>0</td><td>-</td><td>50</td><td>mA</td></tr><tr><td>通过 GND 的电流</td><td>0</td><td>-</td><td>50</td><td>mA</td></tr></tbody></table>
-
-
 
 ## 2 **、机械安装**
 
@@ -47,9 +43,7 @@ UFACTORY xArm的末端工具法兰参照DIN ISO 9409-1-A50/A63标准。 可以�
 
 1300型号的末端工具法兰螺孔如图所示：
 
-<figure><img src="broken-reference" alt=""><figcaption><p><strong><code>末端执行器法兰机械尺寸（单位：mm）</code></strong></p></figcaption></figure>
-
-
+<figure><img src="../broken-reference" alt=""><figcaption><p><strong><code>末端执行器法兰机械尺寸（单位：mm）</code></strong></p></figcaption></figure>
 
 ## **第三方末端执行器软件设置**
 
@@ -63,13 +57,9 @@ UFACTORY xArm的末端工具法兰参照DIN ISO 9409-1-A50/A63标准。 可以�
 2. 点击【新建】按钮，创建末端执行器的TCP Payload
 3. 创建新的TCP payload有两种方式：（1）手动输入（2）自动识别
 
-
-
 **手动输入：** 如果知道负载的重量和负载的大致重心，可以选择手动输入。
 
 **自动识别：** 机械臂需要运行一系列动作命令来计算TCP 负载的参数。
-
-
 
 {% hint style="danger" %}
 **注意** ：
@@ -79,9 +69,7 @@ UFACTORY xArm的末端工具法兰参照DIN ISO 9409-1-A50/A63标准。 可以�
 \* 如果选择自动识别，当前的机械臂必须安装在平稳的地面上。
 {% endhint %}
 
-
-
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../broken-reference" alt=""><figcaption></figcaption></figure>
 
 #### ● Python-SDK **上设置TCP 负载**
 
@@ -115,15 +103,11 @@ set_tcp_offset()
 
 ## 2.自动防撞模型设置
 
-
-
 1. 进入“设置”-“末端工具”
 2. 机械臂末端安装第三方末端执行器（官方未提供）时，请选择【其他】。
 3. 可选择可包裹末端执行器的3D模型（圆柱体/长方体）作为末端执行器的防自撞模型。点击"确定"
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../broken-reference" alt=""><figcaption></figcaption></figure>
 
 ● **Python-SDK 上设置自碰撞预防模型**
 
@@ -141,7 +125,7 @@ set_collision_tool_model()
 
 #### 3.1通过数字IO控制末端执行器
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../broken-reference" alt=""><figcaption></figcaption></figure>
 
 **● Python-SDK**
 
@@ -158,4 +142,3 @@ arm.set_tgpio_digital(0,1)
 通过 xArm-Python-SDK 发送命令来控制 Robotiq Gripper ( 2F-85 / 2F-140 ) 的示例
 
 {% embed url="https://github.com/xArm-Developer/xArm-Python-SDK/blob/master/example/wrapper/thridparty/set_robotiq_gripper.py" %}
-

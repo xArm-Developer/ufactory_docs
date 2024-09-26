@@ -17,6 +17,7 @@
   * [How to solve S17 error?](software/how-to-solve-s17-error.md)
   * [How to solve C60 error?](software/how-to-solve-c60-error.md)
   * [How to judge whether the joint servo zero point is lost?](software/how-to-judge-whether-the-joint-servo-zero-point-is-lost.md)
+  * [How to reset the joint servo zero point?](software/how-to-reset-the-joint-servo-zero-point.md)
 * [FAQ](faq/README.md)
   * [Q & A](faq/q-and-a.md)
   * [Robot state and mode explanation](faq/robot-state-and-mode-explanation.md)

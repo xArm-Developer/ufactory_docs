@@ -38,3 +38,4 @@
   * [Firmware](developer/firmware/README.md)
     * [How to get the real-time data via TCP 30000 port?](developer/firmware/how-to-get-the-real-time-data-via-tcp-30000-port.md)
     * [Data Description of TCP port](developer/firmware/data-description-of-tcp-port.md)
+  * [Collision Detection in UFACTORY Robotic Arms: Current and Dynamic Model-based Feature](developer/collision-detection-in-ufactory-robotic-arms-current-and-dynamic-model-based-feature.md)

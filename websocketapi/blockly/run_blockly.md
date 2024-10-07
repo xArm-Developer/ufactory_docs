@@ -30,7 +30,10 @@ Initialize the parameter of the robot before running the Blockly project.
 {% tab title="Response" %}
 ```
 code=0->success;
-code!=0->Failed, refer to xarm_api_code;
+code=-12 -> run failed
+coe=-11 -> convert to python failed
+code=-3 -> param error
+code=3 -> initialization exception
 ```
 {% endtab %}
 {% endtabs %}

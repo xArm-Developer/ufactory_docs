@@ -12,6 +12,22 @@ Application scenario: If the TCP payload is set correctly, and the collision det
 
 
 
+* If the arm was purchased after July 2024, we backup the data of original joint servo zero point, please use the tool below to obtain the data and provide the CSV file to us, we will compare the data internally.
+* If not,  please follow the steps below to get the current of the corresponding joint.
+
+
+
+### Get CSV file
+
+1. Move the arm to the zero position\[0,0,0,0,0,0].
+2. Download [E\_read\_mmu.exe](https://drive.google.com/drive/folders/13oqBKDGo3I83\_FYuH6vKBa4N9we1UpC\_?usp=sharing), and Launch it. (only for Windows System)
+3. Enter the IP of the controller, and press enter.
+4. Wait for 2-3 minutes, it will automatically generate a CSV file.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+### Get a diagram of the current
+
 Please follow the steps to check the current of the corresponding joint.
 
 1. Remove all end effectors, set TCP payload and offest as 0.
@@ -23,7 +39,7 @@ Please follow the steps to check the current of the corresponding joint.
 
 The current should be around 2A, please send the screenshot to [support@ufactory.cc](mailto:support@ufactory.cc) for double check.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 

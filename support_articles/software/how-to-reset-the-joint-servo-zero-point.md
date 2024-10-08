@@ -17,7 +17,7 @@ Please contact technical support<[support@ufactory.cc](mailto:support@ufactory.c
 ### Joint3-xArm6/xArm5
 
 1. Move all the end effectors, and set TCP payload as 0.
-2. Place the arm horizontally on the table like the image below(J3 around 175 degree), make sure J4J5J6 is suspended, and 1 person to hold the arm to make sure it will not move.
+2. Place the arm horizontally on the table like the image below(J3 around -175 degree), make sure J4J5J6 is suspended, and 1 person to hold the arm to make sure it will not move.
 
 <figure><img src="../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
 

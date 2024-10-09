@@ -29,7 +29,7 @@ Please contact technical support<[support@ufactory.cc](mailto:support@ufactory.c
 ## Reset command
 
 1. Press down the E stop button and release.
-2. Send H101D080CV1I\* via 'Settings-General-Debugging Tools-Joint', J\* will move slightly, you will hear a sound like 'click' and J\* don't move any more, indicating the reset process is over, then press down the E stop button and release.  (\* stands for joint ID, for example joint4 - H101D080CV1I4)
+2. **Don't enable the robot**. Send H101D080CV1I\* via 'Settings-General-Debugging Tools-Joint', J\* will move slightly, you will hear a sound like 'click' and J\* don't move any more, indicating the reset process is over, then press down the E stop button and release.  (\* stands for joint ID, for example joint4 - H101D080CV1I4)
 3. Reboot the entire system, and enable the robot.
 4. Unlock Joint \* via 'Settings-General-Debugging Tools-Joint', move joint\* to its original zero position,  send 'D13 I\*', press down the E stop button and release to take effect, it will set the current position of Joint\* as 0°.
 

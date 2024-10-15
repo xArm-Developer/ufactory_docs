@@ -14,7 +14,7 @@
 
 奇异点判断方法和解决办法：
 
-请参考[UFACTORY xArm 用户手册]（https://www.cn.ufactory.cc/xarm-download）的189-192页
+请参考[UFACTORY xArm 用户手册](https://www.cn.ufactory.cc/xarm-download)的189-192页
 
 **PS:如果这个办法无法改善机械臂抖动，请联系我们并提供以下信息**
 

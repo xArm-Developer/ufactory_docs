@@ -8,7 +8,7 @@
 
 
 
-![image-20240928100828764](F:\E盘\工作资料\Hardware\抖动.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/dou-dong.png)
 
 ## 2-检查机械臂是否经过或者接近奇异点
 

@@ -10,11 +10,11 @@ UFactory Studio: V2.3.0+
 
 
 
-For safety reasons, we give a TCP speed limit under ServoJ mode even for joint motion, the limit is 1000mm/s for xArm series and UF850, and 500mm/s for Lite6.
+For safety reasons, we give a TCP speed limit under ServoJ mode even for joint motion, the limit is 1200mm/s for xArm series and UF850, and 500mm/s for Lite6.
 
 
 
-When the arm works at extended reach, the TCP speed can easily exceed the threshold. Therefore, we increase this threshold and provide a parameter to set the limit by themselves, please modify it carefully after safety evalution.
+When the arm works at extended reach, the TCP speed can easily exceed the threshold. Therefore, we increase this threshold and provide a parameter to set the limit by themselves, please modify it carefully after safety evaluation.
 
 
 

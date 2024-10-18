@@ -18,7 +18,7 @@ There is a status code of S18 error. If the status code is 0, please enter 'Sett
 
 \* stands for joint ID, can be 1-7.
 
-For example, H101D0813V256I3
+For example, H101D0813V256I3.
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 

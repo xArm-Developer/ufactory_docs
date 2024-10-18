@@ -27,7 +27,7 @@ The main parameter is the Baud rate, TCP offset, TCP payload, and self-collision
 
 1\) Enter into 'Settings-Externals-Modbus RTU', choose '**115200**', and save.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 2\) Send command.
 

@@ -10,14 +10,22 @@ UFactory version: V2.4.0+
 
 Please note that if the arm is not used for a long time(**≥3 months**), you need to power on the arm for 6 hours every 3 months to charge the built-in battery of the arm, otherwise the encoder data may be lost and report S18 error.
 
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+### Status code=0:
+
+There is a status code of S18 error. If the status code is 0, please enter 'Settings-General-Debugging Tools-Joint', enter '**H101D0813V256I\***', and send. Then power off the controller and see if the problem is solved.
+
+\* stands for joint ID, can be 1-7.
+
+For example, H101D0813V256I3
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 
-* [x] If you haven't used the arm for a long time and encounter S18 error, please follow the steps below to clear it.
-* [ ] If you encounter S18 error when you receive the arm, please take a screenshot of the error page and contact [support@ufactory.cc](mailto:support@ufactory.cc)
 
-### Clear Error:
+### Status code≠0:
 
-1. Enter 'Settings-General-Debugging Tools-Joint', click 'clear Multi-turn Error', then power off the control box.
-2. Powe on the control box and see if the problem is solved.
+Please provide the SN of the robot, and take a screenshot of the error page to <[support@ufactory.cc](mailto:support@ufactory.cc)>.
 
-<figure><img src="../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+###

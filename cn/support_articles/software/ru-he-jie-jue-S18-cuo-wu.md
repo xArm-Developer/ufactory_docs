@@ -2,7 +2,7 @@
 
 S18：多圈编码器错误
 
-适用产品：xArm series, UF 850, Lite6
+适用产品：xArm系列, UF 850, Lite6
 
 适用固件版本：V2.4.0+
 

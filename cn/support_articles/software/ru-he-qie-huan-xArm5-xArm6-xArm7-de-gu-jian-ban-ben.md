@@ -10,8 +10,10 @@ xArm5,xArm6,xArm7的控制器是相互兼容的，每个手臂都配有一个控
 
 3. 重启控制器，等待2-3分钟，拍下急停按钮再松开。
 
+如下图所示：
+
    
 
-   ![](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241021034816452.png)
+ ![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/2.png)
 
    

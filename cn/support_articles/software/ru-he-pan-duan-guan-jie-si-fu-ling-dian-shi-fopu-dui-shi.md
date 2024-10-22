@@ -44,6 +44,6 @@
 
 电流应该为2A左右，请把截图发我们确认。
 
-![image-20241022065128043](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241022065128043.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/3.png)
 
-![image-20241022065156709](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241022065156709.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/4.png)

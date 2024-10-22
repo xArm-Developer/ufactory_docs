@@ -1,12 +1,5 @@
----
-
-描述：>-
-
-本文主要是解释Robotiq 机械爪 和xArm的连接方式，以及Robotiq 机械爪的用法的举例说明
-
----
-
 # 如何在xArm末端使用Robotiq Gripper？
+本文主要是说明Robotiq 机械爪 和xArm的连接方式，以及Robotiq 机械爪的用法的举例说明
 
 ### 1.硬件方面
 
@@ -17,7 +10,7 @@
 
 1）pin针定义
 
-![image-20241022081815080](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241022081815080.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/8.png)
 
 2）连接
 
@@ -38,14 +31,13 @@
 
 TCP负载和偏移：设置-运动参数-TCP设置
 
-![image-20241022091217015](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241022091217015.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/9.png)
 
 防自碰撞模型：设置-实时控制-末端执行器“，选择Robotiq 机械爪
 
-请选择“是的"，这会把波特率设置为115200，默认波特率是2000000
+请选择“是"，这会把波特率设置为115200，默认波特率是2000000
 
-![image-20241022091449421](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241022091449421.png)
-
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/10.png)
 2）通过python SDK设置参数
 
 波特率：
@@ -86,11 +78,10 @@ arm.set_collision_tool_model(5)
 
 1）通过UFactory Studio控制
 
-![image-20241022092339605](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241022092339605.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/11.png)
 
 Ufactory Studio-Blockly
-
-![image-20241022092444815](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241022092444815.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/12.png)
 
 2)通过python SDK控制
 
@@ -106,5 +97,5 @@ arm.robotiq_open()
 
 1-当使用SDK去控制爪子时，不需要发送CRC，我们会自动添加它
 
-2-请注意，我们默认 Robotiq 机械手的唯一标识符（Slave ID） 为 ID=9。 如果您修改了机械手的 ID，UFactory Studio 或上述 SDK 将无法工作，您只能使用 getset_tgpio_modbus_data 对其进行控制。
+2-请注意，我们默认 Robotiq 机械手的唯一标识符（Slave ID） 为 ID=9。 如果您修改了机械手的 ID，UFactory Studio 或上述 SDK 将无法工作，您只能使用 get/set_tgpio_modbus_data 对其进行控制。
 

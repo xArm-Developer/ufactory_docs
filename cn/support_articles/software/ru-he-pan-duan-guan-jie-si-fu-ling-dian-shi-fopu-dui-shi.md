@@ -24,7 +24,7 @@
 
 4. 等待2-3分钟后，程序将自动生成一个csv文件
 
-![image-20241022043341003](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241022043341003.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/3.png)
 
 ### 获取电流图表
 
@@ -44,6 +44,6 @@
 
 电流应该为2A左右，请把截图发我们确认。
 
-![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/3.png)
-
 ![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/4.png)
+
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/5.png)

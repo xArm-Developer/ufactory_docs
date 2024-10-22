@@ -40,7 +40,7 @@
 
 5. 启动UFactory Assist,选择“实际关节电流”，J3,200HZ，点击“观测”，然后开始
 
-6. 运行Blockly项目，在UFactory Assist里面点击“末端”，然后把电流截图发给我们
+6. 运行Blockly项目，在UFactory Assist里面点击“结束”，然后把电流截图发给我们
 
 电流应该为2A左右，请把截图发我们确认。
 

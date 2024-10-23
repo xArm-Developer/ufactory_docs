@@ -1,6 +1,6 @@
 # 如何通过网线将树莓派连接到xArm并通过 WiFi 控制 Pi？
 
-树莓派（Raspberry Pi）对于开发人员来说是一个相当有名的开发工具，我们的一些客户也喜欢尝试用树莓派作为机械臂的主机。 通常，我们通过 Raspberry Pi 的以太网端口连接 xarm 控制盒，然后用自己的笔记本电脑通过 WiFi 远程控制树莓派。 下面的说明可能会帮助你成功将 Raspberry Pi 与 xarm 控制盒连接起来。
+树莓派（Raspberry Pi）对于开发人员来说是一个相当有名的开发工具，我们的一些客户也喜欢尝试用树莓派作为机械臂的主机。 通常，我们通过树莓派的以太网端口连接 xarm 控制盒，然后用自己的笔记本电脑通过 WiFi 远程控制树莓派。 下面的说明可能会帮助你成功将树莓派与 xarm 控制盒连接起来。
 
 
 
@@ -20,7 +20,7 @@ Codename: buster
 
 下载链接：https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-32-bit
 
-（我们是基于这个操作系统测试的，其他版本应该一样）
+（我们是基于这个版本操作系统测试的，其他版本应该一样）
 
 ## 3.连接
 
@@ -40,6 +40,7 @@ __2.机械臂 IP 和以太网 IP 位于同一网段__
 
 
 
+
 如何修改 Raspberry Pi 的以太网 IP？
 
 1-断开连接 Raspberry Pi 和 xArm 的网线。 
@@ -52,11 +53,13 @@ __2.机械臂 IP 和以太网 IP 位于同一网段__
 
 pi@raspberrypi:~ $ sudo nano /etc/dhcpcd.conf
 
-![image-20241023175446217](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241023175446217.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/15.png)
+
 
 修改成功后，将树莓派网线重新连接到 xArm，检查树莓派配置。 如果符合访问条件，就可以 ping xArm 了。
 
-![image-20241023175550295](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241023175550295.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/16.png)
+
 
 ### 方法2：
 
@@ -66,4 +69,4 @@ pi@raspberrypi:~ $ sudo nano /etc/dhcpcd.conf
 
 PC 通过 WIFI 访问 树莓派，树莓派通过 eth IP 访问 xArm。 通过这种连接方式，树莓派可以直接 ping通xArm。
 
-![image-20241023182045898](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241023182045898.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/17.png)

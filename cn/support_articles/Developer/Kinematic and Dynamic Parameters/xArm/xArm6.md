@@ -1,4 +1,9 @@
+---
+简介: xarm6的运动学和动力学参数
+---
+
 # xArm6
+
 <mark style="color:blue;">**1.修改DH参数**</mark>
 
 ![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/support_articles/.gitbook/assets/image%20(42).png)

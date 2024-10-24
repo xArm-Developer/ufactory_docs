@@ -13,7 +13,7 @@
 
 1）pin针定义
 
-![image-20241022081815080](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241022081815080.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/8.png)
 
 2）连接
 
@@ -34,13 +34,13 @@
 
 TCP负载和偏移：设置-运动参数-TCP设置
 
-![image-20241022091217015](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241022091217015.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/9.png)
 
 防自碰撞模型：设置-实时控制-末端执行器“，选择Robotiq 机械爪
 
 请选择“是的"，这会把波特率设置为115200，默认波特率是2000000
 
-![image-20241022091449421](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241022091449421.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/10.png)
 
 2）通过python SDK设置参数
 
@@ -82,12 +82,11 @@ arm.set_collision_tool_model(5)
 
 1）通过UFactory Studio控制
 
-![image-20241022092339605](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241022092339605.png)
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/11.png)
 
 Ufactory Studio-Blockly
 
-![image-20241022092444815](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241022092444815.png)
-
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/12.png)
 2)通过python SDK控制
 
 ```

@@ -1,5 +1,5 @@
 ---
-xArm 5 Lite的运动学和动力学参数
+简介: xArm 5 Lite的运动学和动力学参数
 ---
 
 # xArm 5 Lite

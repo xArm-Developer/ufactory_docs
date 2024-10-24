@@ -10,7 +10,7 @@
 
 下面简要介绍如何使用 30000 端口进行数据报告。
 
-[TCP 端口数据说明](TCP-duan-ko-shu-ju-shuo-ming.md)
+[TCP 端口数据说明](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/support_articles/Developer/TCP-duan-kou-shu-ju-shuo-ming.md)
 
 ## 2-python示例
 

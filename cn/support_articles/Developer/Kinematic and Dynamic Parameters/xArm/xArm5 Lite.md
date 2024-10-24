@@ -1,4 +1,9 @@
+---
+xArm 5 Lite的运动学和动力学参数
+---
+
 # xArm 5 Lite
+
 <mark style="color:blue;">**1.修改DH参数**</mark>
 
 ![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/support_articles/.gitbook/assets/image%20(39).png)

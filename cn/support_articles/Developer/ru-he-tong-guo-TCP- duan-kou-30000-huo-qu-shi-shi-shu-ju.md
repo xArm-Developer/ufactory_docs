@@ -1,6 +1,6 @@
-# 如何通过TCP 30000端口获取实时数据
+# 如何通过TCP端口30000获取实时数据
 
-以端口30000为例
+本文以端口30000为例
 
 
 
@@ -10,7 +10,7 @@
 
 下面简要介绍如何使用 30000 端口进行数据报告。
 
-[TCP 端口数据说明]()
+[TCP 端口数据说明](TCP-duan-ko-shu-ju-shuo-ming.md)
 
 ## 2-python示例
 
@@ -196,9 +196,9 @@ plt.show()
 
 例如：
 
-{% file src="../../.gitbook/assets/joint_pos.csv" %}
+<a href="annex/[joint_pose.docx](https://github.com/xArm-Developer/ufactory_docs/tree/main/support_articles/.gitbook/assets)" target="_blank">joint_pose.csv</a>
 
 
 
 结果如图：
-
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/support_articles/.gitbook/assets/image%20(59).png)

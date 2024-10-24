@@ -6,9 +6,9 @@
 | Kinematics | theta (rad) | d(mm) | alpha(rad) | a(mm) | offset(rad) |
 | ---------- | ----------- | ----- | ---------- | ----- | ----------- |
 | Joint1     | 0           | 267   | 0          | 0     | 0           |
-| Joint2     | 0           | 0     | -pi/2      | 0     | T2_offset   |
-| Joint3     | 0           | 0     | 0          | a2    | T3_offset   |
-| Joint4     | 0           | 0     | 0          | a3    | T4_offset   |
+| Joint2     | 0           | 0     | -pi/2      | 0     | <mark style="color:orange;">T2_offset</mark>   |
+| Joint3     | 0           | 0     | 0          | <mark style="color:orange;">a2</mark>    | <mark style="color:orange;">T3_offset</mark>   |
+| Joint4     | 0           | 0     | 0          | <mark style="color:orange;">a3</mark>    | <mark style="color:orange;">T4_offset</mark>   |
 | Joint5     | 0           | 97    | -pi/2      | 0     | 0           |
 
 <mark style="color:blue;">**2.标准DH参数**</mark>
@@ -18,9 +18,9 @@
 | Kinematics | theta(rad) | d(mm) | alpha(rad) | a(mm) | offset(rad) |
 | :--------- | :--------- | :---- | :--------- | :---- | :---------- |
 | Joint1     | 0          | 267   | -pi/2      | 0     | 0           |
-| Joint2     | 0          | 0     | 0          | a2    | T2_offset   |
-| Joint3     | 0          | 0     | 0          | a3    | T3_offset   |
-| Joint4     | 0          | 0     | -pi/2      | 76    | T4_offset   |
+| Joint2     | 0          | 0     | 0          |<mark style="color:orange;">a2</mark>   | <mark style="color:orange;">T2_offset</mark>  |
+| Joint3     | 0          | 0     | 0          |<mark style="color:orange;">a3</mark>    | <mark style="color:orange;">T3_offset</mark>   |
+| Joint4     | 0          | 0     | -pi/2      | 76    | <mark style="color:orange;">T4_offset</mark>   |
 | Joint5     | 0          | 97    | 0          | 0     | 0           |
 
 <mark style="color:orange;">**‘Tx\_offset’**</mark> ' 是从数学零位到图中所示的机械零位的偏移关节角度。

@@ -1,5 +1,5 @@
 ---
-简介：本文主要是解释Robotiq 机械爪 和xArm的连接方式，以及Robotiq 机械爪的用法的举例说明
+简介：本文旨在介绍Robotiq 机械爪和xArm的连接方式，以及Robotiq 机械爪的用法的举例说明
 ---
 
 # 如何在xArm末端使用Robotiq Gripper？

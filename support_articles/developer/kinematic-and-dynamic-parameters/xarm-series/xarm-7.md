@@ -31,3 +31,7 @@ description: Kinematic and Dynamic Parameters of xArm 7
 <mark style="color:blue;">**xArm 7 - Model 3**</mark>
 
 <table><thead><tr><th width="190">Dynamics</th><th width="184.33333333333331">Mass(kg)</th><th>Center of Mass(mm)</th></tr></thead><tbody><tr><td>Link1</td><td>2.382</td><td>[0.13, 29.4, -12.4]</td></tr><tr><td>Link2</td><td>1.869</td><td>[0.2, -128.56, 17.35]</td></tr><tr><td>Link3</td><td>1.638</td><td>[46.6, -24.63, -7.68]</td></tr><tr><td>Link4</td><td>1.727</td><td>[70.5, -115.75, 12.0]</td></tr><tr><td>Link5</td><td>1.32</td><td>[-0.32, 16.04, -26.0]</td></tr><tr><td>Link6</td><td>1.325</td><td>[64.7, 32.8, 21.4]</td></tr><tr><td>Link7</td><td>0.17</td><td>[0.0, -6.77, -10.98]</td></tr></tbody></table>
+
+<mark style="color:blue;">**xArm 7 - Model 4**</mark>
+
+<table><thead><tr><th width="190">Dynamics</th><th width="184.33333333333331">Mass(kg)</th><th>Center of Mass(mm)</th></tr></thead><tbody><tr><td>Link1</td><td>2.53</td><td>[-0.164, 35.94, -6.5]</td></tr><tr><td>Link2</td><td>2.166</td><td>[-0.21, -138.9,16.83]</td></tr><tr><td>Link3</td><td>1.98</td><td>[46.7, -22.6, -7.64]</td></tr><tr><td>Link4</td><td>2.08</td><td>[70.7, -124.54, 12.27]</td></tr><tr><td>Link5</td><td>1.36</td><td>[0.19, 14.6, -21.98]</td></tr><tr><td>Link6</td><td>1.345</td><td>[68.24, 33.42, 2.64]</td></tr><tr><td>Link7</td><td>0.173</td><td>[0.8, -3.59, -13.26]</td></tr></tbody></table>

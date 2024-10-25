@@ -14,5 +14,5 @@ The controllers for xArm5/xarm6/xarm7 are compatible. Each arm comes with a cont
 2. Launch it, enter IP and click 'connect'. **After connecting**, choose 'xarm5-type5 for xArm5' (xarm6-type6 for xarm6), and offline install the firmware again.
 3. Reboot the control box, wait 2-3 minutes, press down the E-stop button and release.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

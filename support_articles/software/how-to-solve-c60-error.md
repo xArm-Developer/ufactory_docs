@@ -10,11 +10,11 @@ UFactory Studio: V2.3.0+
 
 
 
-For safety reasons, we give a TCP speed limit under ServoJ mode even for joint motion, the limit is 1000mm/s for xArm series and UF850, and 500mm/s for Lite6.
+For safety reasons, we give a TCP speed limit under ServoJ mode even for joint motion, the limit is 1200mm/s for xArm series and UF850, and 500mm/s for Lite6.
 
 
 
-When the arm works at extended reach, the TCP speed can easily exceed the threshold. Therefore, we increase this threshold and provide a parameter to set the limit by themselves, please modify it carefully after safety evalution.
+When the arm works at extended reach, the TCP speed can easily exceed the threshold. Therefore, we increase this threshold and provide a parameter to set the limit by themselves, please modify it carefully after safety evaluation.
 
 
 
@@ -25,17 +25,29 @@ When the arm works at extended reach, the TCP speed can easily exceed the thresh
 2. 1.2\*1000=1200mm/s for xArm/UF850,  1.2\*500=600mm/s for Lite6
 3. call save\_conf() to save this config after calling set\_linear\_spd\_limit\_factor.
 
-<div align="left">
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-</div>
+```python
+def set_linear_spd_limit_factor(self, factor):
+Set linear speed limit factor (default is 1.2)
+Note:
+    1. only available if firmware_version >= 2.3.0
+    2. only available in mode 1
 
-<div align="left">
+:param factor: speed limit factor
+:return: code
+    code: See the API Code Documentation for details.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-</div>
+def get_linear_spd_limit_factor(self):
+Get linear speed limit factor
+Note:
+    Only available if firmware_version >= 2.3.0
+
+:return: tuple((code, factor)), only when code is 0, the returned result is correct.
+    code: See the API Code Documentation for details.
+    factor: linear speed limit factor
+```
 
 
 

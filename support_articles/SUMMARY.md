@@ -17,6 +17,7 @@
   * [How to solve S17 error?](software/how-to-solve-s17-error.md)
   * [How to solve C60 error?](software/how-to-solve-c60-error.md)
   * [How to judge whether the joint servo zero point is lost?](software/how-to-judge-whether-the-joint-servo-zero-point-is-lost.md)
+  * [How to reset the joint servo zero point?](software/how-to-reset-the-joint-servo-zero-point.md)
 * [FAQ](faq/README.md)
   * [Q & A](faq/q-and-a.md)
   * [Robot state and mode explanation](faq/robot-state-and-mode-explanation.md)
@@ -37,3 +38,5 @@
   * [Firmware](developer/firmware/README.md)
     * [How to get the real-time data via TCP 30000 port?](developer/firmware/how-to-get-the-real-time-data-via-tcp-30000-port.md)
     * [Data Description of TCP port](developer/firmware/data-description-of-tcp-port.md)
+    * [How to update the joint firmware of xArm(1305) and UF850?](developer/firmware/how-to-update-the-joint-firmware-of-xarm-1305-and-uf850.md)
+  * [Collision Detection in UFACTORY Robotic Arms: Current and Dynamic Model-based Feature](developer/collision-detection-in-ufactory-robotic-arms-current-and-dynamic-model-based-feature.md)

@@ -4,7 +4,7 @@
 
 Button: \[Live Control] - X+ / X- / Y+ / Y- / Z+ / Z-
 
-long-press: keep moving in a certain direction until the button is released.
+long-press: keep moving in a certain direction until the button is released, need to use with xarm\_move\_step\_over and xarm\_move\_step\_online.
 
 short-press: move a step in a certain direction.
 

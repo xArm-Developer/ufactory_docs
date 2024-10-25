@@ -14,15 +14,15 @@
 
 #### 块状示例
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../broken-reference" alt=""><figcaption></figcaption></figure>
 
 #### 典型关节力矩图（J3）
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../broken-reference" alt=""><figcaption></figcaption></figure>
 
 #### 典型接头电流图（J3）
 
-<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+<figure><img src="../broken-reference" alt=""><figcaption></figcaption></figure>
 
 可以通过接口 **set\_report\_tau\_or\_i()**
 
@@ -37,8 +37,6 @@ arm.set_report_tau_or_i(tau_or_i=0)
 ```python
 arm.set_report_tau_or_i(tau_or_i=1)
 ```
-
-
 
 下面的例子是获取关节力矩数据的例子。
 
@@ -101,8 +99,3 @@ while True:
     print(joint_data)
 
 ```
-
-
-
-
-

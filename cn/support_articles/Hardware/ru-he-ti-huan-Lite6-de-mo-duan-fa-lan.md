@@ -14,6 +14,7 @@
 ![](https://lh7-rt.googleusercontent.com/docsz/AD\_4nXePqLUTTC-0rS9fsqXYI4SMrpQR5-24kxitkV1TCD0nvRGjN\_IXVKvU8wz2ElTvw4sHg1JQ0qdTpXgeGmeZP0ASNNIuOaZsJul-ebf3YkALf8RWly4mdrh\_no3V7G8ls\_IivWgW-1IShcsy3upyUpK1tzqNl9YZkBDjukmQgQunIUPpsfSv19Q?key=ctEZ5c8w5mecLmVweFBoow)
 
 3) 使用 M3 L 型扳手卸下 4 个螺钉。
+    
 ![](https://lh7-rt.googleusercontent.com/docsz/AD\_4nXeyiuj0gSDbSSwrcsQgjpih-icAZVGtJtWhWZnY1yO1U8Cfhxt4bpyefKD2BZneqjX2kQiijFTT8gHTI029xrBlzDbV5oXerjdHjO9tFJ-fEYoLNEKRUCGBOQ8JVVoMM\_8ogGSnzhzaBqFROxZmt6OUJgxhk-5zuF5SaDmxHo1ilzD6vnlpQik?key=ctEZ5c8w5mecLmVweFBoow)
 
 
@@ -41,7 +42,7 @@
 
 
 
-3) 将电缆插入圆孔，对准之前的标记线。
+3) 将线缆插入圆孔，对准之前的标记线。
 
 ![](https://lh7-rt.googleusercontent.com/docsz/AD\_4nXeWzfy0nq4GMmuPqkd5-oPQDOfwD7oUbQfKOykIyuDo-P8KPgy7HQ2htEfcUpfwAejRUy1Ptoa3NmSOfV7EEOu-dTAlFnx16mq2TESFn2zsCOTB8kFK1HfIQzk2SMeAPXytAlCRkmlHUT9h09edTyJrv3GNmBGdlN4U7grxqROOzMEPO97AnQ?key=ctEZ5c8w5mecLmVweFBoow)
 

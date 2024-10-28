@@ -56,7 +56,7 @@ pi@raspberrypi:~ $ sudo nano /etc/dhcpcd.conf
 ![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/15.png)
 
 
-修改成功后，将树莓派网线重新连接到 xArm，检查树莓派配置。 如果符合访问条件，就可以 ping xArm 了。
+修改成功后，将树莓派网线重新连接到 xArm，检查树莓派配置。 如果符合访问条件，就可以 ping通 xArm 了。
 
 ![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/16.png)
 

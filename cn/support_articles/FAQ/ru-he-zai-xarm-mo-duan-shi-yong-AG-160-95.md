@@ -17,16 +17,16 @@
 
 | AG-160-95 | AG-160-95 | xArm tool end  | xArm tool end |
 | :-------- | :-------- | :------------- | :------------ |
-| color     | Signal    | Color          | Signal        |
-| Red       | 24V       | Brown or Blue  | 24V           |
-| Black     | GND       | White or Green | GND           |
-| Green     | 485-A     | pink           | 485-A         |
-| Blue      | 485-B     | yellow         | 485-B         |
+| 颜色     | 信号    | 颜色          | 信号        |
+| 红色       | 24V       | Brown or Blue  | 24V           |
+| 黑色     | GND       | White or Green | GND           |
+| 绿色     | 485-A     | pink           | 485-A         |
+| 蓝色     | 485-B     | yellow         | 485-B         |
 
 ## 3.参数设置
-主要参数包括波特率、TCP 偏移、TCP 有效载荷和防自碰撞模型。
+主要参数包括波特率、TCP 偏移、TCP 负载和防自碰撞模型。
 
-1）进入“设置-外部设备-Modbus RTU”，旋转“115200”，然后保存
+1）进入“设置-外部设备-Modbus RTU”，选择“115200”，然后保存
 
 ![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/19.png)
 
@@ -34,7 +34,7 @@
 
 初始化: 01 06 01 00 00 01
 
-设置位置: 01 06 01 03 01 F4(设置在500%的位置)
+设置位置: 01 06 01 03 01 F4(设置在50%的位置)
 
 获取位置: 01 03 02 02 00 01
 

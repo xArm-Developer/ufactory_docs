@@ -15,8 +15,8 @@
 1）进入”设置-外部设备-控制器IO“，CI0 ，CI1默认为1（高电平）
 
 ![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/support_articles/.gitbook/assets/image%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1).png)
-
-2）选择机械臂IO，将TO0 ，TO1都设置为高电平
+）
+2）选择机械臂IO，将TO0 ，TO1都设置为1（高电平）
 
 ![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/support_articles/.gitbook/assets/image%20(2)%20(1)%20(1)%20(1)%20(1).png)
 

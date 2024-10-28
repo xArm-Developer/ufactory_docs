@@ -4,7 +4,7 @@
 
 在实时控制界面可使末端调平
 
-![](C:\Users\Kristin\AppData\Roaming\Typora\typora-user-images\image-20241028154640779.png)
+![images](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/25.png)
 
 
 

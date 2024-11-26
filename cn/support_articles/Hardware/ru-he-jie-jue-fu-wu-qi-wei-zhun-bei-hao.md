@@ -30,6 +30,5 @@ UFactory Studio 服务端会提前在控制器安装好并运行，用户不需�
 
 3）确认电脑的IP与机械臂的IP是否在同一个网段
 
-机械臂默认IP是192.168.1.xxx
+机械臂默认IP是192.168.1.xxx，请确保电脑和机械臂在同一个网段。
 
-[IP重置的方法](https://forum.ufactory.cc/t/computer-ip-configuration/2530)

@@ -8,15 +8,15 @@
 
 ### 2.线缆连接
 
-1）pin针定义
+__1）pin针定义__
 
 ![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/8.png)
 
-2）连接
+__2）连接__
 
 | Robotiq 连接线 | Robotiq 连接线 | xArm工具末端 | xArm工具末端 |
 | -------------- | -------------- | ------------ | ------------ |
-| **颜色**       | **信号**       | **颜色**     | **Signal**   |
+| **颜色**       | **信号**       | **颜色**     | **信号**   |
 | 红色           | +24V DC        | 棕色或者蓝色 | +24V DC      |
 | 黑色           | -24V DC        | 白色         | GND          |
 | 白色           | 485-A          | 粉色         | User 485-A   |
@@ -25,9 +25,9 @@
 
 ### 3.参数设置
 
-主要参数是波特率，TCP负载，防自碰撞模型
+主要参数是波特率，TCP偏移，TCP负载，防自碰撞模型
 
-1）通过UFactory Studio设置参数
+__1）通过UFactory Studio设置参数__
 
 TCP负载和偏移：设置-运动参数-TCP设置
 
@@ -38,11 +38,11 @@ TCP负载和偏移：设置-运动参数-TCP设置
 请选择“是"，这会把波特率设置为115200，默认波特率是2000000
 
 ![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/10.png)
-2）通过python SDK设置参数
+__2）通过python SDK设置参数__
 
 波特率：
 
-```
+```php
 //Code example
 # Modify the baud rate to 115200, the default is 2000000.
 arm.set_tgpio_modbus_baudrate(115200)  
@@ -51,7 +51,7 @@ arm.set_tgpio_modbus_baudrate(115200)
 
 TCP负载和偏移设置：
 
-```
+```php
 
 # Robotiq 2F/85 Gripper
 arm.set_tcp_load(0.925, [0, 0, 58])
@@ -66,7 +66,7 @@ arm.save_conf()
 
 防自碰撞模型
 
-```
+```php
 # Robotiq 2F/85 Gripper
 arm.set_collision_tool_model(4)
 
@@ -76,16 +76,18 @@ arm.set_collision_tool_model(5)
 
 ### 4.控制方式
 
-1）通过UFactory Studio控制
+__1）通过UFactory Studio控制__
 
 ![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/11.png)
 
 Ufactory Studio-Blockly
+
+
 ![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/.gitbook/assets/12.png)
 
-2)通过python SDK控制
+__2)通过python SDK控制__
 
-```
+```php
 arm.set_tgpio_modbus_baudrate(115200)  
 arm.robotiq_reset()
 arm.robotiq_set_activate()    #enable the robotiq gripper

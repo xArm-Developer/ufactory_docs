@@ -1,6 +1,8 @@
-# 如何解决C60错误
+---
+description: C60：关节伺服模式线速度超出限制
+---
 
-C60：关节伺服模式线速度超出限制
+# 如何解决C60错误
 
 适用固件版本：V2.3.0+
 
@@ -16,13 +18,13 @@ C60：关节伺服模式线速度超出限制
 
 1- factor(倍数)* 1000 =TCP 速度限制值，默认倍数是1.2
 
-2-__Arm系列/UF850:__  1.2* 1000 =1200mm/s ；__Lite6:__ 1.2*500 =600mm/s
+2-__xArm系列/UF850:__  1.2* 1000 =1200mm/s ；__Lite6:__ 1.2*500 =600mm/s
 
-3-在调用函数set_linear_spd_limit_factor之后，再调用save_conf来保存设置。
+3-在调用函数set_linear_spd_limit_factor之后，再调用save_conf来保存该设置。
 
 
 
-```
+```php
 def set_linear_spd_limit_factor(self, factor):
 Set linear speed limit factor (default is 1.2)
 Note:

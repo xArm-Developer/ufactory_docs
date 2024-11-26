@@ -41,6 +41,8 @@ T3_offset = -T2_offset = 1.3849179 (79.34995°);<br><br>
 
 <mark style="color:blue;">**3.质量参数**</mark>
 
+![image](https://github.com/xArm-Developer/ufactory_docs/blob/main/support_articles/.gitbook/assets/image%20(44).png)
+
 <mark style="color:blue;">**xArm6 - 模型1**</mark>
 
 | Dynamics | Mass(kg) | Center of Mass(mm)    |

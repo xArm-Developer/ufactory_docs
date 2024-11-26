@@ -1,6 +1,9 @@
+---
+description: S18：多圈编码器错误
+---
+
 # 如何解决S18错误
 
-S18：多圈编码器错误
 
 适用产品：xArm系列, UF 850, Lite6
 
@@ -28,4 +31,4 @@ S18：多圈编码器错误
 
 ## 状态码不为0
 
-请提供机械臂的SN和错误弹窗截图给<[support@ufactory.cc](mailto:support@ufactory.cc)>.
+请提供机械臂的SN和错误弹窗截图给我们.

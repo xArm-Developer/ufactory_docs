@@ -8,7 +8,7 @@
 
 我们提供 TCP 端口 30000 以实时获取机械臂数据，频率为 250HZ（使用 FT 传感器时为 200HZ） 
 
-下面简要介绍如何使用 30000 端口进行数据报告。
+下面简要描述如何使用 30000 端口进行数据报告。
 
 [TCP 端口数据说明](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/support_articles/Developer/TCP-duan-kou-shu-ju-shuo-ming.md)
 

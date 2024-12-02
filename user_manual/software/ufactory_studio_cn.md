@@ -1182,7 +1182,7 @@ move_circle([350.0, 50.0, 400.0, 180.0, -90.0, 0.0], [350.0, -50.0, 400.0, 180.0
 &ensp;&ensp;当PC端有网络连接时，可进行在线升级。</br>
 * **方法一：** 使用UFactory studio进行在线升级。 </br>
 &ensp;&ensp; 进入我的设备-检查更新，点击“检查更新”，如有新的版本，点击“下载”，下载完成后点击“安装”加载下载好的安装包，等待系统重启。重启耗时约2-3分钟。</br>
-<img src="assets/settings_checkupdate_2_cn" width="50%"/></br>
+<img src="assets/settings_checkupdate_2_cn.png" width="50%"/></br>
 ## 13.2 离线升级
 &ensp;&ensp;当PC端没有网络连接时，可使用离线升级。 </br>
 * **方法一：** 使用UFactory Studio离线升级。 </br>

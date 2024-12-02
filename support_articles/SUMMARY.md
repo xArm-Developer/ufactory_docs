@@ -6,6 +6,7 @@
   * [What should I do if I swap the robot control box?](hardware/what-should-i-do-if-i-swap-the-robot-control-box.md)
   * [How to replace the end flange of Lite6?](readme/how-to-replace-the-end-flange-of-lite6.md)
   * [How to verify the digital input and output are normal?](readme/how-to-verify-the-digital-input-and-output-are-normal.md)
+  * [How to reset the zero position of xArm Gripper?](readme/how-to-reset-the-zero-position-of-xarm-gripper.md)
 * [Software](software/README.md)
   * [How to improve the jitter of the robotic arm?](software/how-to-improve-the-jitter-of-the-robotic-arm.md)
   * [How to update the firmware and UFactory Studio of Robotic Arm?](software/how-to-update-the-firmware-and-ufactory-studio-of-robotic-arm.md)

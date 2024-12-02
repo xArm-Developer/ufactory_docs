@@ -659,7 +659,7 @@ Modbus TCP寄存器定义请参考：[Modbus TCP寄存器](https://docs.ufactory
 ### 6.4.2 调参工具
 &ensp;&ensp;此页面可通过观测机械臂的一些参数值，进行图形绘制并导入到CSV，方便用户观察并记录。点击开始，开始绘图，希望结束时点击结束按钮，必须点击结束按钮，才可使用Studio软件的其他功能。
 
-**机械臂** 
+**机械臂**   </br>
 <img src="assets/settings_debugging_cn.png" width="60%"/></br>
 可观测数据：
 * 规划关节位置

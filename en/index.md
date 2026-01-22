@@ -36,7 +36,7 @@ features:
       alt: Release Note
     link: http://docs.api.ufactory.cc/gcode/ufactory_Gcode.html
     target: _self
-    details: Python SDK, WebSocket API, Gcode, Modbus TCP, Private TCP
+    details: Python SDK, WebSocket API, Gcode, Modbus TCP, Private TCP, Modbus RTU
   - title: xArm Accessories
     icon: 
       src: /assets/accessories.svg

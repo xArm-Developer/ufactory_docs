@@ -39,7 +39,7 @@ const footerTemplate = `<div style="margin-bottom: -0.4cm; height: 70%; width: 1
 </div>`
 
 const configs = defineUserConfig({
-  outFile: 'ufactory_docs_en.pdf',
+  outFile: 'UFACTORY_Studio_User_Manual_V2.6.0.pdf',
   outDir: './.vitepress/dist/pdf',
   puppeteerLaunchOptions: {
     args: ['--no-sandbox']

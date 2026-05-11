@@ -20,11 +20,10 @@
 >
 > **不支持跨版本升级，如V4.x无法升级到V5.x**
 
-
-
 ## 下载
 
-下载：[xarm-tool-gui-2.16.10.zip](http://update.ufactory.cc/xarm-tool-gui-2.16.10.zip)
+- windows版本：[xarm-tool-gui-2.16.10.zip](http://update.ufactory.cc/xarm-tool-gui-2.16.10.zip)
+- Linux版本：[xarm-tool-gui-linux-2.17.11.zip](http://update.ufactory.cc/xarm-tool-gui-linux-2.17.11.zip)
 
 ## 升级提示
 | 机械臂型号    | 安全板固件           | 问题描述                         | 升级版本    |
@@ -45,6 +44,6 @@
 
 4.	等待大约15s，提示安装成功。
 ![](../assets/safeboard_3.jpg)
-5.	重启控制器，按下控制器上的红色电源按钮按钮。
+5.	**重启控制器，按下控制器上的红色电源按钮按钮**。
 6.	重新连接xarm-tool-gui，查看安全版版本是否更新成功。如下图，安全板版本为V4.6.12。
 ![](../assets/safeboard_4.jpg)

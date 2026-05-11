@@ -22,7 +22,7 @@ As shown in the figure below, the IO Board version is V2.6.0.
 ## Download
 - Windows: [xarm-tool-gui-win-amd64-2.17.1](https://drive.google.com/drive/folders/19qFJlldeSs_SH1UTjnMnNToeXC-BqS-N?usp=sharing)
 
-
+- Linux：[xarm-tool-gui-linux-2.17.11](https://drive.google.com/file/d/1XYMe8mxCci4yoIAdxASgsrtDiSSaAP3v/view?usp=drive_link)
 
 ## How to update the end IO firmware?
 1. Connect with xarm-tool-gui.

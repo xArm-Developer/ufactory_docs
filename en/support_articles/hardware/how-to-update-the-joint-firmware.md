@@ -1,6 +1,7 @@
 # How to update the joint firmware?
 ## Download
 - Windows: [xarm-tool-gui-win-amd64-2.17.1](https://drive.google.com/drive/folders/19qFJlldeSs_SH1UTjnMnNToeXC-BqS-N?usp=sharing)
+- Linux：[xarm-tool-gui-linux-2.17.11](https://drive.google.com/file/d/1XYMe8mxCci4yoIAdxASgsrtDiSSaAP3v/view?usp=drive_link)
 
 ## How to check the joint firmware version?
 Launch xarm-tool-gui, enter the <u>Robot IP</u> and click <u>Connect</u>.

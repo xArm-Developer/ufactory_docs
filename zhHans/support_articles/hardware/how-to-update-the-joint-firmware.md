@@ -18,10 +18,16 @@
 
 
 
+## 下载
+
+- Windows版本：[xarm-tool-gui-2.17.1](http://update.ufactory.cc/xarm-tool-gui-win-amd64-2.17.1.zip)  
+- Linux版本：[xarm-tool-gui-linux-2.17.11](http://update.ufactory.cc/jointServo/xarm-tool-gui-linux-2.17.11.zip)
+
+
+
 ## 如何更新关节固件版本？
 
-1. 下载xarm-tool-gui并运行。  
-Windows版本：[xarm-tool-gui-2.17.1](http://update.ufactory.cc/xarm-tool-gui-win-amd64-2.17.1.zip)  
+1. 运行xarm-tool-gui
 
 2. 切换到对应的<u>测试工具</u>，勾选<u>所有关节驱动板</u>，点击<u>安装驱动</u>，拍下急停按钮并松开，点击<u>下一步</u>。  
 * **1305或850:** 1300/850测试工具

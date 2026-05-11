@@ -21,7 +21,9 @@ As shown in the figure below, the safeboard is V4.6.10.
 
 ## Download
 
-[xarm-tool-gui-2.16.10.zip](https://drive.google.com/drive/folders/1m96yfoUb2SrXt25c-ClZ6JqEgjaukS7e?usp=sharing)
+- Windows：[xarm-tool-gui-2.16.10.zip](https://drive.google.com/drive/folders/1m96yfoUb2SrXt25c-ClZ6JqEgjaukS7e?usp=sharing)
+
+- Linux：[xarm-tool-gui-linux-2.17.11.zip](https://drive.google.com/drive/folders/1m96yfoUb2SrXt25c-ClZ6JqEgjaukS7e)
 
 ## Bug Fix
 

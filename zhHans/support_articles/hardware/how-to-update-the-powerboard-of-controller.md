@@ -23,7 +23,8 @@
 
 
 ## 下载
-[xarm-tool-gui-win-amd64-2.17.14](http://update.ufactory.cc/xarm-tool-gui-2.17.14.zip)
+- Windows：[xarm-tool-gui-win-amd64-2.17.14](http://update.ufactory.cc/xarm-tool-gui-2.17.14.zip)
+- Linux：[xarm-tool-gui-linux-2.17.11](http://update.ufactory.cc/powerboard/xarm-tool-gui-linux-2.17.11.zip)
 
 ## 升级提示
 
@@ -31,7 +32,7 @@
 | ----------- | -------------------------------------- | ------ | ------------- | ------ |
 | xArm        | AC1300~AC1302(EOF)                     | V3.3.0 | 可能会遇到C33错误    | V3.3.3 |
 | xArm或850 | AC1303, AC1304, DC13xx, AC8500, DC8500 | V4.6.5 | 可能会遇到C1，C33错误 | V4.6.9 |
-| xArm或Lite6 | DL1000，DG1000 | V5.6.5 | 可能会遇到C33错误（透传功能） | V5.6.9 |
+| xArm或Lite6 | DL1000，DG1000 | V5.6.5 | 可能会遇到C33错误（透传功能） | V5.6.11 |
 
 
 

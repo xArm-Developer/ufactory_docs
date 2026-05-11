@@ -32,6 +32,7 @@ Feature Description
 * Used for RS485 communication between the robotic arm and the end-effector or controller. The robotic arm only forwards the data without processing it.
 * Optional parameters: Robot Arm, Control Box
   
+
 The following program opens the UFACTORY Gripper G2 and obtains its position.
   ![](assets/2.7.0_rs485.png)
 
@@ -51,9 +52,16 @@ Feature Description
 ## Settings - Assistive Features - Environment Simulation (Beta)
 Feature Description
 * Enable the environment simulation option in Settings - General. (This feature is still in testing)
+
+  ![2.7.0_setting](./assets/2.7.0_setting.png)
+
+  ![2.7.0_environment_beta_3](./assets/2.7.0_environment_beta_3.png)
+
 * You can add models into the environment: cube, cylinder, table.
+
 * After selecting a model, you can enable drag mode to move the model to the desired position. You can also enable physics simulation to consider real gravity and collision.
-![](assets/2.7.0_environment_beta.png)
-![](assets/2.7.0_environment_beta_1.png)
+  ![](assets/2.7.0_environment_beta.png)
+  ![](assets/2.7.0_environment_beta_1.png)
+
 * If a collision occurs, the software will pop up a warning message, as shown below:
   ![](assets/2.7.0_environment_beta_2.png)

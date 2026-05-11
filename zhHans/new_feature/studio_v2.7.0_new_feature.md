@@ -32,6 +32,7 @@
 * 用于机械臂和末端执行器或控制器进行RS485通信，机械臂只进行转发，不添加处理数据。
 * 可选参数：机械臂（末端）、控制盒
   
+
 下面这个程序为，打开UFACTORY机械爪G2，并获取其的位置。
   ![](assets/2.7.0_rs485.png)
 
@@ -51,9 +52,14 @@
 ## 设置-辅助功能-环境仿真(测试预览版)
 功能说明
 * 在通用设置-辅助功能中，打开环境仿真选项。（此功能还在测试中）
+
+  ![](./assets/2.7.0_setting.png)
+
+  ![](./assets/2.7.0_environment_beta_3.png)
+
 * 可在环境中增加模型：立方体、圆柱体、桌子。
 * 选中模型后，可开启拖动模型选项，将模型拖动到对应的位置。也可以打开物理仿真，考虑真实重力及碰撞情况。
-![](assets/2.7.0_environment_beta.png)
-![](assets/2.7.0_environment_beta_1.png)
+  ![](assets/2.7.0_environment_beta.png)
+  ![](assets/2.7.0_environment_beta_1.png)
 * 若发生碰撞，软件会弹窗相应的提示，如下图
   ![](assets/2.7.0_environment_beta_2.png)

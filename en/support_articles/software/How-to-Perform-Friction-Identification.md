@@ -1,5 +1,9 @@
 # How to Perform Friction Identification
 
+>  [!Note]
+>
+> Before conducting friction identification, please consult technical support for confirmation
+
 ## 1. Safety Tips
 
 1. **Clear the Workspace**: During the identification process, the robotic arm will perform large-range movements at various speeds. Ensure there are no obstacles, personnel, or cable interference within the full reach of the arm.

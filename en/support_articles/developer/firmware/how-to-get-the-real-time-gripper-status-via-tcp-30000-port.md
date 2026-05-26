@@ -14,7 +14,7 @@ The specifications for gripper data reporting are as follows:
 | Griper State             | U8    | 738     | 1      | Big        | Status of  Gripper. <br />For Robotiq grippers, the status is determined by bits 6 and 7.<br />0: In motion, no object detected.<br />1: Object detected while opening (contact made before reaching the target position).<br />2: Object detected while closing (contact made before reaching the target position).<br />3: Target position reached (no object detected or object lost). |
 | Gripper Position         | INT16 | 739-740 | 2      | Big        | unit: mm. The Robotiq gripper position is dimensionless, with a range of 0 to 255. To obtain the actual distance in millimeters (mm), users need to convert the value manually. Please contact Robotiq Technical Support for the specific conversion formula. |
 | Gripper Speed            | INT16 | 741-742 | 2      | Big        | unit: mm/s. The actual velocity of the Robotiq gripper cannot be retrieved. The firmware fills this field with 0 by default |
-| Gripper Current or Force | INT16 | 743-744 | 2      | Big        | unit: mA. The Robotiq gripper current range is 0 to 255. Users must convert the raw value to get the actual current in milliamperes (mA) by multiplying it by 10 (e.g., a returned value of 100 represents 1010 mA) |
+| Gripper Current or Force | INT16 | 743-744 | 2      | Big        | unit: mA. The Robotiq gripper current range is 0 to 255. Users must convert the raw value to get the actual current in milliamperes (mA) by multiplying it by 10 (e.g., a returned value of 100 represents 1000 mA) |
 
 For the complete TCP 30000 port reporting data, please refer to:
 [Data Description of TCP port](data-description-of-tcp-port.md)

@@ -36,11 +36,11 @@ description: We use 30000, 30001, 30002, 30003 for TCP data reporting.
 | Reserved for Cartesian                | FP32  | 593-688 | 96     | Little     |                                                              |
 | Raw Data of 6-Axis Torque Sensor      | FP32  | 689-712 | 24     | Little     | N & N·m [Fx,Fy,Fz,Tx,Ty,Tz]                                  |
 | Filtered Data of 6-Axis Torque Sensor | FP32  | 713-736 | 24     | Little     | N & N·m [Fx,Fy,Fz,Tx,Ty,Tz]                                  |
-| Gripper Type                          | U8    | 737     | 1      | Big        | 0：No End Effector，<br />1：Gripper，<br />2：Gripper G2，<br />3：BIO Gripper G2，<br /> |
+| Gripper Type                          | U8    | 737     | 1      | Big        | 0：No End Effector，<br />1：Gripper，<br />2：Gripper G2，<br />3：BIO Gripper G2，<br />4：Robotiq Gripper 2F-85/2F-140 |
 | Griper State                          | U8    | 738     | 1      | Big        | Status of  Gripper. <br />For Robotiq grippers, the status is determined by bits 6 and 7.<br />0: In motion, no object detected.<br />1: Object detected while opening (contact made before reaching the target position).<br />2: Object detected while closing (contact made before reaching the target position).<br />3: Target position reached (no object detected or object lost). |
-| Gripper Position                      | INT16 | 739-740 | 2      | Big        | mm                                                           |
-| Gripper Speed                         | INT16 | 741-742 | 2      | Big        | mm/s                                                         |
-| Gripper Current or Force              | INT16 | 743-744 | 2      | Big        | mA                                                           |
+| Gripper Position                      | INT16 | 739-740 | 2      | Big        | unit: mm. The Robotiq gripper position is dimensionless, with a range of 0 to 255. To obtain the actual distance in millimeters (mm), users need to convert the value manually. Please contact Robotiq Technical Support for the specific conversion formula. |
+| Gripper Speed                         | INT16 | 741-742 | 2      | Big        | unit: mm/s. The actual velocity of the Robotiq gripper cannot be retrieved. The firmware fills this field with 0 by default |
+| Gripper Current or Force              | INT16 | 743-744 | 2      | Big        | unit: mA. The Robotiq gripper current range is 0 to 255. Users must convert the raw value to get the actual current in milliamperes (mA) by multiplying it by 10 (e.g., a returned value of 100 represents 1000 mA) |
 | Reserved for External Devices         | NA    | 745-784 | 40     |            |                                                              |
 
 

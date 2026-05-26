@@ -28,6 +28,7 @@ Parameter 1: Reporting Type
 * 1 - Gripper;
 * 2 - Gripper G2;
 * 3 - BIO Gripper;
+* 4- Robotiq Gripper 2F-85/2F-140
 
 Parameter 2: Frequency
 

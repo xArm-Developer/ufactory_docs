@@ -16,8 +16,8 @@ UFactory version: V2.4.0+
 Code:S17  , Joint ID: \*(can be 1\~7)   , status code:16
 
 1. press down the E-stop button and then release.
-2. Enter 'Settings-General-Debugging Tools-Joing', send `H101 D0104 V1 I*` to unlock joint\*, manually move joint\* a little bit (Note: For Lite6, it is recommended to rotate joints 4, 5, or 6 by at least 45°), and then send `H101D0813V2I*` , press down E-stop button. (This step will reset the zero position, so you need to mark the original position of joint\* before moving)
-3. release the E-stop button, move Joint\* to the original position, send `D13 I*` , press down E-stop button.
+2. Enter 'Settings-General-Debugging Tools-Joing', send `H101 D0104 V1 I*` to unlock joint\*, manually move joint\* a little bit (Note: For Lite6, it is recommended to rotate joints 4, 5, or 6 by at least 45°), and then send `H101D0813V2I*` , press down E-stop button. (This step will reset the zero position, so you need to mark the zero position of joint\* before moving)
+3. release the E-stop button, move Joint\* to the zero position, send `D13 I*` , press down E-stop button.
 4. Try to enable the robot again.
 
 

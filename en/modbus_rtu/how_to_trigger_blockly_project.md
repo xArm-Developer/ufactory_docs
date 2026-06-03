@@ -2,7 +2,7 @@
 
 ## 1. Scenario Description
 
-- Device: xArm Controller (AC1310 or later, AC8510 or later)
+- Device: xArm Controller (AC1320 or later, AC8520 or later)
 - Firmware: V2.7.104 or later
 - Communication: Modbus RTU
 - Device Role: Slave

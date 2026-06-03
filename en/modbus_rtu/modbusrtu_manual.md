@@ -11,7 +11,7 @@ This manual describes the RS-485 communication capabilities of the UFACTORY xArm
 
 The controller currently supports:
 - Modbus RTU Master
-- Modbus RTU Slave (Controller AC1310 or later, firmware V2.7.104 or later)
+- Modbus RTU Slave (Controller AC1320 or later, AC8520 or later, firmware V2.7.104 or later)
 
 ## 2. Modbus RTU Master
 
@@ -100,9 +100,9 @@ Example output:
 (0, [1, 9600, 1, 0])
 ```
 
-## 3.4 Register Mapping Examples
+### 3.4 Register Mapping Examples
 
-### 3.4.1 Function Code
+#### 3.4.1 Function Code
 * Discrete input register
   * 0x02: Read multiple discrete input registers
 * Input register
@@ -118,9 +118,9 @@ Example output:
   * 0x16: Mask write single holding register
   * 0x17: Read and Write multiple holding registers
 
-### 3.4.2 Status Registers (Read Only)
+#### 3.4.2 Status Registers (Read Only)
 
-#### Discrete Input Registers (1 bit, READ only)
+##### Discrete Input Registers (1 bit, READ only)
 
 | Address (Dec) | Address (Hex) | Description |
 | ------------- | ------------- | ----------- |
@@ -128,7 +128,7 @@ Example output:
 | 32–39 | 0x20–0x27 | Tool digital input IO (2 valid) |
 | 40–127 | 0x28–0x7F | Reserved |
 
-#### Input Registers (16 bit, READ only)
+##### Input Registers (16 bit, READ only)
 
 |Address(Dec)|Address(Hex)|Description|
 |---|---|---|
@@ -152,9 +152,9 @@ Example output:
 |111 ~ 127|0x6F ~ 0x7F|Reserved|
 
 
-### 3.4.3 Control Registers (Read / Write)
+#### 3.4.3 Control Registers (Read / Write)
 
-#### Coil Registers (1 bit, READ/WRITE)
+##### Coil Registers (1 bit, READ/WRITE)
 
 
 | Address(Dec) | Address(Hex)  | Description                                                                           |
@@ -172,7 +172,7 @@ Example output:
 | 160 ~ 255    | 0xA0 ~ 0xFF   | Reserved                                                                              |
 | 256 ~ 511    | 0x100 ~ 0x1FF | General purpose, user defined                                                         |
 
-#### Holding Registers (16 bit, READ/WRITE)
+##### Holding Registers (16 bit, READ/WRITE)
 
 | Address (Dec) | Address (Hex) | Description                                                                                                                                                                                                                                                                                                                                  |
 | ------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

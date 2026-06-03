@@ -11,7 +11,7 @@ order: 1
 
 当前控制器已支持： 
 * Modbus RTU 主站（Master）功能 
-* Modbus RTU 从站（Slave）功能（控制器AC1310或以上，固件V2.7.104或以上）
+* Modbus RTU 从站（Slave）功能（控制器AC1320或以上，AC8520或以上，固件V2.7.104或以上）
 
 
 ## 2. Modbus RTU 主站模式

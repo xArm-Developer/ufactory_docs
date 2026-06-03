@@ -29,7 +29,7 @@ SDK: https://github.com/xArm-Developer
 
 * 使用 UFactory Studio 进行离线升级：
 
-下载最新的离线安装包： [xArm/UF850](http://update.ufactory.cc/xArmTool-x86.zip)     [Lite6](http://update.ufactory.cc/xArmTool-Lite6.zip)
+下载最新的离线安装包： [xArm/UF850](https://update.ufactory.cc/xArmTool-x86.zip)     [Lite6](https://update.ufactory.cc/xArmTool-Lite6.zip)
 
 进入设置-我的设备-检查更新，点击 "安装" 加载预先下载的离线软件包，等待系统重启，需要 2-3 分钟。
 
@@ -40,7 +40,7 @@ SDK: https://github.com/xArm-Developer
 * 使用 xArm-tool-gui 工具进行离线升级：
 
 
-下载 [xarm-tool-gui](http://update.ufactory.cc/xarm-tool-gui-2.18.9.zip)工具，解压缩并运行。输入控制器的 IP 地址，点击【连接】按钮。
+下载 [xarm-tool-gui](https://update.ufactory.cc/xarm-tool-gui-2.18.9.zip)工具，解压缩并运行。输入控制器的 IP 地址，点击【连接】按钮。
 
 1) 单击 【固件]】- 【离线安装】，选择事先下载的离线固件包，单击【安装】 ，界面弹出提示 "安装成功"。 
 2) 点击【xArmStudio】-【离线安装】，选择事先下载的离线软件包，点击【安装】，界面弹出提示 "安装成功"。

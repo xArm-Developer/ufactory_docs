@@ -17,7 +17,7 @@
 ![](assets/baterry_5.png)
 
 ## 3. 重写数据
-1. 下载并运行[xarm-tool-gui-2.17.12](http://update.ufactory.cc/xarm-tool-gui-2.17.12.zip), 输入<u>控制器IP</u>，点击<u>连接</u>；
+1. 下载并运行[xarm-tool-gui-2.17.12](https://update.ufactory.cc/xarm-tool-gui-2.17.12.zip), 输入<u>控制器IP</u>，点击<u>连接</u>；
 2. 点击<u>0.关闭关节限位</u>；
 3. 点击<u>多圈归零</u>；
 4. 拍下急停按钮，**等待10秒**，松开急停按钮；

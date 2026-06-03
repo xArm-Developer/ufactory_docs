@@ -2,8 +2,8 @@
 
 ## 1.介绍
 
-* 固件要求： ≥V2.7.101;   [点击下载](http://update.ufactory.cc/xarmcontroller-x86_64-2.7.101.tar.gz)
-* Python SDK：V1.17.0+ ; [点击下载](http://update.ufactory.cc/xArm-Python-SDK-develop.zip)
+* 固件要求： ≥V2.7.101;   [点击下载](https://update.ufactory.cc/xarmcontroller-x86_64-2.7.101.tar.gz)
+* Python SDK：V1.17.0+ ; [点击下载](https://update.ufactory.cc/xArm-Python-SDK-develop.zip)
 * TCP30000端口默认不上报机械爪的位置，速度，电流或力。若需要，需要调用SDK将上报打开。
 
 机械爪上报说明如下：

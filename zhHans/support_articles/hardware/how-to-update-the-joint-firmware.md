@@ -20,8 +20,8 @@
 
 ## 下载
 
-- Windows版本：[xarm-tool-gui-2.17.1](http://update.ufactory.cc/xarm-tool-gui-win-amd64-2.17.1.zip)  
-- Linux版本：[xarm-tool-gui-linux-2.17.11](http://update.ufactory.cc/jointServo/xarm-tool-gui-linux-2.17.11.zip)
+- Windows版本：[xarm-tool-gui-2.17.1](https://update.ufactory.cc/xarm-tool-gui-win-amd64-2.17.1.zip)  
+- Linux版本：[xarm-tool-gui-linux-2.17.11](https://update.ufactory.cc/jointServo/xarm-tool-gui-linux-2.17.11.zip)
 
 
 

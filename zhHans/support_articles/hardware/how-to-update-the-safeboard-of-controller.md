@@ -22,8 +22,8 @@
 
 ## 下载
 
-- windows版本：[xarm-tool-gui-2.16.10.zip](http://update.ufactory.cc/xarm-tool-gui-2.16.10.zip)
-- Linux版本：[xarm-tool-gui-linux-2.17.11.zip](http://update.ufactory.cc/xarm-tool-gui-linux-2.17.11.zip)
+- windows版本：[xarm-tool-gui-2.16.10.zip](https://update.ufactory.cc/xarm-tool-gui-2.16.10.zip)
+- Linux版本：[xarm-tool-gui-linux-2.17.11.zip](https://update.ufactory.cc/xarm-tool-gui-linux-2.17.11.zip)
 
 ## 升级提示
 | 机械臂型号    | 安全板固件           | 问题描述                         | 升级版本    |

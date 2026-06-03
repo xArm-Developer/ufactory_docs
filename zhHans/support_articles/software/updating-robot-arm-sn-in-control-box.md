@@ -33,7 +33,7 @@
 ### xArm 5/6/7（XX1300 之前版本）使用GUI 工具加载摩擦力文件的方法
 
 联系UFACTORY 技术支持，将机械臂SN发送给技术支持，技术支持发送摩擦力文件给你。
-下载和运行GUI 工具,下载链接: http://update.ufactory.cc/xarm-tool-gui-2.16.10.zip
+下载和运行GUI 工具,下载链接: https://update.ufactory.cc/xarm-tool-gui-2.16.10.zip
 点击加载摩擦力文件按钮，加载摩擦力文件。加载完成后，重启控制盒生效。
 ![](../assets/load_fric.png)
 

@@ -28,7 +28,7 @@
 
 5. **空间确认**：确保机械臂臂展范围空间空旷。
 
-6. **软件准备**：下载并解压 [xarm-tool-gui](http://update.ufactory.cc/xarm-tool-gui-2.18.9-.zip)
+6. **软件准备**：下载并解压 [xarm-tool-gui](https://update.ufactory.cc/xarm-tool-gui-2.18.9-.zip)
 
 ## 3. 操作步骤
 

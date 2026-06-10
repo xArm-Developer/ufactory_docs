@@ -32,7 +32,7 @@ S17：单圈编码器错误
 错误码：S17，关节ID：*（1~7），状态码：16，**关节固件版本 ≥ 4.0.18**
 
 1. 按照文档查看关节固件版本是否 ≥ 4.0.18
-   - 若关节固件版本＜4.0.14，请联系UFACTORY 技术支持，进行升级；
+   - 若关节固件版本＜4.0.14，请联系UFACTORY 技术支持，进行更新；
    - 若4.0.18 ≥ 关节固件版本≥ 4.0.14，则按照文档更新关节固件 [如何查看/更新关节固件？ | UFactory Docs](https://docs.supportarticle.ufactory.cc/zhHans/support_articles/hardware/how-to-update-the-joint-firmware.html)
 
 2. 运行xarm-tool-gui，输入控制器IP，点击连接

@@ -35,7 +35,7 @@ S17：单圈编码器错误
    - 若关节固件版本＜4.0.14，请联系UFACTORY 技术支持，进行升级；
    - 若4.0.18 ≥ 关节固件版本≥ 4.0.14，则按照文档更新关节固件 [如何查看/更新关节固件？ | UFactory Docs](https://docs.supportarticle.ufactory.cc/zhHans/support_articles/hardware/how-to-update-the-joint-firmware.html)
 
-2. 下载并运行[xarm-tool-gui](https://update.ufactory.cc/xarm-tool-gui-win-amd64-2.17.1.zip)，输入控制器IP，点击连接
+2. 运行xarm-tool-gui，输入控制器IP，点击连接
 
 3. 切换到调试工具，选择报错的关节ID，点击清除单圈状态码16
 

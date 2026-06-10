@@ -1,4 +1,4 @@
-# How to Determine if a 6 Axis Force Torque Sensor is Damaged
+# How to determine if a 6 Axis Force Torque Sensor is damaged
 
 ## 1. Troubleshooting Steps
 

@@ -3,10 +3,9 @@
 ## 1. Troubleshooting Steps
 
 1. Press the E-stop button.
-
 2. Keep only the 6 Axis Force Torque Sensor at the end of the robotic arm, and remove other end-effectors and cables.
-
 3. Release the E-stop button and enable, then control the robotic arm to return to the zero position (i.e., all joint angles are 0°).
+   - **Tip:** Just check that the area around the arm is clear before moving it, just to safe side and avoid any accidental bumps!
 
 ![](./assets/6-axis-1.png)
 

@@ -1,4 +1,4 @@
-# 如何重置 xArm 机械爪的零位？
+# 如何重置 xArm 机械爪的零点？
 
 **产品**：xArm 机械爪
 
@@ -7,7 +7,7 @@
 ### 步骤：
 1. 按下急停按钮。
 2. 拆下机械爪盖上的 6 颗螺丝，手动旋转机械爪的电机，使机械爪闭合。
-  ![](assets/gripper_cover.png)
+    ![](assets/gripper_cover.png)
 3. 松开急停按钮并启用机械臂。
 4. 将以下 Python 代码复制到 UFactoryStudio 或本地 Python IDE 中。
 5. 修改为对应的 IP 地址。

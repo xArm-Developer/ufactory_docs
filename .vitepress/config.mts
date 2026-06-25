@@ -6,7 +6,7 @@ import { withI18n, } from 'vitepress-i18n';
 const editLinkPattern = `/:path`;
 // https://vitepress.dev/reference/site-config
 const vitePressConfig: UserConfig = defineConfig({
-  title: "UFactory Docs",
+  title: "UFACTORY 850 硬件手册",
   description: "A VitePress Site",
   lastUpdated: true,
   // outDir: '../docs-dist',

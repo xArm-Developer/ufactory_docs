@@ -39,7 +39,7 @@ const footerTemplate = `<div style="margin-bottom: -0.4cm; height: 70%; width: 1
 </div>`
 
 const configs = defineUserConfig({
-  outFile: 'UFACTORY_850_HardWare_Manual_V2.6.0.pdf',
+  outFile: 'UFACTORY_850_HardWare_Manual_V2.6.1.pdf',
   outDir: './.vitepress/dist/pdf',
   puppeteerLaunchOptions: {
     args: ['--no-sandbox']

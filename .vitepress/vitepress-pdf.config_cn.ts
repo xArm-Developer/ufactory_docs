@@ -40,7 +40,7 @@ const footerTemplate = `<div style="margin-bottom: -0.4cm; height: 70%; width: 1
 
 
 const configs = defineUserConfig({
-  outFile: 'Lite6硬件手册_V2.6.1.pdf',
+  outFile: 'Lite6硬件手册_V2.6.2.pdf',
   outDir: './.vitepress/dist/pdf',
   puppeteerLaunchOptions: {
     args: ['--no-sandbox']

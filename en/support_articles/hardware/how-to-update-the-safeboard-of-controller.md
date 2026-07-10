@@ -27,10 +27,10 @@ As shown in the figure below, the safeboard is V4.6.10.
 
 ## Bug Fix
 
-| Robot Arm Model | SafeBoard Version | Issue                                    | Update  |
-| --------------- | ----------------- | ---------------------------------------- | ------- |
-| xArm or 850     | V4.6.5, V4.6.10   | You may meet C1, C19, C39, S0, S40 error | V4.6.14 |
-| Lite6           | V5.6.5, V5.6.6    | You may meet C33, C39 error              | V5.6.15 |
+| Robot Arm Model | SafeBoard Version       | Issue                                    | Update  |
+| --------------- | ----------------------- | ---------------------------------------- | ------- |
+| xArm or 850     | V4.6.5, V4.6.10,V4.6.12 | You may meet C1, C19, C39, S0, S40 error | V4.6.14 |
+| Lite6           | V5.6.5, V5.6.6          | You may meet C33, C39 error              | V5.6.15 |
 
 
 

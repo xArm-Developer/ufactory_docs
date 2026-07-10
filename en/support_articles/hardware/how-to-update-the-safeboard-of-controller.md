@@ -9,11 +9,11 @@ As shown in the figure below, the safeboard is V4.6.10.
 
 ## Mapping of SafeBoard 
 
-| Robot Arm Model | Controller Model                       | SafeBoard File                          | Version |
-| --------------- | -------------------------------------- | --------------------------------------- | ------- |
-| xArm            | AC1302 or lower version                | xArmSafeApp_V1.1.0_release_20210331.bin | V1.1.0  |
-| xArm or 850     | AC1303, AC1304, DC13xx, AC8500, DC8500 | xArmSafeApp_V4.6.12_debug_20250223.bin  | V4.6.x  |
-| Lite6           | DL1000                                 | xArmSafeApp_V5.6.11_debug_20240928.bin  | V5.6.x  |
+| Robot Arm Model | Controller Model                       | SafeBoard File                          | Version | Latest Version |
+| --------------- | -------------------------------------- | --------------------------------------- | ------- | -------------- |
+| xArm            | AC1302 or lower version                | xArmSafeApp_V1.1.0_release_20210331.bin | V1.1.0  | V1.1.0         |
+| xArm or 850     | AC1303, AC1304, DC13xx, AC8500, DC8500 | xArmSafeApp_V4.6.14_debug_20250223.bin  | V4.6.x  | V4.6.14        |
+| Lite6           | DL1000                                 | xArmSafeApp_V5.6.15_debug_20240928.bin  | V5.6.x  | V5.6.15        |
 
 > [!Note]
 >
@@ -21,16 +21,16 @@ As shown in the figure below, the safeboard is V4.6.10.
 
 ## Download
 
-- Windows：[xarm-tool-gui-2.16.10.zip](https://drive.google.com/drive/folders/1m96yfoUb2SrXt25c-ClZ6JqEgjaukS7e?usp=sharing)
+- Windows：[xarm-tool-gui-2.19.8.zip](https://drive.google.com/drive/folders/1m96yfoUb2SrXt25c-ClZ6JqEgjaukS7e)
 
-- Linux：[xarm-tool-gui-linux-2.17.11.zip](https://drive.google.com/drive/folders/1m96yfoUb2SrXt25c-ClZ6JqEgjaukS7e)
+- Linux：[xarm-tool-gui-linux-2.19.8.zip](https://drive.google.com/drive/folders/1m96yfoUb2SrXt25c-ClZ6JqEgjaukS7e)
 
 ## Bug Fix
 
 | Robot Arm Model | SafeBoard Version | Issue                                    | Update  |
 | --------------- | ----------------- | ---------------------------------------- | ------- |
-| xArm or 850     | V4.6.5, V4.6.10   | You may meet C1, C19, C39, S0, S40 error | V4.6.12 |
-| Lite6           | V5.6.5, V5.6.6    | You may meet C33, C39 error              | V5.6.11 |
+| xArm or 850     | V4.6.5, V4.6.10   | You may meet C1, C19, C39, S0, S40 error | V4.6.14 |
+| Lite6           | V5.6.5, V5.6.6    | You may meet C33, C39 error              | V5.6.15 |
 
 
 

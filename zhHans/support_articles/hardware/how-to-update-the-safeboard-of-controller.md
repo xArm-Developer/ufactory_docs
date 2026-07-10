@@ -10,11 +10,11 @@
 ## 不同控制器对应安全板版本
 
 
-| 机械臂型号     | 控制器型号                                  | 安全板固件示例                                 | 安全板版本  |
-| -------- | -------------------------------------- | --------------------------------------- | ------ |
-| xArm     | AC1302或更低版本(已停产)                       | xArmSafeApp_V1.1.0_release_20210331.bin | V1.1.0 |
-| xArm或850 | AC1303, AC1304, DC13xx, AC8500, DC8500 | xArmSafeApp_V4.6.12_debug_20250223.bin  | V4.6.x |
-| Lite6    | DL1000                                 | xArmSafeApp_V5.6.11_debug_20240928.bin  | V5.6.x |
+| 机械臂型号     | 控制器型号                                  | 安全板固件示例                                 | 安全板版本  | 最新版本 |
+| -------- | -------------------------------------- | --------------------------------------- | ------ | ------ |
+| xArm     | AC1302或更低版本(已停产)                       | xArmSafeApp_V1.1.0_release_20210331.bin | V1.1.0 | V1.1.0 |
+| xArm或850 | AC1303, AC1304, DC13xx, AC8500, DC8500 | xArmSafeApp_V4.6.14_debug_20250223.bin  | V4.6.x | V4.6.14 |
+| Lite6    | DL1000                                 | xArmSafeApp_V5.6.15_debug_20240928.bin  | V5.6.x | V5.6.15 |
 
 > [!Note]
 >
@@ -22,14 +22,14 @@
 
 ## 下载
 
-- windows版本：[xarm-tool-gui-2.16.10.zip](https://update.ufactory.cc/xarm-tool-gui-2.16.10.zip)
-- Linux版本：[xarm-tool-gui-linux-2.17.11.zip](https://update.ufactory.cc/xarm-tool-gui-linux-2.17.11.zip)
+- windows版本：[xarm-tool-gui-2.19.8.zip](https://update.ufactory.cc/SafeBoard/xarm-tool-gui-2.19.8.zip)
+- Linux版本：[xarm-tool-gui-linux-2.19.8.zip](https://update.ufactory.cc/SafeBoard/xarm-tool-gui-linux-2.19.8.zip)
 
 ## 升级提示
-| 机械臂型号    | 安全板固件           | 问题描述                         | 升级版本    |
-| -------- | --------------- | ---------------------------- | ------- |
-| xArm或850 | V4.6.5, V4.6.10 | 可能会遇到C1, C19, C39, S0, S40错误 | V4.6.12 |
-| Lite6    | V5.6.5, V5.6.6  | 可能会遇到C33, C39错误              | V5.6.11 |
+| 机械臂型号 | 安全板固件      | 问题描述                            | 升级版本 |
+| ---------- | --------------- | ----------------------------------- | -------- |
+| xArm或850  | V4.6.5, V4.6.10 | 可能会遇到C1, C19, C39, S0, S40错误 | V4.6.14  |
+| Lite6      | V5.6.5, V5.6.6  | 可能会遇到C33, C39错误              | V5.6.15  |
 
 
 

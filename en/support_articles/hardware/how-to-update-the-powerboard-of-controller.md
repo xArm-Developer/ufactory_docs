@@ -10,11 +10,11 @@ As shown in the figure below, the powerboard is V4.6.9.
 
 ## Mapping of PowerBoard
 
-| Robot Arm Model | Controller Model                       | PowerBoard File                        | Version |
-| --------------- | -------------------------------------- | -------------------------------------- | ------- |
-| xArm            | AC1300~AC1302(EOF)                     | xArmPwrApp_V3.3.0_release_20210918.bin | V3.3.0  |
-| xArm or 850     | AC1303, AC1304, DC13xx, AC8500, DC8500 | xArmPwrApp_V4.6.9_debug_20240729.bin   | V4.6.x  |
-| xArm or Lite6           | DL1000, DG1000                                 | xArmPwrApp_V5.6.5_debug_20230517.bin   | V5.6.x  |
+| Robot Arm Model | Controller Model                       | PowerBoard File                        | Version | Latest Version |
+| --------------- | -------------------------------------- | -------------------------------------- | ------- | ------- |
+| xArm            | AC1300~AC1302(EOF)                     | xArmPwrApp_V3.3.0_release_20210918.bin | V3.3.0  | V3.3.0 |
+| xArm or 850     | AC1303, AC1304, DC13xx, AC8500, DC8500 | xArmPwrApp_V4.6.12_debug_20240729.bin  | V4.6.x  | V4.6.12 |
+| xArm or Lite6           | DL1000, DG1000                                 | xArmPwrApp_V5.6.11_debug_20230517.bin  | V5.6.x  | V5.6.11 |
 
 > [!Note]
 >
@@ -24,15 +24,15 @@ As shown in the figure below, the powerboard is V4.6.9.
 
 ## Download
 
-- Windows: [xarm-tool-gui-2.17.14](https://drive.google.com/drive/folders/1DlFYdzB7ARn-aMWK96mjEsWmGnob2RIk)
-- Linux：[xarm-tool-gui-linux-2.17.11](https://drive.google.com/drive/folders/1DlFYdzB7ARn-aMWK96mjEsWmGnob2RIk)
+- Windows: [xarm-tool-gui-2.19.8](https://drive.google.com/drive/folders/1DlFYdzB7ARn-aMWK96mjEsWmGnob2RIk)
+- Linux：[xarm-tool-gui-linux-2.19.8](https://drive.google.com/drive/folders/1DlFYdzB7ARn-aMWK96mjEsWmGnob2RIk)
 
 ## Bug Fix
 
 | Robot Arm Model | Controller Model<br>                   | PowerBoard Version | Issue                      | Update |
 | --------------- | -------------------------------------- | ------------------ | -------------------------- | ------ |
 | xArm            | AC1300~AC1302(EOF)                     | V3.3.0             | You may meet C33 error     | V3.3.3 |
-| xArm or 850     | AC1303, AC1304, DC13xx, AC8500, DC8500 | V4.6.5             | You may meet C1, C33 error | V4.6.9 |
+| xArm or 850     | AC1303, AC1304, DC13xx, AC8500, DC8500 | V4.6.5             | You may meet C1, C33 error | V4.6.12 |
 | xArm or Lite6     | DL1000, DG1000  | V5.6.5             | You may meet C33 error when using 485 transparent transmission| V5.6.11 |
 
 

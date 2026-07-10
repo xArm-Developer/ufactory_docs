@@ -31,7 +31,7 @@ As shown in the figure below, the powerboard is V4.6.9.
 
 | Robot Arm Model | Controller Model<br>                   | PowerBoard Version | Issue                      | Update |
 | --------------- | -------------------------------------- | ------------------ | -------------------------- | ------ |
-| xArm            | AC1300~AC1302(EOF)                     | V3.3.0             | You may meet C33 error     | V3.3.3 |
+| xArm            | AC1300~AC1302(EOF)                     | V3.1.0             | You may meet C33 error     | V3.3.0 |
 | xArm or 850     | AC1303, AC1304, DC13xx, AC8500, DC8500 | V4.6.5             | You may meet C1, C33 error | V4.6.12 |
 | xArm or Lite6     | DL1000, DG1000  | V5.6.5             | You may meet C33 error when using 485 transparent transmission| V5.6.11 |
 

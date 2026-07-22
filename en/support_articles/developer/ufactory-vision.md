@@ -18,7 +18,7 @@
 * Configuration with Luxonis OAK-D-Pro-PoE Camera: [Readme](https://github.com/xArm-Developer/ufactory_vision/blob/main/ggcnn_grasping_demo/example/luxonis_oak_poe/README.md)
 
 ## Videos
-* Customized 850 + Realsense D555 + UFACTORY Gripper G2
+* UFACTORY 850(Gigabit Ethernet cable) + Realsense D555 + UFACTORY Gripper G2
 
   [![Watch the video](assets/realsense_d555.jpg)](https://www.youtube.com/watch?v=c6AeUTJM0QI)
 * xArm6 + Realsense D435 + UFACTORY Gripper G1
@@ -44,5 +44,4 @@ Our demo project is built based on the following open-source projects:
 
 -   [GGCNN](https://github.com/dougsm/ggcnn)
 -   [ggcnn_kinova_grasping](https://github.com/dougsm/ggcnn_kinova_grasping)
-
 

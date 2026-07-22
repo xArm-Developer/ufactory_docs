@@ -19,7 +19,7 @@
 * 基于 Luxonis OAK-D-Pro-PoE 相机的配置：[Readme](https://github.com/xArm-Developer/ufactory_vision/blob/main/ggcnn_grasping_demo/example/luxonis_oak_poe/README_ZH.md)
 
 ## 视频演示
-* 定制850（1000M内置网线） + Realsense D555 + 内部网线走线 + UFACTORY 机械爪G2
+* UFACTORY 850（1000M内置网线） + Realsense D555 + 内部网线走线 + UFACTORY 机械爪G2
   [![Watch the video](assets/realsense_d555.jpg)](https://www.bilibili.com/video/BV1PC2SBcEcr/?spm_id_from=333.1387.homepage.video_card.click&vd_source=9cdbfdb03a35ac858f97ba3ca89dc358)
 * xArm6 + Realsense D435 + 外部USB走线 + UFACTORY 机械爪G1  
   [![Watch the video](assets/realsense_d435.jpg)](https://www.bilibili.com/video/BV1V9ABewE9Q/?spm_id_from=333.1387.upload.video_card.click&vd_source=9cdbfdb03a35ac858f97ba3ca89dc358)

@@ -6,7 +6,7 @@
 
 ```
 // Request:
-00 01 00 02 00 02 F0 01 
+00 01 00 02 00 03 F0 01 01 
 ```
 
 
@@ -17,11 +17,11 @@
 >
 > //00 02    U16, Protocol Identifier
 >
-> //00 02    U16, Length 
+> //00 03    U16, Length
 >
 > //F0       U8, Register
 >
-> //01       U8, Timeout(s)
+> //01 01    U16, Timeout(ms)
 
 
 

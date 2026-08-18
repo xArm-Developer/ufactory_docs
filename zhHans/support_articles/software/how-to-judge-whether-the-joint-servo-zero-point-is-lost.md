@@ -18,11 +18,11 @@
 
 1. 把关节移动到零点位置[0,0,0,0,0,0]
 
-2. 下载[E_read_mmu.exe](https://share.weiyun.com/8m5KIIUu), 然后启动。（只有window版本）
+2. 下载[get_FunCode_xarm_All](https://update.ufactory.cc/joint-servo-zero-point/get_FunCode_xarm_All.zip), 解压后运行。（只有window版本）
 
-3. 输入控制器的ip, 进行连接
+3. 输入控制器的ip后回车, 进行连接
 
-4. 等待2-3分钟后，程序将自动生成一个csv文件
+4. 等待2-3分钟后，程序将自动在脚本所在目录生成一个名为getParm文件夹，将该文件夹中的所有CSV文件提供给我们。
 
 ![](../assets/e_read_mmu.png)
 
@@ -36,7 +36,7 @@
 
 3. 把手臂关节移动到零点位置[0,0,0,0,0,0,]
 
-4. 下载[UFactory Assist](https://share.weiyun.com/idk8s0aA)，和[Blockly项目文件](https://share.weiyun.com/3XP8CQ04)
+4. 下载[UFactory Assist](https://update.ufactory.cc/joint-servo-zero-point/UFACTORY-Assistant-0.3.932-Setup.zip)，和[Blockly项目文件](https://update.ufactory.cc/joint-servo-zero-point/blockly-cur_j3.tar.gz)
 
 5. 启动UFactory Assist,选择“实际关节电流”，J3,200HZ，点击“观测”，然后开始
 

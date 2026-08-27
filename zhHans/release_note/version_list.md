@@ -4,6 +4,7 @@
 
 | 固件    | UFACTORY Studio | Python SDK | ROS&ROS2 |
 | ----- | --------------- | ---------- | -------- |
+| 2.8.2 | 2.7.0 | 1.18.4 | 2.0.0 |
 | 2.7.0 | 2.7.0           | 1.16.3    | 2.0.0    |
 | 2.6.0 | 2.6.0           | 1.14.11    | 2.0.0    |
 | 2.5.5 | 2.5.1           | 1.14.7     | 2.0.0    |
@@ -17,6 +18,9 @@
 
 固件&studio  
 xArm系列, UFactory 850：
+
+- [v2.8.2](https://update.ufactory.cc/release_note/xarmcontroller-x86_64-2.8.2.tar.gz)
+
 * [v2.7.0](https://pan.baidu.com/s/1_Z2nk4vWlcKYWnPrhvFk2Q?pwd=ufuf)
 * [v2.6.0](https://pan.baidu.com/s/1LgTaJasxN1Toz5l5MGbnAg?pwd=ufuf)
 * [v2.5.0](https://pan.baidu.com/s/1BpQ4z8_-NQ4Oz7Du-hyWkQ?pwd=ufuf) 
@@ -27,6 +31,9 @@ xArm系列, UFactory 850：
 * [v2.0.0](https://pan.baidu.com/s/1R7OQVafl52jl4WLKOfqoWg?pwd=ufuf)
 
 Lite6: 
+
+- [v2.8.2](https://update.ufactory.cc/release_note/xarmcontroller-aarch64-2.8.2.tar.gz)
+
 * [v2.7.0](https://pan.baidu.com/s/1RhvWqWWA6odUooqZBCoKhQ?pwd=ufuf)
 * [v2.6.0](https://pan.baidu.com/s/1ltPdS0W-VreWpCD4giUqeQ?pwd=ufuf)
 * [v2.5.0](https://pan.baidu.com/s/1AKjGItflB4QyAXFBC7oNWw?pwd=ufuf) 

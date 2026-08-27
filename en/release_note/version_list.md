@@ -6,6 +6,7 @@ Recommended matching versions are listed below:
 
 | Firmware | UFACTORY Studio | Python SDK | ROS&ROS2 |
 | -------- | --------------- | ---------- | -------- |
+| 2.8.2 | 2.7.0 | 1.18.4 | 2.0.0 |
 | 2.7.0    | 2.7.0           | 1.16.3    | 2.0.0    |
 | 2.6.0    | 2.6.0           | 1.14.11    | 2.0.0    |
 | 2.5.5    | 2.5.1           | 1.14.7     | 2.0.0    |
@@ -19,6 +20,9 @@ Recommended matching versions are listed below:
 
 Firmware & Studio version:
 xarm series, UFactory 850:
+
+- [v2.8.2](https://drive.google.com/drive/folders/1IGlaHEf5lNs5cQw3xmToMuaqLwHGvJly)
+
 * [v2.7.0](https://drive.google.com/drive/folders/1XJK83bN-NHjgtlkxN8x7sVW6UAI5OtH3?usp=drive_link)
 * [v2.6.0](https://drive.google.com/drive/folders/16R6h_LUJW9IiTYBjIPQP9pH3-XVUrKyX?usp=sharing)
 * [v2.5.0](https://drive.google.com/drive/folders/14ybsNO7m5FM0BbAozJTE65yX_1yUYQCa?usp=drive_link)   
@@ -29,6 +33,9 @@ xarm series, UFactory 850:
 * [ v2.0.0](https://drive.google.com/drive/folders/1-po59bPQvD8ZvkrxUvWfqufHGfB9TvyR?usp=drive\_link)  
 
 Lite6: 
+
+- [v2.8.2](https://drive.google.com/drive/folders/1zxzZXgWq_W1sZplQ5P71L2PBurO_UxTg)
+
 * [v2.7.0](https://drive.google.com/drive/folders/13-_T0Z7aBO88_XTx1k06TZKQoK61cmmq?usp=sharing)
 * [v2.6.0](https://drive.google.com/drive/folders/1WVE7y0C1TyqD4pnJ9d65Jajh7I6Eg_67?usp=sharing)
 * [v2.5.0](https://drive.google.com/drive/folders/1PEBSOJ12NKY6EQfojnplr1uPFn72SxMA?usp=drive_link)  
@@ -38,6 +45,7 @@ Lite6:
 * [v2.1.0](https://drive.google.com/drive/folders/10tw5mKVkIZVSvyLH75Mr\_CaFzdjpKjiW?usp=drive\_link)    
 * [ v2.0.0](https://drive.google.com/drive/folders/1fVmX-RV5mW9RBHWOFWV7eUFc5Q6P1H36?usp=drive\_link)
   
+
 ROS
 * [v2.0.0-kinetic](https://github.com/xArm-Developer/xarm\_ros/releases/tag/v2.0.0-kinetic)     
 * [v2.0.0-other](https://github.com/xArm-Developer/xarm\_ros/releases/tag/v2.0.0)

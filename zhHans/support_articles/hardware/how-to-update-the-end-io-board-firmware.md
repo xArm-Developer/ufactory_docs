@@ -7,11 +7,11 @@
 ## 不同手臂对应关末端IO版本
 
 
-| 机械臂型号                 | 末端IO板固件示例                              | 末端板版本  |
-| --------------------- | -------------------------------------- | ------ |
-| xArm12xx或更低版本         | io_board_app_1.2.0.bin                 | V1.2.x |
-| xArm1300~1304版本或Lite6 | xArmEndIOApp_V2.6.0_debug_20230811.bin | V2.6.x |
-| xArm1305版本或850        | xArmEndIOApp_V3.1.2_debug_20240927.bin     | V3.1.x |
+| 机械臂型号               | 末端IO板固件示例                       | 末端板版本 | 最新版本 |
+| ------------------------ | -------------------------------------- | ---------- | -------- |
+| xArm12xx或更低版本       | io_board_app_1.2.0.bin                 | V1.2.x     | V1.2.0   |
+| xArm1300~1304版本或Lite6 | xArmEndIOApp_V2.6.0_debug_20230811.bin | V2.6.x     | V2.6.1   |
+| xArm1305版本或850        | xArmEndIOApp_V3.1.6_debug_20260427.bin | V3.1.x     | V3.1.6   |
 
 > [!Note]
 >
@@ -21,8 +21,8 @@
 
 ## 下载
 
-* Windows版本：[xarm-tool-gui-2.17.1](https://update.ufactory.cc/xarm-tool-gui-win-amd64-2.17.1.zip) 
-* Linux 版本：[xarm-tool-gui-linux-2.17.11](https://update.ufactory.cc/jointServo/xarm-tool-gui-linux-2.17.11.zip)
+* Windows版本：[xarm-tool-gui-2.19.8](https://update.ufactory.cc/jointServo/xarm-tool-gui-2.19.8.zip)
+* Linux 版本：[xarm-tool-gui-linux-2.19.8](https://update.ufactory.cc/jointServo/xarm-tool-gui-linux-2.19.8.zip)
 
 ## 如何更新末端IO版本？
 1. 运行xarm-tool-gui。  

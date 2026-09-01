@@ -6,11 +6,11 @@
 
 ### 不同手臂对应关节版本
 
-| 机械臂型号            | 关节固件示例                                      | 关节固件版本号 |
-| ---------------- | ------------------------------------------- | ------- |
-| xArm1303或更低版本    | uf_servo_stm32f4xx_app_2.7.13.bin           | V2.7.x  |
-| xArm1304版本或Lite6 | ServoGD32F405App_V4.0.23_debug_20250317.bin | V4.0.x  |
-| xArm1305版本或850   | ServoGD32F425App_V5.0.9_debug_20241224      | V5.0.x  |
+| 机械臂型号          | 关节固件示例                                | 关节固件版本号 | 最新版本 |
+| ------------------- | ------------------------------------------- | -------------- | -------- |
+| xArm1303或更低版本  | uf_servo_stm32f4xx_app_2.7.13.bin           | V2.7.x         | V2.7.13  |
+| xArm1304版本或Lite6 | ServoGD32F405App_V4.0.23_debug_20250317.bin | V4.0.x         | V4.0.23  |
+| xArm1305版本或850   | ServoGD32F425App_V5.0.14_debug_20251128.bin | V5.0.x         | V5.0.14  |
 
 > [!Note]
 >
@@ -20,7 +20,7 @@
 
 ## 下载
 
-- Windows版本：[xarm-tool-gui-2.19.8](https://update.ufactory.cc/jointServo/xarm-tool-gui-2.19.8.zip)  
+- Windows版本：[xarm-tool-gui-2.19.8](https://update.ufactory.cc/jointServo/xarm-tool-gui-2.19.8.zip)
 - Linux版本：[xarm-tool-gui-linux-2.19.8](https://update.ufactory.cc/jointServo/xarm-tool-gui-linux-2.19.8.zip)
 
 

@@ -11,11 +11,11 @@ As shown in the figure below, the servo(joint) version is V4.0.23.
 
 ### Mapping of joint firmware to robot
 
-| Robot Arm Model           | Servo Firmware File                         | Version Number |
-| ------------------------- | ------------------------------------------- | -------------- |
-| xArm1303 or lower version | uf_servo_stm32f4xx_app_2.7.13.bin           | V2.7.x         |
-| xArm1304 or Lite6         | ServoGD32F405App_V4.0.23_debug_20250317.bin | V4.0.x         |
-| xArm1305 or 850           | ServoGD32F425App_V5.0.9_debug_20241224      | V5.0.x         |
+| Robot Arm Model           | Servo Firmware File                         | Version Number | Latest Version |
+| ------------------------- | ------------------------------------------- | -------------- | -------------- |
+| xArm1303 or lower version | uf_servo_stm32f4xx_app_2.7.13.bin           | V2.7.x         | V2.7.13        |
+| xArm1304 or Lite6         | ServoGD32F405App_V4.0.23_debug_20250317.bin | V4.0.x         | V4.0.23        |
+| xArm1305 or 850           | ServoGD32F425App_V5.0.14_debug_20251128.bin | V5.0.x         | V5.0.14        |
 
 > [!Note]
 >

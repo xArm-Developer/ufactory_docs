@@ -7,11 +7,11 @@ As shown in the figure below, the IO Board version is V2.6.0.
 
 ## Mapping of end IO firmware
 
-| Robot Arm Model            | End IO Board File                      | Version Number |
-| -------------------------- | -------------------------------------- | -------------- |
-| xArm12xx or lower version  | io_board_app_1.2.0.bin                 | V1.2.x         |
-| xArm1300~xArm1304 or Lite6 | xArmEndIOApp_V2.6.0_debug_20230811.bin | V2.6.x         |
-| xArm1305 or 850            | xArmEndIOApp_V3.1.2_debug_20240927     | V3.1.x         |
+| Robot Arm Model            | End IO Board File                      | Version Number | Latest Version |
+| -------------------------- | -------------------------------------- | -------------- | -------------- |
+| xArm12xx or lower version  | io_board_app_1.2.0.bin                 | V1.2.x         | V1.2.0         |
+| xArm1300~xArm1304 or Lite6 | xArmEndIOApp_V2.6.1_debug_20241217.bin | V2.6.x         | V2.6.1         |
+| xArm1305 or 850            | xArmEndIOApp_V3.1.6_debug_20260427.bin | V3.1.x         | V3.1.6         |
 
 > [!Note]
 >
@@ -20,9 +20,9 @@ As shown in the figure below, the IO Board version is V2.6.0.
 
 
 ## Download
-- Windows: [xarm-tool-gui-win-amd64-2.17.1](https://drive.google.com/drive/folders/19qFJlldeSs_SH1UTjnMnNToeXC-BqS-N?usp=sharing)
+- Windows: [xarm-tool-gui-2.19.8](https://drive.google.com/drive/folders/19qFJlldeSs_SH1UTjnMnNToeXC-BqS-N)
 
-- Linux：[xarm-tool-gui-linux-2.17.11](https://drive.google.com/file/d/1XYMe8mxCci4yoIAdxASgsrtDiSSaAP3v/view?usp=drive_link)
+- Linux：[xarm-tool-gui-linux-2.19.8](https://drive.google.com/drive/folders/19qFJlldeSs_SH1UTjnMnNToeXC-BqS-N)
 
 ## How to update the end IO firmware?
 1. Connect with xarm-tool-gui.

@@ -5,7 +5,6 @@ Released Time: 2026.07.31
 ## Firmware V2.8.2
 1. TCP port 30000: added reporting for gripper / control box IO / robot IO, target and actual TCP acceleration, and six-axis Force Torque Sensor enable status.
 
-
 2. TCP port 30002: added gripper information reporting.
 
 3. Cartesian online planning (mode 7) now supports relative position commands.
@@ -21,7 +20,7 @@ Released Time: 2026.07.31
 
 ## Studio V2.8.2
 
-1. Live Control - End-effector - Robotiq gripper now supports acceleration and force adjustment.
+1. Live Control - End-effector - Robotiq gripper now supports speed and force adjustment.
 2. Live Control - End-effector - Gripper G2 and BIO G2 now display drive version and SN.
 3. Live Control - End-effector - Added Force Torque Sensor (AI1500).
 4. Live Control - End-effector - Grippers (excluding Robotiq gripper) now support 3D visualization of opening/closing.
@@ -43,7 +42,7 @@ Released Time: 2026.07.31
 20. Settings - General - Assistive Features - Merged the 3D model resolution and model refresh rate options into 3D Model High Quality.
 21. Error Handling - S20: added driver type query; C39: added IC error code query.
 22. Error Handling – S17/S18/S20/S54: Blocked access to register 0x0813 V16 to prevent S22 (encoder configuration error) caused by concurrent PVL read/write operations.
-23. Error Handling – S17: The clear button is now shown only when the single-turn status code is 16; gain data is now read only when the status code is 8 (not read for any other status codes)
+23. Error Handling – S17: The clear button is now shown only when the single-turn status code is 16; gain data is now read only when the status code is 8 (not read for any other status codes).
 24. Error Handling – S20: Fixed an issue where register 0x000C was continuously polled when the driver type is 0.
 25. Others - Frontend is now compatible with wss requests.
 26. Fixed several issues and optimized the user experience.

@@ -27,7 +27,7 @@ There are three values: S / I / F.
 
 If ⑪ is 0, please send the SN of the xArm to technical support(email:support@ufactory.cc)
 
-If⑪ is A,  the robotic arm is model 4.
+If⑪ is A/E,  the robotic arm is model 4.
 
 If ⑪ is L,  the robotic arm is **model 2**.
 

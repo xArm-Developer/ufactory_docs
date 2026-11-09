@@ -10,8 +10,8 @@ As shown in the figure below, the IO Board version is V2.6.0.
 | Robot Arm Model            | End IO Board File                      | Version Number | Latest Version |
 | -------------------------- | -------------------------------------- | -------------- | -------------- |
 | xArm12xx or lower version  | io_board_app_1.2.0.bin                 | V1.2.x         | V1.2.0         |
-| xArm1300~xArm1304 or Lite6 | xArmEndIOApp_V2.6.1_debug_20241217.bin | V2.6.x         | V2.6.1         |
-| xArm1305 or 850            | xArmEndIOApp_V3.1.6_debug_20260427.bin | V3.1.x         | V3.1.6         |
+| xArm1300~xArm1304 or Lite6 | xArmEndIOApp_V2.6.3_debug_20260916.bin | V2.6.x         | V2.6.3         |
+| xArm1305 or 850            | xArmEndIOApp_V3.1.7_debug_20260811.bin | V3.1.x         | V3.1.7         |
 
 > [!Note]
 >

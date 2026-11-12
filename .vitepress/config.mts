@@ -66,11 +66,11 @@ const vitePressI18nConfig: any = {
         },
         {
           text: 'Official Website',
-          link: 'https://ufactory.cc'
+          link: 'https://www.ufactory.cc/'
         },
         {
           text: 'Contact Us',
-          link: 'https://www.ufactory.cc/contact-us/'
+          link: 'https://www.ufactory.cc/contact'
         },
 
       ],
@@ -90,11 +90,11 @@ const vitePressI18nConfig: any = {
         },
         {
           text: '官方网站',
-          link: 'https://cn.ufactory.cc'
+          link: 'https://www.ufactory.cc/zh-cn'
         },
         {
           text: '联系我们',
-          link: 'https://cn.ufactory.cc/contact-us/'
+          link: 'https://www.ufactory.cc/zh-cn/contact'
         },
       ],
       outline: {

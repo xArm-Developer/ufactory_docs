@@ -62,11 +62,11 @@ const vitePressI18nConfig: any = {
       nav: [
         {
           text: 'Official Website',
-          link: 'https://ufactory.cc'
+          link: 'https://www.ufactory.cc'
         },
         {
           text: 'Contact Us',
-          link: 'https://www.ufactory.cc/contact-us/'
+          link: 'https://www.ufactory.cc/contact'
         },
 
       ],
@@ -75,18 +75,18 @@ const vitePressI18nConfig: any = {
         level: [2, 4]
       },
       editLink: {
-        pattern: `https://github.com/xArm-Developer/ufactory_doc_usermanual/tree/ufactory_doc_accessories/:path`,
+        pattern: `https://github.com/xArm-Developer/ufactory_docs/blob/ufactory_doc_accessories/:path`,
       }
     },
     zhHans: {
       nav: [
         {
           text: '官方网站',
-          link: 'https://cn.ufactory.cc'
+          link: 'https://www.ufactory.cc/zh-cn'
         },
         {
           text: '联系我们',
-          link: 'https://cn.ufactory.cc/contact-us/'
+          link: 'https://www.ufactory.cc/zh-cn/contact'
         },
       ],
       outline: {
@@ -94,11 +94,11 @@ const vitePressI18nConfig: any = {
         level: [2, 4]
       },
       editLink: {
-        pattern: `https://github.com/xArm-Developer/ufactory_doc_usermanual/tree/ufactory_doc_accessories/:path`,
+        pattern: `https://github.com/xArm-Developer/ufactory_docs/blob/ufactory_doc_accessories/:path`,
       }
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/xArm-Developer/ufactory_usermanual' }
+      { icon: 'github', link: 'https://github.com/xArm-Developer/ufactory_docs' }
     ],
     // search: {
     //   provider: 'local'

@@ -7,25 +7,25 @@ import {  FileDown } from "lucide-vue-next";
 // pdf路由映射
 const PDF_ROUTE_MAP = {
   "6_Axis_Force_Torque_Sensor":{
-    "en-US": "https://www.ufactory.cc/wp-content/uploads/2025/04/UFACTORY-6-Axis-Force-Torque-Sensor-V2.5.2.pdf",
-    "zh-CN": "https://www.cn.ufactory.cc/_files/ugd/896670_1889641667fb418c8fba20b80354da0f.pdf",
+    "en-US": "https://www.ufactory.cc/upfiles/download/202606/F9P8MD5PMWGI.pdf",
+    "zh-CN": "https://www.ufactory.cc/upfiles/download/202609/2XPBN6U1Y2N0.pdf",
   },
   "Bio_Gripper_G2":{
-    "en-US": "https://www.ufactory.cc/wp-content/uploads/2025/04/BIO-Gripper-G2-User-Manual-V2.6.0-2.pdf",
-    "zh-CN": "https://www.cn.ufactory.cc/_files/ugd/896670_fd83ca08e630454db2ef400905851f07.pdf",
+    "en-US": "https://www.ufactory.cc/upfiles/download/202610/WJY8KDIK8B1F.pdf",
+    "zh-CN": "https://www.ufactory.cc/upfiles/download/202610/1VSE6RX1IR3Y.pdf",
   },
 
   "Linear_Motor":{
-    "en-US": "https://www.ufactory.cc/wp-content/uploads/2023/05/UFACTORY-Linear-Motor-V2.0.04.pdf",
-    "zh-CN": "https://www.cn.ufactory.cc/_files/ugd/896670_75b0c669a3f14963a38b100400716c63.pdf",
+    "en-US": "https://www.ufactory.cc/upfiles/download/202606/CKSNS72G2EF1.pdf",
+    "zh-CN": "https://www.ufactory.cc/upfiles/download/202609/B6M2DABCBT49.pdf",
   },
-  "xArm_Gripper":{
-    "en-US": "https://www.ufactory.cc/wp-content/uploads/2023/11/xArm-Gripper-User-Manual-V2.2.0.pdf",
-    "zh-CN": "https://www.cn.ufactory.cc/_files/ugd/896670_f9ede1a3f60e46eb9cb385d1e5748414.pdf",
+  "xArm_Gripper_G2":{
+    "en-US": "https://www.ufactory.cc/upfiles/download/202611/7G03FG4AX9DZ.pdf",
+    "zh-CN": "https://www.ufactory.cc/upfiles/download/202611/Z3XY4FDIX4Y2.pdf",
   },
   "xArm_Vacuum_Gripper":{
-    "en-US": "https://www.ufactory.cc/wp-content/uploads/2025/04/xArm-Vacuum-Gripper-User-Manual-V2.5.2-1.pdf",
-    "zh-CN": "https://www.cn.ufactory.cc/_files/ugd/896670_d1bb14ad508243e1bac6b812cbdffd90.pdf",
+    "en-US": "https://www.ufactory.cc/upfiles/download/202606/YGBA8GSZKNFI.pdf",
+    "zh-CN": "https://www.ufactory.cc/upfiles/download/202609/HQ3EQXVFB5RW.pdf",
   },
 }
 

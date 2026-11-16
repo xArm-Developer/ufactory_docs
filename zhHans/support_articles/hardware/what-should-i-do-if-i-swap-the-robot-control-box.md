@@ -36,7 +36,7 @@ SN号的前6位代表机械臂的型号
 
 ## 4.不同轴数的机械臂
 
-如果是不同轴数机械臂需要交换控制器，除了要加载摩擦力参数，还需要刷新控制器固件和软件，具体操作方式请参考[如何切换xarm5/xarm6/xarm7的固件？](https://github.com/xArm-Developer/ufactory_docs/blob/main/cn/support_articles/software/ru-he-qie-huan-xArm5-xArm6-xArm7-de-gu-jian-ban-ben.md)
+如果是不同轴数机械臂需要交换控制器，除了要加载摩擦力参数，还需要刷新控制器固件和软件，具体操作方式请参考[如何切换xarm5/xarm6/xarm7的固件？](https://docs.supportarticle.ufactory.cc/zhHans/support_articles/software/how-to-switch-the-firmware-for-xarm5-xarm6-xarm7.html)
 
 
 

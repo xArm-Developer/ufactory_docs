@@ -11,7 +11,7 @@
 
 - 机械臂：[UFACTORY](https://www.ufactory.cc/)-850、xArm 系列（版本 1305）
 
-- 软夹爪：[UBIROS](https://ubiros.com/product/gentle-duo-robotic-gripper/) - Gentle Duo GNT2508
+- 软夹爪：[UBIROS](https://www.ubiros.com/products/gentle-duo/) - Gentle Duo GNT2508
 
 ## 硬件连接
 

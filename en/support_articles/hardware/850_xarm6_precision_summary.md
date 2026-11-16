@@ -53,4 +53,4 @@ The test is conducted at room temperature with a payload of 0 kg on the robotic 
 ![850_z_box](../assets/850_z_boxplot_centered.png)
 
 ## Raw Data
-Raw Data Download: [Click Here](https://www.ufactory.cc/wp-content/uploads/2025/06/850_xarm6_raw.zip)
+Raw Data Download: [Click Here](https://update.ufactory.cc/850_xarm6_raw.zip)

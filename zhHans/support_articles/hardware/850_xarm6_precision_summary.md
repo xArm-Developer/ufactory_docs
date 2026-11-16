@@ -61,4 +61,4 @@
 ![850 Z 箱线图](../assets/850_z_boxplot_centered.png)
 
 ## 原始数据
-原始数据下载：[点击下载](https://www.ufactory.cc/wp-content/uploads/2025/06/850_xarm6_raw.zip)
+原始数据下载：[点击下载](https://update.ufactory.cc/850_xarm6_raw.zip)

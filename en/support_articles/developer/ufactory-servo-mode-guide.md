@@ -104,7 +104,7 @@ The SDK provides servo control interfaces, and ROS encapsulates them as services
 **ROS2:**
 * Joint servo service: `set_servo_angle_j`
 * Cartesian servo service: `set_servo_cartesian`
-* [Service Documentation](https://github.com/xArm-Developer/xarm_ros2/blob/master/xarm_api/ReadMe.md)
+* [Service Documentation](https://github.com/xArm-Developer/xarm_ros2/blob/humble/xarm_api/ReadMe.md)
 
 
 ## Additional Notes:

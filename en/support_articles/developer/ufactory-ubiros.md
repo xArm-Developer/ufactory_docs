@@ -8,7 +8,7 @@ After following this guide, users can seamlessly integrate the UBIROS soft gripp
 
 ## Hardware Requirements
 * Robotic Arm: [UFACTORY](https://www.ufactory.cc/)- 850, xArm series (version 1305)
-* Soft Robotic Gripper: [UBIROS](https://ubiros.com/product/gentle-duo-robotic-gripper/)  - Gentle Duo Touch
+* Soft Robotic Gripper: [UBIROS](https://www.ubiros.com/products/gentle-duo/)  - Gentle Duo Touch
 ## Hardware Connection
 ### Robotic Arm End Effector Definition
 * **Plug in Connection**  

@@ -103,7 +103,7 @@ SDK提供伺服控制接口，ROS将其封装成service，用户调用配置好�
 **ROS2:**
 * 关节伺服服务: `set_servo_angle_j`
 * 笛卡尔伺服服务: `set_servo_cartesian`
-* [服务说明](https://github.com/xArm-Developer/xarm_ros2/blob/master/xarm_api/ReadMe.md)
+* [服务说明](https://github.com/xArm-Developer/xarm_ros2/blob/humble/ReadMe_cn.md)
 
 
 ## 补充说明：

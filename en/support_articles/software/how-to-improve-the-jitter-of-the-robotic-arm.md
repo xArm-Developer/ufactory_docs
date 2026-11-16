@@ -16,7 +16,7 @@ Reduce the jerk via 'Settings-General-Advanced Settings-Parameters-Jerk'.
 
 Singularity judgment method and solution:
 
-Please refer to the page 189-191 of the UFACTORY xArm user manual: [UFACTORY xArm user manual](https://www.ufactory.cc/pages/download-xarm)
+Please refer to the page 189-191 of the UFACTORY xArm user manual: [UFACTORY xArm user manual](https://www.ufactory.cc/downloads)
 
 
 

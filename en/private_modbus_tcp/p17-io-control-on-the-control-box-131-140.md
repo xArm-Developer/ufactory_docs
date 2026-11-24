@@ -414,3 +414,139 @@
 
 
 
+## Get GPIO status
+
+**Register:139 (0x8B)**
+
+```
+//Request
+00 01 00 02 00 01 8B  
+```
+
+
+
+> Request Description
+>
+> //00 01    U16, Transaction ID
+>
+> //00 02    U16, Protocol Identifier
+>
+> //00 01    U16, Length 
+>
+> //8B       U8, Register
+
+
+
+```
+// Response:
+00 01 00 02 00 34 8B 00 00 00 01 00 FF FD 00 00 FF 00 00 11 00 15 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+```
+
+
+
+> Response Description
+>
+> //00 01    U16, Transaction ID
+>
+> //00 02    U16, Protocol Identifier
+>
+> //00 34    U16, Length 
+>
+> //8B       U8, Register
+>
+> //00       U8, State
+>
+> //00       U8, GPIO module status
+>
+> 0: Normal
+>
+> 3: Gripper has error information
+>
+> //00       U8, GPIO module error code
+>
+> 0: Normal
+>
+> Non-0: Error code
+>
+> //01 00    U16, Auxiliary input IO status
+>
+> //FF FD    U16, Digital input IO status
+>
+> //00 00    U16, Digital output function IO status
+>
+> //FF 00    U16, Digital output configuration IO0-IO15 status
+>
+> //00 11    U16, Analog input 1
+>
+> //00 15    U16, Analog input 2
+>
+> //00 00    U16, Analog output 1
+>
+> //00 00    U16, Analog output 2
+>
+> //00 00 00 00 00 00 00 00    U8*8, Digital input IO0-IO7 configuration information
+>
+> //00 00 00 00 00 00 00 00    U8*8, Digital output IO0-IO7 configuration information
+>
+> //00 00 00 00 00 00 00 00    U8*8, Digital input IO8-IO15 configuration information
+>
+> //00 00 00 00 00 00 00 00    U8*8, Digital output IO8-IO15 configuration information
+
+
+
+## Get GPIO version
+
+**Register:140 (0x8C)**
+
+```
+//Request
+00 01 00 02 00 01 8C  
+```
+
+
+
+> Request Description
+>
+> //00 01    U16, Transaction ID
+>
+> //00 02    U16, Protocol Identifier
+>
+> //00 01    U16, Length 
+>
+> //8C       U8, Register
+
+
+
+```
+// Response:
+00 01 00 02 00 08 8C 00 01 01 02 04 06 01
+```
+
+
+
+> Response Description
+>
+> //00 01    U16, Transaction ID
+>
+> //00 02    U16, Protocol Identifier
+>
+> //00 08    U16, Length 
+>
+> //8C       U8, Register
+>
+> //00       U8, State
+>
+> //01       U8, Power board version first digit
+>
+> //01       U8, Power board version second digit
+>
+> //02       U8, Power board version third digit
+>
+> //04       U8, Safety board version first digit
+>
+> //06       U8, Safety board version second digit
+>
+> //01       U8, Safety board version third digit
+
+
+

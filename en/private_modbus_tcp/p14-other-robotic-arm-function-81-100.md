@@ -143,7 +143,7 @@ Set target Cartesian linear velocity and angular velocity, for cartesian velocit
 
 ```
 // Request:
-00 01 00 02 00 1E 53 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 01 00 02 00 2F 53 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 ```
 
 
@@ -155,7 +155,7 @@ Set target Cartesian linear velocity and angular velocity, for cartesian velocit
 >
 > //00 02    U16, Protocol Identifier
 >
-> //00 1E    U16, Length
+> //00 2F    U16, Length
 >
 > //53       U8, Register
 >
@@ -283,7 +283,7 @@ When planning a linear motion, the target pose is expressed in terms of axis ang
 
 ```
 // Request:
-00 01 00 02 00 0D 5C 00 00 96 43 00 00 00 00 00 00 16 43 DB 0F 49 40 00 00 00 00 00  00 00 00 00 00 48 43 00 00 FA 44 00 00 00 00 00 00 
+00 01 00 02 00 27 5C 00 00 96 43 00 00 00 00 00 00 16 43 DB 0F 49 40 00 00 00 00 00  00 00 00 00 00 48 43 00 00 FA 44 00 00 00 00 00 00 
 ```
 
 
@@ -295,7 +295,7 @@ When planning a linear motion, the target pose is expressed in terms of axis ang
 >
 > //00 02    U16, Protocol Identifier
 >
-> //00 0D    U16, Length
+> //00 27    U16, Length
 >
 > //5C       U8, Register
 >

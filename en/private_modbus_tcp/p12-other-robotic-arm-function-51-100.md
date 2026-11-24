@@ -841,7 +841,7 @@ Set the safety boundary in three-dimensional space. If the TCP of the robot exce
 
 ```
 // Request:
-00 01 00 02 00 73 44 00 00 00 00 00 00 80 85 43 00 00 00 00 00 00 00 00 FD 44 B1 BF 00 00 00 00 DB 0F C9 BF 00 00 00 00 FD 44 B1 3F 00 00 00 00 00 00 00 00 49 BE 90 43 00 00 00 00 00 40 AB 43 DB 0F C9 BF 00 00 9B 42 00 00 00 00 00 00 00 00 DB 0F C9 3F 00 00 00 00 00 00 00 00 00 00 C2 42 DB 0F C9 BF 00 00 98 42 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 01 00 02 00 72 44 00 00 00 00 00 00 80 85 43 00 00 00 00 00 00 00 00 FD 44 B1 BF 00 00 00 00 DB 0F C9 BF 00 00 00 00 FD 44 B1 3F 00 00 00 00 00 00 00 00 49 BE 90 43 00 00 00 00 00 40 AB 43 DB 0F C9 BF 00 00 9B 42 00 00 00 00 00 00 00 00 DB 0F C9 3F 00 00 00 00 00 00 00 00 00 00 C2 42 DB 0F C9 BF 00 00 98 42 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 ```
 
 
@@ -852,7 +852,7 @@ Set the safety boundary in three-dimensional space. If the TCP of the robot exce
 >
 > //00 02    U16, Protocol Identifier
 >
-> //00 73    U16, Length 
+> //00 72    U16, Length 
 >
 > //44       U8, Register
 >

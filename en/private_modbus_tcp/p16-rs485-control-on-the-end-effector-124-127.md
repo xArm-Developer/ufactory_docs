@@ -155,7 +155,7 @@
 
 ```
 //Response
-00 01 00 02 00 09 7C 00 09 08 10 01 00 00 01
+00 01 00 02 00 09 7C 00 09 08 10 01 01 00 01
 ```
 
 
@@ -178,7 +178,7 @@
 >
 > //10        U8, Function Code
 >
-> //01 00     U16, Register Start Address
+> //01 01     U16, Register Start Address
 >
 > //00 01     U16, Register Count
 
@@ -625,7 +625,7 @@
 
 ```
 // Response:
-00 01 00 02 00 01 7F
+00 01 00 02 00 02 7F 00
 ```
 
 
@@ -636,9 +636,11 @@
 >
 > //00 02    U16, Protocol Identifier
 >
-> //00 01    U16, Length 
+> //00 02    U16, Length 
 >
 > //7F       U8, Register
+>
+> //00       U8, State
 
 
 
@@ -796,7 +798,7 @@
 
 
 
->Response Description
+> Response Description
 >
 > //00 01    U16, Transaction ID
 >

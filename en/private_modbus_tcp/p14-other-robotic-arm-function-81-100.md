@@ -56,7 +56,7 @@ Set target joint velocity for joint velocity mode (mode 4)
 
 
 
-Response Description
+> Response Description
 >
 > //00 01    U16, Transaction ID
 >
@@ -183,7 +183,7 @@ Set target Cartesian linear velocity and angular velocity, for cartesian velocit
 >
 > //00	U8, 0 is TCP motion, 1 is joint motion.
 >
-> //00	U8, Only available in TCP motion. 0 is RPY, 1 is aixs angle.
+> //00	U8, Only available in TCP motion. 0 is RPY, 1 is axis angle.
 >
 
 
@@ -191,22 +191,24 @@ Set target Cartesian linear velocity and angular velocity, for cartesian velocit
 
 ```
 // Response:
-00 01 00 02 00 02 53 00
+00 01 00 02 00 04 53 00 00 01
 ```
 
 
 
-Response Description
+> Response Description
 >
 > //00 01    U16, Transaction ID
 >
 > //00 02    U16, Protocol Identifier
 >
-> //00 02    U16, Length 
+> //00 04    U16, Length 
 >
 > //53       U8, Register
 >
 > //00       U8, State
+>
+> //00 01    U16, Parameter 1 (number of commands in the command buffer)
 
 
 
@@ -327,22 +329,24 @@ When planning a linear motion, the target pose is expressed in terms of axis ang
 
 ```
 // Response:
-00 01 00 02 00 03 5C 00 01
+00 01 00 02 00 04 5C 00 00 01
 ```
 
 
 
-Response Description
+> Response Description
 >
 > //00 01    U16, Transaction ID
 >
 > //00 02    U16, Protocol Identifier
 >
-> //00 03    U16, Length 
+> //00 04    U16, Length 
 >
 > //5C       U8, Register
 >
-> //00 01    U16, State
+> //00       U8, State
+>
+> //00 01    U16, Parameter 1 (number of commands in the command buffer)
 
 
 
@@ -387,7 +391,7 @@ An interface for receiving high-frequency continuous Cartesian motion, and the p
 >
 > //00 00 FA 44	FP32, acceleration=2000 mm/s²
 >
-> //00 00 00 00	FP32, 0 i the robot base coordinate system, 1 is robot tool coordinate system.
+> //00 00 00 00	FP32, 0 is the robot base coordinate system, 1 is robot tool coordinate system.
 >
 > //00  U8,  If the motion reference is the robot base, then 0 is absolute pose, 1 is relative pose.
 

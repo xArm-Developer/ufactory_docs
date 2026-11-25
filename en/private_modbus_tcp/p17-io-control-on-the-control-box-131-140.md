@@ -484,13 +484,13 @@
 >
 > //00 00    U16, Analog output 2
 >
-> //00 00 00 00 00 00 00 00    U8*8, Digital input IO0-IO7 configuration information
+> //00 00 00 00 00 00 00 00    U8\*8, Digital input IO0-IO7 configuration information
 >
-> //00 00 00 00 00 00 00 00    U8*8, Digital output IO0-IO7 configuration information
+> //00 00 00 00 00 00 00 00    U8\*8, Digital output IO0-IO7 configuration information
 >
-> //00 00 00 00 00 00 00 00    U8*8, Digital input IO8-IO15 configuration information
+> //00 00 00 00 00 00 00 00    U8\*8, Digital input IO8-IO15 configuration information
 >
-> //00 00 00 00 00 00 00 00    U8*8, Digital output IO8-IO15 configuration information
+> //00 00 00 00 00 00 00 00    U8\*8, Digital output IO8-IO15 configuration information
 
 
 

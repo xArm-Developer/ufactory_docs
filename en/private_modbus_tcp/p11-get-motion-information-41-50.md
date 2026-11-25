@@ -349,7 +349,7 @@
 >
 > //2F       U8, Register
 >
-> //00 00 C8 43    U8,  Max TCP speed=400 mm/s
+> //00 00 C8 43    FP32,  Max TCP speed=400 mm/s
 
 
 
@@ -395,7 +395,7 @@
 >
 > //30       U8, Register
 >
-> //00 00 C8 43    U8,  Max joint speed=1.0 rad/s
+> //00 00 80 3F    FP32,  Max joint speed=1.0 rad/s
 
 
 
@@ -445,7 +445,7 @@
 
 ```
 // Response:
-00 01 00 03 00 03 31 00 00
+00 01 00 02 00 03 31 00 00
 ```
 
 
@@ -493,7 +493,7 @@
 
 ```
 // Response:
-00 01 00 03 00 02 32 00
+00 01 00 02 00 02 32 00
 ```
 
 

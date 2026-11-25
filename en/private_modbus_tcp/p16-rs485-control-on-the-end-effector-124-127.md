@@ -752,7 +752,7 @@
 >
 > //00       U8, State
 >
-> //00 00 00 00    U8,
+> //00 00 00 00    U8\*4,
 >
 > The end byte indicates the input status. The digit of 0 corresponds to input 0 and the digit of 1 corresponds to input 1.
 >

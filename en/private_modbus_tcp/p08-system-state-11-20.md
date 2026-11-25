@@ -159,11 +159,11 @@ The above operations will terminate the ongoing movement of the robotic arm and 
 >
 > //00 02    U16, Protocol Identifier
 >
-> //00 01    U16, Length 
+> //00 03    U16, Length 
 >
 > //0D       U8, Register
 >
-> 
+> //00       U8, State
 >
 > //02       U8,
 >

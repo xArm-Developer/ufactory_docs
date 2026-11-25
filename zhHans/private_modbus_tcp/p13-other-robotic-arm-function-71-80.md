@@ -79,12 +79,12 @@
 > //DB 0F 49 40	FP32, Roll=π\
 > //00 00 00 00	FP32, Pitch=0\
 > //00 00 00 00	FP32, Yaw=0\
-> //00	FP32,\ 
+> //00	U8,\ 
 > 输入姿态的表示法:\
 > 0 : RPY（Roll,Pitch,Yaw）\
 > 1 : 轴角（Rx,Ry,Rz）
 > 
-> //00	FP32,\ 
+> //00	U8,\ 
 > 输出姿态的表示法：\
 > 0 : RPY（Roll,Pitch,Yaw）\
 > 1 : 轴角（Rx,Ry,Rz）

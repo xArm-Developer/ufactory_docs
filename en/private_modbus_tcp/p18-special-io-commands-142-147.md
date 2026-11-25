@@ -312,7 +312,7 @@ Controller analog output will be activated when the robot reaches the specified 
 
 ```
 // Request:
-00 01 00 02 00 14 93 00 00 00 00 c8 43 00 00 00 00 00 00 48 43 00 00 48 42 
+00 01 00 02 00 14 93 00 00 00 00 00 c8 43 00 00 00 00 00 00 48 43 00 00 48 42 
 ```
 
 

@@ -153,9 +153,8 @@ Response Description
 //00 02    U16, Protocol Identifier
 //00 51    U16, Length 
 //35       U8, Register
-//10       U8, State
-//10       U8, State
-//00	   U16,	The state of Reduce mode: 0-OFF; 1-ON
+//00       U8, State
+//01	   U8,	The state of Reduce mode: 0-OFF; 1-ON
 //01 2C 00 64  01 2C FF F6 01 2C 00 32
 int16*6, safety boundary
 [x_max=300, x_min=100, y_max=300, y_min=-10, z_max=300, z_min=50]
@@ -203,7 +202,7 @@ Estimate the joint torque based on current and theoretical model, which is for r
 
 ```
 // Response:
-00 01 00 02 00 1E 37 00 17 37 00 00 00 00 00 2A C5 5B C1 79 A4 C5 C0 00 00 00 00 87 A3 E9 BF 00 00 00 00 00 00 00 00 
+00 01 00 02 00 1E 37 00 00 00 00 00 2A C5 5B C1 79 A4 C5 C0 00 00 00 00 87 A3 E9 BF 00 00 00 00 00 00 00 00 
 ```
 
 
@@ -376,7 +375,7 @@ Set the safety boundary in three-dimensional space. If the TCP of the robot exce
 
 ```
 // Response:
-00 01 00 02 00 02 3C 10
+00 01 00 02 00 02 3C 00
 ```
 
 

@@ -176,7 +176,7 @@
 
 ```
 // Response:
->00 01 00 02 00 03 05 00 00
+00 01 00 02 00 03 05 00 00
 ```
 
 
@@ -242,7 +242,7 @@
 >
 > //10       U8, State
 >
-> //00 00 00 00    U8, Parameter 1(Radius of rotation)
+> //00 00 00 00    FP32, Parameter 1(Radius of rotation)
 
 
 

@@ -113,7 +113,7 @@ Given two coordinate points of the robotic arm, the offset coordinate between th
 >
 > //00 00 00 00	FP32, Yaw=0
 >
-> //00	FP32, 
+> //00	U8, 
 >
 > Representation of input pose:
 >
@@ -123,7 +123,7 @@ Given two coordinate points of the robotic arm, the offset coordinate between th
 >
 > 
 >
-> //00	FP32, 
+> //00	U8, 
 >
 > Representation of output pose:
 >
